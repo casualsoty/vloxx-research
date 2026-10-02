@@ -21,7 +21,11 @@ practical result: the "+2.5 s Fixated" timing bug that makes the last-phase +63 
 ```
 README.md            this file (context + how to continue)
 docs/index.html      static documentation page (categories, search) GENERATED from FINDINGS.md + README.md + data/ —
-                     rebuild with `node scripts/build_docs.js` after every change to the notes
+                     rebuild with `node scripts/build_docs.js` after every change to the notes.
+                     Two tabs: Knowledge base, and Raid planner (open with `#planner`)
+docs-src/planner.js  raid planner (SVG arena editor; plan JSON import/export) — inlined into docs/index.html by build_docs.js
+docs-src/planner.css planner styles (also inlined)
+docs-src/plans/      shared planner templates (*.json, any exported plan); see the README there
 FINDINGS.md          every conclusion, its evidence, and hypotheses that were tested and REJECTED
 logs/raw/            the user's own raw arcdps logs (.zevtc), CM, 2026-09-30 (5 that reached last phase) + all of 2026-10-01
 logs/ei/             Elite Insights JSON of other squads' logs (gzipped). dps.report links + Wingman imports
@@ -42,11 +46,35 @@ scripts/             parser + loaders + dataset builder + checks (Node.js, no de
 | `probability_distribution_last_phase.csv` | each last-phase PD tick (+23/+43/+63…) |
 | `ascension_orbs.csv` | each Ascension Orb (raw logs): spawn, lifetime, picked up vs expired |
 | `ascension_sacrifice_2green.csv` | each 2-people green pick (Ascension's Sacrifice): order, timing, distance rank, fixated (built by `scripts/asc_sacrifice.js`) |
+| `arena.json` | not a table: arena geometry for the planner (centre, platform radius, Aspect spawns, 8-point Cosmic ring, entrance, player heatmap); built by `scripts/build_arena.js` |
+| `worldpiercer.csv` / `worldpiercer_summary.json` | Worldpiercer projectile (origin, aim, end, speed) / measured shape for the planner (`scripts/worldpiercer.js`) |
 | `aspect_events.csv` | Aspect of the Staff/Spear/Sword spawns, deaths (+respawn time), breakbar breaks (+orb delay) |
 
 Times are seconds from log start. **Raw logs start ~3 s later than EI** (EI shows the first Fixated at 0 s, raw at 3.0 s).
 "Last phase" = from the start of Vloxx's channel skill **81071**; its rounds are at **+3, +33, +63 s** (greens),
 **+23, +43, +63 s** (Probability Distribution) and Fixated ticks at **+2.5, +22.5, +42.5, +62.5 s**.
+
+## Raid planner (docs page, "Raid planner" tab)
+A fight planner in the style of raidplan.io, built for Vloxx CM. The map is drawn in real game coordinates from `data/arena.json`;
+the cursor readout shows world, map (×0.0254) and distance from centre. Features:
+- Players: 10, each with name, profession colour, role and subgroup. Squad markers: one of each per step.
+- Units: Vloxx, Aspects, Cosmic adds, orbs, custom NPCs.
+- Shapes: AoE circles with EI-sized presets (they can be attached to a token), cones, beams, lines and arrows, text, freehand drawing, a ruler and an eraser.
+- Steps (phases) with name, time and notes. Play animates the tokens between steps.
+- **Templates** tab with two lists:
+  - Shared templates: every `docs-src/plans/*.json`. They are validated and embedded by `scripts/build_plans.js` and open with `#planner=t.<id>`. See `docs-src/plans/README.md`.
+  - My templates: saved in the browser with "Save current plan as template". "Download for repo" turns one into a shared template.
+  No templates ship by default; add your own.
+- Worldpiercer preset: a 6-spoke star, 60° apart and 220 wide, ending at the arena edge. It uses the measured numbers from `data/worldpiercer_summary.json`.
+- Map layers: platform, heatmap of where players stood, grid, range rings, spawn points, Cosmic ring, entrance.
+- Editing: undo/redo, copy/paste, Alt+drag to duplicate, snapping, keyboard shortcuts (press ?).
+- Saving and sharing: plans autosave to localStorage. Export/Import JSON (`format: "vloxx-raid-plan", version: 1`), or paste JSON.
+  Share link puts the deflate-compressed plan in `#planner=…`. Each step can also be exported as PNG or SVG.
+
+Plan JSON: `{format, version, title, notes, players[10]{name,prof,role,sub}, layers{…}, snap, steps[{id,name,time,note,objects[]}]}`.
+Object types: `player{pid,x,y}`, `marker{m,x,y}`, `unit{u,x,y}`, `circle{x,y,r,attach?,inner?,fill,dash}`, `cone{x,y,r,angle,spread}`,
+`beam{x1,y1,x2,y2,w}`, `line/arrow{x1,y1,x2,y2,width,dash}`, `text{x,y,text,size,attach?}`, `path{pts[[x,y]]}`. All of them also take `color, label, note`.
+Coordinates are arcdps world units. Objects keep the same `id` across steps, which is what Play uses to animate them.
 
 ## Automation (GitHub Actions → GitHub Pages)
 Every push to `main` runs `.github/workflows/build-docs.yml`: Node 22 runs `scripts/build_all.js` (all dataset scripts + key checks +

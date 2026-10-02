@@ -121,6 +121,38 @@ Skill **81076**, cast twice in the Staff phase (~38 s and ~85 s raw time). Marke
 * **Conversion: map coordinate = arcdps world position × 0.0254** (inches → meters, no offset; second value increases
   upward on the map). Derived from the user's marker tool screenshot (arrow 292.731, 408.926; circle 267.190, 389.968) whose
   layout around the boss only fits this mapping; not yet confirmed in game by placing a marker on a spawn **[likely]**.
+* **Platform:** circle of radius **≈ 2,470** around the arena centre (12221.6, 15327.4; 10 last-phase samples).
+  99 % of player positions (after the first 6 s) are within 2,290 of the centre; EI's combat-replay map is a 5,000-unit
+  disc (750 px at 0.15 px/unit) centred on it. **[solid]**
+* **Entrance:** players start ≈ **3,270 units west** of the centre (mean start position 8958, 15450 → map 227.5, 392.4);
+  the first green round therefore only hits the fixated player. **[solid]**
+* **Cosmic adds (Piercer / Bulwark / Sunderer) spawn at one of 8 fixed points** on a ring 608–702 units from the centre,
+  every ~45° (angles −180, −137, −94, −49, −1, 48, 94, 138°; 486 spawns, data in `data/arena.json → cosmicPoints`).
+  Piercers spawn mostly 110–170 s, Bulwarks 270–290 s (around Splits 1–2), Sunderer rarely (Split 3). **[solid]**
+  World / map coordinates of the 8 points: (11519, 15321) 292.59, 389.17 · (11731, 14878) 297.97, 377.90 ·
+  (12172, 14664) 309.18, 372.47 · (12638, 14857) 320.99, 377.37 · (12830, 15313) 325.88, 388.96 ·
+  (12645, 15794) 321.18, 401.17 · (12180, 15980) 309.36, 405.88 · (11718, 15783) 297.64, 400.88.
+  Arena data for the planner: `scripts/build_arena.js` → `data/arena.json` (centre, radius, spawns, Cosmic ring,
+  50-unit player-position heatmap).
+* **Mechanic sizes** (radius in world units, from Elite Insights' Nexus of Eternity combat-replay code, used as planner presets):
+  3-people green 240 · 2-people green (shackle) 150 · Probability Distribution spread circle 280, puddle 280 (trail 160) ·
+  Cosmic Charge trail 160 / puddle 280 · Annihilating Orb 180 + ring to 240 · post-teleport barrier 240 (ring to 300) ·
+  Surrounding Curse 200 · Raging Storm 150 · Slice Through Reality port 220 · Excision Extremis 400 radius half-circle (Sword) ·
+  Spear cone 135° · Bulwark arrow 1,850 × 100 · Vloxx staff sweep 2,400 × 1,200 ·
+  Visions of Eternity 560. **[likely]** (EI's numbers, not re-measured; EI's "Worldpiercer 3,650 × 100" was **wrong**, see below)
+* **Worldpiercer (Vloxx, skill 80916) = 6 projectiles in a star, exactly 60° apart** (330 casts / 1,964 projectiles,
+  every cast has 6, every gap 60°). It is **not aimed at players** (median 31° from the nearest player). Timeline: cast start →
+  6 ground telegraphs (effect **39208**, one per spoke, orientation = `value` high int16 in mrad, spokes 1,047 mrad apart) →
+  projectiles launch ~2.75–3.0 s later from Vloxx's position, aimed **5,000** units out, flying **~3,010 units/s** (p10–p90 3,050–3,100),
+  and they disappear at the **arena edge** (median 2,584 from the centre, p1 2,449). So a spoke covers Vloxx → edge (~1,100–3,900 long
+  depending on where Vloxx stands); it crosses the whole platform in ≤ 1.3 s. **Width:** a player is hit when the projectile passes
+  within ~**100–110** units of their position (hit rate 61/67 within 100, 10/31 at 100–125, 5/74 at 125–150), so treat each spoke as
+  **~220 wide** (that figure includes the player's own hitbox). **[solid]** (shape, count, speed, range) / **[likely]** (width ±20).
+  Data: `data/worldpiercer.csv`, script `scripts/worldpiercer.js`. Missile event layout: int16×10 positions packed in the
+  value/buffDmg/overstack bytes. Statechange 57 holds the origin. 58 holds the aim point, then the origin. 59 holds the end position at bytes 4–9.
+  Ground-effect u16 at byte 48 = duration in ms (green 8000, shackle 5000, Worldpiercer telegraph 5000), *not* a size.
+* The other "Worldpiercer" (skill **81015**) is cast by the **Cosmic Bulwark** (Splits), with no missiles. Its shape has not been re-measured
+  (EI: Bulwark arrow 1,850 × 100).
 * arcdps squad markers: statechange **53**, `skill` = marker index (0 arrow, 1 circle, 2 heart, 3 square, 4 star, 5 spiral,
   6 triangle, 7 x), position = `src` as two floats (x, y) + `value` as float z; (Infinity, Infinity) = marker removed.
 

@@ -37,13 +37,13 @@ function parseEvtc(file) {
   const nSk = b.readUInt32LE(o); o += 4;
   const skills = new Map();
   for (let i = 0; i < nSk; i++) { skills.set(b.readInt32LE(o), b.toString('utf8', o + 4, o + 68).split('\0')[0]); o += 68; }
-  const ev = [];
+  const ev = []; const o0 = o;
   for (; o + 64 <= b.length; o += 64) {
     ev.push({ t: Number(b.readBigUInt64LE(o)), src: b.readBigUInt64LE(o + 8), dst: b.readBigUInt64LE(o + 16), value: b.readInt32LE(o + 24),
       buffDmg: b.readInt32LE(o + 28), over: b.readUInt32LE(o + 32), skill: b.readUInt32LE(o + 36), srcInst: b.readUInt16LE(o + 40),
       dstInst: b.readUInt16LE(o + 42), srcMaster: b.readUInt16LE(o + 44), iff: b[o + 48], buff: b[o + 49], result: b[o + 50],
       act: b[o + 51], brem: b[o + 52], sc: b[o + 56] });
   }
-  return { agents, skills, ev, header: b.toString('latin1', 0, 12), revision: b[12], bossId: b.readUInt16LE(13) };
+  return { agents, skills, ev, evStart: o0, buf: b, header: b.toString('latin1', 0, 12), revision: b[12], bossId: b.readUInt16LE(13) };
 }
-module.exports = { parseEvtc };
+module.exports = { parseEvtc, readMaybeZip };

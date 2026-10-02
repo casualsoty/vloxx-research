@@ -88,6 +88,14 @@ const body = catSecs.map(c => `<section class="cat" id="${c.id}"><h2><span class
    <p>Logs: <strong>${count('logs/raw')}</strong> raw CM .zevtc · <strong>${count('logs/ei')}</strong> EI JSON · <strong>${count('logs/raw_nm')}</strong> raw NM.</p></article>
    <article class="card"><h3>Scripts (scripts/)</h3><div class="tw"><table><thead><tr><th>script</th><th>what it does</th></tr></thead><tbody>${scripts.map(s => `<tr><td><a href="${BASE}scripts/${s.f}"><code>${s.f}</code></a></td><td>${esc(s.d)}</td></tr>`).join('')}</tbody></table></div></article></section>`;
 
+// Raid planner tab: CSS/JS from docs-src/, arena geometry from data/arena.json (scripts/build_arena.js)
+const rd = p => { try { return fs.readFileSync(path.join(ROOT, p), 'utf8'); } catch (e) { return ''; } };
+const plannerCss = rd('docs-src/planner.css'), plannerJs = rd('docs-src/planner.js').replace(/<\/script/gi, '<\\/script'), arenaJson = rd('data/arena.json') || 'null';
+// shared fight-plan templates (docs-src/plans/*.json, validated by build_plans.js) + measured mechanics for planner presets
+const safeJson = o => JSON.stringify(o).replace(/</g, '\\u003c');
+const plansJson = safeJson(require('./build_plans').buildPlans());
+const mechJson = safeJson({ worldpiercer: (() => { try { return JSON.parse(rd('data/worldpiercer_summary.json')); } catch (e) { return null; } })() });
+
 const html = `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Vloxx CM Research</title><style>
 :root{--bg:#f6f5f2;--panel:#fff;--ink:#1f2328;--mute:#5b6370;--line:#e3e1dc;--acc:#2f6f5e;--accbg:#e6f1ed;--code:#f0eee9;
@@ -96,8 +104,11 @@ const html = `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta n
 --solid:#6fd09c;--solidbg:#1d3528;--likely:#e0b54a;--likelybg:#3a3220;--open:#93a6ee;--openbg:#262c45;--rej:#f08a8a;--rejbg:#3d2526}}
 *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:16px}
 body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
-.wrap{display:grid;grid-template-columns:270px minmax(0,1fr);min-height:100vh}
-aside{position:sticky;top:0;height:100vh;overflow:auto;border-right:1px solid var(--line);background:var(--panel);padding:20px 14px}
+.wrap{display:grid;grid-template-columns:270px minmax(0,1fr);min-height:calc(100vh - 46px)}
+.topbar{position:sticky;top:0;z-index:20;height:46px;display:flex;align-items:center;gap:4px;padding:0 14px;background:var(--panel);border-bottom:1px solid var(--line)}
+.topbar b{margin-right:14px;font-size:14px}.topbar a{padding:7px 12px;border-radius:8px;color:var(--mute);text-decoration:none;font-weight:600;font-size:14px}
+.topbar a.on{background:var(--accbg);color:var(--acc)}body.planner .wrap{display:none}html{scroll-padding-top:62px}
+aside{position:sticky;top:46px;height:calc(100vh - 46px);overflow:auto;border-right:1px solid var(--line);background:var(--panel);padding:20px 14px}
 aside h1{font-size:17px;margin:0 0 2px}aside .sub{color:var(--mute);font-size:12px;margin-bottom:14px}
 #q{width:100%;padding:8px 10px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink);font:inherit;margin-bottom:12px}
 nav a{display:flex;gap:8px;align-items:center;padding:6px 8px;border-radius:7px;color:var(--ink);text-decoration:none;font-size:14px}
@@ -122,14 +133,14 @@ a{color:var(--acc)}.tag{display:inline-block;font-size:11px;font-weight:600;padd
 .star{color:var(--likely)}mark{background:var(--likelybg);color:inherit;border-radius:3px}
 .hide{display:none}#none{display:none;color:var(--mute);padding:20px}
 @media (max-width:820px){.wrap{grid-template-columns:1fr}aside{position:static;height:auto;border-right:0;border-bottom:1px solid var(--line)}}
-</style></head><body><div class="wrap"><aside><h1>Vloxx CM Research</h1><div class="sub">Nexus of Eternity · boss 28106 · built ${built}</div>
+${plannerCss}</style></head><body><div class="topbar"><b>Vloxx CM</b><a href="#top" data-view="kb" class="on">Knowledge base</a><a href="#planner" data-view="planner">Raid planner</a></div><div class="wrap" id="top"><aside><h1>Vloxx CM Research</h1><div class="sub">Nexus of Eternity · boss 28106 · built ${built}</div>
 <input id="q" type="search" placeholder="Search findings… (e.g. fixated, 120s, orbs)"><nav>${nav}</nav>
 <div class="legend"><span class="tag tag-solid">solid</span><span class="tag tag-likely">likely</span><span class="tag tag-open">open</span><span class="tag tag-rejected">REJECTED</span></div></aside>
 <main><div class="hero"><h2>What we know about Vloxx CM</h2>${md(intro)}<div class="stats">
 <div class="stat"><b>${count('logs/raw') + count('logs/ei')}</b>logs analysed</div>
 ${dataFiles.map(d => d.f === 'green_rounds.csv' ? `<div class="stat"><b>${d.rows}</b>green rounds</div>` : d.f === 'ascension_sacrifice_2green.csv' ? `<div class="stat"><b>${d.rows}</b>shackle picks</div>` : d.f === 'ascension_orbs.csv' ? `<div class="stat"><b>${d.rows}</b>orbs tracked</div>` : '').join('')}
 ${Object.entries(tagCounts).map(([k, v]) => `<div class="stat"><b>${v}</b>${k} findings</div>`).join('')}</div></div>
-${body}<div id="none">No matching findings.</div></main></div>
+${body}<div id="none">No matching findings.</div></main></div><div id="planner-root"></div>
 <script>
 const q=document.getElementById('q'),cards=[...document.querySelectorAll('.card')],cats=[...document.querySelectorAll('.cat')];
 cards.forEach(c=>c.dataset.html=c.innerHTML);
@@ -142,6 +153,11 @@ q.addEventListener('input',()=>{const t=q.value.trim().toLowerCase();let any=fal
  document.getElementById('none').style.display=any?'none':'block';});
 const links=[...document.querySelectorAll('nav a')];const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){links.forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+e.target.id));}}),{rootMargin:'-20% 0px -70% 0px'});
 document.querySelectorAll('.cat,.card[id]').forEach(s=>io.observe(s));
+</script><script>window.ARENA=${arenaJson};window.PLANS=${plansJson};window.MECH=${mechJson};</script><script>${plannerJs}</script>
+<script>
+function view(){const pl=/^#planner/.test(location.hash);document.body.classList.toggle('planner',pl);document.getElementById('planner-root').classList.toggle('on',pl);
+ document.querySelectorAll('.topbar a').forEach(a=>a.classList.toggle('on',(a.dataset.view==='planner')===pl));if(pl)window.VloxxPlanner.boot();else document.querySelectorAll('.pl-modal').forEach(m=>m.remove());}
+window.addEventListener('hashchange',view);view();
 </script></body></html>`;
 fs.mkdirSync(OUTDIR, { recursive: true });
 fs.writeFileSync(path.join(OUTDIR, 'index.html'), html);

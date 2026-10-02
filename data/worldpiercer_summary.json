@@ -1,0 +1,58 @@
+{
+ "skill": 80916,
+ "casts": 330,
+ "projectiles": 1964,
+ "perCast": {
+  "6": 1964
+ },
+ "gapDeg": [
+  60
+ ],
+ "aimToNearestPlayerDeg": 34.29562398537162,
+ "aimRange": 5000,
+ "speed": 3013,
+ "endFromCentre": 2584,
+ "telegraphEffect": 39208,
+ "launchDelayS": 2.75,
+ "halfWidth": 100,
+ "width": 220,
+ "hitBands": [
+  {
+   "band": "0-50",
+   "hit": 34,
+   "miss": 3
+  },
+  {
+   "band": "50-75",
+   "hit": 13,
+   "miss": 3
+  },
+  {
+   "band": "75-100",
+   "hit": 14,
+   "miss": 0
+  },
+  {
+   "band": "100-125",
+   "hit": 10,
+   "miss": 21
+  },
+  {
+   "band": "125-150",
+   "hit": 5,
+   "miss": 69
+  },
+  {
+   "band": "150-200",
+   "hit": 15,
+   "miss": 620
+  },
+  {
+   "band": "200-300",
+   "hit": 6,
+   "miss": 1158
+  }
+ ],
+ "firstCastFightS": 171.8,
+ "logs": 110
+}
