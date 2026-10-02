@@ -27,7 +27,7 @@ docs-src/planner.js  raid planner (SVG arena editor; plan JSON import/export) �
 docs-src/planner.css planner styles (also inlined)
 docs-src/plans/      shared planner templates (*.json, any exported plan); see the README there
 FINDINGS.md          every conclusion, its evidence, and hypotheses that were tested and REJECTED
-logs/raw/            the user's own raw arcdps logs (.zevtc), CM, 2026-09-30 (5 that reached last phase) + all of 2026-10-01
+logs/raw/            our squad's raw arcdps logs (.zevtc), CM, 2026-09-30 (5 that reached last phase) + all of 2026-10-01
 logs/ei/             Elite Insights JSON of other squads' logs (gzipped). dps.report links + Wingman imports
 logs/sources.json    log id -> URL (dps.report / Wingman)
 logs/wingman_vloxx_all_attempts_metadata.json.gz   Wingman summary of all 3,398 Vloxx attempts (as of 2026-10-01)
@@ -78,13 +78,13 @@ Coordinates are arcdps world units. Objects keep the same `id` across steps, whi
 
 ## Automation (GitHub Actions → GitHub Pages)
 Every push to `main` runs `.github/workflows/build-docs.yml`: Node 22 runs `scripts/build_all.js` (all dataset scripts + key checks +
-doc page) on the logs in the repo, then publishes the page with FINDINGS/README/data/scripts to GitHub Pages
-(repo: github.com/tanguysanquirgo/vloxx-research). One-time setup: repo **Settings → Pages → Source: GitHub Actions**.
+doc page) on the logs in the repo, then publishes the page with FINDINGS/README/data/scripts to GitHub Pages.
+One-time setup: repo **Settings → Pages → Source: GitHub Actions**.
 Locally: `node scripts/build_all.js` does the same (writes data/*.csv and docs/index.html).
 
 ## How to run
 ```
-cd vloxx-research
+# from the repository root
 node scripts/build_dataset.js      # ~15 s, rebuilds data/*.csv from logs/
 node scripts/key_checks.js         # prints the headline conclusions recomputed from the CSVs
 ```
@@ -101,7 +101,7 @@ common structure (greens, PD, fixation, stealth, downs, deaths, positions, orbs,
   * CM released Tuesday 2026-09-29 23:00 CEST. On 2026-10-01 Wingman had 14 CM attempts that reached the last phase
     (all in `logs/`), 1 CM kill.
 * **Raw logs are always better** than EI JSON: exact positions, every effect/buff event, agent effects (EI doesn't export).
-  New raw logs: the user's folder `C:\Users\Sanqu\Documents\Guild Wars 2\addons\arcdps\arcdps.cbtlogs\Vloxx (28106)`.
+  New raw logs: arcdps saves them in `Documents\Guild Wars 2\addons\arcdps\arcdps.cbtlogs\Vloxx (28106)`.
 
 ## Important IDs (arcdps build EVTC20260929, game build 207890/207970)
 | what | id |
@@ -122,7 +122,7 @@ common structure (greens, PD, fixation, stealth, downs, deaths, positions, orbs,
 | world → map/marker-tool coords | × 0.0254 (inches → meters) |
 | squad markers | statechange 53, skill = marker index, src = float x,y, value = float z |
 
-**Working rule (from the user): whenever something new is learned, save it here** (FINDINGS.md / README / data / scripts)
+**Working rule: whenever something new is learned, save it here** (FINDINGS.md / README / data / scripts)
 in the same turn, **then rebuild the doc page**: `node scripts/build_docs.js`. New FINDINGS sections (`## N. Title`) appear
 automatically; to give one its own sidebar category, add an entry to `CATS` in `scripts/build_docs.js`.
 

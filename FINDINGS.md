@@ -2,7 +2,7 @@
 
 Confidence tags: **[solid]** many cases, no counter-example · **[likely]** consistent but small sample · **[open]** unresolved ·
 **[REJECTED]** tested and disproved (kept so nobody re-tests it blindly).
-Sample at time of writing: 49 CM logs (later 141 CM logs — 128 raw + 13 EI — after adding the rest of the user's folder on 2026-10-02; the extra raw logs are mostly early wipes, so last-phase counts are unchanged) (35 raw from the user's squad, 14 EI from other squads), 24 of them reached the last phase;
+Sample at time of writing: 49 CM logs (later 141 CM logs — 128 raw + 13 EI — after adding the rest of our squad's logs on 2026-10-02; the extra raw logs are mostly early wipes, so last-phase counts are unchanged) (35 raw from our squad, 14 EI from other squads), 24 of them reached the last phase;
 414 green rounds; 326 Fixated applications; 593 Ascension Orbs.
 
 ---
@@ -13,7 +13,7 @@ Sample at time of writing: 49 CM logs (later 141 CM logs — 128 raw + 13 EI —
 * **Slot 1 = the Fixated player**, at any distance. If nobody holds Fixated, slot 1 stays empty and the first marker lands
   ~80 ms late. **[solid]** (165/165 rounds with a fixated player had them first.)
 * **Count = min(3, floor(players up / 3))**, downed/dead players don't count. **[solid]** — 338/338 rounds with a fixated
-  player (excluding the fight-start round) match (2026-10-02 full set of 141 CM logs: **757/758**; the 1 exception is a round 2.6 s before a wipe ended the log). Every short round in the user's own logs is explained by downs/deaths.
+  player (excluding the fight-start round) match (2026-10-02 full set of 141 CM logs: **757/758**; the 1 exception is a round 2.6 s before a wipe ended the log). Every short round in our squad's own logs is explained by downs/deaths.
 * **Fight start (first round, ~3 s / ~6 s raw):** always only the fixated player (48/49 logs). The others are still at the
   entrance ~4,400 units away. The exception (224233) had 6 players already hitting the boss and got 3. In CM players standing at
   the boss's feet at that moment (EI showed 4 units — actually unloaded positions) were not picked. **[solid]**
@@ -57,7 +57,7 @@ The group in 005256 / 010435 / 3273c (Player-582B, Player-BC75, Player-700E, …
 **Recipe:** (1) nobody fixated at last-phase +2.5 s; (2) that Fixated holder doesn't stealth or go down for 60 s; (3) +63 s → 1 green.
 For (1) the last pre-last-phase Fixated must be applied ≥ ~58 s before the last phase starts, or be removed (stealth during
 Split 3 — **untested**, and stealth makes the boss skip its next chance ~half the time in boss phases).
-In the user's 10 raw last-phase fights, 9 still had the pre-last-phase Fixated at +2.5 s (applied only 30–45 s before).
+In our squad's 10 raw last-phase fights, 9 still had the pre-last-phase Fixated at +2.5 s (applied only 30–45 s before).
 
 Related "stale fixation" cases (one green lost at +33 s): 050224 (Fixated stealthed off at +15 s, +22.5 tick skipped → 2 greens);
 210120 +63 s (holder downed, +62.5 skipped, 0 instead of 1). Not consistent: other no-fixated rounds were full (214712, 234618,
@@ -80,7 +80,7 @@ Related "stale fixation" cases (one green lost at +33 s): 050224 (Fixated stealt
 ## 5b. Ascension's Sacrifice — 2-people green "shackles" (Staff phase)  [solid]
 Skill **81076**, cast twice in the Staff phase (~38 s and ~85 s raw time). Marker = agent effect **37976**
 (EI GUID A47987D0864223429B261683B6452826, mechanic `2Green.Slct`). Data: `data/ascension_sacrifice_2green.csv`
-(script `scripts/asc_sacrifice.js`, 62 casts / 186 picks from the user's raw CM logs).
+(script `scripts/asc_sacrifice.js`, 62 casts / 186 picks from our squad's raw CM logs).
 * **3 markers per cast, 0.68 s apart**, at **+2.03, +2.72, +3.40 s** after the cast starts.
 * **Marker 1 = the Fixated player: 59/59** casts where someone was fixated (3 casts with nobody fixated → someone else).
 * **Markers 2 and 3 are not proximity-based**: rank by distance to Vloxx is uniform (mean 4.7 vs 4.75 random, ranks 1–10
@@ -119,7 +119,7 @@ Skill **81076**, cast twice in the Staff phase (~38 s and ~85 s raw time). Marke
 
 * Spawn spacing: Staff↔Spear 1,649 · Staff↔Sword 1,247 · Spear↔Sword 1,200 (world units).
 * **Conversion: map coordinate = arcdps world position × 0.0254** (inches → meters, no offset; second value increases
-  upward on the map). Derived from the user's marker tool screenshot (arrow 292.731, 408.926; circle 267.190, 389.968) whose
+  upward on the map). Derived from a marker-tool screenshot (arrow 292.731, 408.926; circle 267.190, 389.968) whose
   layout around the boss only fits this mapping; not yet confirmed in game by placing a marker on a spawn **[likely]**.
 * **Platform:** circle of radius **≈ 2,470** around the arena centre (12221.6, 15327.4; 10 last-phase samples).
   99 % of player positions (after the first 6 s) are within 2,290 of the centre; EI's combat-replay map is a 5,000-unit
@@ -158,7 +158,7 @@ Skill **81076**, cast twice in the Staff phase (~38 s and ~85 s raw time). Marke
 
 ## 6. Hypotheses that were tested and REJECTED (don't redo)
 * **Range limit ~600 (last phase) / ~775 (early, = 600 + boss hitbox 150 + player 24).** Looked perfect on EI data (211/211),
-  **broken by the user's raw 2026-10-01 logs** (201030 +33 s: 3 greens with everyone 714–898 away; 213946/223543 +33 s: 3
+  **broken by our squad's raw 2026-10-01 logs** (201030 +33 s: 3 greens with everyone 714–898 away; 213946/223543 +33 s: 3
   greens with only 2–4 players within 600). The fit was an artifact of EI's 300 ms positions. Greens in the last phase are not
   range-limited in any way found. (Fight-start 1-green is due to everyone being 4,000+ away / not engaged, not a 600 range.)
 * "Random draw, stop at first out-of-range/invalid pick" model.

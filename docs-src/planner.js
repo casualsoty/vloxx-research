@@ -244,7 +244,7 @@
   function delStep(i) { if (S.plan.steps.length < 2) { toast('A plan needs at least one step'); return; } if (!confirm('Delete step "' + S.plan.steps[i].name + '"?')) return; change(() => { S.plan.steps.splice(i, 1); fixStep(); S.sel.clear(); }); renderSide(); }
   function moveStep(i, d) { const j = i + d; if (j < 0 || j >= S.plan.steps.length) return; change(() => { const a = S.plan.steps; [a[i], a[j]] = [a[j], a[i]]; S.step = j; }); renderSide(); }
 
-  // ---------- templates: shared ones from docs-src/plans/ (window.PLANS, built by scripts/build_plans.js) + the user's own (this browser) ----------
+  // ---------- templates: shared ones from docs-src/plans/ (window.PLANS, built by scripts/build_plans.js) + personal ones saved in this browser ----------
   const REPO_TPL = (window.PLANS && window.PLANS.plans) || [];
   const TPL_KEY = 'vloxx-planner-templates';
   function myTemplates() { try { const a = JSON.parse(localStorage.getItem(TPL_KEY) || '[]'); return Array.isArray(a) ? a.filter(t => t && validPlan(t.plan)) : []; } catch (e) { return []; } }
