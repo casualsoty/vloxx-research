@@ -1,4 +1,487 @@
 log_id,source,phase,last_phase_tick_s,time_s,fixated_player,players_up,expected_floor_up_div3,greens,green_targets_in_order,last_phase_slots_80ms,probability_distribution_targets_same_instant,boss_hp_pct
+20260929-230342,raw,early,,5.999,Player-89AD,9,3,3,Player-89AD > Player-631B > Player-DE24,,,100
+20260929-230929,raw,early,,5.718,Player-DDA6,10,3,3,Player-DDA6 > Player-F494 > Player-8FDE,,,99.98
+20260929-230929,raw,early,,53.156,Player-DDA6,10,3,3,Player-DDA6 > Player-82BE > Player-F494,,,89.19
+20260929-230929,raw,early,,97.958,Player-BCA0,8,2,2,Player-BCA0 > Player-82BE,,,79.73
+20260929-230929,raw,early,,150.072,Player-BCA0,10,3,3,Player-BCA0 > Player-89AD > Player-74C1,,,72
+20260929-230929,raw,early,,204.07,Player-DE24,10,3,3,Player-DE24 > Player-631B > Player-82BE,,,68.72
+20260929-230929,raw,early,,259.228,Player-DDA6,9,3,3,Player-DDA6 > Player-82BE > Player-BCA0,,,59.98
+20260929-231520,raw,early,,6.078,Player-DE24,10,3,3,Player-DE24 > Player-FBAD > Player-631B,,,99.93
+20260929-231520,raw,early,,53.674,Player-DE24,10,3,3,Player-DE24 > Player-F494 > Player-74C1,,,91
+20260929-231520,raw,early,,98.918,Player-82BE,10,3,3,Player-82BE > Player-631B > Player-F494,,,79.13
+20260929-231520,raw,early,,181.948,Player-89AD,10,3,3,Player-89AD > Player-FBAD > Player-631B,,,68.56
+20260929-231520,raw,early,,236.708,Player-89AD,10,3,3,Player-89AD > Player-BCA0 > Player-F494,,,57.54
+20260929-231520,raw,early,,282.502,,7,2,2,Player-82BE > Player-FBAD,,,53.98
+20260929-232028,raw,early,,5.482,Player-FBAD,10,3,3,Player-FBAD > Player-80A0 > Player-3025,,,99.98
+20260929-232028,raw,early,,52.846,Player-FBAD,10,3,3,Player-FBAD > Player-80A0 > Player-F494,,,87.59
+20260929-232028,raw,early,,97.41,Player-3025,10,3,3,Player-3025 > Player-F494 > Player-80A0,,,78.74
+20260929-232028,raw,early,,177.194,Player-F494,10,3,3,Player-F494 > Player-BCA0 > Player-3025,,,68.49
+20260929-232602,raw,early,,5.877,Player-DDA6,10,3,3,Player-DDA6 > Player-051A > Player-8FDE,,,99.98
+20260929-232602,raw,early,,53.321,Player-DDA6,10,3,3,Player-DDA6 > Player-80A0 > Player-470E,,,92.27
+20260929-232602,raw,early,,97.875,Player-BCA0,10,3,3,Player-BCA0 > Player-FBAD > Player-8FDE,,,81.82
+20260929-232602,raw,early,,151.037,Player-DDA6,10,3,3,Player-DDA6 > Player-8FDE > Player-051A,,,70.27
+20260929-232602,raw,early,,203.993,,10,3,3,Player-80A0 > Player-DE24 > Player-BCA0,,,68.79
+20260929-232602,raw,early,,258.867,,1,0,1,Player-FBAD,,,60.69
+20260929-233227,raw,early,,5.753,Player-DDA6,10,3,3,Player-DDA6 > Player-470E > Player-F494,,,99.99
+20260929-233227,raw,early,,53.277,Player-DDA6,10,3,3,Player-DDA6 > Player-1BA4 > Player-F494,,,92.74
+20260929-233227,raw,early,,98.235,Player-BCA0,10,3,3,Player-BCA0 > Player-74C1 > Player-1BA4,,,80.82
+20260929-233227,raw,early,,197.309,Player-F494,10,3,3,Player-F494 > Player-74C1 > Player-BCA0,,,68.53
+20260929-233227,raw,early,,251.943,Player-F494,5,1,1,Player-F494,,,60.61
+20260929-233952,raw,early,,6.038,Player-8FDE,10,3,3,Player-8FDE > Player-74C1 > Player-89AD,,,100
+20260929-233952,raw,early,,53.72,Player-8FDE,10,3,3,Player-8FDE > Player-BCA0 > Player-470E,,,93.55
+20260929-233952,raw,early,,98.6,Player-8FDE,10,3,3,Player-8FDE > Player-AB6A > Player-FBAD,,,81.12
+20260929-233952,raw,early,,150.036,Player-1BA4,10,3,3,Player-1BA4 > Player-AB6A > Player-470E,,,71.13
+20260929-233952,raw,early,,200.632,Player-89AD,10,3,3,Player-89AD > Player-1172 > Player-AB6A,,,68.31
+20260929-233952,raw,early,,255.27,Player-1172,9,3,3,Player-1172 > Player-AB6A > Player-89AD,,,61.3
+20260929-234806,raw,early,,5.474,Player-BCA0,10,3,3,Player-BCA0 > Player-8FDE > Player-AB6A,,,100
+20260929-234806,raw,early,,52.516,Player-BCA0,10,3,3,Player-BCA0 > Player-80A0 > Player-F494,,,94.04
+20260929-234806,raw,early,,97.046,Player-BCA0,10,3,3,Player-BCA0 > Player-F494 > Player-89AD,,,83.69
+20260929-234806,raw,early,,148.99,Player-8FDE,10,3,3,Player-8FDE > Player-FBAD > Player-80A0,,,74.43
+20260929-234806,raw,early,,213.626,Player-1172,10,3,3,Player-1172 > Player-631B > Player-89AD,,,68.79
+20260929-234806,raw,early,,268.874,Player-F494,10,3,3,Player-F494 > Player-631B > Player-470E,,,62.94
+20260929-234806,raw,early,,314.344,Player-470E,8,2,2,Player-470E > Player-BCA0,,,60.07
+20260929-235415,raw,early,,5.96,Player-DE24,10,3,3,Player-DE24 > Player-8FDE > Player-80A0,,,100
+20260929-235415,raw,early,,53.204,Player-DE24,10,3,3,Player-DE24 > Player-80A0 > Player-470E,,,89.91
+20260929-235415,raw,early,,97.96,Player-80A0,10,3,3,Player-80A0 > Player-FBAD > Player-BCA0,,,79.06
+20260929-235415,raw,early,,181.836,Player-DE24,10,3,3,Player-DE24 > Player-F494 > Player-7AAB,,,68.38
+20260929-235415,raw,early,,236.348,Player-DE24,10,3,3,Player-DE24 > Player-7AAB > Player-F494,,,58.7
+20260929-235415,raw,early,,297.83,,2,0,1,Player-89AD,,,53.23
+20260929-235848,raw,early,,5.711,Player-FBAD,10,3,3,Player-FBAD > Player-7AAB > Player-DE24,,,100
+20260929-235848,raw,early,,53.231,Player-FBAD,10,3,3,Player-FBAD > Player-470E > Player-F494,,,88.99
+20260929-235848,raw,early,,98.355,Player-8FDE,10,3,3,Player-8FDE > Player-89AD > Player-631B,,,78.29
+20260929-235848,raw,early,,167.033,Player-89AD,10,3,3,Player-89AD > Player-631B > Player-F494,,,68.47
+20260930-000603,raw,early,,6.117,Player-010B,10,3,3,Player-010B > Player-74C1 > Player-F494,,,100
+20260930-000603,raw,early,,52.957,Player-010B,10,3,3,Player-010B > Player-470E > Player-74C1,,,88.98
+20260930-000603,raw,early,,97.515,Player-8FDE,10,3,3,Player-8FDE > Player-F494 > Player-010B,,,78.35
+20260930-000603,raw,early,,167.995,Player-010B,10,3,3,Player-010B > Player-631B > Player-F494,,,68.57
+20260930-000603,raw,early,,223.107,Player-010B,9,3,3,Player-010B > Player-BCA0 > Player-DE24,,,59.13
+20260930-002046,raw,early,,5.8,Player-FBAD,10,3,3,Player-FBAD > Player-1BA4 > Player-8FDE,,,100
+20260930-002046,raw,early,,53.162,Player-FBAD,10,3,3,Player-FBAD > Player-1BA4 > Player-F494,,,89.46
+20260930-002046,raw,early,,97.838,Player-DE24,10,3,3,Player-DE24 > Player-1BA4 > Player-F494,,,78.51
+20260930-002046,raw,early,,166.958,Player-010B,10,3,3,Player-010B > Player-8FDE > Player-1BA4,,,68.1
+20260930-002046,raw,early,,222.268,Player-010B,9,3,3,Player-010B > Player-8FDE > Player-1BA4,,,59.07
+20260930-002046,raw,early,,267.67,Player-BCA0,8,2,2,Player-BCA0 > Player-470E,,,51.45
+20260930-002947,raw,early,,5.878,Player-470E,10,3,3,Player-470E > Player-F494 > Player-8FDE,,,100
+20260930-002947,raw,early,,53.282,Player-470E,10,3,3,Player-470E > Player-1BA4 > Player-DE24,,,89.21
+20260930-002947,raw,early,,97.79,Player-F494,10,3,3,Player-F494 > Player-010B > Player-1BA4,,,79.24
+20260930-002947,raw,early,,176.59,Player-BCA0,10,3,3,Player-BCA0 > Player-74C1 > Player-F494,,,68.62
+20260930-002947,raw,early,,231.516,Player-BCA0,10,3,3,Player-BCA0 > Player-F494 > Player-FBAD,,,59.16
+20260930-002947,raw,early,,276.106,Player-DE24,10,3,3,Player-DE24 > Player-74C1 > Player-8FDE,,,52.43
+20260930-002947,raw,early,,332.346,Player-89AD,10,3,3,Player-89AD > Player-DE24 > Player-8FDE,,,47.73
+20260930-002947,raw,early,,387.308,Player-74C1,10,3,3,Player-74C1 > Player-8FDE > Player-F494,,,41.98
+20260930-002947,raw,early,,456.582,Player-010B,10,3,3,Player-010B > Player-DE24 > Player-FBAD,,,39.54
+20260930-003645,raw,early,,5.796,Player-1BA4,10,3,3,Player-1BA4 > Player-DE24 > Player-010B,,,100
+20260930-003645,raw,early,,52.96,Player-1BA4,10,3,3,Player-1BA4 > Player-74C1 > Player-010B,,,88.85
+20260930-003645,raw,early,,97.632,Player-F494,10,3,3,Player-F494 > Player-010B > Player-FBAD,,,78.29
+20260930-003645,raw,early,,178.548,Player-F494,10,3,3,Player-F494 > Player-470E > Player-BCA0,,,68.37
+20260930-003645,raw,early,,233.506,Player-74C1,10,3,3,Player-74C1 > Player-F494 > Player-FBAD,,,58.94
+20260930-003645,raw,early,,279.942,Player-DE24,10,3,3,Player-DE24 > Player-BCA0 > Player-74C1,,,51.93
+20260930-004322,raw,early,,5.596,Player-74C1,10,3,3,Player-74C1 > Player-8FDE > Player-DE24,,,100
+20260930-004322,raw,early,,52.714,Player-74C1,10,3,3,Player-74C1 > Player-470E > Player-F494,,,89.1
+20260930-004322,raw,early,,97.756,Player-89AD,10,3,3,Player-89AD > Player-010B > Player-FBAD,,,77.62
+20260930-004322,raw,early,,161.35,Player-BCA0,10,3,3,Player-BCA0 > Player-1BA4 > Player-F494,,,68.2
+20260930-004322,raw,early,,216.512,Player-BCA0,10,3,3,Player-BCA0 > Player-F494 > Player-1BA4,,,58.55
+20260930-004322,raw,early,,263.188,Player-010B,10,3,3,Player-010B > Player-FBAD > Player-1BA4,,,49.73
+20260930-004322,raw,early,,312.946,Player-F494,8,2,2,Player-F494 > Player-010B,,,43.3
+20260930-004948,raw,early,,5.795,Player-8FDE,10,3,3,Player-8FDE > Player-1BA4 > Player-FBAD,,,100
+20260930-004948,raw,early,,53.353,Player-8FDE,10,3,3,Player-8FDE > Player-1BA4 > Player-010B,,,89.48
+20260930-004948,raw,early,,98.151,Player-74C1,10,3,3,Player-74C1 > Player-DE24 > Player-010B,,,78.59
+20260930-004948,raw,early,,171.115,Player-FBAD,10,3,3,Player-FBAD > Player-010B > Player-BCA0,,,68.33
+20260930-004948,raw,early,,225.787,Player-FBAD,10,3,3,Player-FBAD > Player-89AD > Player-1BA4,,,58.52
+20260930-010007,raw,early,,5.92,Player-74C1,10,3,3,Player-74C1 > Player-470E > Player-8FDE,,,100
+20260930-010007,raw,early,,53.002,Player-74C1,10,3,3,Player-74C1 > Player-1BA4 > Player-470E,,,89.45
+20260930-010007,raw,early,,97.642,Player-F494,10,3,3,Player-F494 > Player-DCBD > Player-1172,,,78.38
+20260930-010007,raw,early,,172.836,Player-BCA0,10,3,3,Player-BCA0 > Player-470E > Player-1BA4,,,68.41
+20260930-010007,raw,early,,227.556,Player-8FDE,10,3,3,Player-8FDE > Player-BCA0 > Player-1172,,,61.23
+20260930-010007,raw,early,,272.396,Player-DCBD,10,3,3,Player-DCBD > Player-F494 > Player-BCA0,,,54.38
+20260930-010656,raw,early,,6.075,Player-470E,10,3,3,Player-470E > Player-74C1 > Player-89AD,,,100
+20260930-010656,raw,early,,54.039,Player-470E,10,3,3,Player-470E > Player-DCBD > Player-F494,,,89.09
+20260930-010656,raw,early,,98.519,Player-470E,10,3,3,Player-470E > Player-DCBD > Player-1172,,,78.61
+20260930-010656,raw,early,,168.309,Player-470E,10,3,3,Player-470E > Player-89AD > Player-74C1,,,68.57
+20260930-010656,raw,early,,223.629,Player-F494,10,3,3,Player-F494 > Player-DCBD > Player-1172,,,60.09
+20260930-010656,raw,early,,268.305,Player-F494,10,3,3,Player-F494 > Player-1BA4 > Player-1172,,,53.59
+20260930-010656,raw,early,,324.581,Player-1B7A,8,2,2,Player-1B7A > Player-F494,,,45.22
+20260930-011344,raw,early,,6.076,Player-89AD,10,3,3,Player-89AD > Player-470E > Player-DCBD,,,100
+20260930-011344,raw,early,,52.952,Player-89AD,10,3,3,Player-89AD > Player-470E > Player-DCBD,,,89.8
+20260930-011344,raw,early,,97.832,Player-470E,10,3,3,Player-470E > Player-F494 > Player-DCBD,,,79.77
+20260930-011344,raw,early,,177.588,Player-1172,10,3,3,Player-1172 > Player-89AD > Player-74C1,,,68.67
+20260930-011344,raw,early,,232.39,Player-BCA0,10,3,3,Player-BCA0 > Player-8FDE > Player-1BA4,,,57.48
+20260930-011344,raw,early,,277.666,Player-BCA0,10,3,3,Player-BCA0 > Player-1172 > Player-DCBD,,,50.07
+20260930-011934,raw,early,,6,Player-1BA4,10,3,3,Player-1BA4 > Player-8FDE > Player-74C1,,,100
+20260930-011934,raw,early,,53.318,Player-1BA4,10,3,3,Player-1BA4 > Player-DCBD > Player-470E,,,90.31
+20260930-011934,raw,early,,98.276,Player-8FDE,10,3,3,Player-8FDE > Player-F494 > Player-89AD,,,79.91
+20260930-011934,raw,early,,172.394,Player-1172,10,3,3,Player-1172 > Player-470E > Player-1BA4,,,68.72
+20260930-011934,raw,early,,227.996,Player-1172,10,3,3,Player-1172 > Player-1BA4 > Player-89AD,,,60.03
+20260930-012807,raw,early,,5.676,Player-1172,10,3,3,Player-1172 > Player-8FDE > Player-1B7A,,,100
+20260930-012807,raw,early,,52.75,Player-1172,10,3,3,Player-1172 > Player-1BA4 > Player-F494,,,90.19
+20260930-012807,raw,early,,97.198,Player-8FDE,10,3,3,Player-8FDE > Player-1BA4 > Player-1172,,,80.34
+20260930-012807,raw,early,,187.664,Player-F494,10,3,3,Player-F494 > Player-1BA4 > Player-DCBD,,,68.26
+20260930-012807,raw,early,,243.02,Player-1172,10,3,3,Player-1172 > Player-89AD > Player-DCBD,,,57.26
+20260930-012807,raw,early,,289.388,Player-470E,10,3,3,Player-470E > Player-DCBD > Player-1B7A,,,48.58
+20260930-012807,raw,early,,343.856,,5,1,1,Player-F494,,,41.21
+20260930-013625,raw,early,,5.64,Player-1BA4,10,3,3,Player-1BA4 > Player-8FDE > Player-DE24,,,100
+20260930-013625,raw,early,,53.196,Player-1BA4,10,3,3,Player-1BA4 > Player-470E > Player-74C1,,,88.87
+20260930-013625,raw,early,,98.31,Player-89AD,9,3,3,Player-89AD > Player-DCBD > Player-F494,,,78.03
+20260930-013625,raw,early,,160.634,Player-74C1,10,3,3,Player-74C1 > Player-1BA4 > Player-BCA0,,,68.24
+20260930-013625,raw,early,,215.228,Player-74C1,10,3,3,Player-74C1 > Player-DCBD > Player-8FDE,,,59.05
+20260930-013625,raw,early,,260.662,,2,0,1,Player-F494,,,51.87
+20260930-013625,raw,early,,310.104,Player-89AD,5,1,1,Player-89AD,,,48
+20260930-014701,raw,early,,5.761,Player-BCA0,10,3,3,Player-BCA0 > Player-8FDE > Player-470E,,,100
+20260930-014701,raw,early,,52.757,Player-BCA0,10,3,3,Player-BCA0 > Player-DCBD > Player-F494,,,89.44
+20260930-014701,raw,early,,97.317,Player-1172,10,3,3,Player-1172 > Player-DE24 > Player-74C1,,,78.8
+20260930-014701,raw,early,,170.473,Player-74C1,10,3,3,Player-74C1 > Player-1172 > Player-F494,,,68.55
+20260930-014701,raw,early,,225.153,Player-74C1,10,3,3,Player-74C1 > Player-F494 > Player-1BA4,,,58.33
+20260930-014701,raw,early,,270.587,Player-DCBD,10,3,3,Player-DCBD > Player-F494 > Player-74C1,,,50.04
+20260930-014701,raw,early,,326.233,Player-1BA4,6,2,2,Player-1BA4 > Player-1172,,,43.64
+20260930-014701,raw,early,,381.547,Player-1BA4,8,2,2,Player-1BA4 > Player-DCBD,,,40.68
+20260930-014701,raw,early,,468.705,Player-DE24,7,2,2,Player-DE24 > Player-1172,,,39.75
+20260930-015718,raw,early,,5.673,Player-DCBD,10,3,3,Player-DCBD > Player-470E > Player-8FDE,,,100
+20260930-015718,raw,early,,52.995,Player-DCBD,10,3,3,Player-DCBD > Player-470E > Player-F494,,,88.96
+20260930-015718,raw,early,,97.637,Player-74C1,10,3,3,Player-74C1 > Player-DCBD > Player-F494,,,77.75
+20260930-015718,raw,early,,164.351,Player-1172,10,3,3,Player-1172 > Player-74C1 > Player-1BA4,,,68.65
+20260930-015718,raw,early,,219.267,Player-1172,10,3,3,Player-1172 > Player-DCBD > Player-8FDE,,,57.22
+20260930-015718,raw,early,,264.625,Player-DE24,10,3,3,Player-DE24 > Player-DCBD > Player-89AD,,,47.91
+20260930-015718,raw,early,,320.145,Player-89AD,10,3,3,Player-89AD > Player-DCBD > Player-F494,,,40.33
+20260930-015718,raw,early,,365.745,Player-F494,10,3,3,Player-F494 > Player-1BA4 > Player-DCBD,,,38.91
+20260930-020654,raw,early,,5.68,Player-DCBD,10,3,3,Player-DCBD > Player-8FDE > Player-DE24,,,100
+20260930-020654,raw,early,,52.766,Player-DCBD,10,3,3,Player-DCBD > Player-1BA4 > Player-BCA0,,,89.13
+20260930-020654,raw,early,,97.954,Player-DE24,10,3,3,Player-DE24 > Player-1BA4 > Player-89AD,,,79.04
+20260930-020654,raw,early,,166.396,Player-BCA0,10,3,3,Player-BCA0 > Player-1172 > Player-8FDE,,,68.46
+20260930-020654,raw,early,,221.274,Player-470E,10,3,3,Player-470E > Player-BCA0 > Player-1BA4,,,58.41
+20260930-020654,raw,early,,267.112,,10,3,3,Player-1BA4 > Player-8FDE > Player-470E,,,48.64
+20260930-020654,raw,early,,353.426,Player-8FDE,10,3,3,Player-8FDE > Player-1BA4 > Player-DE24,,,38.62
+20260930-020654,raw,early,,400.708,,8,2,2,Player-DCBD > Player-470E,,,33.48
+20260930-020654,raw,early,,447.984,Player-DE24,7,2,2,Player-DE24 > Player-BCA0,,,28
+20260930-020654,raw,early,,498.542,Player-1172,10,3,3,Player-1172 > Player-DCBD > Player-F494,,,22.11
+20260930-130931,raw,early,,5.683,Player-470E,10,3,1,Player-470E,,,100
+20260930-130931,raw,early,,52.521,Player-470E,10,3,3,Player-470E > Player-CC68 > Player-74C1,,,88.31
+20260930-130931,raw,early,,97.201,Player-F7E0,10,3,3,Player-F7E0 > Player-F494 > Player-DDA6,,,77.23
+20260930-130931,raw,early,,158.713,Player-DDA6,10,3,3,Player-DDA6 > Player-F494 > Player-CC68,,,68.64
+20260930-130931,raw,early,,213.749,Player-F494,8,2,2,Player-F494 > Player-01BF,,,60.04
+20260930-130931,raw,early,,258.387,Player-CC68,8,2,2,Player-CC68 > Player-F494,,,54.35
+20260930-131331,raw,early,,5.558,Player-470E,10,3,1,Player-470E,,,100
+20260930-131331,raw,early,,52.872,Player-470E,10,3,3,Player-470E > Player-F494 > Player-01BF,,,88.79
+20260930-131331,raw,early,,97.678,Player-74C1,10,3,3,Player-74C1 > Player-C842 > Player-CC68,,,77.38
+20260930-131331,raw,early,,165.076,Player-CC68,10,3,3,Player-CC68 > Player-01BF > Player-F7E0,,,68.45
+20260930-131748,raw,early,,5.675,Player-470E,10,3,1,Player-470E,,,100
+20260930-131748,raw,early,,53.595,Player-470E,10,3,3,Player-470E > Player-74C1 > Player-F7E0,,,88.41
+20260930-131748,raw,early,,98.839,Player-470E,10,3,3,Player-470E > Player-01BF > Player-C842,,,77.32
+20260930-131748,raw,early,,159.711,Player-BCA0,10,3,3,Player-BCA0 > Player-F7E0 > Player-CC68,,,68.18
+20260930-131748,raw,early,,214.465,Player-470E,7,2,2,Player-470E > Player-C842,,,60.56
+20260930-131949,raw,early,,5.959,Player-470E,10,3,1,Player-470E,,,100
+20260930-131949,raw,early,,53.439,Player-470E,10,3,3,Player-470E > Player-01BF > Player-F7E0,,,88.27
+20260930-132907,raw,early,,5.998,Player-470E,10,3,1,Player-470E,,,100
+20260930-132907,raw,early,,53.562,Player-470E,10,3,3,Player-470E > Player-F494 > Player-01BF,,,88.5
+20260930-132907,raw,early,,98.514,Player-74C1,10,3,3,Player-74C1 > Player-F494 > Player-01BF,,,77.75
+20260930-132907,raw,early,,167.632,Player-470E,10,3,3,Player-470E > Player-01BF > Player-F494,,,68.24
+20260930-132907,raw,early,,222.27,,10,3,3,Player-F494 > Player-BCA0 > Player-74C1,,,57.33
+20260930-132907,raw,early,,268.588,,10,3,3,Player-01BF > Player-F7E0 > Player-F494,,,47.5
+20260930-132907,raw,early,,318.148,Player-BCA0,10,3,3,Player-BCA0 > Player-F494 > Player-CC68,,,41.92
+20260930-132907,raw,early,,385.178,Player-74C1,10,3,3,Player-74C1 > Player-F494 > Player-BCA0,,,39.24
+20260930-132907,raw,early,,432.176,Player-717E,10,3,3,Player-717E > Player-01BF > Player-F7E0,,,33.24
+20260930-132907,raw,early,,481.858,Player-470E,10,3,3,Player-470E > Player-CC68 > Player-C842,,,26.44
+20260930-133514,raw,early,,5.607,Player-470E,10,3,1,Player-470E,,,100
+20260930-133514,raw,early,,52.963,Player-470E,10,3,3,Player-470E > Player-01BF > Player-F494,,,88.64
+20260930-133514,raw,early,,98.036,Player-01BF,10,3,3,Player-01BF > Player-F494 > Player-C842,,,77.63
+20260930-133514,raw,early,,162.115,Player-717E,10,3,3,Player-717E > Player-F7E0 > Player-CC68,,,68.24
+20260930-133514,raw,early,,216.913,Player-DDA6,10,3,3,Player-DDA6 > Player-C842 > Player-01BF,,,58.42
+20260930-133514,raw,early,,261.433,Player-717E,9,3,3,Player-717E > Player-C842 > Player-CC68,,,50.54
+20260930-134135,raw,early,,5.994,Player-470E,10,3,1,Player-470E,,,100
+20260930-134135,raw,early,,53.592,Player-470E,10,3,3,Player-470E > Player-F494 > Player-01BF,,,89.11
+20260930-134135,raw,early,,98.512,Player-CC68,10,3,3,Player-CC68 > Player-F494 > Player-01BF,,,77.88
+20260930-134135,raw,early,,163.834,Player-DDA6,10,3,3,Player-DDA6 > Player-F494 > Player-CC68,,,67.91
+20260930-134135,raw,early,,218.672,Player-DDA6,10,3,3,Player-DDA6 > Player-717E > Player-CC68,,,58.24
+20260930-134135,raw,early,,265.666,,10,3,3,Player-CC68 > Player-F494 > Player-01BF,,,50.02
+20260930-134554,raw,early,,5.722,Player-470E,10,3,1,Player-470E,,,100
+20260930-134554,raw,early,,52.918,Player-470E,10,3,3,Player-470E > Player-F494 > Player-CC68,,,88.59
+20260930-134554,raw,early,,97.718,Player-717E,10,3,3,Player-717E > Player-F494 > Player-74C1,,,78.51
+20260930-134554,raw,early,,157.918,Player-74C1,10,3,3,Player-74C1 > Player-C842 > Player-CC68,,,68.55
+20260930-135458,raw,early,,5.555,Player-470E,10,3,1,Player-470E,,,100
+20260930-135458,raw,early,,52.555,Player-470E,10,3,3,Player-470E > Player-01BF > Player-CC68,,,88.39
+20260930-135458,raw,early,,97.557,Player-F7E0,10,3,3,Player-F7E0 > Player-CC68 > Player-C842,,,76.8
+20260930-135458,raw,early,,164.393,Player-74C1,10,3,3,Player-74C1 > Player-F494 > Player-F7E0,,,68.08
+20260930-135458,raw,early,,219.785,Player-74C1,9,3,3,Player-74C1 > Player-DDA6 > Player-C842,,,56.87
+20260930-135458,raw,early,,264.831,Player-01BF,10,3,3,Player-01BF > Player-CC68 > Player-F7E0,,,48.09
+20260930-135458,raw,early,,344.025,Player-717E,10,3,3,Player-717E > Player-01BF > Player-F7E0,,,38.81
+20260930-135458,raw,early,,390.903,Player-74C1,8,2,2,Player-74C1 > Player-717E,,,33.36
+20260930-135458,raw,early,,441.661,Player-470E,10,3,3,Player-470E > Player-BCA0 > Player-01BF,,,27.37
+20260930-135458,raw,early,,487.381,,8,2,2,Player-BCA0 > Player-CC68,,,23.28
+20260930-140020,raw,early,,5.595,Player-470E,10,3,1,Player-470E,,,100
+20260930-140020,raw,early,,53.233,Player-470E,10,3,3,Player-470E > Player-F7E0 > Player-01BF,,,88.33
+20260930-140955,raw,early,,5.834,Player-470E,10,3,1,Player-470E,,,100
+20260930-140955,raw,early,,53.64,Player-470E,10,3,3,Player-470E > Player-CC68 > Player-F494,,,88.87
+20260930-140955,raw,early,,98.232,Player-470E,10,3,3,Player-470E > Player-F494 > Player-CC68,,,78.92
+20260930-140955,raw,early,,167.988,Player-717E,10,3,3,Player-717E > Player-DDA6 > Player-CC68,,,68.78
+20260930-140955,raw,early,,222.866,Player-CC68,10,3,3,Player-CC68 > Player-C842 > Player-BCA0,,,57.8
+20260930-140955,raw,early,,269.022,,10,3,3,Player-01BF > Player-C842 > Player-DDA6,,,49.25
+20260930-140955,raw,early,,318.144,Player-74C1,10,3,3,Player-74C1 > Player-CC68 > Player-01BF,,,40.39
+20260930-140955,raw,early,,361.938,Player-74C1,10,3,3,Player-74C1 > Player-01BF > Player-BCA0,,,37.98
+20260930-140955,raw,early,,416.784,Player-CC68,10,3,3,Player-CC68 > Player-F494 > Player-C842,,,30.85
+20260930-140955,raw,early,,468.54,Player-F494,6,2,2,Player-F494 > Player-DDA6,,,24.68
+20260930-140955,raw,early,,523.972,,6,2,2,Player-01BF > Player-BCA0,,,21.64
+20260930-142129,raw,early,,5.561,Player-F494,10,3,1,Player-F494,,,100
+20260930-142129,raw,early,,53.555,Player-F494,10,3,3,Player-F494 > Player-E1F6 > Player-01BF,,,88.83
+20260930-142129,raw,early,,98.079,Player-CC68,10,3,3,Player-CC68 > Player-01BF > Player-E1F6,,,77.81
+20260930-142129,raw,early,,168.557,Player-E1F6,10,3,3,Player-E1F6 > Player-F494 > Player-717E,,,68.49
+20260930-142129,raw,early,,223.111,Player-E1F6,10,3,3,Player-E1F6 > Player-F494 > Player-C842,,,59.12
+20260930-142522,raw,early,,8.241,,10,3,3,Player-C842 > Player-DDA6 > Player-E1F6,,,99.96
+20260930-142522,raw,early,,55.511,Player-74C1,10,3,3,Player-74C1 > Player-DDA6 > Player-CC68,,,88.56
+20260930-142522,raw,early,,102.557,Player-F494,10,3,3,Player-F494 > Player-CC68 > Player-74C1,,,76.9
+20260930-142522,raw,early,,163.469,Player-C842,10,3,3,Player-C842 > Player-CC68 > Player-01BF,,,68.44
+20260930-143043,raw,early,,6.116,Player-F494,10,3,1,Player-F494,,,100
+20260930-143043,raw,early,,53.478,Player-C842,10,3,3,Player-C842 > Player-E1F6 > Player-74C1,,,88.53
+20260930-143043,raw,early,,98.678,Player-01BF,10,3,3,Player-01BF > Player-CC68 > Player-F494,,,77.9
+20260930-143043,raw,early,,162.31,Player-C842,10,3,3,Player-C842 > Player-CC68 > Player-F7E0,,,68.56
+20260930-143043,raw,early,,217.272,,10,3,3,Player-DDA6 > Player-C842 > Player-01BF,,,57.29
+20260930-143043,raw,early,,278.264,,7,2,2,Player-F7E0 > Player-DDA6,,,48.82
+20260930-144016,raw,early,,5.64,Player-F494,10,3,1,Player-F494,,,100
+20260930-144016,raw,early,,52.922,Player-F494,10,3,3,Player-F494 > Player-BCA0 > Player-F7E0,,,89.04
+20260930-144016,raw,early,,97.358,Player-74C1,10,3,3,Player-74C1 > Player-E1F6 > Player-CC68,,,79.4
+20260930-144016,raw,early,,184.43,Player-74C1,10,3,3,Player-74C1 > Player-CC68 > Player-E1F6,,,68.71
+20260930-144016,raw,early,,238.988,Player-74C1,10,3,3,Player-74C1 > Player-DDA6 > Player-717E,,,57.96
+20260930-144016,raw,early,,284.194,,8,2,2,Player-F494 > Player-717E,,,52.11
+20260930-144016,raw,early,,339.82,Player-C842,10,3,3,Player-C842 > Player-F494 > Player-F7E0,,,43.37
+20260930-144016,raw,early,,406.862,Player-CC68,10,3,3,Player-CC68 > Player-E1F6 > Player-01BF,,,39.23
+20260930-144016,raw,early,,453.538,,3,1,1,Player-E1F6,,,35.5
+20260930-144016,raw,early,,501.738,Player-E1F6,10,3,3,Player-E1F6 > Player-01BF > Player-CC68,,,31.04
+20260930-144536,raw,early,,8.084,,10,3,3,Player-F7E0 > Player-74C1 > Player-BCA0,,,99.98
+20260930-144536,raw,early,,55.84,Player-74C1,10,3,3,Player-74C1 > Player-E1F6 > Player-F494,,,88.46
+20260930-144536,raw,early,,103.602,Player-BCA0,10,3,3,Player-BCA0 > Player-CC68 > Player-F494,,,77.24
+20260930-144536,raw,early,,161.72,Player-717E,10,3,3,Player-717E > Player-01BF > Player-E1F6,,,68.69
+20260930-144536,raw,early,,216.834,Player-717E,10,3,3,Player-717E > Player-F7E0 > Player-01BF,,,58.27
+20260930-144536,raw,early,,261.594,,1,0,1,Player-717E,,,51.44
+20260930-145035,raw,early,,5.961,Player-F494,10,3,1,Player-F494,,,100
+20260930-145035,raw,early,,53.437,Player-F494,10,3,3,Player-F494 > Player-E1F6 > Player-C842,,,88.71
+20260930-145035,raw,early,,98.115,Player-CC68,10,3,3,Player-CC68 > Player-F494 > Player-01BF,,,77.77
+20260930-145035,raw,early,,155.631,Player-01BF,10,3,3,Player-01BF > Player-F7E0 > Player-CC68,,,68.3
+20260930-145035,raw,early,,210.671,Player-CC68,10,3,3,Player-CC68 > Player-74C1 > Player-F494,,,57.2
+20260930-145735,raw,early,,6.002,Player-F494,10,3,1,Player-F494,,,100
+20260930-145735,raw,early,,53.32,Player-F494,10,3,3,Player-F494 > Player-74C1 > Player-01BF,,,89
+20260930-145735,raw,early,,97.994,Player-74C1,10,3,3,Player-74C1 > Player-E1F6 > Player-F494,,,77.93
+20260930-145735,raw,early,,164.2,Player-DDA6,10,3,3,Player-DDA6 > Player-E1F6 > Player-F494,,,68.53
+20260930-145735,raw,early,,219.27,Player-DDA6,10,3,3,Player-DDA6 > Player-E1F6 > Player-C842,,,57.19
+20260930-145735,raw,early,,265.51,,10,3,3,Player-01BF > Player-F494 > Player-F7E0,,,48.55
+20260930-145735,raw,early,,342.354,Player-C842,10,3,3,Player-C842 > Player-CC68 > Player-74C1,,,38.64
+20260930-161109,raw,early,,5.761,Player-3760,10,3,1,Player-3760,,,100
+20260930-161109,raw,early,,53.076,Player-3760,10,3,3,Player-3760 > Player-10E1 > Player-8B8A,,,89.46
+20260930-161109,raw,early,,97.678,Player-781D,10,3,3,Player-781D > Player-00E6 > Player-6B3D,,,79.14
+20260930-161109,raw,early,,176.636,Player-DDA6,10,3,3,Player-DDA6 > Player-F273 > Player-C729,,,68.53
+20260930-161736,raw,early,,5.843,Player-3760,10,3,1,Player-3760,,,100
+20260930-161736,raw,early,,53.363,Player-3760,10,3,3,Player-3760 > Player-00E6 > Player-C729,,,89.77
+20260930-161736,raw,early,,98.359,Player-3760,10,3,3,Player-3760 > Player-00E6 > Player-10E1,,,79.25
+20260930-161736,raw,early,,171.075,Player-C729,10,3,3,Player-C729 > Player-00E6 > Player-BCA0,,,68.27
+20260930-161736,raw,early,,226.111,Player-3760,10,3,3,Player-3760 > Player-00E6 > Player-DDA6,,,59.16
+20260930-162218,raw,early,,5.481,Player-3760,10,3,1,Player-3760,,,100
+20260930-162218,raw,early,,52.765,Player-3760,10,3,3,Player-3760 > Player-8B8A > Player-C729,,,88.7
+20260930-162218,raw,early,,97.399,Player-F273,10,3,3,Player-F273 > Player-5862 > Player-3760,,,78.09
+20260930-162218,raw,early,,176.119,Player-8B8A,10,3,3,Player-8B8A > Player-C729 > Player-6B3D,,,68.37
+20260930-162757,raw,early,,5.473,Player-3760,10,3,1,Player-3760,,,100
+20260930-162757,raw,early,,52.875,Player-3760,10,3,3,Player-3760 > Player-5862 > Player-10E1,,,89.18
+20260930-162757,raw,early,,97.313,Player-C729,10,3,3,Player-C729 > Player-3760 > Player-5862,,,79.46
+20260930-162757,raw,early,,172.551,Player-F273,10,3,3,Player-F273 > Player-C729 > Player-3760,,,68.17
+20260930-162757,raw,early,,227.423,Player-F273,10,3,3,Player-F273 > Player-5862 > Player-10E1,,,57.71
+20260930-162757,raw,early,,272.181,Player-BCA0,8,2,2,Player-BCA0 > Player-F273,,,49.14
+20260930-163327,raw,early,,5.591,Player-3760,10,3,1,Player-3760,,,100
+20260930-163327,raw,early,,52.593,Player-3760,10,3,3,Player-3760 > Player-5862 > Player-F273,,,89.37
+20260930-163327,raw,early,,97.159,Player-781D,10,3,3,Player-781D > Player-5862 > Player-3760,,,78.48
+20260930-163327,raw,early,,168.949,Player-C729,10,3,3,Player-C729 > Player-5862 > Player-BCA0,,,68.3
+20260930-163327,raw,early,,223.827,,2,0,1,Player-8B8A,,,61.13
+20260930-163913,raw,early,,5.917,Player-3760,10,3,1,Player-3760,,,100
+20260930-163913,raw,early,,53.279,Player-3760,10,3,3,Player-3760 > Player-DCBD > Player-C729,,,89.32
+20260930-163913,raw,early,,98.399,Player-6B3D,10,3,3,Player-6B3D > Player-DCBD > Player-C729,,,79.05
+20260930-163913,raw,early,,178.437,Player-6B3D,10,3,3,Player-6B3D > Player-C729 > Player-DCBD,,,68.36
+20260930-163913,raw,early,,233.551,,2,0,1,Player-DCBD,,,58.98
+20260930-164624,raw,early,,5.72,Player-3760,10,3,1,Player-3760,,,100
+20260930-164624,raw,early,,53.52,Player-3760,10,3,3,Player-3760 > Player-C729 > Player-8B8A,,,88.7
+20260930-164624,raw,early,,98.28,Player-DDA6,10,3,3,Player-DDA6 > Player-DCBD > Player-3760,,,78.71
+20260930-164624,raw,early,,172.228,Player-10E1,10,3,3,Player-10E1 > Player-DCBD > Player-3760,,,68.31
+20260930-164624,raw,early,,227.072,Player-8B8A,10,3,3,Player-8B8A > Player-DCBD > Player-DDA6,,,59.34
+20260930-164624,raw,early,,271.824,Player-BCA0,8,2,2,Player-BCA0 > Player-DDA6,,,52.29
+20260930-164624,raw,early,,325.344,,9,3,3,Player-DCBD > Player-DDA6 > Player-10E1,,,47.88
+20260930-165517,raw,early,,5.795,Player-3760,10,3,1,Player-3760,,,100
+20260930-165517,raw,early,,52.713,Player-3760,10,3,3,Player-3760 > Player-F273 > Player-781D,,,88.89
+20260930-165517,raw,early,,97.313,Player-C729,10,3,3,Player-C729 > Player-DCBD > Player-3760,,,78.14
+20260930-165517,raw,early,,177.831,Player-C729,10,3,3,Player-C729 > Player-BCA0 > Player-DCBD,,,68.23
+20260930-165517,raw,early,,232.705,Player-DDA6,9,3,3,Player-DDA6 > Player-BCA0 > Player-781D,,,58.27
+20260930-165517,raw,early,,277.703,Player-F273,8,2,2,Player-F273 > Player-3760,,,51.56
+20260930-165517,raw,early,,330.705,Player-8B8A,9,3,3,Player-8B8A > Player-DCBD > Player-DDA6,,,46.3
+20260930-165517,raw,early,,445.537,Player-3760,9,3,3,Player-3760 > Player-DCBD > Player-10E1,,,39.4
+20260930-165517,raw,early,,492.657,,2,0,1,Player-F273,,,37.29
+20260930-170422,raw,early,,5.998,Player-3760,10,3,1,Player-3760,,,100
+20260930-170422,raw,early,,53.202,Player-3760,10,3,3,Player-3760 > Player-0AFD > Player-3BD3,,,88.57
+20260930-170422,raw,early,,97.76,Player-781D,10,3,3,Player-781D > Player-3BD3 > Player-C729,,,78.61
+20260930-170422,raw,early,,168.438,Player-DDA6,10,3,3,Player-DDA6 > Player-C729 > Player-0AFD,,,68.41
+20260930-170422,raw,early,,223.59,Player-DDA6,10,3,3,Player-DDA6 > Player-0AFD > Player-3BD3,,,57.75
+20260930-170422,raw,early,,268.348,Player-781D,10,3,3,Player-781D > Player-C729 > Player-3760,,,49.72
+20260930-170422,raw,early,,321.874,Player-C729,10,3,3,Player-C729 > Player-3BD3 > Player-BCA0,,,42.89
+20260930-170422,raw,early,,416.984,Player-C729,8,2,2,Player-C729 > Player-3760,,,39.43
+20260930-170947,raw,early,,6.158,Player-3760,10,3,1,Player-3760,,,100
+20260930-170947,raw,early,,53.838,Player-3760,10,3,3,Player-3760 > Player-0AFD > Player-3BD3,,,89.61
+20260930-170947,raw,early,,98.752,Player-BCA0,10,3,3,Player-BCA0 > Player-0AFD > Player-3760,,,78.82
+20260930-170947,raw,early,,170.946,Player-0AFD,10,3,3,Player-0AFD > Player-BCA0 > Player-8B8A,,,68.24
+20260930-175523,raw,early,,5.994,Player-F494,10,3,1,Player-F494,,,100
+20260930-175523,raw,early,,52.796,Player-F494,10,3,3,Player-F494 > Player-0AFD > Player-B757,,,89.7
+20260930-175523,raw,early,,97.314,Player-0AFD,10,3,3,Player-0AFD > Player-F494 > Player-C842,,,79.71
+20260930-175523,raw,early,,168.468,Player-F494,10,3,3,Player-F494 > Player-08B9 > Player-BCA0,,,68.52
+20260930-175523,raw,early,,223.546,Player-F494,10,3,3,Player-F494 > Player-89AD > Player-D808,,,59.63
+20260930-175523,raw,early,,268.108,Player-C842,10,3,3,Player-C842 > Player-D74D > Player-B757,,,52.83
+20260930-175523,raw,early,,316.106,,9,3,3,Player-89AD > Player-F494 > Player-0AFD,,,46.38
+20260930-175523,raw,early,,375.025,Player-C842,7,2,2,Player-C842 > Player-89AD,,,41.14
+20260930-180129,raw,early,,5.795,Player-F494,10,3,1,Player-F494,,,100
+20260930-180129,raw,early,,53.239,Player-1172,10,3,3,Player-1172 > Player-D74D > Player-0AFD,,,88.5
+20260930-180129,raw,early,,97.959,Player-D74D,10,3,3,Player-D74D > Player-F494 > Player-0AFD,,,78.03
+20260930-180129,raw,early,,169.153,Player-D808,10,3,3,Player-D808 > Player-C842 > Player-B757,,,68.93
+20260930-180129,raw,early,,223.911,Player-D808,10,3,3,Player-D808 > Player-C842 > Player-89AD,,,59.04
+20260930-180129,raw,early,,270.751,,10,3,3,Player-C842 > Player-F494 > Player-89AD,,,50.08
+20260930-180617,raw,early,,5.601,Player-F494,10,3,1,Player-F494,,,100
+20260930-180617,raw,early,,53.081,Player-F494,10,3,3,Player-F494 > Player-B757 > Player-0AFD,,,89.35
+20260930-180617,raw,early,,98.273,Player-F494,10,3,3,Player-F494 > Player-0AFD > Player-B757,,,78.75
+20260930-180617,raw,early,,171.993,Player-B757,10,3,3,Player-B757 > Player-F494 > Player-D74D,,,68.69
+20260930-180617,raw,early,,226.555,Player-D808,10,3,3,Player-D808 > Player-C842 > Player-B757,,,61.3
+20260930-181021,raw,early,,5.879,Player-F494,10,3,1,Player-F494,,,100
+20260930-181021,raw,early,,52.915,Player-F494,10,3,3,Player-F494 > Player-0AFD > Player-89AD,,,89.8
+20260930-181021,raw,early,,97.603,Player-08B9,10,3,3,Player-08B9 > Player-F494 > Player-0AFD,,,79.02
+20260930-181021,raw,early,,169.679,Player-D808,10,3,3,Player-D808 > Player-D74D > Player-F494,,,69.03
+20260930-181643,raw,early,,5.877,Player-F494,10,3,1,Player-F494,,,100
+20260930-181643,raw,early,,53.837,Player-F494,10,3,3,Player-F494 > Player-0AFD > Player-1172,,,89.45
+20260930-181643,raw,early,,98.477,Player-1172,10,3,3,Player-1172 > Player-B757 > Player-89AD,,,79.46
+20260930-181643,raw,early,,169.155,Player-F494,10,3,3,Player-F494 > Player-1172 > Player-BCA0,,,68.95
+20260930-181643,raw,early,,223.867,Player-08B9,9,3,3,Player-08B9 > Player-F494 > Player-89AD,,,59.92
+20260930-181643,raw,early,,268.783,Player-08B9,9,3,3,Player-08B9 > Player-0AFD > Player-F494,,,54.17
+20260930-182315,raw,early,,6.078,Player-F494,10,3,1,Player-F494,,,100
+20260930-182315,raw,early,,53.48,Player-F494,10,3,3,Player-F494 > Player-1172 > Player-B757,,,89.13
+20260930-182315,raw,early,,98.634,Player-F494,10,3,3,Player-F494 > Player-0AFD > Player-C842,,,81.07
+20260930-182315,raw,early,,183.956,Player-F494,10,3,3,Player-F494 > Player-1172 > Player-0AFD,,,68.81
+20260930-182315,raw,early,,239.276,,10,3,3,Player-F494 > Player-89AD > Player-D74D,,,59.28
+20260930-182616,raw,early,,5.555,Player-F494,10,3,1,Player-F494,,,100
+20260930-182616,raw,early,,53.595,Player-F494,10,3,3,Player-F494 > Player-DCBD > Player-D808,,,89.21
+20260930-182616,raw,early,,98.315,Player-D74D,10,3,3,Player-D74D > Player-D808 > Player-F494,,,80
+20260930-183207,raw,early,,5.599,Player-F494,10,3,1,Player-F494,,,100
+20260930-183207,raw,early,,53.005,Player-F494,10,3,3,Player-F494 > Player-BCA0 > Player-DCBD,,,89.79
+20260930-183207,raw,early,,97.559,Player-89AD,10,3,3,Player-89AD > Player-BCA0 > Player-08B9,,,78.88
+20260930-183207,raw,early,,173.713,Player-F494,10,3,3,Player-F494 > Player-DCBD > Player-BCA0,,,68.87
+20260930-183207,raw,early,,228.473,,10,3,3,Player-DCBD > Player-BCA0 > Player-B757,,,60.32
+20260930-183207,raw,early,,273.149,Player-B757,9,3,3,Player-B757 > Player-BCA0 > Player-DCBD,,,52.99
+20260930-183742,raw,early,,5.68,Player-F494,10,3,1,Player-F494,,,100
+20260930-183742,raw,early,,52.958,Player-F494,10,3,3,Player-F494 > Player-DCBD > Player-1172,,,89.58
+20260930-183742,raw,early,,97.554,Player-08B9,10,3,3,Player-08B9 > Player-D74D > Player-D808,,,79.08
+20260930-183742,raw,early,,174.916,Player-D74D,10,3,3,Player-D74D > Player-DCBD > Player-1172,,,68.75
+20260930-184348,raw,early,,6.117,Player-F494,10,3,1,Player-F494,,,100
+20260930-184348,raw,early,,53.519,Player-F494,10,3,3,Player-F494 > Player-1172 > Player-DCBD,,,89.75
+20260930-184348,raw,early,,98.435,Player-F494,10,3,3,Player-F494 > Player-DCBD > Player-08B9,,,79.42
+20260930-184348,raw,early,,167.593,Player-BCA0,10,3,3,Player-BCA0 > Player-DCBD > Player-1172,,,68.08
+20260930-184348,raw,early,,222.309,Player-1172,10,3,3,Player-1172 > Player-DCBD > Player-F494,,,58.1
+20260930-184348,raw,early,,267.313,Player-89AD,9,3,3,Player-89AD > Player-DCBD > Player-1172,,,50.03
+20260930-184348,raw,early,,314.547,Player-08B9,7,2,2,Player-08B9 > Player-C842,,,45.91
+20260930-191231,raw,early,,6.074,Player-F494,10,3,1,Player-F494,,,100
+20260930-191231,raw,early,,54.276,Player-F494,10,3,3,Player-F494 > Player-1BA4 > Player-470E,,,87.96
+20260930-191231,raw,early,,98.798,Player-BCA0,10,3,3,Player-BCA0 > Player-DE24 > Player-1B8E,,,76.5
+20260930-191231,raw,early,,154.834,Player-FBAD,10,3,3,Player-FBAD > Player-BCA0 > Player-1B8E,,,68.14
+20260930-191231,raw,early,,209.994,Player-FBAD,10,3,3,Player-FBAD > Player-1B8E > Player-BCA0,,,58
+20260930-191231,raw,early,,255.468,Player-FBAD,10,3,3,Player-FBAD > Player-74C1 > Player-F494,,,51.42
+20260930-191231,raw,early,,310.904,Player-FBAD,9,3,3,Player-FBAD > Player-74C1 > Player-1BA4,,,42.72
+20260930-191231,raw,early,,383.186,Player-BCA0,9,3,3,Player-BCA0 > Player-F494 > Player-470E,,,38.79
+20260930-192340,raw,early,,5.838,Player-F494,10,3,1,Player-F494,,,100
+20260930-192340,raw,early,,53.16,Player-DDA6,10,3,3,Player-DDA6 > Player-1BA4 > Player-1B8E,,,88.49
+20260930-192340,raw,early,,97.756,Player-89AD,10,3,3,Player-89AD > Player-1B8E > Player-F494,,,76.32
+20260930-192340,raw,early,,149.114,Player-89AD,10,3,3,Player-89AD > Player-F494 > Player-1BA4,,,68.47
+20260930-192340,raw,early,,203.712,Player-1BA4,10,3,3,Player-1BA4 > Player-1B8E > Player-FBAD,,,56.8
+20260930-192340,raw,early,,249.076,Player-74C1,10,3,3,Player-74C1 > Player-1B8E > Player-F494,,,46.17
+20260930-192340,raw,early,,317.192,Player-DDA6,10,3,3,Player-DDA6 > Player-F494 > Player-BCA0,,,38.8
+20260930-192340,raw,early,,365.029,Player-DDA6,10,3,3,Player-DDA6 > Player-1BA4 > Player-1B8E,,,31.27
+20260930-192340,raw,early,,413.224,Player-470E,10,3,3,Player-470E > Player-FBAD > Player-1BA4,,,23.93
+20260930-193130,raw,early,,6.08,Player-F494,10,3,1,Player-F494,,,100
+20260930-193130,raw,early,,53.998,Player-F494,10,3,3,Player-F494 > Player-1B8E > Player-FBAD,,,87.68
+20260930-193130,raw,early,,98.68,Player-F494,10,3,3,Player-F494 > Player-1B8E > Player-FBAD,,,75.34
+20260930-193130,raw,early,,154.314,Player-470E,10,3,3,Player-470E > Player-1B8E > Player-1BA4,,,68.58
+20260930-193130,raw,early,,209.634,Player-470E,10,3,3,Player-470E > Player-F494 > Player-DDA6,,,55.54
+20260930-193130,raw,early,,270.518,Player-1B8E,10,3,3,Player-1B8E > Player-FBAD > Player-F494,,,41.21
+20260930-193130,raw,early,,319.946,Player-1B8E,10,3,3,Player-1B8E > Player-FBAD > Player-F494,,,37.69
+20260930-193906,raw,early,,5.481,Player-F494,10,3,1,Player-F494,,,100
+20260930-193906,raw,early,,53.005,Player-F494,10,3,3,Player-F494 > Player-1B8E > Player-470E,,,87.74
+20260930-193906,raw,early,,114.913,Player-470E,10,3,3,Player-470E > Player-F494 > Player-FBAD,,,70.9
+20260930-193906,raw,early,,162.473,Player-DE24,10,3,3,Player-DE24 > Player-F494 > Player-FBAD,,,66.16
+20260930-193906,raw,early,,208.193,,10,3,3,Player-FBAD > Player-1BA4 > Player-BCA0,,,55.78
+20260930-193906,raw,early,,264.915,Player-BCA0,10,3,3,Player-BCA0 > Player-1B8E > Player-F494,,,45.37
+20260930-193906,raw,early,,331.865,Player-F494,10,3,3,Player-F494 > Player-FBAD > Player-74C1,,,38.68
+20260930-193906,raw,early,,378.627,,7,2,2,Player-89AD > Player-1B8E,,,33.95
+20260930-194816,raw,early,,5.914,Player-F494,10,3,1,Player-F494,,,100
+20260930-194816,raw,early,,53.44,Player-F494,10,3,3,Player-F494 > Player-1B8E > Player-74C1,,,87.67
+20260930-194816,raw,early,,97.994,Player-DDA6,10,3,3,Player-DDA6 > Player-1B8E > Player-FBAD,,,75.75
+20260930-194816,raw,early,,152.116,Player-1B8E,10,3,3,Player-1B8E > Player-89AD > Player-FBAD,,,68.49
+20260930-194816,raw,early,,206.752,Player-1B8E,10,3,3,Player-1B8E > Player-FBAD > Player-F494,,,56.03
+20260930-194816,raw,early,,251.826,Player-1B8E,10,3,3,Player-1B8E > Player-FBAD > Player-F494,,,46.07
+20260930-194816,raw,early,,319.952,Player-470E,10,3,3,Player-470E > Player-1B8E > Player-F494,,,38.52
+20260930-194816,raw,early,,367.63,Player-FBAD,8,2,2,Player-FBAD > Player-F494,,,31.04
+20260930-194816,raw,early,,423.548,Player-74C1,7,2,2,Player-74C1 > Player-BCA0,,,22.07
+20260930-195751,raw,early,,6.037,Player-F494,10,3,1,Player-F494,,,100
+20260930-195751,raw,early,,53.12,Player-F494,10,3,3,Player-F494 > Player-1B8E > Player-1BA4,,,88.31
+20260930-195751,raw,early,,97.558,Player-89AD,10,3,3,Player-89AD > Player-F494 > Player-1B8E,,,76.3
+20260930-195751,raw,early,,149.516,Player-1B8E,10,3,3,Player-1B8E > Player-F494 > Player-FBAD,,,68.22
+20260930-195751,raw,early,,204.03,Player-DDA6,10,3,3,Player-DDA6 > Player-89AD > Player-FBAD,,,55.69
+20260930-195751,raw,early,,264.868,Player-DE24,10,3,3,Player-DE24 > Player-F494 > Player-FBAD,,,41.6
+20260930-195751,raw,early,,311.264,Player-DE24,10,3,3,Player-DE24 > Player-1B8E > Player-FBAD,,,38.69
+20260930-195751,raw,early,,358.704,Player-F494,10,3,3,Player-F494 > Player-FBAD > Player-1BA4,,,30.41
+20260930-195751,raw,early,,407.782,Player-F494,10,3,3,Player-F494 > Player-1B8E > Player-BCA0,,,21.76
+20260930-195751,raw,early,,452.702,Player-FBAD,10,3,3,Player-FBAD > Player-470E > Player-DE24,,,13.58
+20260930-200445,raw,early,,5.597,Player-F494,10,3,1,Player-F494,,,100
+20260930-200445,raw,early,,53.561,Player-F494,10,3,3,Player-F494 > Player-FBAD > Player-1B8E,,,87.68
+20260930-200445,raw,early,,98.631,Player-DDA6,10,3,3,Player-DDA6 > Player-1B8E > Player-DE24,,,75.73
+20260930-200445,raw,early,,148.675,Player-1BA4,10,3,3,Player-1BA4 > Player-BCA0 > Player-DE24,,,68.14
+20260930-201108,raw,early,,6.115,Player-F494,10,3,1,Player-F494,,,100
+20260930-201108,raw,early,,53.477,Player-F494,10,3,3,Player-F494 > Player-1B8E > Player-470E,,,87.93
+20260930-201108,raw,early,,97.951,Player-BCA0,10,3,3,Player-BCA0 > Player-F494 > Player-1B8E,,,76.46
+20260930-201108,raw,early,,147.033,Player-DE24,10,3,3,Player-DE24 > Player-1B8E > Player-F494,,,68.45
+20260930-201108,raw,early,,201.949,Player-470E,10,3,3,Player-470E > Player-FBAD > Player-F494,,,56.28
+20260930-201108,raw,early,,248.701,,10,3,3,Player-1B8E > Player-1BA4 > Player-FBAD,,,44.67
+20260930-201108,raw,early,,317.425,Player-FBAD,10,3,3,Player-FBAD > Player-1B8E > Player-F494,,,38.32
+20260930-203200,raw,early,,5.879,Player-F494,10,3,1,Player-F494,,,100
+20260930-203200,raw,early,,53.799,Player-F494,10,3,3,Player-F494 > Player-1B8E > Player-DE24,,,88.07
+20260930-203200,raw,early,,117.959,Player-F494,10,3,3,Player-F494 > Player-FBAD > Player-1B8E,,,71.69
+20260930-203200,raw,early,,163.755,Player-DE24,10,3,3,Player-DE24 > Player-1B8E > Player-FBAD,,,66.79
+20260930-203200,raw,early,,210.639,Player-DE24,10,3,3,Player-DE24 > Player-1B8E > Player-74C1,,,55.46
+20260930-203200,raw,early,,261.711,Player-BCA0,10,3,3,Player-BCA0 > Player-F494 > Player-470E,,,46.86
+20260930-203200,raw,early,,331.389,Player-1B8E,10,3,3,Player-1B8E > Player-FBAD > Player-F494,,,38.53
+20260930-203200,raw,early,,378.233,Player-DE24,10,3,3,Player-DE24 > Player-FBAD > Player-74C1,,,30.67
+20260930-203200,raw,early,,429.301,Player-BCA0,10,3,3,Player-BCA0 > Player-1B8E > Player-74C1,,,22.51
+20260930-203600,raw,early,,5.715,Player-F494,10,3,1,Player-F494,,,100
+20260930-203600,raw,early,,53.153,Player-F494,10,3,3,Player-F494 > Player-1B8E > Player-89AD,,,88.14
+20260930-203600,raw,early,,97.757,Player-DDA6,10,3,3,Player-DDA6 > Player-1B8E > Player-FBAD,,,76.91
+20260930-203600,raw,early,,152.471,Player-74C1,10,3,3,Player-74C1 > Player-F494 > Player-1B8E,,,68.31
+20260930-203947,raw,early,,5.764,Player-F494,10,3,1,Player-F494,,,100
+20260930-203947,raw,early,,53.158,Player-F494,10,3,3,Player-F494 > Player-FBAD > Player-DE24,,,87.32
+20260930-203947,raw,early,,97.962,Player-DE24,10,3,3,Player-DE24 > Player-1B8E > Player-FBAD,,,75.36
+20260930-203947,raw,early,,158.24,Player-89AD,10,3,3,Player-89AD > Player-F494 > Player-1B8E,,,68.28
+20260930-204517,raw,early,,5.717,Player-F494,10,3,1,Player-F494,,,100
+20260930-204517,raw,early,,53.279,Player-F494,10,3,3,Player-F494 > Player-1B8E > Player-470E,,,87.65
+20260930-204517,raw,early,,97.765,Player-F494,10,3,3,Player-F494 > Player-FBAD > Player-1B8E,,,75.69
+20260930-204517,raw,early,,154.397,Player-74C1,10,3,3,Player-74C1 > Player-F494 > Player-FBAD,,,68.23
+20260930-204517,raw,early,,209.001,Player-74C1,10,3,3,Player-74C1 > Player-89AD > Player-470E,,,55.63
+20260930-204517,raw,early,,255.119,,10,3,3,Player-DE24 > Player-470E > Player-DDA6,,,45.72
+20260930-204753,raw,early,,6.119,Player-F494,10,3,1,Player-F494,,,100
+20260930-204753,raw,early,,53.677,Player-F494,10,3,3,Player-F494 > Player-1B8E > Player-74C1,,,87.81
+20260930-204753,raw,early,,98.711,Player-89AD,10,3,3,Player-89AD > Player-FBAD > Player-1B8E,,,75.75
+20260930-205557,raw,early,,5.601,Player-F494,10,3,1,Player-F494,,,100
+20260930-205557,raw,early,,53.075,Player-F494,10,3,3,Player-F494 > Player-1B8E > Player-470E,,,88.48
+20260930-205557,raw,early,,97.637,Player-89AD,10,3,3,Player-89AD > Player-1B8E > Player-FBAD,,,76.84
+20260930-205557,raw,early,,156.675,Player-F494,10,3,3,Player-F494 > Player-FBAD > Player-1B8E,,,68.27
+20260930-205557,raw,early,,211.669,Player-470E,10,3,3,Player-470E > Player-1B8E > Player-FBAD,,,55.26
+20260930-205557,raw,early,,256.631,Player-470E,10,3,3,Player-470E > Player-1B8E > Player-F494,,,44.57
+20260930-205557,raw,early,,311.983,Player-89AD,10,3,3,Player-89AD > Player-1B8E > Player-F494,,,38.82
+20260930-205557,raw,early,,358.789,Player-74C1,3,1,1,Player-74C1,,,33.07
+20260930-210018,raw,early,,5.723,Player-F494,10,3,1,Player-F494,,,100
+20260930-210018,raw,early,,53.123,Player-F494,10,3,3,Player-F494 > Player-FBAD > Player-1B8E,,,87.7
+20260930-210018,raw,early,,97.683,Player-1B8E,10,3,3,Player-1B8E > Player-FBAD > Player-DE24,,,76.64
+20260930-210018,raw,early,,152.557,Player-DDA6,10,3,3,Player-DDA6 > Player-F494 > Player-1B8E,,,68.24
+20260930-210743,raw,early,,5.834,Player-F494,10,3,1,Player-F494,,,100
+20260930-210743,raw,early,,53.354,Player-F494,10,3,3,Player-F494 > Player-BCA0 > Player-DE24,,,87.35
+20260930-210743,raw,early,,98.32,Player-470E,10,3,3,Player-470E > Player-FBAD > Player-1B8E,,,75.55
+20260930-210743,raw,early,,147.59,Player-1B8E,10,3,3,Player-1B8E > Player-FBAD > Player-F494,,,68.06
+20260930-210743,raw,early,,202.472,,10,3,3,Player-1B8E > Player-F494 > Player-FBAD,,,56.82
+20260930-210743,raw,early,,247.994,Player-DE24,10,3,3,Player-DE24 > Player-1B8E > Player-FBAD,,,45.59
+20260930-210743,raw,early,,312.672,Player-74C1,10,3,3,Player-74C1 > Player-1B8E > Player-F494,,,38.57
+20260930-210743,raw,early,,359.272,Player-74C1,10,3,3,Player-74C1 > Player-1B8E > Player-FBAD,,,31.66
+20260930-210743,raw,early,,410.789,,8,2,2,Player-1B8E > Player-470E,,,24.77
 20260930-211921,raw,early,,6.039,Player-F494,10,3,1,Player-F494,,,100
 20260930-211921,raw,early,,53.759,Player-F494,10,3,3,Player-F494 > Player-1B8E > Player-FBAD,,,88.3
 20260930-211921,raw,early,,98.321,Player-DDA6,10,3,3,Player-DDA6 > Player-FBAD > Player-1B8E,,,76.56
@@ -12,6 +495,13 @@ log_id,source,phase,last_phase_tick_s,time_s,fixated_player,players_up,expected_
 20260930-211921,raw,last,3,519.669,Player-DDA6,10,3,3,Player-DDA6 > Player-FBAD > Player-F494,1 2 3,,9.42
 20260930-211921,raw,last,33,549.669,Player-BCA0,10,3,3,Player-BCA0 > Player-1B8E > Player-1BA4,1 2 3,,7.08
 20260930-211921,raw,last,63,579.669,Player-BCA0,5,1,1,Player-BCA0,1,Player-BCA0,5.03
+20260930-213241,raw,early,,5.632,Player-F494,10,3,1,Player-F494,,,100
+20260930-213241,raw,early,,53.312,Player-F494,10,3,3,Player-F494 > Player-DE24 > Player-74C1,,,88.49
+20260930-213637,raw,early,,5.995,Player-F494,10,3,1,Player-F494,,,100
+20260930-213637,raw,early,,53.517,Player-F494,10,3,3,Player-F494 > Player-1B8E > Player-DE24,,,88.19
+20260930-213637,raw,early,,98.319,Player-DE24,10,3,3,Player-DE24 > Player-F494 > Player-FBAD,,,76.12
+20260930-213637,raw,early,,145.391,Player-1BA4,10,3,3,Player-1BA4 > Player-1B8E > Player-FBAD,,,68.46
+20260930-213637,raw,early,,200.147,Player-89AD,10,3,3,Player-89AD > Player-1B8E > Player-FBAD,,,56.91
 20260930-214712,raw,early,,6.08,Player-F494,10,3,1,Player-F494,,,100
 20260930-214712,raw,early,,53.762,Player-F494,10,3,3,Player-F494 > Player-1B8E > Player-470E,,,88.52
 20260930-214712,raw,early,,98.914,Player-DE24,10,3,3,Player-DE24 > Player-F494 > Player-1B8E,,,77.05
@@ -25,6 +515,46 @@ log_id,source,phase,last_phase_tick_s,time_s,fixated_player,players_up,expected_
 20260930-214712,raw,last,3,534.138,Player-74C1,10,3,3,Player-74C1 > Player-F494 > Player-FBAD,1 2 3,,9.58
 20260930-214712,raw,last,33,564.138,,10,3,3,Player-1BA4 > Player-F494 > Player-89AD,2 3 4,,7.91
 20260930-214712,raw,last,63,594.138,,3,1,0,,,Player-DDA6,6.45
+20260930-215124,raw,early,,5.561,Player-F494,10,3,1,Player-F494,,,100
+20260930-215124,raw,early,,52.995,Player-F494,10,3,3,Player-F494 > Player-FBAD > Player-DE24,,,87.48
+20260930-215627,raw,early,,5.479,Player-F494,10,3,1,Player-F494,,,100
+20260930-215627,raw,early,,52.475,Player-F494,10,3,3,Player-F494 > Player-FBAD > Player-BCA0,,,88.36
+20260930-215627,raw,early,,97.085,Player-89AD,10,3,3,Player-89AD > Player-F494 > Player-FBAD,,,76.21
+20260930-215627,raw,early,,147.955,Player-F494,10,3,3,Player-F494 > Player-FBAD > Player-1B8E,,,68.19
+20260930-215627,raw,early,,203.235,Player-DDA6,10,3,3,Player-DDA6 > Player-F494 > Player-1B8E,,,55.02
+20260930-215627,raw,early,,247.791,Player-DDA6,10,3,3,Player-DDA6 > Player-1B8E > Player-F494,,,43.39
+20260930-215821,raw,early,,5.715,Player-F494,10,3,1,Player-F494,,,100
+20260930-215821,raw,early,,53.112,Player-F494,10,3,3,Player-F494 > Player-470E > Player-1B8E,,,88.34
+20260930-220441,raw,early,,5.836,Player-F494,10,3,1,Player-F494,,,100
+20260930-220441,raw,early,,52.794,Player-F494,10,3,3,Player-F494 > Player-1BA4 > Player-89AD,,,87.98
+20260930-220441,raw,early,,97.764,Player-1BA4,10,3,3,Player-1BA4 > Player-FBAD > Player-1B8E,,,77.24
+20260930-220441,raw,early,,156.394,Player-1B8E,10,3,3,Player-1B8E > Player-FBAD > Player-F494,,,68.33
+20260930-220441,raw,early,,211.438,Player-1B8E,10,3,3,Player-1B8E > Player-FBAD > Player-89AD,,,55.35
+20260930-220441,raw,early,,257.51,,10,3,3,Player-1B8E > Player-FBAD > Player-74C1,,,44.96
+20260930-220441,raw,early,,323.752,Player-BCA0,10,3,3,Player-BCA0 > Player-FBAD > Player-74C1,,,38.64
+20260930-220831,raw,early,,5.799,Player-F494,10,3,1,Player-F494,,,100
+20260930-220831,raw,early,,53.157,Player-F494,10,3,3,Player-F494 > Player-1B8E > Player-DE24,,,88.25
+20260930-220831,raw,early,,97.751,Player-1B8E,10,3,3,Player-1B8E > Player-F494 > Player-FBAD,,,76.39
+20260930-220831,raw,early,,145.711,Player-1BA4,10,3,3,Player-1BA4 > Player-1B8E > Player-F494,,,68.11
+20260930-221626,raw,early,,5.56,Player-F494,10,3,1,Player-F494,,,100
+20260930-221626,raw,early,,53.278,Player-F494,10,3,3,Player-F494 > Player-1BA4 > Player-74C1,,,88.25
+20260930-221626,raw,early,,97.71,Player-BCA0,10,3,3,Player-BCA0 > Player-FBAD > Player-1BA4,,,76.78
+20260930-221626,raw,early,,155.792,Player-FBAD,10,3,3,Player-FBAD > Player-F494 > Player-1B8E,,,68.77
+20260930-221626,raw,early,,210.43,Player-FBAD,10,3,3,Player-FBAD > Player-F494 > Player-1B8E,,,55.44
+20260930-221626,raw,early,,254.87,Player-74C1,10,3,3,Player-74C1 > Player-FBAD > Player-1B8E,,,45.47
+20260930-221626,raw,early,,328.542,Player-74C1,10,3,3,Player-74C1 > Player-1B8E > Player-F494,,,38.87
+20260930-225431,raw,early,,5.522,Player-F494,10,3,1,Player-F494,,,100
+20260930-225431,raw,early,,53.202,Player-F494,10,3,3,Player-F494 > Player-FBAD > Player-DE24,,,87.95
+20260930-225431,raw,early,,98.238,Player-BCA0,10,3,3,Player-BCA0 > Player-F494 > Player-1B8E,,,76.02
+20260930-225431,raw,early,,155.518,Player-89AD,10,3,3,Player-89AD > Player-1B8E > Player-FBAD,,,68.14
+20260930-225431,raw,early,,210.75,Player-F494,10,3,3,Player-F494 > Player-1B8E > Player-FBAD,,,55.44
+20260930-225431,raw,early,,255.468,Player-DE24,10,3,3,Player-DE24 > Player-1B8E > Player-FBAD,,,43.85
+20260930-225431,raw,early,,309.706,Player-1BA4,10,3,3,Player-1BA4 > Player-1B8E > Player-BCA0,,,38.69
+20260930-225431,raw,early,,357.184,Player-DDA6,10,3,3,Player-DDA6 > Player-1B8E > Player-FBAD,,,31.28
+20260930-225431,raw,early,,405.346,Player-DDA6,9,3,3,Player-DDA6 > Player-F494 > Player-74C1,,,23.1
+20260930-225808,raw,early,,5.716,Player-F494,10,3,1,Player-F494,,,100
+20260930-225808,raw,early,,53.08,Player-F494,10,3,3,Player-F494 > Player-1B8E > Player-FBAD,,,88.38
+20260930-225808,raw,early,,97.796,Player-1B8E,6,2,1,Player-1B8E,,,76.85
 20260930-230802,raw,early,,5.959,Player-F494,10,3,1,Player-F494,,,100
 20260930-230802,raw,early,,53.477,Player-F494,10,3,3,Player-F494 > Player-FBAD > Player-DE24,,,88.55
 20260930-230802,raw,early,,98.639,Player-FBAD,10,3,3,Player-FBAD > Player-1B8E > Player-F494,,,76.78
@@ -37,6 +567,23 @@ log_id,source,phase,last_phase_tick_s,time_s,fixated_player,players_up,expected_
 20260930-230802,raw,early,,448.463,Player-470E,10,3,3,Player-470E > Player-1B8E > Player-F494,,,12.66
 20260930-230802,raw,last,3,498.427,Player-470E,10,3,3,Player-470E > Player-FBAD > Player-74C1,1 2 3,,9.72
 20260930-230802,raw,last,33,528.427,Player-470E,6,2,2,Player-470E > Player-1B8E,1 2,,7.96
+20260930-231403,raw,early,,5.677,Player-F494,10,3,1,Player-F494,,,100
+20260930-231403,raw,early,,52.845,Player-F494,10,3,3,Player-F494 > Player-FBAD > Player-1B8E,,,88.52
+20260930-231403,raw,early,,97.641,Player-DDA6,10,3,3,Player-DDA6 > Player-F494 > Player-DE24,,,76.98
+20260930-231403,raw,early,,152.955,Player-FBAD,10,3,3,Player-FBAD > Player-1B8E > Player-89AD,,,68.14
+20260930-231403,raw,early,,207.797,Player-BCA0,8,2,2,Player-BCA0 > Player-F494,,,55.5
+20260930-231723,raw,early,,5.555,Player-F494,10,3,1,Player-F494,,,100
+20260930-231723,raw,early,,53.117,Player-F494,10,3,3,Player-F494 > Player-1B8E > Player-1BA4,,,88.44
+20260930-231723,raw,early,,114.549,Player-1B8E,10,3,3,Player-1B8E > Player-FBAD > Player-DE24,,,73.52
+20260930-231723,raw,early,,159.473,Player-74C1,10,3,3,Player-74C1 > Player-FBAD > Player-F494,,,68.27
+20260930-232430,raw,early,,5.602,Player-F494,10,3,1,Player-F494,,,100
+20260930-232430,raw,early,,53.038,Player-F494,10,3,3,Player-F494 > Player-FBAD > Player-1B8E,,,88.65
+20260930-232430,raw,early,,97.594,Player-470E,10,3,3,Player-470E > Player-FBAD > Player-1B8E,,,75.82
+20260930-232430,raw,early,,145.714,Player-DDA6,10,3,3,Player-DDA6 > Player-F494 > Player-FBAD,,,68.43
+20260930-232430,raw,early,,200.556,Player-F494,10,3,3,Player-F494 > Player-1B8E > Player-FBAD,,,56.98
+20260930-232430,raw,early,,245.154,Player-89AD,10,3,3,Player-89AD > Player-1B8E > Player-F494,,,45.41
+20260930-232430,raw,early,,322.186,Player-1BA4,10,3,3,Player-1BA4 > Player-FBAD > Player-1B8E,,,38.6
+20260930-232430,raw,early,,368.91,Player-89AD,9,3,3,Player-89AD > Player-FBAD > Player-74C1,,,31.42
 20260930-233450,raw,early,,5.835,Player-F494,10,3,1,Player-F494,,,100
 20260930-233450,raw,early,,53.519,Player-F494,10,3,3,Player-F494 > Player-FBAD > Player-1B8E,,,87.3
 20260930-233450,raw,early,,98.435,Player-DDA6,10,3,3,Player-DDA6 > Player-FBAD > Player-1B8E,,,74.97

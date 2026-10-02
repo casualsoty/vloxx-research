@@ -1,17 +1,21 @@
 # Vloxx (Nexus of Eternity) CM — mechanics research
 
-Research into how the Guild Wars 2 raid boss **Vloxx** (encounter "Nexus of Eternity", arcdps boss id **28106**) picks
-targets for its **3-people greens** (*Judgment of Eternity*), how **Fixated** works, and the **Ascension orbs / Aspect** adds.
-Done from arcdps logs between 2026-10-01 and 2026-10-02 with Claude Code. Owner: Tanguy (account plays in the
+A knowledge base on the Guild Wars 2 raid boss **Vloxx** (encounter "Nexus of Eternity", arcdps boss id **28106**),
+Challenge Mode, built from arcdps logs with Claude Code since 2026-10-01. Owner: Tanguy (plays in the
 "Chosey / Player-1B8E / Player-FBAD …" squad, whose raw logs are in `logs/raw`).
 
 **Start here as a new session:** read this file, then [FINDINGS.md](FINDINGS.md), then run
-`node scripts/build_dataset.js && node scripts/key_checks.js` to see every headline number recomputed from the logs.
+`node scripts/build_all.js` to see every headline number recomputed from the logs.
 
 ## The goal behind the research
-The user wanted to understand why green rounds sometimes have fewer than 3 targets, and ultimately **how to
-consistently get fewer than 3 greens** (so the group doesn't have to deal with them). Current best answer — see FINDINGS §3:
-**the "+2.5s Fixated" timing bug makes the last-phase +63s green round come out 2 greens short (3 → 1), 4 of 4 cases.**
+Gather **general, evidence-backed knowledge about how Vloxx CM works** — how each mechanic picks its targets, its timers,
+what adds do and when they respawn, where things spawn — so the group can plan the fight from facts instead of guesses.
+Every claim is tied to log evidence and a confidence tag, and disproved ideas are kept so they aren't re-tested.
+
+Topics so far: 3-people greens (*Judgment of Eternity*), Fixated, Probability Distribution, 2-people green shackles
+(*Ascension's Sacrifice*), Ascension orbs, the Aspect adds (respawn, CC, spawn points), arena coordinates. A notable
+practical result: the "+2.5 s Fixated" timing bug that makes the last-phase +63 s green round come out 2 greens short
+(FINDINGS §3).
 
 ## Folder layout
 ```
@@ -43,6 +47,12 @@ scripts/             parser + loaders + dataset builder + checks (Node.js, no de
 Times are seconds from log start. **Raw logs start ~3 s later than EI** (EI shows the first Fixated at 0 s, raw at 3.0 s).
 "Last phase" = from the start of Vloxx's channel skill **81071**; its rounds are at **+3, +33, +63 s** (greens),
 **+23, +43, +63 s** (Probability Distribution) and Fixated ticks at **+2.5, +22.5, +42.5, +62.5 s**.
+
+## Automation (GitHub Actions → GitHub Pages)
+Every push to `main` runs `.github/workflows/build-docs.yml`: Node 22 runs `scripts/build_all.js` (all dataset scripts + key checks +
+doc page) on the logs in the repo, then publishes the page with FINDINGS/README/data/scripts to GitHub Pages
+(repo: github.com/tanguysanquirgo/vloxx-research). One-time setup: repo **Settings → Pages → Source: GitHub Actions**.
+Locally: `node scripts/build_all.js` does the same (writes data/*.csv and docs/index.html).
 
 ## How to run
 ```

@@ -2,6 +2,9 @@
 // Re-run after every change to the research notes:   node scripts/build_docs.js
 const fs = require('fs'), path = require('path');
 const ROOT = path.join(__dirname, '..');
+// DOCS_BASE = prefix for links to repo files (default '../' when the page sits in docs/), DOCS_OUT = output folder
+const BASE = process.env.DOCS_BASE ?? '../';
+const OUTDIR = path.join(ROOT, process.env.DOCS_OUT || 'docs');
 const read = f => fs.readFileSync(path.join(ROOT, f), 'utf8');
 
 // ---------- tiny markdown renderer (headings, lists, tables, code, emphasis, links) ----------
@@ -11,7 +14,7 @@ function inline(s) {
   const codes = []; s = s.replace(/`([^`]+)`/g, (_, c) => { codes.push(c); return '\u0000' + (codes.length - 1) + '\u0000'; });
   s = esc(s);
   s = s.replace(/\[(solid|likely(?: → strong)?|open|REJECTED)\]/gi, (m, t) => `<span class="tag tag-${TAGS[t.toLowerCase()] || 'open'}">${t}</span>`);
-  s = s.replace(/\[([^\]]+)\]\(([^)]+)\)/g, (_, t, u) => `<a href="${/^https?:/.test(u) ? u : '../' + u}">${t}</a>`);
+  s = s.replace(/\[([^\]]+)\]\(([^)]+)\)/g, (_, t, u) => `<a href="${/^https?:/.test(u) ? u : BASE + u}">${t}</a>`);
   s = s.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>').replace(/(^|[^*])\*([^*\s][^*]*?)\*(?!\*)/g, '$1<em>$2</em>');
   s = s.replace(/★/g, '<span class="star">★</span>');
   return s.replace(/\u0000(\d+)\u0000/g, (_, i) => `<code>${esc(codes[+i])}</code>`);
@@ -81,9 +84,9 @@ const nav = catSecs.map(c => `<a href="#${c.id}" data-cat="${c.id}"><span class=
   '<div class="navh">Reference</div>' + ref.map((s, k) => `<a href="#ref${k}"><span class="ic">§</span>${esc(s.title)}</a>`).join('') + '<a href="#files"><span class="ic">▤</span>Data & scripts</a>';
 const body = catSecs.map(c => `<section class="cat" id="${c.id}"><h2><span class="ic">${c.icon}</span>${esc(c.name)}</h2>${c.secs.map(s => `<article class="card"><h3>${inline(s.title)}</h3>${md(s.body)}</article>`).join('')}</section>`).join('') +
   `<section class="cat" id="reference"><h2><span class="ic">§</span>Reference</h2>${ref.map((s, k) => `<article class="card" id="ref${k}"><h3>${inline(s.title)}</h3>${md(s.body)}</article>`).join('')}</section>` +
-  `<section class="cat" id="files"><h2><span class="ic">▤</span>Data & scripts</h2><article class="card"><h3>Datasets (data/)</h3><div class="tw"><table><thead><tr><th>file</th><th>rows</th><th>columns</th><th>size</th></tr></thead><tbody>${dataFiles.map(d => `<tr><td><a href="../data/${d.f}"><code>${d.f}</code></a></td><td>${d.rows}</td><td>${d.cols}</td><td>${d.kb} KB</td></tr>`).join('')}</tbody></table></div>
+  `<section class="cat" id="files"><h2><span class="ic">▤</span>Data & scripts</h2><article class="card"><h3>Datasets (data/)</h3><div class="tw"><table><thead><tr><th>file</th><th>rows</th><th>columns</th><th>size</th></tr></thead><tbody>${dataFiles.map(d => `<tr><td><a href="${BASE}data/${d.f}"><code>${d.f}</code></a></td><td>${d.rows}</td><td>${d.cols}</td><td>${d.kb} KB</td></tr>`).join('')}</tbody></table></div>
    <p>Logs: <strong>${count('logs/raw')}</strong> raw CM .zevtc · <strong>${count('logs/ei')}</strong> EI JSON · <strong>${count('logs/raw_nm')}</strong> raw NM.</p></article>
-   <article class="card"><h3>Scripts (scripts/)</h3><div class="tw"><table><thead><tr><th>script</th><th>what it does</th></tr></thead><tbody>${scripts.map(s => `<tr><td><a href="../scripts/${s.f}"><code>${s.f}</code></a></td><td>${esc(s.d)}</td></tr>`).join('')}</tbody></table></div></article></section>`;
+   <article class="card"><h3>Scripts (scripts/)</h3><div class="tw"><table><thead><tr><th>script</th><th>what it does</th></tr></thead><tbody>${scripts.map(s => `<tr><td><a href="${BASE}scripts/${s.f}"><code>${s.f}</code></a></td><td>${esc(s.d)}</td></tr>`).join('')}</tbody></table></div></article></section>`;
 
 const html = `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Vloxx CM Research</title><style>
@@ -101,7 +104,7 @@ nav a{display:flex;gap:8px;align-items:center;padding:6px 8px;border-radius:7px;
 nav a:hover,nav a.on{background:var(--accbg);color:var(--acc)}.ic{width:18px;text-align:center;color:var(--acc);flex:none}
 .navh{margin:14px 8px 4px;font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--mute)}
 .legend{margin-top:16px;font-size:12px;color:var(--mute);display:flex;flex-wrap:wrap;gap:6px}
-main{padding:28px clamp(16px,4vw,48px) 80px;max-width:1100px}
+main{min-width:0;overflow-wrap:anywhere;padding:28px clamp(16px,4vw,48px) 80px;max-width:1100px}
 .hero{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:18px 22px;margin-bottom:22px}
 .hero h2{margin:0 0 6px;font-size:22px}.stats{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
 .stat{background:var(--bg);border:1px solid var(--line);border-radius:9px;padding:8px 12px;font-size:13px}.stat b{display:block;font-size:18px}
@@ -109,10 +112,10 @@ main{padding:28px clamp(16px,4vw,48px) 80px;max-width:1100px}
 .card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px 20px;margin:0 0 14px}
 .card h3{margin:0 0 8px;font-size:16px}.card h4{margin:14px 0 6px;font-size:14px}
 ul,ol{padding-left:22px;margin:6px 0}li{margin:3px 0}p{margin:8px 0}
-code{background:var(--code);padding:1px 5px;border-radius:5px;font:12.5px ui-monospace,Consolas,monospace}
-pre{background:var(--code);padding:10px 12px;border-radius:8px;overflow:auto}pre code{padding:0;background:none}
+code{background:var(--code);padding:1px 5px;border-radius:5px;font:12.5px ui-monospace,Consolas,monospace;overflow-wrap:anywhere;word-break:break-word}
+pre{background:var(--code);padding:10px 12px;border-radius:8px;overflow:auto}pre code{padding:0;background:none;overflow-wrap:normal;word-break:normal}
 .tw{overflow-x:auto;margin:8px 0}table{border-collapse:collapse;font-size:13.5px;min-width:60%}
-th,td{border:1px solid var(--line);padding:5px 9px;text-align:left;vertical-align:top}th{background:var(--bg)}
+th,td{border:1px solid var(--line);padding:5px 9px;text-align:left;vertical-align:top;overflow-wrap:normal}th{background:var(--bg)}
 a{color:var(--acc)}.tag{display:inline-block;font-size:11px;font-weight:600;padding:1px 7px;border-radius:999px;margin:0 2px;white-space:nowrap}
 .tag-solid{color:var(--solid);background:var(--solidbg)}.tag-likely{color:var(--likely);background:var(--likelybg)}
 .tag-open{color:var(--open);background:var(--openbg)}.tag-rejected{color:var(--rej);background:var(--rejbg)}
@@ -140,6 +143,6 @@ q.addEventListener('input',()=>{const t=q.value.trim().toLowerCase();let any=fal
 const links=[...document.querySelectorAll('nav a')];const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){links.forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+e.target.id));}}),{rootMargin:'-20% 0px -70% 0px'});
 document.querySelectorAll('.cat,.card[id]').forEach(s=>io.observe(s));
 </script></body></html>`;
-fs.mkdirSync(path.join(ROOT, 'docs'), { recursive: true });
-fs.writeFileSync(path.join(ROOT, 'docs', 'index.html'), html);
-console.log('wrote docs/index.html —', catSecs.length, 'categories,', ref.length, 'reference sections,', dataFiles.length, 'datasets');
+fs.mkdirSync(OUTDIR, { recursive: true });
+fs.writeFileSync(path.join(OUTDIR, 'index.html'), html);
+console.log('wrote', path.relative(ROOT, path.join(OUTDIR, 'index.html')), '—', catSecs.length, 'categories,', ref.length, 'reference sections,', dataFiles.length, 'datasets');

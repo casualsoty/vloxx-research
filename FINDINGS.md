@@ -2,7 +2,7 @@
 
 Confidence tags: **[solid]** many cases, no counter-example · **[likely]** consistent but small sample · **[open]** unresolved ·
 **[REJECTED]** tested and disproved (kept so nobody re-tests it blindly).
-Sample at time of writing: 49 CM logs (35 raw from the user's squad, 14 EI from other squads), 24 of them reached the last phase;
+Sample at time of writing: 49 CM logs (later 141 CM logs — 128 raw + 13 EI — after adding the rest of the user's folder on 2026-10-02; the extra raw logs are mostly early wipes, so last-phase counts are unchanged) (35 raw from the user's squad, 14 EI from other squads), 24 of them reached the last phase;
 414 green rounds; 326 Fixated applications; 593 Ascension Orbs.
 
 ---
@@ -13,7 +13,7 @@ Sample at time of writing: 49 CM logs (35 raw from the user's squad, 14 EI from 
 * **Slot 1 = the Fixated player**, at any distance. If nobody holds Fixated, slot 1 stays empty and the first marker lands
   ~80 ms late. **[solid]** (165/165 rounds with a fixated player had them first.)
 * **Count = min(3, floor(players up / 3))**, downed/dead players don't count. **[solid]** — 338/338 rounds with a fixated
-  player (excluding the fight-start round) match. Every short round in the user's own logs is explained by downs/deaths.
+  player (excluding the fight-start round) match (2026-10-02 full set of 141 CM logs: **757/758**; the 1 exception is a round 2.6 s before a wipe ended the log). Every short round in the user's own logs is explained by downs/deaths.
 * **Fight start (first round, ~3 s / ~6 s raw):** always only the fixated player (48/49 logs). The others are still at the
   entrance ~4,400 units away. The exception (224233) had 6 players already hitting the boss and got 3. In CM players standing at
   the boss's feet at that moment (EI showed 4 units — actually unloaded positions) were not picked. **[solid]**
@@ -69,13 +69,13 @@ Related "stale fixation" cases (one green lost at +33 s): 050224 (Fixated stealt
 
 ## 5. Ascension Orbs & Aspects
 * Orbs are agents (max HP 14,940). They spawn in **groups of 3, 0.2 s apart, 200–450 units around an Aspect**,
-  **~2.0 s (1.5–2.6 s) after that Aspect's breakbar is broken** — 86/86 confirmed breaks dropped orbs; deaths without a CC
+  **~2.0 s (1.5–2.6 s) after that Aspect's breakbar is broken** — 86/86 confirmed breaks dropped orbs (full set: **250/251**, the miss = break 2.1 s before the log ended); deaths without a CC
   dropped orbs 4/91 times (probably a simultaneous CC elsewhere). **CC drops orbs, death doesn't.** **[solid]**
   Bigger groups (6/11) = overlapping breaks or Vloxx's own breakbar.
-* **Unpicked orbs disappear 120.1 s after spawning** (10/10 that nobody picked; team-change event 5 s after vs 2 s for picked
+* **Unpicked orbs disappear 120.1 s after spawning** (10/10; full set 14/14 that nobody picked; team-change event 5 s after vs 2 s for picked
   ones). Picked orbs: median ~4 s after spawn. Picking one gives the player Ascension. **[solid]**
 * **Aspects (Staff, Spear, Sword) respawn exactly 40.0 s after dying**, each on its own timer, in every phase incl. last phase
-  (Staff 64, Spear 58, Sword 22 deaths). **[solid]**
+  (Staff 64, Spear 58, Sword 22 deaths; full set Staff 199, Spear 156, Sword 36 — all 39.97–40.01 s). **[solid]**
 
 ## 5b. Ascension's Sacrifice — 2-people green "shackles" (Staff phase)  [solid]
 Skill **81076**, cast twice in the Staff phase (~38 s and ~85 s raw time). Marker = agent effect **37976**
