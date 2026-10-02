@@ -151,8 +151,12 @@ q.addEventListener('input',()=>{const t=q.value.trim().toLowerCase();let any=fal
   else if(hit)any=true;});
  cats.forEach(s=>s.classList.toggle('hide',![...s.querySelectorAll('.card')].some(c=>!c.classList.contains('hide'))));
  document.getElementById('none').style.display=any?'none':'block';});
-const links=[...document.querySelectorAll('nav a')];const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){links.forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+e.target.id));}}),{rootMargin:'-20% 0px -70% 0px'});
-document.querySelectorAll('.cat,.card[id]').forEach(s=>io.observe(s));
+const links=[...document.querySelectorAll('nav a')];const targets=links.map(a=>document.getElementById(a.getAttribute('href').slice(1))).filter(Boolean);
+let pinned=null,pinT=0;const setOn=id=>links.forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+id));
+function spy(){if(pinned&&Date.now()-pinT<1200)return;pinned=null;const line=90;let cur=null;for(const s of targets){if(s.offsetParent===null)continue;if(s.getBoundingClientRect().top-line<=0)cur=s;}
+ if(window.innerHeight+window.scrollY>=document.documentElement.scrollHeight-4){const vis=targets.filter(s=>s.offsetParent!==null);cur=vis[vis.length-1]||cur;}if(cur)setOn(cur.id);}
+links.forEach(a=>a.addEventListener('click',()=>{pinned=a.getAttribute('href').slice(1);pinT=Date.now();setOn(pinned);}));
+['wheel','touchstart','keydown'].forEach(t=>window.addEventListener(t,()=>{pinT=0;},{passive:true}));window.addEventListener('scroll',spy,{passive:true});spy();
 </script><script>window.ARENA=${arenaJson};window.PLANS=${plansJson};window.MECH=${mechJson};</script><script>${plannerJs}</script>
 <script>
 function view(){const pl=/^#planner/.test(location.hash);document.body.classList.toggle('planner',pl);document.getElementById('planner-root').classList.toggle('on',pl);
