@@ -1,0 +1,429 @@
+{
+ "logs": 49,
+ "casts": 85,
+ "departureEffectAtS": 1.24,
+ "arrivalEffectAtS": 2.6,
+ "teleportDistance": {
+  "median": 2000,
+  "min": 996,
+  "max": 2009,
+  "castsWithin50OfMedian": 77
+ },
+ "hit1ByDistanceFromVloxx": [
+  {
+   "from": 0,
+   "to": 50,
+   "hitPct": 100,
+   "players": 8
+  },
+  {
+   "from": 50,
+   "to": 100,
+   "hitPct": 100,
+   "players": 32
+  },
+  {
+   "from": 100,
+   "to": 150,
+   "hitPct": 100,
+   "players": 41
+  },
+  {
+   "from": 150,
+   "to": 200,
+   "hitPct": 100,
+   "players": 39
+  },
+  {
+   "from": 200,
+   "to": 250,
+   "hitPct": 100,
+   "players": 56
+  },
+  {
+   "from": 250,
+   "to": 300,
+   "hitPct": 100,
+   "players": 60
+  },
+  {
+   "from": 300,
+   "to": 350,
+   "hitPct": 100,
+   "players": 43
+  },
+  {
+   "from": 350,
+   "to": 400,
+   "hitPct": 100,
+   "players": 31
+  },
+  {
+   "from": 400,
+   "to": 450,
+   "hitPct": 100,
+   "players": 20
+  },
+  {
+   "from": 450,
+   "to": 500,
+   "hitPct": 100,
+   "players": 9
+  },
+  {
+   "from": 500,
+   "to": 550,
+   "hitPct": 40,
+   "players": 10
+  },
+  {
+   "from": 550,
+   "to": 600,
+   "hitPct": 0,
+   "players": 4
+  },
+  {
+   "from": 600,
+   "to": 650,
+   "hitPct": 0,
+   "players": 3
+  },
+  {
+   "from": 650,
+   "to": 700,
+   "hitPct": 0,
+   "players": 10
+  },
+  {
+   "from": 700,
+   "to": 750,
+   "hitPct": 0,
+   "players": 4
+  },
+  {
+   "from": 750,
+   "to": 800,
+   "hitPct": 0,
+   "players": 2
+  },
+  {
+   "from": 800,
+   "to": 850,
+   "hitPct": 0,
+   "players": 3
+  },
+  {
+   "from": 850,
+   "to": 900,
+   "hitPct": 0,
+   "players": 2
+  }
+ ],
+ "hit2ByDistanceFromDeparturePoint": [
+  {
+   "from": 0,
+   "to": 50,
+   "hitPct": 100,
+   "players": 72
+  },
+  {
+   "from": 50,
+   "to": 100,
+   "hitPct": 100,
+   "players": 34
+  },
+  {
+   "from": 100,
+   "to": 150,
+   "hitPct": 96,
+   "players": 28
+  },
+  {
+   "from": 150,
+   "to": 200,
+   "hitPct": 100,
+   "players": 42
+  },
+  {
+   "from": 200,
+   "to": 250,
+   "hitPct": 100,
+   "players": 143
+  },
+  {
+   "from": 250,
+   "to": 300,
+   "hitPct": 97,
+   "players": 91
+  },
+  {
+   "from": 300,
+   "to": 350,
+   "hitPct": 62,
+   "players": 21
+  },
+  {
+   "from": 350,
+   "to": 400,
+   "hitPct": 53,
+   "players": 19
+  },
+  {
+   "from": 400,
+   "to": 450,
+   "hitPct": 33,
+   "players": 6
+  },
+  {
+   "from": 450,
+   "to": 500,
+   "hitPct": 12,
+   "players": 17
+  },
+  {
+   "from": 500,
+   "to": 550,
+   "hitPct": 33,
+   "players": 9
+  },
+  {
+   "from": 550,
+   "to": 600,
+   "hitPct": 0,
+   "players": 2
+  },
+  {
+   "from": 600,
+   "to": 650,
+   "hitPct": 0,
+   "players": 5
+  },
+  {
+   "from": 650,
+   "to": 700,
+   "hitPct": 0,
+   "players": 4
+  },
+  {
+   "from": 700,
+   "to": 750,
+   "hitPct": 0,
+   "players": 2
+  },
+  {
+   "from": 750,
+   "to": 800,
+   "hitPct": 0,
+   "players": 5
+  }
+ ],
+ "hit2Grid": [
+  {
+   "aheadFrom": -500,
+   "besideFrom": 0,
+   "hitPct": 43,
+   "players": 7
+  },
+  {
+   "aheadFrom": -500,
+   "besideFrom": 100,
+   "hitPct": 0,
+   "players": 2
+  },
+  {
+   "aheadFrom": -500,
+   "besideFrom": 200,
+   "hitPct": 0,
+   "players": 1
+  },
+  {
+   "aheadFrom": -250,
+   "besideFrom": 0,
+   "hitPct": 100,
+   "players": 90
+  },
+  {
+   "aheadFrom": -250,
+   "besideFrom": 100,
+   "hitPct": 100,
+   "players": 50
+  },
+  {
+   "aheadFrom": -250,
+   "besideFrom": 200,
+   "hitPct": 97,
+   "players": 34
+  },
+  {
+   "aheadFrom": -250,
+   "besideFrom": 300,
+   "hitPct": 14,
+   "players": 7
+  },
+  {
+   "aheadFrom": -250,
+   "besideFrom": 400,
+   "hitPct": 0,
+   "players": 2
+  },
+  {
+   "aheadFrom": -250,
+   "besideFrom": 500,
+   "hitPct": 0,
+   "players": 1
+  },
+  {
+   "aheadFrom": 0,
+   "besideFrom": 0,
+   "hitPct": 98,
+   "players": 112
+  },
+  {
+   "aheadFrom": 0,
+   "besideFrom": 100,
+   "hitPct": 100,
+   "players": 52
+  },
+  {
+   "aheadFrom": 0,
+   "besideFrom": 200,
+   "hitPct": 94,
+   "players": 50
+  },
+  {
+   "aheadFrom": 0,
+   "besideFrom": 300,
+   "hitPct": 14,
+   "players": 7
+  },
+  {
+   "aheadFrom": 0,
+   "besideFrom": 400,
+   "hitPct": 0,
+   "players": 5
+  },
+  {
+   "aheadFrom": 250,
+   "besideFrom": 0,
+   "hitPct": 93,
+   "players": 40
+  },
+  {
+   "aheadFrom": 250,
+   "besideFrom": 100,
+   "hitPct": 82,
+   "players": 11
+  },
+  {
+   "aheadFrom": 250,
+   "besideFrom": 200,
+   "hitPct": 33,
+   "players": 3
+  },
+  {
+   "aheadFrom": 250,
+   "besideFrom": 300,
+   "hitPct": 0,
+   "players": 3
+  },
+  {
+   "aheadFrom": 250,
+   "besideFrom": 400,
+   "hitPct": 0,
+   "players": 1
+  },
+  {
+   "aheadFrom": 250,
+   "besideFrom": 500,
+   "hitPct": 0,
+   "players": 1
+  },
+  {
+   "aheadFrom": 500,
+   "besideFrom": 0,
+   "hitPct": 29,
+   "players": 7
+  },
+  {
+   "aheadFrom": 500,
+   "besideFrom": 100,
+   "hitPct": 0,
+   "players": 2
+  },
+  {
+   "aheadFrom": 500,
+   "besideFrom": 200,
+   "hitPct": 0,
+   "players": 5
+  },
+  {
+   "aheadFrom": 500,
+   "besideFrom": 400,
+   "hitPct": 0,
+   "players": 1
+  },
+  {
+   "aheadFrom": 500,
+   "besideFrom": 500,
+   "hitPct": 0,
+   "players": 1
+  },
+  {
+   "aheadFrom": 750,
+   "besideFrom": 0,
+   "hitPct": 0,
+   "players": 9
+  }
+ ],
+ "hit2PulseTimesS": {
+  "3.4": 47,
+  "4.0": 51,
+  "2.8": 73,
+  "3.2": 77,
+  "3.8": 13,
+  "3.0": 47,
+  "2.6": 243,
+  "3.6": 23,
+  "4.2": 2
+ },
+ "portal": {
+  "hitsFromArrivalOn": 642,
+  "playerAtExitAfterHitPct": 95,
+  "distanceFromEntranceWhenHit": {
+   "p50": 231,
+   "p90": 283,
+   "max": 521
+  },
+  "landingDistanceFromExitCentre": {
+   "p50": 177,
+   "p90": 295,
+   "max": 427
+  },
+  "lateHits": {
+   "n": 66,
+   "distanceFromEntrance": {
+    "p10": 143,
+    "p50": 238,
+    "p90": 272
+   }
+  },
+  "hitsBySecondOfCast": {
+   "2": 335,
+   "3": 233,
+   "4": 27,
+   "5": 12,
+   "6": 7,
+   "7": 15,
+   "8": 5,
+   "9": 7,
+   "10": 1
+  },
+  "entranceEffectAtS": 2.2,
+  "exitEffectAtS": 3.6,
+  "effectDurationS": 9
+ },
+ "playersWithin400OfArrivalPoint": {
+  "players": 264,
+  "hit": 0
+ }
+}

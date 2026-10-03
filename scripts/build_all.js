@@ -15,8 +15,13 @@ const steps = [
   'excision_geometry.js',    // data/excision_slashes.csv + excision_summary.json: slashes vs telegraphs, semicircle radius
   'excision_strip.js',       // data/excision_strip.csv + excision_strip_summary.json: boon strip / Crippled and the 1.0 s lockout
   'excision_lockout_check.js', // prints the stress test of the 1.0 s strip lockout (FINDINGS §5e)
+  'cast_order.js',           // data/cast_order.csv + cast_order_summary.json: usual order of Vloxx's attacks per phase
+  'slice_through_reality.js', // data/slice_through_reality_summary.json: the two hits (525 then ~300) and the teleport
+  'excision_safespot.js',    // data/excision_melee.csv + excision_safespot_summary.json: melee safety vs distance of the fixated player
   'echoing_blade.js',        // data/echoing_blade_summary.json: spinning half-circle on Vloxx, radius, projectiles
   'breakbars.js',            // data/breakbars.csv + breakbars_summary.json: bar size, when it opens, drain, time to break
+  'phase_entry_fixated.js',  // data/phase_entry_fixated.csv: P2 / P3 entry with a fresh vs carried Fixated
+  'sword_sweetspot.js',      // data/sword_casts.csv + sword_division_summary.json: Sword's Division Eternal shape, target, stack safety
   'build_plans.js',          // validates docs-src/plans/*.json (shared planner templates); fails the build if one is invalid
   'anonymise.js',            // player names → stable pseudonyms in data/, FINDINGS.md, README.md (before anything is printed or published)
   'key_checks.js',          // prints headline conclusions (sanity check in the CI log)

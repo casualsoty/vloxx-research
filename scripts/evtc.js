@@ -31,7 +31,7 @@ function parseEvtc(file) {
     const addr = b.readBigUInt64LE(o), prof = b.readUInt32LE(o + 8), elite = b.readUInt32LE(o + 12);
     const name = b.subarray(o + 28, o + 92).toString('utf8');
     agents.set(addr, { addr, prof, elite, name, isPlayer: elite !== 0xffffffff, species: elite === 0xffffffff ? (prof & 0xffff) : null,
-      hitboxWidth: b.readInt16LE(o + 22) });
+      hitboxWidth: b.readInt16LE(o + 22), toughness: b.readInt16LE(o + 16), concentration: b.readInt16LE(o + 18), healing: b.readInt16LE(o + 20), condition: b.readInt16LE(o + 24) });
     o += 96;
   }
   const nSk = b.readUInt32LE(o); o += 4;

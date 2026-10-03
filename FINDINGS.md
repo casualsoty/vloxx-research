@@ -58,6 +58,27 @@ Current sample (2026-10-03): **175 CM logs** — 162 raw from our squad + 13 EI 
     found (not time since loss, not cause, not holder state, not stealth at the tick). After a +22.5 skip, +42.5 applied **7/7**. **[open]**
   * The previous holder can be re-fixated immediately (233450, 230802, 220703).
 
+* **Entering P2 (Spear) and P3 (Sword): with or without a Fixated carried through the split** (`scripts/phase_entry_fixated.js` →
+  `data/phase_entry_fixated.csv`; 120 P2 entries, 47 P3 entries, raw logs). A phase change goes: split starts → Vloxx returns channelling
+  *Visions of Eternity* with its breakbar (§5i) → the bar is broken → the boss phase resumes ("entry" = end of that cast).
+  * **Fixated is checked when the bar breaks, ~1.4 s before the entry.** If nobody holds it, a new one is applied right there
+    ("fresh": 91 of 120 P2 entries, 29 of 47 P3 entries). If someone still holds one from before the split, nothing is applied and that
+    player simply keeps it ("carried": 27 P2, 16 P3). Truly entering with nobody fixated almost never happens (2 fights each, and Fixated
+    was applied at the entry itself).
+  * **Vloxx's behaviour does not change.** Cast order and timing are identical in both cases, to the tenth of a second.
+    P2: Judgment of Eternity 0 s, Cosmic Charge 4.5 s, Worldpiercer 12.4 s, Raging Storm 18.5 s, Thousand Strikes 27.4 s, Probability
+    Distribution 33.5 s. P3: Judgment of Eternity 0 s, Echoing Blade 4.5 s, Slice Through Reality 9.9 s, Excision Extremis 15.4 s,
+    Probability Distribution 23.2 s, Division Eternal 25.2 s. The first green round (1.4 s after entry) has 3 greens in every case.
+  * **What changes is who is fixated and for how long.**
+    * *Fresh:* the new holder looks random: any distance from Vloxx (ranks 1–10 about equally often), and it is the previous holder in
+      only 5 of 91 (P2) and 3 of 29 (P3). The Fixated lasts until ~58.6 s after the entry unless it is lost (median 46 s in P2, 35 s in P3).
+    * *Carried:* the old Fixated runs out early in the phase (P2: median 17 s after the entry, P3: 11 s), then nobody is fixated for
+      ~9–11 s (3–20 s), and the next one is applied a median 26 s (P2) / 21.6 s (P3) after the entry.
+  * **Side effect of carrying:** attacks early in the phase can land with nobody fixated. First Cosmic Charge (4.5 s): a fixated player
+    existed in 91/91 fresh entries and 24/27 carried ones; the 3 unfixated charges went at a player who was neither fixated nor the closest.
+    First P3 green round: fixated present 17/18 fresh, 6/8 carried (the green count stays 3 either way).
+  **[solid]** (timings, no change in casts) / **[likely]** (random pick of the fresh holder).
+
 ## 3. ★ The way to get fewer greens: the "+2.5 s Fixated" timing bug  **[likely → strong]**
 If nobody holds Fixated when the last phase starts, the **+2.5 s tick** gives it to someone. It lasts exactly 60 s, so it ends
 **10–30 ms after the +62.5 s tick**. That tick still sees a holder → gives Fixated to nobody → the **+63 s green round has no
@@ -253,13 +274,13 @@ Elite Insights (EI) values = what the planner used before.
 | Surrounding Curse (80484 Vloxx, 81230 Staff) | Vloxx, Staff | circle **~200** around its ground marker (~1 s telegraph) | 200 | ✔ |
 | Raging Storm (80810, 81176 Vloxx; 80965 Bulwark) | Vloxx, Bulwark | circle **~150** around its ground marker (~2 s telegraph) | 150 | ✔ |
 | Visions of Eternity (80420, 81017) | Vloxx | circle **~600** (100 % / 0 %, 113 impacts) | 560 | bigger |
-| Slice Through Reality (80585) | Vloxx | circle **~525 around Vloxx**, ground marker 7 s before | "port 220" | **wrong** |
+| Slice Through Reality (80585) | Vloxx | circle **~525 around Vloxx** at 1.2 s, then a **portal of ~300 radius** where Vloxx stood (hits and teleports players to an identical exit ~2,000 away, open ~9 s); see §5m | "port 220" | **wrong** |
 | Excision Extremis (81053; 80901 in the last phase) | Vloxx | **semicircles of radius ~525**, 16 (sometimes 23–24) per cast, each telegraphed 2.0 s before; see §5e | 400 half-circle | bigger (radius), shape ✔ |
 | Excision Extremis (81326) | Sword | diffuse, forward ±450 out to ~2,000; no clean shape | 400 half-circle | **[open]** |
 | Thousand Strikes (80709) | Spear | **forward cone, half-angle ~55° (~110°), radius ~1,100–1,200**; nothing behind | 135°, 1,000 | corrected |
 | Thousand Strikes (80555) | Vloxx | same cone, radius ~1,200–1,500 | — | new |
 | Division Eternal (80483) | Vloxx | **forward band ~900 wide (±450)**, ≥ 1,350 long, nothing behind | "staff sweep" 2,400 × 1,200 | **narrower** |
-| Division Eternal (81330) | Sword | **forward rectangle ~750–800 wide, ~1,650–1,800 long** | — | new |
+| Division Eternal (81330) | Sword | first hit ~500 around the Sword, then a **line of 6 half-circle slashes: ~1,050 wide (±500–550), ~1,800 long**; see §5j | — | corrected |
 | Worldpiercer (81015), "Bulwark arrow" | Cosmic Bulwark | Bulwark stands still for a 4 s cast. Hits 3.9–5.9 s, on **one straight line** (all hits on one bearing): within ~150 of the line → **~300 wide**, out to ≥ 1,500. The line doesn't travel. | 1,850 × 100 | **wider** |
 | Annihilating Orb (81273) | Cosmic Piercer | circle **~375** around the landing spot (ground effect ~1,200 from the Piercer) | 180 + ring 240 | **bigger** |
 | Annihilating Orb (80323) | Vloxx | a narrow line ahead along Vloxx's facing (±150), hits fade by ~900; a forward projectile, not a circle | 240 | **[open]** |
@@ -284,7 +305,7 @@ Scripts `scripts/excision_geometry.js` (→ `data/excision_slashes.csv`, `excisi
 * Each slash is a **semicircle of radius ~525** around its origin: 100 % of players hit out to 500, 46 % at 500–550, 0 % beyond 550
   (Elite Insights draws 400). On the hit side 99.4 % are hit, on the other side 0.7 %.
 * Effect rotation = int16 at byte 26 of the event, in mrad, **clockwise**: a player at bearing b from the origin is hit when
-  norm(b + rotation) is negative. The slash effect is stored 180° from its telegraph when they agree.
+  norm(b + rotation) is negative. The slash effect is stored 180° from its telegraph when they agree, so only the slash effect gives the real hit side.
 * The Aspect of the Sword's version (81326) uses the same slash effect but no A5962B65 telegraph; not analysed for mismatch. **[open]**
 * **All of these slashes are Excision Extremis (damage skill 81053), the ones on Vloxx and the ones further out, and it fires no projectiles.**
   The half-circle on the boss that throws projectiles is a different skill, **Echoing Blade (81271)**, see §5f. Both skills draw the same
@@ -437,6 +458,278 @@ Units: "breakbar damage" as in the game's skill facts (a 1 s Daze = 100, a 2 s S
 * **Vloxx's bar and its health thresholds.** Opens at 68.9–70 % (133 windows), 39–40 % (49) and 9–10 % (12): these look like the thresholds that lead
   into the splits and the last phase, which was not checked separately **[likely]**. *Visions of Eternity* (cast ~19–25 s) is being channelled while the bar is up.
 * Soft CC from conditions is logged as small positive unattributed ticks (median 6–10 per tick) and counts toward the bar like player CC.
+
+## 5j. Aspect of the Sword — Division Eternal: shape, who it targets, when the stack is safe  [solid / likely]
+Script `scripts/sword_sweetspot.js` → `data/sword_casts.csv`, `data/sword_division_summary.json` (part of the full build). 350 casts in 49 logs.
+
+**The attack (skill 81330).** The Sword picks a direction at the start of the cast and keeps it.
+* **~0.4 s: a hit around the Sword**, radius ~500–550 (80 % of players within 400 are hit, 48 % at 500–600, 14 % at 600–700).
+* **0.8 → 1.8 s: six half-circle slashes march outward along that direction**, one every 0.2 s, at 75, 325, 575, 825, 1,075 and 1,325 units
+  from the Sword. They use the same slash effect as Excision Extremis (GUID B4868841…, radius ~525).
+* **Danger zone of the line:** ≥ 95 % hit within 400 of the line, ~20–45 % at 500–600, none at 600+ to the side. Ahead: ~97 % out to 1,600,
+  23 % at 1,800–2,000. Behind the Sword: ~25 % within 200, ~5 % at 200–400. So: **~1,050 wide, from ~200 behind the Sword to ~1,800 ahead**.
+  **[solid]**
+
+**Who it is aimed at.** The line points at one specific player (someone is within 3° of it in 88 % of casts). That player is:
+* **the farthest player from the Sword: 56 %** (one of the two farthest: 68 %);
+* the fixated player: 17 %; the closest player: 2 %; the farthest from Vloxx: 30 %; pure chance would be 11 %.
+
+So **Fixated does not steer the Sword**: Fixated is Vloxx's mechanic. The Sword favours the player farthest from itself, but only a
+bit over half the time; the rest is not explained (not timing, not a range cap, not downed players). **[likely]**
+* The Sword's melee (*Ancora Strike*) hits the **closest** player 75 % of the time, and the fixated player only when they are close.
+  The Staff and Spear Aspects behave the same (86 % / 81 %). The Aspects walk around: the Sword is 185–1,158 from Vloxx (median 506).
+
+**When the squad stacked on Vloxx (within 400) is hit by the line** (casts with ≥ 4 players stacked):
+| where Vloxx is, relative to the Sword's line | result |
+|---|---|
+| ahead of the Sword, < 300 beside the line | 152 casts, 87 % of the stacked players hit, 6 casts with nobody hit |
+| ahead, 300–600 beside the line | 28 casts, 70 % of the stacked players hit, 0 casts with nobody hit |
+| ahead, 600+ beside the line | 4 casts, 36 % of the stacked players hit, 1 casts with nobody hit |
+| behind the Sword by 0–300 (the line points away) | 28 casts, 53 % of the stacked players hit, 7 casts with nobody hit |
+| behind the Sword by 300+ | 4 casts, 5 % of the stacked players hit, 3 casts with nobody hit |
+
+**The "sweet spot".** There is no distance for the *fixated* player that protects the squad: with the fixated player 1,000 from the Sword
+but on the same side as Vloxx, the line went through the stack and hit 9 of 9 (20261003-165843, ~518 s). What protects the stack is the
+**direction** of the line:
+* the player the Sword targets must be **on the far side of the Sword from Vloxx** (the line then points away from the stack), and
+* the Sword must be **at least ~300–400 from the stack** along that line (closer, the first slash and the 0.4 s hit still reach it; to
+  also avoid the 0.4 s hit the Sword must be ~600 away).
+* To be the target that player has to be the **farthest from the Sword**: farther than the Sword–stack distance plus the stack's spread,
+  i.e. roughly **1,000+ from the Sword** when the Sword is ~500–600 from Vloxx. Even then it is aimed at them only a bit over half the time.
+* Alternative: the stack ≥ 600 to the side of the line, or beyond ~1,900 from the Sword (Sword kited far away: 3 casts at 2,000–2,500, nobody hit).
+Sample for the safe cases is small (4 casts with Vloxx 300+ behind the Sword). **[likely]**
+
+## 5k. Excision Extremis — is there a safe spot in melee, depending on where the fixated player stands?  [solid / likely]
+Script `scripts/excision_safespot.js` → `data/excision_melee.csv` (one row per non-fixated player per cast) and
+`data/excision_safespot_summary.json` (part of the full build). 210 casts in 45 logs, 152 with a fixated player.
+"Melee" = stayed within **300 of the edge of Vloxx's hitbox** (hitbox radius 150, so within 450 of its centre) for all eight pulses.
+A blocked or evaded hit counts as a hit. Distances Vloxx ↔ fixated are centre to centre.
+
+**Short answer: no distance within normal play gives a reliable safe spot in melee.** The side of Vloxx **away from the fixated player**
+gets safer the further the fixated player stands, slowly: at 500–1,000 it is still covered in most casts. Only with the fixated player
+**~1,000+ from Vloxx** does the back of Vloxx stay mostly clean.
+
+**How the 16 slashes are laid out.**
+* **4 slashes on Vloxx** (20 % of slashes; origin ~104 from its centre, at 4.8, 5.3, 6.2 and 6.8 s). They face **forward**: the half-circle
+  covers the side Vloxx is looking at, i.e. toward the fixated player, out to ~525 + the offset. Directly behind Vloxx they don't reach.
+* **12 slashes further out**, origins 426–967 from Vloxx (median 572), in three groups: from the left, from the right and from beyond.
+  In casts where the fixated player stands still they sit roughly 400 around that player and face back toward them; no exact placement
+  rule was found. **40 % of these origins are within 525 of Vloxx's centre**, so they sweep over the melee area from the sides, including behind Vloxx. **[likely]**
+* All half-circles are aligned on Vloxx's facing (0° off), which is the direction of the fixated player at that moment.
+* The fixated player moved a median of 263 units during the pulses (p90 596).
+
+**What happened to players in melee of Vloxx**, by distance between Vloxx and the fixated player (mean over the pulses).
+Cells: % of players hit at least once (players, mean number of hits).
+| Vloxx ↔ fixated | all melee players | on the fixated player's side | on the far side of Vloxx | casts with ≥ 3 in melee / nobody hit |
+|---|---|---|---|---|
+| 0–200 | 93 % (342, 4.6 hits) | 95 % (150, 5.1 hits) | 90 % (78, 3.3 hits) | 44 / 1 |
+| 200–300 | 94 % (266, 3.7 hits) | 99 % (135, 4.6 hits) | 86 % (77, 2.3 hits) | 34 / 0 |
+| 300–400 | 94 % (163, 5.3 hits) | 100 % (81, 7.1 hits) | 72 % (32, 1.9 hits) | 22 / 0 |
+| 400–500 | 82 % (71, 3.6 hits) | 100 % (17, 6.1 hits) | 59 % (29, 1.4 hits) | 10 / 1 |
+| 500–700 | 50 % (48, 1.3 hits) | 88 % (8, 2.9 hits) | 28 % (29, 0.3 hits) | 8 / 0 |
+| 700+ | 67 % (33, 3 hits) | 75 % (4, 2.5 hits) | 40 % (15, 0.5 hits) | 5 / 1 |
+
+**From the slash effects alone** (no player needed, so every cast counts): the part of Vloxx's melee area (hitbox edge to 300 beyond it)
+that none of the cast's slashes covers. "Back sector" = the 120° directly opposite the fixated player. A "standing spot" = a point with
+a free radius of 75 around it inside the melee area. The slash effect is used, not the telegraph: the telegraph has the same position, but
+its orientation is wrong for about half of the late slashes (§5e).
+| Vloxx ↔ fixated | casts | melee area never covered | back sector never covered | casts with the back sector fully clean | casts with a standing spot (behind Vloxx) | where the spot is, degrees off "directly behind" (p25 / median / p75) |
+|---|---|---|---|---|---|---|
+| 0–200 | 43 | 6 % | 4 % | 0 | 9 (3) | 90 / 130 / 150 |
+| 200–300 | 41 | 7 % | 9 % | 0 | 8 (7) | 30 / 70 / 100 |
+| 300–400 | 24 | 7 % | 14 % | 0 | 9 (8) | 10 / 20 / 60 |
+| 400–500 | 15 | 14 % | 23 % | 0 | 7 (6) | 20 / 50 / 110 |
+| 500–600 | 7 | 18 % | 30 % | 0 | 5 (4) | 20 / 50 / 70 |
+| 600–700 | 4 | 20 % | 32 % | 0 | 3 (3) | 50 / 70 / 90 |
+| 700–850 | 3 | 34 % | 41 % | 1 | 2 (2) | 30 / 60 / 80 |
+| 850–1000 | 4 | 24 % | 45 % | 0 | 3 (3) | 20 / 30 / 60 |
+| 1000+ | 8 | 71 % | 86 % | 5 | 8 (8) | 40 / 80 / 130 |
+
+* **The safe area grows slowly up to ~1,000 and then jumps.** Below 1,000 the back sector is on average less than half clean and was fully
+  clean in 1 of 141 casts. **At 1,000+ it is 86 % clean, fully clean in 5 of 8 casts.** [likely: 8 casts]
+* **From ~300 on there usually is a small safe pocket behind Vloxx** (a standing spot in roughly 40–75 % of casts), but it is not in the same
+  place from cast to cast: anywhere from directly behind to ~80° off. It cannot be pre-positioned on.
+* **A fixated player who stands still does not help.** Back sector clean, fixated player moved < 200 vs ≥ 200 during the pulses:
+  Vloxx ↔ fixated under 500: 7 % (52 casts) vs 13 % (71); 500–1,000: 32 % (6) vs 37 % (12).
+
+**By distance from the fixated player** (any position): 0–250: 95 % hit, 5.4 hits · 250–450: 93 % hit, 4.1 hits · 450–650: 84 % hit, 3 hits · 650–1000: 66 % hit, 2.5 hits · 1000+: 51 % hit, 1.9 hits.
+Without a fixated player the attack still happens around Vloxx's current target: 92 % of 307 melee players hit.
+
+**What to take from it.**
+* **Fixated player within ~300 of Vloxx's centre (the usual case; median 273): everybody in melee is hit**, wherever they stand
+  (86–99 %). There is no gap to stand in. Standing behind Vloxx only lowers the **number** of hits (about 2–3 instead of 5).
+* **Fixated player 300–500 away, stack behind Vloxx** (opposite the fixated player): 72 % hit at 300–400, 59 % at 400–500, 1–2 hits.
+* **Fixated player 500–700 away, stack behind Vloxx:** 28 % hit (29 players), 0.3 hits on average. This is the best measured case.
+* **700–1,000:** still not safe. Players behind Vloxx were hit 40 % of the time at 700+ (15 players), and the slash geometry leaves the back sector only 41–45 % clean.
+* **1,000+:** the first range where the back is mostly clean (table above). Small sample. **[likely]**
+* The side between Vloxx and the fixated player is hit at every distance (75–100 %).
+* One slash is enough to strip a boon and apply Crippled (§5e), so "fewer hits" does not save the strip; it only lowers the damage.
+
+## 5l. Usual order of Vloxx's attacks in each phase  [solid for the first cycle, likely later]
+Script `scripts/cast_order.js` → `data/cast_order.csv` (one row per phase × position) and `data/cast_order_summary.json` (part of the
+full build). 162 logs. Phases are cut on Vloxx's *Visions of Eternity* casts (70 %, 40 %, 10 % health). Times: P1 from the start of
+the fight, P2 and P3 from the moment the breakbar of *Visions of Eternity* is broken.
+
+**How it works.** Each phase has a fixed **main rotation**, and on top of it a few attacks that run on **their own timers** (the greens
+*Judgment of Eternity*, *Probability Distribution*, in P1 also *Eternal Reflection*). The timer attacks slot in between the rotation
+attacks. The first cycle is the same in almost every log (start times within about a second); after ~100 s in P2 and ~50 s in P3 the
+logs start to differ, both in where the timer attacks land and in the rotation itself (in P2 the 12th rotation attack is *Cosmic Charge*
+in 46 logs and *Thousand Strikes* in 18). The cause of those differences was not looked into. **[open]**
+
+**Fixated swaps (last column).** Fixated lasts 60 s and the next one comes ~7.7 s after it ends (§2), so a swap happens every ~68 s
+counted from the previous application, not from the start of the phase.
+* **P1 is fixed:** first Fixated at 3 s, second at 70.7 s (93 % of logs within 2 s), third at ~132 s if the phase lasts that long.
+* **P2 and P3 are not fixed:** 93 % / 92 % of these phases start with a Fixated already running (applied during the split or the breakbar), so the
+  first swap of the phase comes ~68 s after *that* application. The column shows the most common times with how many logs had them;
+  a time shared by fewer than 15 % of the logs is left out. A Fixated that ends early (holder downed, stealth) moves everything after it.
+
+### P1 (Staff, 100 → 70 %)
+Reached in 162 logs, finished in 133; a full phase lasts about 130 s (23 casts). Times are from the start of the fight.
+* **Main rotation** (same start in 128 of 130 logs that got that far): Surrounding Curse → Annihilating Orb → Ascension's Sacrifice → Annihilating Orb → Surrounding Curse → Annihilating Orb → Ascension's Sacrifice → Annihilating Orb → Surrounding Curse.
+* **On their own timers:** *Judgment of Eternity* first at 4.4 s, then about every 47 s (44–65); *Probability Distribution* first at 20 s, then about every 45 s (32–54); *Eternal Reflection* first at 22.1 s, then about every 10 s (9–26).
+
+| # | starts at | attack | cast time | logs that agree | otherwise | new Fixated during this attack |
+|---|---|---|---|---|---|---|
+| 1 | 4.4 s | Judgment of Eternity | 4.4 s | 100 % of 162 |  | Fixated #1 at ~3 s (160 of 162 logs) |
+| 2 | 8.9 s | Surrounding Curse | 4 s | 100 % of 162 |  |  |
+| 3 | 13 s | Annihilating Orb | 6.9 s | 100 % of 162 |  |  |
+| 4 | 20 s | Probability Distribution | 2 s | 100 % of 160 |  |  |
+| 5 | 22.1 s | Eternal Reflection | 3.8 s | 100 % of 158 |  |  |
+| 6 | 31.2 s | Eternal Reflection | 3.8 s | 100 % of 157 |  |  |
+| 7 | 37.3 s | Ascension's Sacrifice | 6 s | 100 % of 155 |  |  |
+| 8 | 43.4 s | Annihilating Orb | 6.9 s | 100 % of 154 |  |  |
+| 9 | 51.8 s | Judgment of Eternity | 4.4 s | 100 % of 152 |  |  |
+| 10 | 56.3 s | Eternal Reflection | 3.8 s | 100 % of 152 |  |  |
+| 11 | 60.1 s | Surrounding Curse | 4 s | 100 % of 150 |  |  |
+| 12 | 64.2 s | Probability Distribution | 2 s | 100 % of 149 |  |  |
+| 13 | 66.3 s | Eternal Reflection | 3.8 s | 100 % of 148 |  | Fixated #2 at ~70.7 s (132 of 143 logs) |
+| 14 | 73.8 s | Annihilating Orb | 6.9 s | 100 % of 140 |  |  |
+| 15 | 80.7 s | Eternal Reflection | 3.8 s | 100 % of 139 |  |  |
+| 16 | 84.6 s | Ascension's Sacrifice | 6 s | 100 % of 138 |  |  |
+| 17 | 90.9 s | Eternal Reflection | 3.8 s | 100 % of 138 |  |  |
+| 18 | 96.6 s | Judgment of Eternity | 4.4 s | 96 % of 138 | Probability Distribution x6 |  |
+| 19 | 101.2 s | Eternal Reflection | 3.8 s | 100 % of 135 |  |  |
+| 20 | 105.1 s | Annihilating Orb | 6.9 s | 99 % of 135 | Probability Distribution x1 / Surrounding Curse x1 |  |
+| 21 | 112.3 s | Surrounding Curse | 4 s | 98 % of 130 | Judgment of Eternity x2 / Probability Distribution x1 |  |
+| 22 | 117.6 s | Probability Distribution | 2 s | 95 % of 111 | Annihilating Orb x2 / Surrounding Curse x2 |  |
+| 23 | 119.7 s | Eternal Reflection | 3.8 s | 100 % of 97 |  |  |
+| 24 | 128.9 s | Eternal Reflection | 3.8 s | 100 % of 61 |  | Fixated #3 at ~132 s (15 of 39 logs) |
+| 25 | 135 s | Ascension's Sacrifice | 7 s | 100 % of 35 |  | Fixated #3 at ~140 s (7 of 39 logs) |
+
+### P2 (Spear, 70 → 40 %)
+Reached in 133 logs, finished in 50; a full phase lasts about 133 s (19 casts). The first cast starts the moment the breakbar is broken.
+* **Main rotation** (same start in 46 of 75 logs that got that far): Cosmic Charge → Worldpiercer → Raging Storm → Thousand Strikes → Thousand Strikes → Worldpiercer → Cosmic Charge → Raging Storm → Thousand Strikes → Worldpiercer → Thousand Strikes → Cosmic Charge.
+* **On their own timers:** *Judgment of Eternity* first at 0 s, then about every 55 s (44–61); *Probability Distribution* first at 33.5 s, then about every 49 s (45–55).
+
+| # | starts at | attack | cast time | logs that agree | otherwise | new Fixated during this attack |
+|---|---|---|---|---|---|---|
+| 1 | 0 s | Judgment of Eternity | 4.4 s | 98 % of 133 | Cosmic Charge x2 |  |
+| 2 | 4.5 s | Cosmic Charge | 7.8 s | 98 % of 133 | Worldpiercer x1 / Judgment of Eternity x1 |  |
+| 3 | 12.4 s | Worldpiercer | 6 s | 99 % of 133 | Judgment of Eternity x1 |  |
+| 4 | 18.5 s | Raging Storm | 7.4 s | 99 % of 127 | Thousand Strikes x1 |  |
+| 5 | 27.4 s | Thousand Strikes | 6 s | 99 % of 119 | Raging Storm x1 |  |
+| 6 | 33.5 s | Probability Distribution | 2 s | 99 % of 118 | Thousand Strikes x1 |  |
+| 7 | 38.9 s | Thousand Strikes | 6 s | 99 % of 117 | Probability Distribution x1 |  |
+| 8 | 48.8 s | Worldpiercer | 6 s | 98 % of 111 | Cosmic Charge x2 | Fixated #1 at ~48 s (26 of 115 logs) |
+| 9 | 54.9 s | Judgment of Eternity | 4.4 s | 99 % of 108 | Cosmic Charge x1 |  |
+| 10 | 59.6 s | Cosmic Charge | 7.8 s | 97 % of 103 | Worldpiercer x2 / Judgment of Eternity x1 |  |
+| 11 | 68.7 s | Raging Storm | 7.4 s | 99 % of 99 | Thousand Strikes x1 | Fixated #1 at ~68 s (23 of 115 logs) |
+| 12 | 76.2 s | Thousand Strikes | 6 s | 99 % of 92 | Raging Storm x1 |  |
+| 13 | 82.5 s | Probability Distribution | 2 s | 99 % of 89 | Thousand Strikes x1 |  |
+| 14 | 85.4 s | Worldpiercer | 6 s | 98 % of 88 | Thousand Strikes x2 |  |
+| 15 | 92.6 s | Thousand Strikes | 6 s | 96 % of 83 | Cosmic Charge x2 / Probability Distribution x1 | Fixated #2 at ~92 s (22 of 84 logs); Fixated #3 at ~92 s (5 of 32 logs) |
+| 16 | 100 s | Judgment of Eternity | 4.4 s | 87 % of 78 | Raging Storm x8 / Thousand Strikes x1 |  |
+| 17 | 106.2 s | Cosmic Charge | 7.8 s | 73 % of 75 | Thousand Strikes x18 / Judgment of Eternity x1 | Fixated #3 at ~112 s (7 of 32 logs) |
+| 18 | 114.6 s | Raging Storm | 7.4 s | 62 % of 73 | Cosmic Charge x18 / Judgment of Eternity x8 |  |
+
+After ~100 s the order starts to differ between logs (the later rows above are less certain).
+
+### P3 (Sword, 40 → 10 %)
+Reached in 49 logs, finished in 12; a full phase lasts about 155 s (28 casts). The first cast starts the moment the breakbar is broken.
+* **Main rotation** (same start in 20 of 28 logs that got that far): Echoing Blade → Slice Through Reality → Excision Extremis → Division Eternal → Echoing Blade → Excision Extremis → Division Eternal → Excision Extremis → Echoing Blade → Division Eternal → Excision Extremis → Division Eternal.
+* **On their own timers:** *Judgment of Eternity* first at 0 s, then about every 47 s (45–56); *Probability Distribution* first at 23.2 s, then about every 42 s (34–63).
+
+| # | starts at | attack | cast time | logs that agree | otherwise | new Fixated during this attack |
+|---|---|---|---|---|---|---|
+| 1 | 0 s | Judgment of Eternity | 4.4 s | 92 % of 49 | Echoing Blade x4 |  |
+| 2 | 4.5 s | Echoing Blade | 5.4 s | 92 % of 49 | Judgment of Eternity x3 / Slice Through Reality x1 |  |
+| 3 | 9.9 s | Slice Through Reality | 5.4 s | 92 % of 49 | Excision Extremis x4 |  |
+| 4 | 15.4 s | Excision Extremis | 6.2 s | 92 % of 49 | Slice Through Reality x3 / Judgment of Eternity x1 | Fixated #1 at ~20 s (22 of 41 logs) |
+| 5 | 23.2 s | Probability Distribution | 2 s | 91 % of 47 | Division Eternal x4 |  |
+| 6 | 25.2 s | Division Eternal | 3.7 s | 91 % of 47 | Echoing Blade x4 |  |
+| 7 | 30.2 s | Echoing Blade | 5.4 s | 91 % of 44 | Excision Extremis x4 |  |
+| 8 | 35.6 s | Excision Extremis | 6.2 s | 91 % of 44 | Probability Distribution x4 |  |
+| 9 | 43.3 s | Division Eternal | 3.7 s | 100 % of 41 |  | Fixated #2 at ~44 s (6 of 30 logs) |
+| 10 | 47.1 s | Judgment of Eternity | 4.4 s | 92 % of 37 | Excision Extremis x3 |  |
+| 11 | 52.3 s | Excision Extremis | 6.2 s | 71 % of 35 | Division Eternal x7 / Echoing Blade x3 |  |
+| 12 | 58.6 s | Echoing Blade | 5.4 s | 73 % of 33 | Excision Extremis x6 / Judgment of Eternity x3 | Fixated #1 at ~64 s (7 of 41 logs); Fixated #2 at ~64 s (5 of 30 logs) |
+| 13 | 65.5 s | Probability Distribution | 2 s | 72 % of 32 | Echoing Blade x6 / Excision Extremis x3 |  |
+| 14 | 67.6 s | Division Eternal | 3.7 s | 74 % of 31 | Probability Distribution x8 |  |
+| 15 | 71.3 s | Excision Extremis | 6.2 s | 73 % of 30 | Division Eternal x8 |  |
+| 16 | 77.6 s | Division Eternal | 3.7 s | 71 % of 28 | Excision Extremis x6 / Echoing Blade x2 |  |
+| 17 | 82.9 s | Slice Through Reality | 5.4 s | 71 % of 28 | Division Eternal x5 / Excision Extremis x2 | Fixated #2 at ~88 s (6 of 30 logs) |
+| 18 | 89.8 s | Echoing Blade | 5.4 s | 68 % of 28 | Slice Through Reality x8 / Excision Extremis x1 |  |
+| 19 | 95.3 s | Judgment of Eternity | 4.4 s | 70 % of 27 | Echoing Blade x5 / Division Eternal x2 |  |
+| 20 | 99.7 s | Excision Extremis | 6.2 s | 74 % of 27 | Judgment of Eternity x6 / Echoing Blade x1 |  |
+| 21 | 106 s | Probability Distribution | 2 s | 70 % of 27 | Excision Extremis x5 / Judgment of Eternity x2 |  |
+| 22 | 108.1 s | Division Eternal | 3.7 s | 67 % of 27 | Probability Distribution x5 / Echoing Blade x3 | Fixated #3 at ~112 s (4 of 20 logs) |
+| 23 | 115.3 s | Echoing Blade | 5.4 s | 65 % of 26 | Division Eternal x6 / Excision Extremis x3 | Fixated #3 at ~116 s (4 of 20 logs) |
+| 24 | 120.7 s | Excision Extremis | 6.2 s | 75 % of 24 | Echoing Blade x4 / Probability Distribution x2 |  |
+| 25 | 127.2 s | Division Eternal | 3.7 s | 78 % of 23 | Excision Extremis x4 / Echoing Blade x1 | Fixated #3 at ~132 s (6 of 20 logs) |
+| 26 | 135.9 s | Division Eternal | 3.7 s | 89 % of 18 | Excision Extremis x2 |  |
+| 28 | 144.5 s | Echoing Blade | 5.4 s | 60 % of 15 | Judgment of Eternity x5 / Division Eternal x1 |  |
+| 30 | 157.1 s | Excision Extremis | 6.2 s | 60 % of 10 | Slice Through Reality x4 |  |
+
+In about 1 log in 12 the phase starts with *Echoing Blade* before the greens. From the third greens round (~95 s) on, the order differs more.
+
+### Last phase (10 → 0 %)
+Reached in 12 logs. Vloxx casts a single 65 s channel (skill 81071); its attacks are not logged as casts, so this list comes from the
+damage they deal (seconds after the channel starts, median and range over the logs). All three Aspects are up as well and keep their own attacks.
+| at | attack of Vloxx | range | logs |
+|---|---|---|---|
+| 16.2 s | Surrounding Curse (80484), burst 1 | 15–36.1 s | 12 |
+| 20 s | Excision Extremis (80901), burst 1 | 20–20.5 s | 12 |
+| 20.5 s | Raging Storm (81176), burst 1 | 17.5–35.5 s | 12 |
+| 26.8 s | Surrounding Curse (80484), burst 2 | 25.8–46 s | 12 |
+| 29.6 s | Raging Storm (81176), burst 2 | 20.5–50.5 s | 11 |
+| 35 s | Excision Extremis (80901), burst 2 | 35–36.6 s | 12 |
+| 35.5 s | Raging Storm (81176), burst 3 | 32.6–60 s | 10 |
+| 41 s | Judgment of Eternity (80378), burst 1 | 11–41.2 s | 9 |
+| 44.7 s | Surrounding Curse (80484), burst 3 | 36.1–76.2 s | 10 |
+| 50 s | Excision Extremis (80901), burst 3 | 50–50 s | 8 |
+| 51.5 s | Raging Storm (81176), burst 4 | 41.5–75.7 s | 9 |
+| 53.9 s | Probability Distribution (81318), burst 1 | 33.1–71 s | 8 |
+| 55.8 s | Surrounding Curse (80484), burst 4 | 39.8–86.3 s | 7 |
+| 59.5 s | Raging Storm (81176), burst 5 | 56.5–65.5 s | 6 |
+| 65 s | Excision Extremis (80901), burst 4 | 65–65 s | 6 |
+
+* **Excision Extremis is on a strict 15 s timer here: 20, 35, 50, 65 s.** The other times depend on players being hit, so they are looser.
+* The greens of the last phase and their timing are in §1 and §3.
+
+## 5m. Slice Through Reality — a 525 hit, then a portal (entrance and exit ~300)  [solid]
+Script `scripts/slice_through_reality.js` → `data/slice_through_reality_summary.json` (part of the full build). 85 casts in 49 logs. Cast 5.4 s.
+Vloxx's logged position only updates ~4.2 s into the cast, so everything here is measured from the ground effects of the skill.
+
+**Sequence.**
+1. **1.24 s: a hit around Vloxx, circle of radius ~525** (0–500: 100 % (339) hit · 500–550: 40 % (10) · 550+: 0 % (28)).
+2. **2.2 s: a portal opens where Vloxx stands** (effect GUID D33CD046…, lasts 9 s). **2.6 s: Vloxx teleports 2,000 units away**
+   (996–2,009), and at 3.6 s the same portal effect appears on the arrival point.
+3. **From 2.6 s on, the entrance portal hits whoever is inside it and teleports them to the exit.** 95 % of the 642 hits
+   were followed by the player standing at the exit about a second later.
+
+**Size of the portal: ~300 radius, the same at both ends.**
+* **Entrance:** players were 231 from its centre when hit (median), 90 % within 283. Hit rate by distance from the centre:
+  0–300: 99 % (410) · 300–400: 58 % (40) · 400–550: 22 % (32) · 550+: 0 % (18). Beside the teleport line it stops at ~300
+  (200–300: 94 % (50), 300–400: 14 % (7)).
+* **Exit:** players land 177 from its centre (median), 90 % within 295: the same spread as at the entrance, so a player keeps
+  their offset from the centre and the exit area is the same size.
+* **It stays open.** 74 of the hits came 4–10 s into the cast (players walking into the entrance later), all 143–272 from its centre, and they were teleported too.
+* **Standing at the exit is safe**: 0 of 264 players who were already there were hit in the first 1.6 s. Whether the exit sends players back was not
+  measurable (only 2 players walked onto it). **[open]**
+
+So the big circle (525) is only the first hit. What stays on the ground afterwards, at both ends, is the ~300 portal.
+The distance between entrance and exit is fixed (2,000 ± 50 in 77 of 85 casts; shorter in the other 8, down to ~1,000), so the planner has a single "Slice Through Reality" attack: click on Vloxx, drag toward
+the teleport direction, and it places the 525 hit, the entrance and the exit.
 
 ## 6. Hypotheses that were tested and REJECTED (don't redo)
 * **Range limit ~600 (last phase) / ~775 (early, = 600 + boss hitbox 150 + player 24).** Looked perfect on EI data (211/211),

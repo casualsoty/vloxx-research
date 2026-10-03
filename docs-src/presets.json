@@ -65,15 +65,6 @@
       "source": "measured ~375 (§5d)"
     },
     {
-      "label": "Slice Through Reality (around Vloxx)",
-      "r": 525,
-      "color": "#f0a040",
-      "skill": "80585",
-      "caster": "Vloxx",
-      "note": "centred on Vloxx, ground marker 7 s before",
-      "source": "measured ~525 (§5d)"
-    },
-    {
       "label": "Visions of Eternity",
       "r": 600,
       "color": "#f0a040",
@@ -81,6 +72,15 @@
       "caster": "Vloxx",
       "note": "",
       "source": "measured ~600 (§5d)"
+    },
+    {
+      "label": "Division Eternal (Sword) first hit",
+      "r": 525,
+      "color": "#f0a040",
+      "skill": "81330",
+      "caster": "Aspect of the Sword",
+      "note": "around the Sword, ~0.4 s into the cast",
+      "source": "measured ~500–550 (§5j)"
     },
     {
       "label": "Custom",
@@ -163,12 +163,12 @@
     },
     {
       "label": "Division Eternal (Sword)",
-      "w": 775,
-      "len": 1700,
+      "w": 1050,
+      "len": 1800,
       "skill": "81330",
       "caster": "Aspect of the Sword",
-      "note": "forward rectangle",
-      "source": "measured ~775 × ~1,700 (§5d)"
+      "note": "line of 6 half-circle slashes (75 → 1,325 from the Sword, radius ~525) along the Sword's facing, after a ~500 hit around the Sword at 0.4 s; aimed mostly at the player farthest from the Sword, not at the fixated one",
+      "source": "measured ~1,050 × ~1,800 (§5j)"
     },
     {
       "label": "Custom",
@@ -252,6 +252,21 @@
       "r": 60,
       "tag": "?",
       "source": ""
+    }
+  ],
+  "portals": [
+    {
+      "label": "Slice Through Reality",
+      "skill": "80585",
+      "caster": "Vloxx",
+      "hitR": 525,
+      "portalR": 300,
+      "distance": 2000,
+      "hitAtS": 1.24,
+      "portalFromS": 2.6,
+      "portalOpenS": 9,
+      "note": "one hit around Vloxx, then a portal where Vloxx stood: whoever is inside is hit and teleported to the exit, which is the same size and a fixed distance away",
+      "source": "measured, 85 casts (§5m, data/slice_through_reality_summary.json)"
     }
   ]
 }
