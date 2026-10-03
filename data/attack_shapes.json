@@ -1,0 +1,1727 @@
+{
+ "80323": {
+  "label": "Annihilating Orb (Vloxx)",
+  "name": "Annihilating Orb",
+  "impacts": 2310,
+  "casters": {
+   "Vloxx": 2310
+  },
+  "best": {
+   "model": "caster",
+   "radius": 400,
+   "plateau": 0.56,
+   "outside": 0.15,
+   "score": 0.41,
+   "edgeRate": 0.29
+  },
+  "models": [
+   {
+    "model": "caster",
+    "radius": 400,
+    "plateau": 0.56,
+    "outside": 0.15,
+    "score": 0.41,
+    "edgeRate": 0.29
+   },
+   {
+    "model": "effect:D200E82E",
+    "coverage": 0.43,
+    "radius": 475,
+    "plateau": 0.45,
+    "outside": 0.07,
+    "score": 0.38,
+    "edgeRate": 0.27,
+    "delayS": 7.08,
+    "anchorToCaster": 323,
+    "anchor": "ground"
+   },
+   {
+    "model": "effect:B21F84B9",
+    "coverage": 0.55,
+    "radius": 300,
+    "plateau": 0.51,
+    "outside": 0.15,
+    "score": 0.36,
+    "edgeRate": 0.27,
+    "delayS": 3.48,
+    "anchorToCaster": 263,
+    "anchor": "ground"
+   }
+  ],
+  "cone": {
+   "halfAngle90": 55,
+   "hitRateInside": 0.59,
+   "hitRateOutside": 0.15
+  }
+ },
+ "80378": {
+  "label": "Judgment of Eternity — failed green (last phase)",
+  "name": "Judgment of Eternity",
+  "impacts": 12,
+  "casters": {
+   "Vloxx": 12
+  },
+  "best": null,
+  "models": [],
+  "cone": null
+ },
+ "80420": {
+  "label": "Visions of Eternity",
+  "name": "Visions of Eternity",
+  "impacts": 60,
+  "casters": {
+   "Vloxx": 60
+  },
+  "best": {
+   "model": "effect:C3579636",
+   "coverage": 1,
+   "radius": 600,
+   "plateau": 1,
+   "outside": 0,
+   "score": 1,
+   "edgeRate": 0.75,
+   "delayS": 0,
+   "anchorToCaster": 613,
+   "anchor": "ground"
+  },
+  "models": [
+   {
+    "model": "effect:C3579636",
+    "coverage": 1,
+    "radius": 600,
+    "plateau": 1,
+    "outside": 0,
+    "score": 1,
+    "edgeRate": 0.75,
+    "delayS": 0,
+    "anchorToCaster": 613,
+    "anchor": "ground"
+   },
+   {
+    "model": "effect:4B6532EC",
+    "coverage": 0.55,
+    "radius": 600,
+    "plateau": 1,
+    "outside": 0,
+    "score": 1,
+    "edgeRate": 0.65,
+    "delayS": 8,
+    "anchorToCaster": 671,
+    "anchor": "ground"
+   },
+   {
+    "model": "effect:051F8F16",
+    "coverage": 0.45,
+    "radius": 500,
+    "plateau": 0.54,
+    "outside": 0.09,
+    "score": 0.44,
+    "edgeRate": 0.29,
+    "delayS": 4.68,
+    "anchorToCaster": 377,
+    "anchor": "ground"
+   }
+  ],
+  "cone": null
+ },
+ "80483": {
+  "label": "80483 (Vloxx, big hit)",
+  "name": "80483",
+  "impacts": 870,
+  "casters": {
+   "Vloxx": 870
+  },
+  "best": {
+   "model": "effect:5614D57D",
+   "coverage": 0.82,
+   "radius": 1250,
+   "plateau": 0.55,
+   "outside": 0.03,
+   "score": 0.51,
+   "edgeRate": 0.33,
+   "delayS": 0.44,
+   "anchorToCaster": 1199,
+   "anchor": "ground"
+  },
+  "models": [
+   {
+    "model": "effect:5614D57D",
+    "coverage": 0.82,
+    "radius": 1250,
+    "plateau": 0.55,
+    "outside": 0.03,
+    "score": 0.51,
+    "edgeRate": 0.33,
+    "delayS": 0.44,
+    "anchorToCaster": 1199,
+    "anchor": "ground"
+   },
+   {
+    "model": "caster",
+    "radius": 1600,
+    "plateau": 0.49,
+    "outside": 0.17,
+    "score": 0.32,
+    "edgeRate": 0.33
+   },
+   {
+    "model": "effect:BDF70822",
+    "coverage": 0.54,
+    "radius": 625,
+    "plateau": 0.44,
+    "outside": 0.14,
+    "score": 0.3,
+    "edgeRate": 0.31,
+    "delayS": 3.05,
+    "anchorToCaster": 489,
+    "anchor": "carried by an agent"
+   }
+  ],
+  "cone": {
+   "halfAngle90": 80,
+   "hitRateInside": 0.68,
+   "hitRateOutside": 0.07
+  }
+ },
+ "80484": {
+  "label": "80484 (Vloxx)",
+  "name": "80484",
+  "impacts": 3955,
+  "casters": {
+   "Vloxx": 3955
+  },
+  "best": {
+   "model": "effect:D200E82E",
+   "coverage": 0.94,
+   "radius": 200,
+   "plateau": 0.74,
+   "outside": 0.03,
+   "score": 0.71,
+   "edgeRate": 0.54,
+   "delayS": 1.05,
+   "anchorToCaster": 366,
+   "anchor": "ground"
+  },
+  "models": [
+   {
+    "model": "effect:D200E82E",
+    "coverage": 0.94,
+    "radius": 200,
+    "plateau": 0.74,
+    "outside": 0.03,
+    "score": 0.71,
+    "edgeRate": 0.54,
+    "delayS": 1.05,
+    "anchorToCaster": 366,
+    "anchor": "ground"
+   },
+   {
+    "model": "effect:B21F84B9",
+    "coverage": 1,
+    "radius": 200,
+    "plateau": 0.65,
+    "outside": 0,
+    "score": 0.64,
+    "edgeRate": 0.49,
+    "delayS": 4.55,
+    "anchorToCaster": 362,
+    "anchor": "ground"
+   },
+   {
+    "model": "effect:D5C6761C",
+    "coverage": 0.59,
+    "radius": 525,
+    "plateau": 0.36,
+    "outside": 0.07,
+    "score": 0.3,
+    "edgeRate": 0.2,
+    "delayS": 6.16,
+    "anchorToCaster": 4,
+    "anchor": "ground"
+   }
+  ],
+  "cone": {
+   "halfAngle90": 89,
+   "hitRateInside": 0.36,
+   "hitRateOutside": 0.2
+  }
+ },
+ "80512": {
+  "label": "Cosmic Charge (Vloxx) — reference, measured separately",
+  "name": "Cosmic Charge",
+  "impacts": 4309,
+  "casters": {
+   "Vloxx": 4309
+  },
+  "best": {
+   "model": "effect:68FD7F34",
+   "coverage": 0.92,
+   "radius": 200,
+   "plateau": 0.75,
+   "outside": 0.16,
+   "score": 0.59,
+   "edgeRate": 0.54,
+   "delayS": 0.95,
+   "anchorToCaster": 233,
+   "anchor": "ground"
+  },
+  "models": [
+   {
+    "model": "effect:68FD7F34",
+    "coverage": 0.92,
+    "radius": 200,
+    "plateau": 0.75,
+    "outside": 0.16,
+    "score": 0.59,
+    "edgeRate": 0.54,
+    "delayS": 0.95,
+    "anchorToCaster": 233,
+    "anchor": "ground"
+   },
+   {
+    "model": "effect:212A27E2",
+    "coverage": 0.69,
+    "radius": 625,
+    "plateau": 0.63,
+    "outside": 0.2,
+    "score": 0.43,
+    "edgeRate": 0.39,
+    "delayS": 3.45,
+    "anchorToCaster": 0,
+    "anchor": "carried by an agent"
+   },
+   {
+    "model": "effect:1FD11FB1",
+    "coverage": 0.36,
+    "radius": 1000,
+    "plateau": 0.46,
+    "outside": 0.18,
+    "score": 0.28,
+    "edgeRate": 0.26,
+    "delayS": 5.33,
+    "anchorToCaster": 683,
+    "anchor": "ground"
+   }
+  ],
+  "cone": {
+   "halfAngle90": 162,
+   "hitRateInside": 0.38,
+   "hitRateOutside": 0.73
+  }
+ },
+ "80555": {
+  "label": "Thousand Strikes (Vloxx)",
+  "name": "Thousand Strikes",
+  "impacts": 5465,
+  "casters": {
+   "Vloxx": 5465
+  },
+  "best": {
+   "model": "effect:5AFA5E46",
+   "coverage": 0.42,
+   "radius": 1525,
+   "plateau": 0.67,
+   "outside": 0,
+   "score": 0.67,
+   "edgeRate": 0.4,
+   "delayS": 4.63,
+   "anchorToCaster": 5,
+   "anchor": "ground"
+  },
+  "models": [
+   {
+    "model": "effect:5AFA5E46",
+    "coverage": 0.42,
+    "radius": 1525,
+    "plateau": 0.67,
+    "outside": 0,
+    "score": 0.67,
+    "edgeRate": 0.4,
+    "delayS": 4.63,
+    "anchorToCaster": 5,
+    "anchor": "ground"
+   },
+   {
+    "model": "caster",
+    "radius": 1675,
+    "plateau": 0.62,
+    "outside": 0,
+    "score": 0.62,
+    "edgeRate": null
+   },
+   {
+    "model": "effect:D5C6761C",
+    "coverage": 0.55,
+    "radius": 1375,
+    "plateau": 0.68,
+    "outside": 0.06,
+    "score": 0.62,
+    "edgeRate": 0.53,
+    "delayS": 5.24,
+    "anchorToCaster": 6,
+    "anchor": "ground"
+   }
+  ],
+  "cone": {
+   "halfAngle90": 53,
+   "hitRateInside": 0.93,
+   "hitRateOutside": 0.04
+  }
+ },
+ "80585": {
+  "label": "80585 (Vloxx)",
+  "name": "80585",
+  "impacts": 332,
+  "casters": {
+   "Vloxx": 332
+  },
+  "best": {
+   "model": "effect:40EF37BF",
+   "coverage": 0.64,
+   "radius": 525,
+   "plateau": 0.7,
+   "outside": 0,
+   "score": 0.7,
+   "edgeRate": 0.44,
+   "delayS": 7,
+   "anchorToCaster": 3,
+   "anchor": "ground"
+  },
+  "models": [
+   {
+    "model": "effect:40EF37BF",
+    "coverage": 0.64,
+    "radius": 525,
+    "plateau": 0.7,
+    "outside": 0,
+    "score": 0.7,
+    "edgeRate": 0.44,
+    "delayS": 7,
+    "anchorToCaster": 3,
+    "anchor": "ground"
+   },
+   {
+    "model": "effect:1FD11FB1",
+    "coverage": 0.56,
+    "radius": 725,
+    "plateau": 0.66,
+    "outside": 0,
+    "score": 0.66,
+    "edgeRate": 0.43,
+    "delayS": 5.07,
+    "anchorToCaster": 5,
+    "anchor": "ground"
+   },
+   {
+    "model": "caster",
+    "radius": 500,
+    "plateau": 0.65,
+    "outside": 0.01,
+    "score": 0.64,
+    "edgeRate": 0.38
+   }
+  ],
+  "cone": {
+   "halfAngle90": 155,
+   "hitRateInside": 0.55,
+   "hitRateOutside": 0.51
+  }
+ },
+ "80629": {
+  "label": "Judgment of Eternity — failed 3-people green (early phases)",
+  "name": "80629",
+  "impacts": 174,
+  "casters": {
+   "Vloxx": 174
+  },
+  "best": {
+   "model": "effect:092F93A0",
+   "coverage": 1,
+   "radius": 250,
+   "plateau": 0.98,
+   "outside": 0.05,
+   "score": 0.93,
+   "edgeRate": 0.67,
+   "delayS": 0,
+   "anchorToCaster": 482,
+   "anchor": "ground"
+  },
+  "models": [
+   {
+    "model": "effect:092F93A0",
+    "coverage": 1,
+    "radius": 250,
+    "plateau": 0.98,
+    "outside": 0.05,
+    "score": 0.93,
+    "edgeRate": 0.67,
+    "delayS": 0,
+    "anchorToCaster": 482,
+    "anchor": "ground"
+   },
+   {
+    "model": "effect:1A262BDD",
+    "coverage": 0.68,
+    "radius": 800,
+    "plateau": 0.42,
+    "outside": 0.18,
+    "score": 0.24,
+    "edgeRate": 0.25,
+    "delayS": 4.29,
+    "anchorToCaster": 796,
+    "anchor": "ground"
+   },
+   {
+    "model": "caster",
+    "radius": null,
+    "plateau": 0.35,
+    "score": 0
+   }
+  ],
+  "cone": null
+ },
+ "80709": {
+  "label": "Thousand Strikes (Spear)",
+  "name": "Thousand Strikes",
+  "impacts": 5553,
+  "casters": {
+   "Aspect of the Spear": 5553
+  },
+  "best": {
+   "model": "caster",
+   "radius": 1175,
+   "plateau": 0.69,
+   "outside": 0,
+   "score": 0.69,
+   "edgeRate": 0.68
+  },
+  "models": [
+   {
+    "model": "caster",
+    "radius": 1175,
+    "plateau": 0.69,
+    "outside": 0,
+    "score": 0.69,
+    "edgeRate": 0.68
+   },
+   {
+    "model": "effect:051F8F16",
+    "coverage": 1,
+    "radius": 1175,
+    "plateau": 0.68,
+    "outside": 0,
+    "score": 0.68,
+    "edgeRate": 0.67,
+    "delayS": 1.04,
+    "anchorToCaster": 4,
+    "anchor": "ground"
+   },
+   {
+    "model": "effect:D697C2EC",
+    "coverage": 1,
+    "radius": 1175,
+    "plateau": 0.68,
+    "outside": 0,
+    "score": 0.68,
+    "edgeRate": 0.67,
+    "delayS": 1.04,
+    "anchorToCaster": 4,
+    "anchor": "ground"
+   }
+  ],
+  "cone": {
+   "halfAngle90": 54,
+   "hitRateInside": 0.87,
+   "hitRateOutside": 0.09
+  }
+ },
+ "80717": {
+  "label": "80717 (Cosmic Bulwark)",
+  "name": "80717",
+  "impacts": 157,
+  "casters": {
+   "Cosmic Bulwark": 157
+  },
+  "best": {
+   "model": "caster",
+   "radius": 300,
+   "plateau": 0.4,
+   "outside": 0.01,
+   "score": 0.38,
+   "edgeRate": 0.31
+  },
+  "models": [
+   {
+    "model": "caster",
+    "radius": 300,
+    "plateau": 0.4,
+    "outside": 0.01,
+    "score": 0.38,
+    "edgeRate": 0.31
+   },
+   {
+    "model": "effect:D1132020",
+    "coverage": 0.52,
+    "radius": 1700,
+    "plateau": 0.21,
+    "outside": 0,
+    "score": 0.21,
+    "edgeRate": 0.25,
+    "delayS": 2.36,
+    "anchorToCaster": 305,
+    "anchor": "ground"
+   },
+   {
+    "model": "effect:D5C6761C",
+    "coverage": 0.44,
+    "radius": 675,
+    "plateau": 0.2,
+    "outside": 0,
+    "score": 0.2,
+    "edgeRate": 0.27,
+    "delayS": 5.2,
+    "anchorToCaster": 361,
+    "anchor": "ground"
+   }
+  ],
+  "cone": {
+   "halfAngle90": 37,
+   "hitRateInside": 0.79,
+   "hitRateOutside": 0.02
+  }
+ },
+ "80809": {
+  "label": "Probability Distribution (spread)",
+  "name": "Probability Distribution",
+  "impacts": 3567,
+  "casters": {
+   "Vloxx": 3567
+  },
+  "best": {
+   "model": "effect:C3579636",
+   "coverage": 0.37,
+   "radius": 300,
+   "plateau": 0.93,
+   "outside": 0.02,
+   "score": 0.91,
+   "edgeRate": 0.93,
+   "delayS": 4.15,
+   "anchorToCaster": 599,
+   "anchor": "ground"
+  },
+  "models": [
+   {
+    "model": "effect:C3579636",
+    "coverage": 0.37,
+    "radius": 300,
+    "plateau": 0.93,
+    "outside": 0.02,
+    "score": 0.91,
+    "edgeRate": 0.93,
+    "delayS": 4.15,
+    "anchorToCaster": 599,
+    "anchor": "ground"
+   },
+   {
+    "model": "effect:68FD7F34",
+    "coverage": 0.53,
+    "radius": 325,
+    "plateau": 0.35,
+    "outside": 0.05,
+    "score": 0.3,
+    "edgeRate": 0.24,
+    "delayS": 3.75,
+    "anchorToCaster": 535,
+    "anchor": "ground"
+   },
+   {
+    "model": "effect:1FD11FB1",
+    "coverage": 0.38,
+    "radius": 1550,
+    "plateau": 0.13,
+    "outside": 0,
+    "score": 0.13,
+    "edgeRate": 0,
+    "delayS": 5.76,
+    "anchorToCaster": 214,
+    "anchor": "ground"
+   }
+  ],
+  "cone": null
+ },
+ "80810": {
+  "label": "Raging Storm (Vloxx)",
+  "name": "Raging Storm",
+  "impacts": 4074,
+  "casters": {
+   "Vloxx": 4074
+  },
+  "best": {
+   "model": "effect:D200E82E",
+   "coverage": 0.92,
+   "radius": 150,
+   "plateau": 0.82,
+   "outside": 0.03,
+   "score": 0.78,
+   "edgeRate": 0.74,
+   "delayS": 2.08,
+   "anchorToCaster": 379,
+   "anchor": "ground"
+  },
+  "models": [
+   {
+    "model": "effect:D200E82E",
+    "coverage": 0.92,
+    "radius": 150,
+    "plateau": 0.82,
+    "outside": 0.03,
+    "score": 0.78,
+    "edgeRate": 0.74,
+    "delayS": 2.08,
+    "anchorToCaster": 379,
+    "anchor": "ground"
+   },
+   {
+    "model": "effect:68FD7F34",
+    "coverage": 0.95,
+    "radius": 150,
+    "plateau": 0.81,
+    "outside": 0.04,
+    "score": 0.77,
+    "edgeRate": 0.75,
+    "delayS": 2.09,
+    "anchorToCaster": 390,
+    "anchor": "ground"
+   },
+   {
+    "model": "effect:D1132020",
+    "coverage": 0.88,
+    "radius": 150,
+    "plateau": 0.41,
+    "outside": 0.03,
+    "score": 0.38,
+    "edgeRate": 0.31,
+    "delayS": 3.55,
+    "anchorToCaster": 389,
+    "anchor": "ground"
+   }
+  ],
+  "cone": {
+   "halfAngle90": 117,
+   "hitRateInside": 0.27,
+   "hitRateOutside": 0.2
+  }
+ },
+ "80871": {
+  "label": "Cosmic Charge (Spear)",
+  "name": "Cosmic Charge",
+  "impacts": 5044,
+  "casters": {
+   "Aspect of the Spear": 5044
+  },
+  "best": {
+   "model": "effect:68FD7F34",
+   "coverage": 1,
+   "radius": 200,
+   "plateau": 0.61,
+   "outside": 0.09,
+   "score": 0.51,
+   "edgeRate": 0.32,
+   "delayS": 1.04,
+   "anchorToCaster": 360,
+   "anchor": "ground"
+  },
+  "models": [
+   {
+    "model": "effect:68FD7F34",
+    "coverage": 1,
+    "radius": 200,
+    "plateau": 0.61,
+    "outside": 0.09,
+    "score": 0.51,
+    "edgeRate": 0.32,
+    "delayS": 1.04,
+    "anchorToCaster": 360,
+    "anchor": "ground"
+   },
+   {
+    "model": "effect:A8AA7A32",
+    "coverage": 0.42,
+    "radius": 1725,
+    "plateau": 0.31,
+    "outside": 0,
+    "score": 0.31,
+    "edgeRate": 0,
+    "delayS": 3.16,
+    "anchorToCaster": 456,
+    "anchor": "ground"
+   },
+   {
+    "model": "effect:051F8F16",
+    "coverage": 0.58,
+    "radius": 1750,
+    "plateau": 0.33,
+    "outside": 0.03,
+    "score": 0.3,
+    "edgeRate": 0.19,
+    "delayS": 5.49,
+    "anchorToCaster": 897,
+    "anchor": "ground"
+   }
+  ],
+  "cone": {
+   "halfAngle90": 170,
+   "hitRateInside": 0.35,
+   "hitRateOutside": 0
+  }
+ },
+ "80901": {
+  "label": "Excision Extremis (Vloxx, last phase)",
+  "name": "Excision Extremis",
+  "impacts": 112,
+  "casters": {
+   "Vloxx": 112
+  },
+  "best": {
+   "model": "effect:B4868841",
+   "coverage": 1,
+   "radius": 500,
+   "plateau": 0.52,
+   "outside": 0,
+   "score": 0.52,
+   "edgeRate": 0.48,
+   "delayS": 0,
+   "anchorToCaster": 473,
+   "anchor": "ground"
+  },
+  "models": [
+   {
+    "model": "effect:B4868841",
+    "coverage": 1,
+    "radius": 500,
+    "plateau": 0.52,
+    "outside": 0,
+    "score": 0.52,
+    "edgeRate": 0.48,
+    "delayS": 0,
+    "anchorToCaster": 473,
+    "anchor": "ground"
+   },
+   {
+    "model": "effect:C3579636",
+    "coverage": 0.34,
+    "radius": 1350,
+    "plateau": 0.43,
+    "outside": 0,
+    "score": 0.43,
+    "edgeRate": 0.33,
+    "delayS": 4.52,
+    "anchorToCaster": 788,
+    "anchor": "ground"
+   },
+   {
+    "model": "effect:5AFA5E46",
+    "coverage": 0.59,
+    "radius": 950,
+    "plateau": 0.47,
+    "outside": 0.25,
+    "score": 0.22,
+    "edgeRate": 0.5,
+    "delayS": 2.49,
+    "anchorToCaster": 3,
+    "anchor": "ground"
+   }
+  ],
+  "cone": null
+ },
+ "80940": {
+  "label": "Ancora Strike (Staff/Spear)",
+  "name": "Ancora Strike",
+  "impacts": 6421,
+  "casters": {
+   "Aspect of the Staff": 3869,
+   "Aspect of the Spear": 2552
+  },
+  "best": {
+   "model": "caster",
+   "radius": 275,
+   "plateau": 0.7,
+   "outside": 0,
+   "score": 0.7,
+   "edgeRate": 0.68
+  },
+  "models": [
+   {
+    "model": "caster",
+    "radius": 275,
+    "plateau": 0.7,
+    "outside": 0,
+    "score": 0.7,
+    "edgeRate": 0.68
+   },
+   {
+    "model": "effect:D200E82E",
+    "coverage": 0.42,
+    "radius": 1200,
+    "plateau": 0.29,
+    "outside": 0.07,
+    "score": 0.22,
+    "edgeRate": 0.17,
+    "delayS": 4.04,
+    "anchorToCaster": 358,
+    "anchor": "ground"
+   },
+   {
+    "model": "effect:D5C6761C",
+    "coverage": 0.55,
+    "radius": 925,
+    "plateau": 0.34,
+    "outside": 0.13,
+    "score": 0.21,
+    "edgeRate": 0.2,
+    "delayS": 5.11,
+    "anchorToCaster": 314,
+    "anchor": "ground"
+   }
+  ],
+  "cone": {
+   "halfAngle90": 62,
+   "hitRateInside": 0.94,
+   "hitRateOutside": 0.19
+  }
+ },
+ "80965": {
+  "label": "Raging Storm (Bulwark)",
+  "name": "Raging Storm",
+  "impacts": 782,
+  "casters": {
+   "Cosmic Bulwark": 782
+  },
+  "best": {
+   "model": "effect:A8AA7A32",
+   "coverage": 0.99,
+   "radius": 150,
+   "plateau": 0.58,
+   "outside": 0.11,
+   "score": 0.47,
+   "edgeRate": 0.4,
+   "delayS": 0.08,
+   "anchorToCaster": 440,
+   "anchor": "ground"
+  },
+  "models": [
+   {
+    "model": "effect:A8AA7A32",
+    "coverage": 0.99,
+    "radius": 150,
+    "plateau": 0.58,
+    "outside": 0.11,
+    "score": 0.47,
+    "edgeRate": 0.4,
+    "delayS": 0.08,
+    "anchorToCaster": 440,
+    "anchor": "ground"
+   },
+   {
+    "model": "effect:D1132020",
+    "coverage": 1,
+    "radius": 150,
+    "plateau": 0.49,
+    "outside": 0.05,
+    "score": 0.44,
+    "edgeRate": 0.38,
+    "delayS": 1.48,
+    "anchorToCaster": 468,
+    "anchor": "ground"
+   },
+   {
+    "model": "effect:1FD11FB1",
+    "coverage": 0.33,
+    "radius": 1925,
+    "plateau": 0.38,
+    "outside": 0,
+    "score": 0.38,
+    "edgeRate": 0,
+    "delayS": 3.93,
+    "anchorToCaster": 267,
+    "anchor": "ground"
+   }
+  ],
+  "cone": {
+   "halfAngle90": 160,
+   "hitRateInside": 0.34,
+   "hitRateOutside": 0.34
+  }
+ },
+ "81015": {
+  "label": "Worldpiercer (Cosmic Bulwark)",
+  "name": "Worldpiercer",
+  "impacts": 373,
+  "casters": {
+   "Cosmic Bulwark": 373
+  },
+  "best": {
+   "model": "effect:75E4C35E",
+   "coverage": 1,
+   "radius": 175,
+   "plateau": 0.51,
+   "outside": 0.01,
+   "score": 0.5,
+   "edgeRate": 0.52,
+   "delayS": 3,
+   "anchorToCaster": 535,
+   "anchor": "ground"
+  },
+  "models": [
+   {
+    "model": "effect:75E4C35E",
+    "coverage": 1,
+    "radius": 175,
+    "plateau": 0.51,
+    "outside": 0.01,
+    "score": 0.5,
+    "edgeRate": 0.52,
+    "delayS": 3,
+    "anchorToCaster": 535,
+    "anchor": "ground"
+   },
+   {
+    "model": "effect:4CAB3D62",
+    "coverage": 1,
+    "radius": 175,
+    "plateau": 0.51,
+    "outside": 0.01,
+    "score": 0.5,
+    "edgeRate": 0.52,
+    "delayS": 3,
+    "anchorToCaster": 535,
+    "anchor": "ground"
+   },
+   {
+    "model": "effect:51A65F90",
+    "coverage": 0.57,
+    "radius": 1050,
+    "plateau": 0.22,
+    "outside": 0.02,
+    "score": 0.2,
+    "edgeRate": 0.17,
+    "delayS": 4.32,
+    "anchorToCaster": 557,
+    "anchor": "ground"
+   }
+  ],
+  "cone": {
+   "halfAngle90": 165,
+   "hitRateInside": 0.15,
+   "hitRateOutside": 0.44
+  }
+ },
+ "81017": {
+  "label": "Visions of Eternity (2)",
+  "name": "Visions of Eternity",
+  "impacts": 53,
+  "casters": {
+   "Vloxx": 53
+  },
+  "best": {
+   "model": "effect:C3579636",
+   "coverage": 1,
+   "radius": 600,
+   "plateau": 1,
+   "outside": 0,
+   "score": 1,
+   "edgeRate": 0.6,
+   "delayS": 0,
+   "anchorToCaster": 506,
+   "anchor": "ground"
+  },
+  "models": [
+   {
+    "model": "effect:C3579636",
+    "coverage": 1,
+    "radius": 600,
+    "plateau": 1,
+    "outside": 0,
+    "score": 1,
+    "edgeRate": 0.6,
+    "delayS": 0,
+    "anchorToCaster": 506,
+    "anchor": "ground"
+   },
+   {
+    "model": "effect:4B6532EC",
+    "coverage": 0.55,
+    "radius": 600,
+    "plateau": 1,
+    "outside": 0,
+    "score": 1,
+    "edgeRate": 0.5,
+    "delayS": 8,
+    "anchorToCaster": 477,
+    "anchor": "ground"
+   },
+   {
+    "model": "effect:D5C6761C",
+    "coverage": 0.57,
+    "radius": 625,
+    "plateau": 0.51,
+    "outside": 0.03,
+    "score": 0.48,
+    "edgeRate": 0.5,
+    "delayS": 6.48,
+    "anchorToCaster": 550,
+    "anchor": "ground"
+   }
+  ],
+  "cone": null
+ },
+ "81053": {
+  "label": "Excision Extremis (Vloxx)",
+  "name": "Excision Extremis",
+  "impacts": 1397,
+  "casters": {
+   "Vloxx": 1397
+  },
+  "best": {
+   "model": "effect:B4868841",
+   "coverage": 1,
+   "radius": 525,
+   "plateau": 0.52,
+   "outside": 0.01,
+   "score": 0.51,
+   "edgeRate": 0.56,
+   "delayS": 0.92,
+   "anchorToCaster": 194,
+   "anchor": "ground"
+  },
+  "models": [
+   {
+    "model": "effect:B4868841",
+    "coverage": 1,
+    "radius": 525,
+    "plateau": 0.52,
+    "outside": 0.01,
+    "score": 0.51,
+    "edgeRate": 0.56,
+    "delayS": 0.92,
+    "anchorToCaster": 194,
+    "anchor": "ground"
+   },
+   {
+    "model": "effect:A5962B65",
+    "coverage": 1,
+    "radius": 375,
+    "plateau": 0.52,
+    "outside": 0.03,
+    "score": 0.49,
+    "edgeRate": 0.38,
+    "delayS": 2.39,
+    "anchorToCaster": 329,
+    "anchor": "ground"
+   },
+   {
+    "model": "effect:5AFA5E46",
+    "coverage": 0.47,
+    "radius": 750,
+    "plateau": 0.57,
+    "outside": 0.17,
+    "score": 0.4,
+    "edgeRate": 0.33,
+    "delayS": 4.17,
+    "anchorToCaster": 5,
+    "anchor": "ground"
+   }
+  ],
+  "cone": null
+ },
+ "81076": {
+  "label": "Ascension's Sacrifice — 2-people green (shackle)",
+  "name": "81076",
+  "impacts": 753,
+  "casters": {
+   "Vloxx": 753
+  },
+  "best": {
+   "model": "effect:A47987D0",
+   "coverage": 1,
+   "radius": 25,
+   "plateau": 0.48,
+   "outside": 0.01,
+   "score": 0.46,
+   "edgeRate": 0.48,
+   "delayS": 0,
+   "anchorToCaster": 349,
+   "anchor": "carried by an agent"
+  },
+  "models": [
+   {
+    "model": "effect:A47987D0",
+    "coverage": 1,
+    "radius": 25,
+    "plateau": 0.48,
+    "outside": 0.01,
+    "score": 0.46,
+    "edgeRate": 0.48,
+    "delayS": 0,
+    "anchorToCaster": 349,
+    "anchor": "carried by an agent"
+   },
+   {
+    "model": "effect:A8AA7A32",
+    "coverage": 1,
+    "radius": 375,
+    "plateau": 0.2,
+    "outside": 0.14,
+    "score": 0.05,
+    "edgeRate": 0.33,
+    "delayS": 2.28,
+    "anchorToCaster": 352,
+    "anchor": "ground"
+   },
+   {
+    "model": "effect:D200E82E",
+    "coverage": 0.32,
+    "radius": 1325,
+    "plateau": 0.15,
+    "outside": 0.14,
+    "score": 0.01,
+    "edgeRate": 0.2,
+    "delayS": 6.84,
+    "anchorToCaster": 1167,
+    "anchor": "ground"
+   }
+  ],
+  "cone": null
+ },
+ "81176": {
+  "label": "Raging Storm (Vloxx, last phase)",
+  "name": "Raging Storm",
+  "impacts": 529,
+  "casters": {
+   "Vloxx": 529
+  },
+  "best": {
+   "model": "effect:68FD7F34",
+   "coverage": 0.99,
+   "radius": 150,
+   "plateau": 0.79,
+   "outside": 0.03,
+   "score": 0.75,
+   "edgeRate": 0.75,
+   "delayS": 2.08,
+   "anchorToCaster": 422,
+   "anchor": "ground"
+  },
+  "models": [
+   {
+    "model": "effect:68FD7F34",
+    "coverage": 0.99,
+    "radius": 150,
+    "plateau": 0.79,
+    "outside": 0.03,
+    "score": 0.75,
+    "edgeRate": 0.75,
+    "delayS": 2.08,
+    "anchorToCaster": 422,
+    "anchor": "ground"
+   },
+   {
+    "model": "effect:D200E82E",
+    "coverage": 1,
+    "radius": 150,
+    "plateau": 0.7,
+    "outside": 0.03,
+    "score": 0.67,
+    "edgeRate": 0.65,
+    "delayS": 2.08,
+    "anchorToCaster": 413,
+    "anchor": "ground"
+   },
+   {
+    "model": "effect:D1132020",
+    "coverage": 1,
+    "radius": 150,
+    "plateau": 0.29,
+    "outside": 0.03,
+    "score": 0.25,
+    "edgeRate": 0.25,
+    "delayS": 2.53,
+    "anchorToCaster": 463,
+    "anchor": "ground"
+   }
+  ],
+  "cone": {
+   "halfAngle90": 164,
+   "hitRateInside": 0.17,
+   "hitRateOutside": 0.08
+  }
+ },
+ "81230": {
+  "label": "81230 Surrounding Curse? (Staff)",
+  "name": "81230",
+  "impacts": 5776,
+  "casters": {
+   "Aspect of the Staff": 5776
+  },
+  "best": {
+   "model": "effect:D200E82E",
+   "coverage": 0.93,
+   "radius": 200,
+   "plateau": 0.77,
+   "outside": 0.02,
+   "score": 0.75,
+   "edgeRate": 0.65,
+   "delayS": 1.04,
+   "anchorToCaster": 508,
+   "anchor": "ground"
+  },
+  "models": [
+   {
+    "model": "effect:D200E82E",
+    "coverage": 0.93,
+    "radius": 200,
+    "plateau": 0.77,
+    "outside": 0.02,
+    "score": 0.75,
+    "edgeRate": 0.65,
+    "delayS": 1.04,
+    "anchorToCaster": 508,
+    "anchor": "ground"
+   },
+   {
+    "model": "effect:B21F84B9",
+    "coverage": 1,
+    "radius": 200,
+    "plateau": 0.67,
+    "outside": 0.01,
+    "score": 0.67,
+    "edgeRate": 0.57,
+    "delayS": 4.45,
+    "anchorToCaster": 513,
+    "anchor": "ground"
+   },
+   {
+    "model": "effect:1A262BDD",
+    "coverage": 0.5,
+    "radius": 600,
+    "plateau": 0.43,
+    "outside": 0.11,
+    "score": 0.32,
+    "edgeRate": 0.23,
+    "delayS": 4.12,
+    "anchorToCaster": 668,
+    "anchor": "ground"
+   }
+  ],
+  "cone": {
+   "halfAngle90": 87,
+   "hitRateInside": 0.31,
+   "hitRateOutside": 0.22
+  }
+ },
+ "81238": {
+  "label": "Annihilating Orb (2)",
+  "name": "Annihilating Orb",
+  "impacts": 1396,
+  "casters": {
+   "Vloxx": 1396
+  },
+  "best": {
+   "model": "caster",
+   "radius": 1375,
+   "plateau": 0.17,
+   "outside": 0.02,
+   "score": 0.15,
+   "edgeRate": 0.12
+  },
+  "models": [
+   {
+    "model": "caster",
+    "radius": 1375,
+    "plateau": 0.17,
+    "outside": 0.02,
+    "score": 0.15,
+    "edgeRate": 0.12
+   },
+   {
+    "model": "effect:51A65F90",
+    "coverage": 1,
+    "radius": 1375,
+    "plateau": 0.16,
+    "outside": 0.02,
+    "score": 0.15,
+    "edgeRate": 0.09,
+    "delayS": 1.29,
+    "anchorToCaster": 4,
+    "anchor": "ground"
+   },
+   {
+    "model": "effect:D21FF557",
+    "coverage": 1,
+    "radius": 1375,
+    "plateau": 0.16,
+    "outside": 0.02,
+    "score": 0.15,
+    "edgeRate": 0.09,
+    "delayS": 1.29,
+    "anchorToCaster": 4,
+    "anchor": "ground"
+   }
+  ],
+  "cone": {
+   "halfAngle90": 35,
+   "hitRateInside": 0.17,
+   "hitRateOutside": 0.16
+  }
+ },
+ "81271": {
+  "label": "Echoing Blade (Vloxx)",
+  "name": "Echoing Blade",
+  "impacts": 2328,
+  "casters": {
+   "Vloxx": 2328
+  },
+  "best": {
+   "model": "caster",
+   "radius": 650,
+   "plateau": 0.46,
+   "outside": 0.05,
+   "score": 0.4,
+   "edgeRate": 0.25
+  },
+  "models": [
+   {
+    "model": "caster",
+    "radius": 650,
+    "plateau": 0.46,
+    "outside": 0.05,
+    "score": 0.4,
+    "edgeRate": 0.25
+   },
+   {
+    "model": "effect:A5962B65",
+    "coverage": 1,
+    "radius": 625,
+    "plateau": 0.44,
+    "outside": 0.04,
+    "score": 0.4,
+    "edgeRate": 0.31,
+    "delayS": 3.32,
+    "anchorToCaster": 4,
+    "anchor": "ground"
+   },
+   {
+    "model": "effect:40EF37BF",
+    "coverage": 0.99,
+    "radius": 650,
+    "plateau": 0.46,
+    "outside": 0.05,
+    "score": 0.4,
+    "edgeRate": 0.28,
+    "delayS": 2.39,
+    "anchorToCaster": 4,
+    "anchor": "ground"
+   }
+  ],
+  "cone": {
+   "halfAngle90": 159,
+   "hitRateInside": 0.44,
+   "hitRateOutside": 0.48
+  }
+ },
+ "81273": {
+  "label": "81273 (Cosmic Piercer)",
+  "name": "81273",
+  "impacts": 543,
+  "casters": {
+   "Cosmic Piercer": 543
+  },
+  "best": {
+   "model": "effect:59E2060A",
+   "coverage": 0.6,
+   "radius": 375,
+   "plateau": 0.67,
+   "outside": 0.07,
+   "score": 0.6,
+   "edgeRate": 0.41,
+   "delayS": 0,
+   "anchorToCaster": 1200,
+   "anchor": "ground"
+  },
+  "models": [
+   {
+    "model": "effect:59E2060A",
+    "coverage": 0.6,
+    "radius": 375,
+    "plateau": 0.67,
+    "outside": 0.07,
+    "score": 0.6,
+    "edgeRate": 0.41,
+    "delayS": 0,
+    "anchorToCaster": 1200,
+    "anchor": "ground"
+   },
+   {
+    "model": "effect:4B6532EC",
+    "coverage": 0.41,
+    "radius": 550,
+    "plateau": 0.46,
+    "outside": 0.2,
+    "score": 0.26,
+    "edgeRate": 0.29,
+    "delayS": 0.6,
+    "anchorToCaster": 1168,
+    "anchor": "ground"
+   },
+   {
+    "model": "effect:D5C6761C",
+    "coverage": 0.54,
+    "radius": 350,
+    "plateau": 0.39,
+    "outside": 0.16,
+    "score": 0.23,
+    "edgeRate": 0.33,
+    "delayS": 3.48,
+    "anchorToCaster": 1064,
+    "anchor": "ground"
+   }
+  ],
+  "cone": null
+ },
+ "81318": {
+  "label": "Probability Distribution (2)",
+  "name": "Probability Distribution",
+  "impacts": 84,
+  "casters": {
+   "Vloxx": 84
+  },
+  "best": {
+   "model": "effect:C3579636",
+   "coverage": 0.86,
+   "radius": 325,
+   "plateau": 0.88,
+   "outside": 0.06,
+   "score": 0.82,
+   "edgeRate": null,
+   "delayS": 1.31,
+   "anchorToCaster": 639,
+   "anchor": "ground"
+  },
+  "models": [
+   {
+    "model": "effect:C3579636",
+    "coverage": 0.86,
+    "radius": 325,
+    "plateau": 0.88,
+    "outside": 0.06,
+    "score": 0.82,
+    "edgeRate": null,
+    "delayS": 1.31,
+    "anchorToCaster": 639,
+    "anchor": "ground"
+   },
+   {
+    "model": "effect:99C7A4DB",
+    "coverage": 0.75,
+    "radius": 325,
+    "plateau": 0.77,
+    "outside": 0.09,
+    "score": 0.68,
+    "edgeRate": null,
+    "delayS": 3.52,
+    "anchorToCaster": 703,
+    "anchor": "ground"
+   },
+   {
+    "model": "effect:68FD7F34",
+    "coverage": 1,
+    "radius": 275,
+    "plateau": 0.3,
+    "outside": 0.11,
+    "score": 0.19,
+    "edgeRate": 0.18,
+    "delayS": 1.48,
+    "anchorToCaster": 660,
+    "anchor": "ground"
+   }
+  ],
+  "cone": {
+   "halfAngle90": 162,
+   "hitRateInside": 0.13,
+   "hitRateOutside": 0.14
+  }
+ },
+ "81326": {
+  "label": "Excision Extremis (Sword)",
+  "name": "Excision Extremis",
+  "impacts": 615,
+  "casters": {
+   "Aspect of the Sword": 615
+  },
+  "best": {
+   "model": "effect:D5C6761C",
+   "coverage": 0.63,
+   "radius": 825,
+   "plateau": 0.5,
+   "outside": 0,
+   "score": 0.5,
+   "edgeRate": 0.33,
+   "delayS": 4.16,
+   "anchorToCaster": 545,
+   "anchor": "ground"
+  },
+  "models": [
+   {
+    "model": "effect:D5C6761C",
+    "coverage": 0.63,
+    "radius": 825,
+    "plateau": 0.5,
+    "outside": 0,
+    "score": 0.5,
+    "edgeRate": 0.33,
+    "delayS": 4.16,
+    "anchorToCaster": 545,
+    "anchor": "ground"
+   },
+   {
+    "model": "effect:F2485AEE",
+    "coverage": 1,
+    "radius": 525,
+    "plateau": 0.47,
+    "outside": 0,
+    "score": 0.47,
+    "edgeRate": 0.59,
+    "delayS": 0,
+    "anchorToCaster": 601,
+    "anchor": "ground"
+   },
+   {
+    "model": "effect:A8AA7A32",
+    "coverage": 0.44,
+    "radius": 900,
+    "plateau": 0.53,
+    "outside": 0.1,
+    "score": 0.43,
+    "edgeRate": 0.44,
+    "delayS": 3.64,
+    "anchorToCaster": 572,
+    "anchor": "ground"
+   }
+  ],
+  "cone": null
+ },
+ "81327": {
+  "label": "Ancora Strike (Sword)",
+  "name": "Ancora Strike",
+  "impacts": 468,
+  "casters": {
+   "Aspect of the Sword": 468
+  },
+  "best": {
+   "model": "caster",
+   "radius": 325,
+   "plateau": 0.65,
+   "outside": 0,
+   "score": 0.65,
+   "edgeRate": 0.62
+  },
+  "models": [
+   {
+    "model": "caster",
+    "radius": 325,
+    "plateau": 0.65,
+    "outside": 0,
+    "score": 0.65,
+    "edgeRate": 0.62
+   },
+   {
+    "model": "effect:D5C6761C",
+    "coverage": 0.6,
+    "radius": 800,
+    "plateau": 0.38,
+    "outside": 0.02,
+    "score": 0.36,
+    "edgeRate": 0.31,
+    "delayS": 4.87,
+    "anchorToCaster": 275,
+    "anchor": "ground"
+   },
+   {
+    "model": "effect:5AFA5E46",
+    "coverage": 0.45,
+    "radius": 775,
+    "plateau": 0.39,
+    "outside": 0.03,
+    "score": 0.36,
+    "edgeRate": 0.31,
+    "delayS": 4.08,
+    "anchorToCaster": 313,
+    "anchor": "ground"
+   }
+  ],
+  "cone": {
+   "halfAngle90": 48,
+   "hitRateInside": 1,
+   "hitRateOutside": 0.06
+  }
+ },
+ "81330": {
+  "label": "Division Eternal (Sword)",
+  "name": "Division Eternal",
+  "impacts": 1588,
+  "casters": {
+   "Aspect of the Sword": 1588
+  },
+  "best": {
+   "model": "effect:B4868841",
+   "coverage": 0.9,
+   "radius": 525,
+   "plateau": 0.53,
+   "outside": 0.01,
+   "score": 0.52,
+   "edgeRate": 0.58,
+   "delayS": 0.48,
+   "anchorToCaster": 326,
+   "anchor": "ground"
+  },
+  "models": [
+   {
+    "model": "effect:B4868841",
+    "coverage": 0.9,
+    "radius": 525,
+    "plateau": 0.53,
+    "outside": 0.01,
+    "score": 0.52,
+    "edgeRate": 0.58,
+    "delayS": 0.48,
+    "anchorToCaster": 326,
+    "anchor": "ground"
+   },
+   {
+    "model": "effect:5614D57D",
+    "coverage": 1,
+    "radius": 1275,
+    "plateau": 0.5,
+    "outside": 0.01,
+    "score": 0.49,
+    "edgeRate": 0.34,
+    "delayS": 0.76,
+    "anchorToCaster": 1199,
+    "anchor": "ground"
+   },
+   {
+    "model": "caster",
+    "radius": 575,
+    "plateau": 0.64,
+    "outside": 0.3,
+    "score": 0.34,
+    "edgeRate": 0.32
+   }
+  ],
+  "cone": {
+   "halfAngle90": 81,
+   "hitRateInside": 0.75,
+   "hitRateOutside": 0.12
+  }
+ }
+}

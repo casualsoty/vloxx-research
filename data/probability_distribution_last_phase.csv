@@ -28,6 +28,11 @@ log_id,last_phase_tick_s,time_s,fixated_player,players_up,expected,targets,targe
 20261001-223543,63,540.502,Player-BCA0,10,3,3,Player-BCA0 | Player-DDA6 | Player-1BA4
 20261001-223543,83,560.502,Player-BCA0,4,1,1,Player-BCA0
 20261001-223543,103,580.502,,1,1,0,
+20261002-225404,23,488.774,,10,3,3,Player-1B8E | Player-8FDE | Player-DDA6
+20261002-225404,43,508.774,Player-F494,10,3,3,Player-F494 | Player-1B8E | Player-DE24
+20261002-225404,63,528.774,,10,3,3,Player-8FDE | Player-74C1 | Player-258F
+20261002-232932,23,573.532,Player-F494,10,3,3,Player-F494 | Player-74C1 | Player-BCA0
+20261002-232932,43,593.532,Player-F494,9,3,3,Player-F494 | Player-1B8E | Player-DDA6
 014037-fixed_dpsreport,23,489.994,Player-D34A,10,3,3,Player-D34A | Player-B5C2 | Player-EACF
 014037-fixed_dpsreport,43,509.994,,8,2,2,Player-184B | Player-9884
 014037-fixed_dpsreport,63,529.994,Player-B5C2,10,3,3,Player-B5C2 | Player-D34A | Player-0BF9

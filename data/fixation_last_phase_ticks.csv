@@ -37,6 +37,14 @@ log_id,tick_s,holder_at_tick,result,new_holder,previous_holder,previous_end_caus
 20261001-223543,42.5,,APPLIED,Player-BCA0,Player-74C1,expired,28.584,10
 20261001-223543,62.5,Player-BCA0,held,,Player-74C1,expired,48.584,10
 20261001-223543,82.5,Player-BCA0,held,,Player-74C1,expired,68.584,4
+20261002-225404,2.5,Player-258F,held,,Player-1B8E,expired,64.9,10
+20261002-225404,22.5,,SKIPPED,,Player-258F,expired,15.26,10
+20261002-225404,42.5,,APPLIED,Player-F494,Player-258F,expired,35.26,10
+20261002-225404,62.5,,SKIPPED,,Player-F494,down,2.977,9
+20261002-225404,82.5,,SKIPPED,,Player-F494,down,22.977,10
+20261002-232932,2.5,,APPLIED,Player-F494,Player-1B8E,down,38.298,10
+20261002-232932,22.5,Player-F494,held,,Player-1B8E,down,58.298,10
+20261002-232932,42.5,Player-F494,held,,Player-1B8E,down,78.298,9
 014037-fixed_dpsreport,2.5,,APPLIED,Player-D34A,Player-0BF9,expired,34.094,10
 014037-fixed_dpsreport,22.5,Player-D34A,held,,Player-0BF9,expired,54.094,10
 014037-fixed_dpsreport,42.5,,SKIPPED,,Player-D34A,down,0.972,9

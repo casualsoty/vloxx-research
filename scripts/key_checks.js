@@ -36,3 +36,15 @@ const br = A.filter(a => a.event === 'breakbar_broken'); console.log('   Aspect 
 const de = A.filter(a => a.event === 'death' && a['respawn_after_s (death) / first_orb_after_s (breakbar_broken)']);
 const rs = {}; de.forEach(a => { const k = a.aspect; rs[k] = rs[k] || []; rs[k].push(+a['respawn_after_s (death) / first_orb_after_s (breakbar_broken)']); });
 console.log('9) Aspect respawn after death:', Object.entries(rs).map(([k, v]) => k + ' n=' + v.length + ' ' + Math.min(...v) + '-' + Math.max(...v) + 's').join(' | '));
+// 10) orb throws (data/orb_throws.csv from scripts/orb_throws.js): the Aspect throws 3 missiles (skill 80520) at the CC
+if (fs.existsSync(path.join(D, 'orb_throws.csv'))) {
+  const OT = read('orb_throws.csv'); const nt = OT.filter(r => r.throw_missiles_80520 === '0');
+  console.log('10) Orb throws on Aspect CC:', (OT.length - nt.length) + '/' + OT.length, 'thrown; not thrown:', nt.map(r => `${r.log_id}@${r.break_s} ${r.aspect}`).join(', ') || '-');
+}
+// 11) +63 s overlap: green + PD on the same player, by whether someone is fixated at +63 s
+{
+  const t = {}; for (const p of PD) { if (p.last_phase_tick_s !== '63') continue; const g = G.find(r => r.log_id === p.log_id && r.phase === 'last' && Math.abs(+r.time_s - +p.time_s) < 1); if (!g) continue;
+    const both = g.green_targets_in_order.split(' > ').filter(x => x && p.target_names.split(' | ').includes(x)); const k = g.fixated_player ? 'fixated' : 'nobody fixated';
+    t[k] = t[k] || { n: 0, overlap: 0, overlapIsFixated: 0 }; t[k].n++; if (both.length) { t[k].overlap++; if (both.every(x => x === g.fixated_player)) t[k].overlapIsFixated++; } }
+  console.log('11) +63 s green+PD overlap:', Object.entries(t).map(([k, v]) => `${k}: ${v.overlap}/${v.n} rounds (overlap player = fixated ${v.overlapIsFixated}/${v.overlap})`).join(' | '));
+}

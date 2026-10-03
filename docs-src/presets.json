@@ -1,0 +1,257 @@
+{
+  "_about": "Raid-planner attack presets. Single source of truth: the planner (docs-src/planner.js) and the documentation page (scripts/build_docs.js, 'Raid planner data' section) both read this file. Sizes in arcdps world units; 'source' says where the number comes from (FINDINGS §5d = measured from raw logs). Cosmic Charge and Worldpiercer are not listed here: they are built from the measured data/cosmic_charge_summary.json and data/worldpiercer_summary.json.",
+  "circles": [
+    {
+      "label": "3-people green",
+      "r": 240,
+      "color": "#2fa84f",
+      "skill": "80629 / 80378",
+      "caster": "Vloxx",
+      "note": "on the green-marked player; needs 3 players inside",
+      "source": "measured ~240–250 (§5d)"
+    },
+    {
+      "label": "2-people green (shackle)",
+      "r": 150,
+      "color": "#2fa84f",
+      "skill": "81076",
+      "caster": "Vloxx",
+      "note": "Staff phase; marker 1 = fixated player",
+      "source": "Elite Insights (not measurable)"
+    },
+    {
+      "label": "Probability Distribution spread",
+      "r": 300,
+      "color": "#f0a040",
+      "skill": "80809",
+      "caster": "Vloxx",
+      "note": "last phase +23/+43/+63 s; fixated player first",
+      "source": "measured ~300 (§5d)"
+    },
+    {
+      "label": "Probability Distribution puddle",
+      "r": 325,
+      "color": "#2f55c0",
+      "skill": "81318",
+      "caster": "Vloxx",
+      "note": "left where each spread lands",
+      "source": "measured ~325 (§5d)"
+    },
+    {
+      "label": "Surrounding Curse",
+      "r": 200,
+      "color": "#f0a040",
+      "skill": "80484 / 81230",
+      "caster": "Vloxx, Aspect of the Staff",
+      "note": "ground marker ~1 s before",
+      "source": "measured ~200 (§5d)"
+    },
+    {
+      "label": "Raging Storm",
+      "r": 150,
+      "color": "#f0a040",
+      "skill": "80810 / 81176 / 80965",
+      "caster": "Vloxx, Cosmic Bulwark",
+      "note": "ground marker ~2 s before",
+      "source": "measured ~150 (§5d)"
+    },
+    {
+      "label": "Annihilating Orb (Piercer) explosion",
+      "r": 375,
+      "color": "#e0464f",
+      "skill": "81273",
+      "caster": "Cosmic Piercer",
+      "note": "explodes where it lands",
+      "source": "measured ~375 (§5d)"
+    },
+    {
+      "label": "Slice Through Reality (around Vloxx)",
+      "r": 525,
+      "color": "#f0a040",
+      "skill": "80585",
+      "caster": "Vloxx",
+      "note": "centred on Vloxx, ground marker 7 s before",
+      "source": "measured ~525 (§5d)"
+    },
+    {
+      "label": "Excision Extremis (Vloxx)",
+      "r": 525,
+      "color": "#f0a040",
+      "skill": "81053 / 80901",
+      "caster": "Vloxx",
+      "note": "around a ground marker ~0.9 s before",
+      "source": "measured ~525 (§5d) [likely]"
+    },
+    {
+      "label": "Echoing Blade (around Vloxx)",
+      "r": 475,
+      "color": "#f0a040",
+      "skill": "81271",
+      "caster": "Vloxx",
+      "note": "~45 % of players in range hit per pulse",
+      "source": "measured ~450–500 (§5d) [likely]"
+    },
+    {
+      "label": "Visions of Eternity",
+      "r": 600,
+      "color": "#f0a040",
+      "skill": "80420 / 81017",
+      "caster": "Vloxx",
+      "note": "",
+      "source": "measured ~600 (§5d)"
+    },
+    {
+      "label": "Custom",
+      "r": 300,
+      "color": "#ffffff",
+      "note": "free circle"
+    }
+  ],
+  "cones": [
+    {
+      "label": "Thousand Strikes (Spear)",
+      "r": 1150,
+      "spread": 110,
+      "skill": "80709",
+      "caster": "Aspect of the Spear",
+      "note": "forward cone, nothing behind",
+      "source": "measured ~110°, ~1,100–1,200 (§5d)"
+    },
+    {
+      "label": "Thousand Strikes (Vloxx)",
+      "r": 1350,
+      "spread": 110,
+      "skill": "80555",
+      "caster": "Vloxx",
+      "note": "forward cone, nothing behind",
+      "source": "measured ~110°, ~1,200–1,500 (§5d)"
+    },
+    {
+      "label": "Ancora Strike (Aspect melee)",
+      "r": 275,
+      "spread": 90,
+      "skill": "80940 / 81327",
+      "caster": "Aspects",
+      "note": "short frontal swing on the tank",
+      "source": "measured ~200–300 ahead, ±150 (§5d)"
+    },
+    {
+      "label": "Custom",
+      "r": 600,
+      "spread": 90,
+      "note": "free cone"
+    }
+  ],
+  "beams": [
+    {
+      "label": "Bulwark arrow (Worldpiercer)",
+      "w": 300,
+      "len": 1500,
+      "skill": "81015",
+      "caster": "Cosmic Bulwark",
+      "note": "fixed line from the Bulwark, hits ~2 s after its 4 s cast",
+      "source": "measured ~300 wide, ≥ 1,500 long (§5d)"
+    },
+    {
+      "label": "Division Eternal (Vloxx)",
+      "w": 900,
+      "len": 1350,
+      "skill": "80483",
+      "caster": "Vloxx",
+      "note": "forward band, nothing behind; length ≥ 1,350",
+      "source": "measured ~900 wide (§5d)"
+    },
+    {
+      "label": "Division Eternal (Sword)",
+      "w": 775,
+      "len": 1700,
+      "skill": "81330",
+      "caster": "Aspect of the Sword",
+      "note": "forward rectangle",
+      "source": "measured ~775 × ~1,700 (§5d)"
+    },
+    {
+      "label": "Custom",
+      "w": 200,
+      "note": "free line attack"
+    }
+  ],
+  "units": [
+    {
+      "key": "vloxx",
+      "label": "Vloxx",
+      "color": "#d13b3b",
+      "r": 150,
+      "tag": "V",
+      "species": 28106,
+      "source": "agent hitbox (radius field) 150"
+    },
+    {
+      "key": "staff",
+      "label": "Aspect of the Staff",
+      "color": "#c98a2e",
+      "r": 120,
+      "tag": "St",
+      "species": 28017,
+      "source": "agent hitbox 120"
+    },
+    {
+      "key": "spear",
+      "label": "Aspect of the Spear",
+      "color": "#3fa7c9",
+      "r": 120,
+      "tag": "Sp",
+      "species": 28033,
+      "source": "agent hitbox 120"
+    },
+    {
+      "key": "sword",
+      "label": "Aspect of the Sword",
+      "color": "#b9b9c9",
+      "r": 120,
+      "tag": "Sw",
+      "species": 28107,
+      "source": "agent hitbox 120"
+    },
+    {
+      "key": "piercer",
+      "label": "Cosmic Piercer",
+      "color": "#8f6fe0",
+      "r": 50,
+      "tag": "Pi",
+      "source": "agent hitbox 50 (elite) / 75 (champion)"
+    },
+    {
+      "key": "bulwark",
+      "label": "Cosmic Bulwark",
+      "color": "#5f8fe0",
+      "r": 45,
+      "tag": "Bu",
+      "source": "agent hitbox 40–50"
+    },
+    {
+      "key": "sunderer",
+      "label": "Cosmic Sunderer",
+      "color": "#e06f9f",
+      "r": 50,
+      "tag": "Su",
+      "source": "agent hitbox 50"
+    },
+    {
+      "key": "orb",
+      "label": "Ascension Orb",
+      "color": "#f3e37a",
+      "r": 16,
+      "tag": "o",
+      "source": "agent hitbox 16, max HP 14,940"
+    },
+    {
+      "key": "npc",
+      "label": "Custom NPC",
+      "color": "#aaaaaa",
+      "r": 60,
+      "tag": "?",
+      "source": ""
+    }
+  ]
+}

@@ -56,8 +56,10 @@ const CATS = [
   { id: 'greens', name: '3-people greens', icon: '◉', match: /^1\.|green rounds/i },
   { id: 'fixated', name: 'Fixated', icon: '◎', match: /^2\.|^Fixated/i },
   { id: 'bug', name: 'Fewer greens (timing bug)', icon: '★', match: /^3\.|timing bug/i },
+  { id: 'overlap', name: 'Green + spread overlap', icon: '⊗', match: /^3b\.|overlap/i },
   { id: 'pd', name: 'Probability Distribution', icon: '◌', match: /^4\.|Probability/i },
   { id: 'shackles', name: '2-people green shackles', icon: '⛓', match: /^5b\.|Sacrifice/i },
+  { id: 'shapes', name: 'Attack shapes (verified)', icon: '◇', match: /^5d.|Attack shapes/i },
   { id: 'orbs', name: 'Ascension orbs & Aspects', icon: '✦', match: /^5\.|orbs/i },
   { id: 'arena', name: 'Arena coordinates', icon: '⌖', match: /^5c\.|coordinates/i },
   { id: 'rejected', name: 'Rejected hypotheses', icon: '✕', match: /^6\.|REJECTED/i },
@@ -67,6 +69,12 @@ const findings = sections(read('FINDINGS.md'));
 const readme = sections(read('README.md'));
 const intro = read('FINDINGS.md').split(/\n## /)[0].replace(/^# .*\n/, '');
 const used = new Set(); const catSecs = CATS.map(c => { const s = findings.filter(f => !used.has(f) && c.match.test(f.title)); s.forEach(x => used.add(x)); return { ...c, secs: s }; });
+// Sidebar / page order: mechanics in the order they happen in the fight, then arena & planner, then research notes.
+// (CATS above is the MATCHING order — first match wins — so it is kept as is.)
+const ORDER = [
+  ['In fight order', ['fixated', 'greens', 'shackles', 'orbs', 'shapes', 'pd', 'bug', 'overlap']],
+  ['Arena & planner', ['arena', 'plannerdata']],
+  ['Research notes', ['rejected', 'open']]];
 findings.filter(f => !used.has(f)).forEach(f => catSecs.push({ id: 'misc-' + catSecs.length, name: f.title.replace(/^\d+[a-z]?\.\s*/, ''), icon: '•', secs: [f] }));
 const refTitles = ['The goal behind the research', 'Important IDs', 'Datasets', 'Getting more logs', 'How to run', 'Folder layout', 'Status'];
 const ref = refTitles.map(t => readme.find(s => s.title.startsWith(t))).filter(Boolean);
@@ -79,10 +87,45 @@ const tagCounts = {}; for (const m of read('FINDINGS.md').matchAll(/\[(solid|lik
 const scripts = fs.readdirSync(path.join(ROOT, 'scripts')).filter(f => f.endsWith('.js')).map(f => { const first = fs.readFileSync(path.join(ROOT, 'scripts', f), 'utf8').split('\n').find(l => l.startsWith('//')) || ''; return { f, d: first.replace(/^\/\/\s*/, '') }; });
 const built = new Date().toISOString().replace('T', ' ').slice(0, 16) + ' UTC';
 
+// ---------- "Raid planner data": generated from exactly the files the planner uses, so docs and planner can't diverge ----------
+const pj = p => { try { return JSON.parse(fs.readFileSync(path.join(ROOT, p), 'utf8')); } catch (e) { return null; } };
+const AR = pj('data/arena.json'), PRE = pj('docs-src/presets.json'), WPS = pj('data/worldpiercer_summary.json'), CCS = pj('data/cosmic_charge_summary.json');
+const mk = v => (v * 0.0254).toFixed(3); const n0 = v => Math.round(v).toLocaleString('en-US');
+const tbl = (head, rows) => `<div class="tw"><table><thead><tr>${head.map(h => `<th>${h}</th>`).join('')}</tr></thead><tbody>${rows.map(r => `<tr>${r.map(c => `<td>${c}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`;
+const compass = a => ['E', 'NE', 'N', 'NW', 'W', 'SW', 'S', 'SE'][((Math.round(a / 45) % 8) + 8) % 8];
+let plannerCards = [];
+if (AR) {
+  const C = AR.centre; const sp = Object.entries(AR.spawns || {}).filter(([k]) => /Aspect/.test(k));
+  plannerCards.push(['Arena', `<p>Map / squad-marker tool coordinates = arcdps world × 0.0254. North = up (world y increases upward).</p>` + tbl(['', 'map (marker tool)', 'arcdps world', 'notes'], [
+    ['Vloxx / arena centre', `<b>${mk(C.x)}, ${mk(C.y)}</b>`, `${C.x}, ${C.y}`, `last-phase position, ${C.samples} logs`],
+    ['Platform', '—', '—', `radius ≈ ${n0(AR.platformRadius)}; 99 % of player positions within ${n0(AR.radius.p99)} (${n0(AR.positions)} samples)`],
+    ['Entrance (start)', AR.entrance ? `<b>${mk(AR.entrance.x)}, ${mk(AR.entrance.y)}</b>` : '—', AR.entrance ? `${AR.entrance.x}, ${AR.entrance.y}` : '—', AR.entrance ? `${n0(AR.entrance.dist)} west of the centre (average start position)` : '']])]);
+  plannerCards.push(['Aspect spawn points', `<p>Each Aspect always spawns at exactly the same point (respawn 40 s after death).</p>` + tbl(['Aspect', 'map (marker tool)', 'arcdps world', 'from centre', 'spawns seen'],
+    sp.map(([k, p]) => [k, `<b>${mk(p.x)}, ${mk(p.y)}</b>`, `${p.x}, ${p.y}`, n0(Math.hypot(p.x - C.x, p.y - C.y)), `${p.n}${p.variants > 1 ? ` (${p.variants} variants)` : ''}`]))]);
+  plannerCards.push(['Cosmic add spawn points (Piercer / Bulwark / Sunderer)', `<p>The purple circles on the planner map. 8 fixed points every ~45° around the centre; all three Cosmic add types use them.</p>` +
+    tbl(['#', 'direction', 'map (marker tool)', 'arcdps world', 'from centre', 'Piercer / Bulwark / Sunderer seen'], (AR.cosmicPoints || []).map((p, i) => [i + 1, `${compass(p.angle)} (${p.angle}°)`, `<b>${mk(p.x)}, ${mk(p.y)}</b>`, `${p.x}, ${p.y}`, n0(p.dist),
+      ['Cosmic Piercer', 'Cosmic Bulwark', 'Cosmic Sunderer'].map(k => (p.types || {})[k] || 0).join(' / ')]))]);
+}
+if (PRE && PRE.units) plannerCards.push(['Unit sizes (hitbox radius)', tbl(['unit', 'radius', 'source'], PRE.units.filter(u => u.key !== 'npc').map(u => [u.label, u.r, esc(u.source || '')]))]);
+if (PRE) plannerCards.push(['Attack presets', `<p>Every attack the planner can draw, with the size it uses. "§5d" = measured from raw logs (see Attack shapes).</p>` +
+  tbl(['attack', 'shape', 'size', 'caster', 'skill id', 'notes', 'source'], [
+    ...(CCS ? [['<b>Cosmic Charge</b>', 'dash + knockdown band + trail', `dash ${n0(CCS.dashLength)} toward the fixated player; start knockdown r ${CCS.startRadius}; band ±${CCS.dashSideReach || 600} (front ~${CCS.dashFrontReach || 650}); trail ${2 * CCS.trailHalfWidth} wide until ~${CCS.trailEndS} s`, 'Vloxx', '80512', `cast ${CCS.castS} s; knockdown pulses at ${(CCS.knockPulsesS || []).join(', ')} s; Stability prevents it`, `measured, ${CCS.casts} casts (data/cosmic_charge_summary.json)`]] : []),
+    ...(WPS ? [['<b>Worldpiercer</b>', `${Object.keys(WPS.perCast || { 6: 1 })[0]}-spoke star`, `${(WPS.gapDeg || [60])[0]}° apart, ${WPS.width} wide, to the arena edge (~${n0(WPS.endFromCentre)} from centre)`, 'Vloxx', '80916', `projectiles ~${n0(WPS.speed)} units/s, launched ~${WPS.launchDelayS} s after the cast; Spear phase only`, `measured, ${WPS.casts} casts (data/worldpiercer_summary.json)`]] : []),
+    ...PRE.circles.filter(c => c.label !== 'Custom').map(c => [esc(c.label), 'circle', `radius ${c.r}`, esc(c.caster || ''), esc(c.skill || ''), esc(c.note || ''), esc(c.source || '')]),
+    ...PRE.cones.filter(c => c.label !== 'Custom').map(c => [esc(c.label), 'cone', `${c.spread}°, radius ${c.r}`, esc(c.caster || ''), esc(c.skill || ''), esc(c.note || ''), esc(c.source || '')]),
+    ...PRE.beams.filter(c => c.label !== 'Custom').map(c => [esc(c.label), 'line / band', `${c.w} wide${c.len ? `, ~${n0(c.len)} long` : ''}`, esc(c.caster || ''), esc(c.skill || ''), esc(c.note || ''), esc(c.source || '')])])]);
+const plannerSection = plannerCards.length ? `<section class="cat" id="plannerdata"><h2><span class="ic">⌗</span>Raid planner data</h2><p class="sub">Generated from data/arena.json, docs-src/presets.json and the measured mechanic summaries — the same files the planner reads.</p>${plannerCards.map(([t, h], k) => `<article class="card" id="plannerdata${k}"><h3>${esc(t)}</h3>${h}</article>`).join('')}</section>` : '';
+
 // ---------- page ----------
-const nav = catSecs.map(c => `<a href="#${c.id}" data-cat="${c.id}"><span class="ic">${c.icon}</span>${esc(c.name)}</a>`).join('') +
+const catById = Object.fromEntries(catSecs.map(c => [c.id, c]));
+const navLink = c => `<a href="#${c.id}" data-cat="${c.id}"><span class="ic">${c.icon}</span>${esc(c.name)}</a>`;
+const pdCat = { id: 'plannerdata', name: 'Raid planner data', icon: '⌗' };
+const orderedIds = ORDER.flatMap(([, ids]) => ids);
+const leftovers = catSecs.filter(c => !orderedIds.includes(c.id)); // FINDINGS sections without a category go at the end of the fight list
+const nav = ORDER.map(([title, ids], gi) => `<div class="navh">${esc(title)}</div>` + ids.map(id => id === 'plannerdata' ? (plannerSection ? navLink(pdCat) : '') : catById[id] ? navLink(catById[id]) : '').join('') + (gi === 0 ? leftovers.map(navLink).join('') : '')).join('') +
   '<div class="navh">Reference</div>' + ref.map((s, k) => `<a href="#ref${k}"><span class="ic">§</span>${esc(s.title)}</a>`).join('') + '<a href="#files"><span class="ic">▤</span>Data & scripts</a>';
-const body = catSecs.map(c => `<section class="cat" id="${c.id}"><h2><span class="ic">${c.icon}</span>${esc(c.name)}</h2>${c.secs.map(s => `<article class="card"><h3>${inline(s.title)}</h3>${md(s.body)}</article>`).join('')}</section>`).join('') +
+const secHtml = c => `<section class="cat" id="${c.id}"><h2><span class="ic">${c.icon}</span>${esc(c.name)}</h2>${c.secs.map(s => `<article class="card"><h3>${inline(s.title)}</h3>${md(s.body)}</article>`).join('')}</section>`;
+const body = ORDER.map(([, ids], gi) => ids.map(id => id === 'plannerdata' ? plannerSection : catById[id] ? secHtml(catById[id]) : '').join('') + (gi === 0 ? leftovers.map(secHtml).join('') : '')).join('') +
   `<section class="cat" id="reference"><h2><span class="ic">§</span>Reference</h2>${ref.map((s, k) => `<article class="card" id="ref${k}"><h3>${inline(s.title)}</h3>${md(s.body)}</article>`).join('')}</section>` +
   `<section class="cat" id="files"><h2><span class="ic">▤</span>Data & scripts</h2><article class="card"><h3>Datasets (data/)</h3><div class="tw"><table><thead><tr><th>file</th><th>rows</th><th>columns</th><th>size</th></tr></thead><tbody>${dataFiles.map(d => `<tr><td><a href="${BASE}data/${d.f}"><code>${d.f}</code></a></td><td>${d.rows}</td><td>${d.cols}</td><td>${d.kb} KB</td></tr>`).join('')}</tbody></table></div>
    <p>Logs: <strong>${count('logs/raw')}</strong> raw CM .zevtc · <strong>${count('logs/ei')}</strong> EI JSON · <strong>${count('logs/raw_nm')}</strong> raw NM.</p></article>
@@ -94,7 +137,9 @@ const plannerCss = rd('docs-src/planner.css'), plannerJs = rd('docs-src/planner.
 // shared fight-plan templates (docs-src/plans/*.json, validated by build_plans.js) + measured mechanics for planner presets
 const safeJson = o => JSON.stringify(o).replace(/</g, '\\u003c');
 const plansJson = safeJson(require('./build_plans').buildPlans());
-const mechJson = safeJson({ worldpiercer: (() => { try { return JSON.parse(rd('data/worldpiercer_summary.json')); } catch (e) { return null; } })() });
+const rdJson = p => { try { return JSON.parse(rd(p)); } catch (e) { return null; } };
+const presets = rdJson('docs-src/presets.json') || { circles: [], cones: [], beams: [] }; const presetsJson = safeJson(presets);
+const mechJson = safeJson({ worldpiercer: rdJson('data/worldpiercer_summary.json'), cosmicCharge: rdJson('data/cosmic_charge_summary.json') });
 
 const html = `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Vloxx CM Research</title><style>
@@ -157,9 +202,9 @@ function spy(){if(pinned&&Date.now()-pinT<1200)return;pinned=null;const line=90;
  if(window.innerHeight+window.scrollY>=document.documentElement.scrollHeight-4){const vis=targets.filter(s=>s.offsetParent!==null);cur=vis[vis.length-1]||cur;}if(cur)setOn(cur.id);}
 links.forEach(a=>a.addEventListener('click',()=>{pinned=a.getAttribute('href').slice(1);pinT=Date.now();setOn(pinned);}));
 ['wheel','touchstart','keydown'].forEach(t=>window.addEventListener(t,()=>{pinT=0;},{passive:true}));window.addEventListener('scroll',spy,{passive:true});spy();
-</script><script>window.ARENA=${arenaJson};window.PLANS=${plansJson};window.MECH=${mechJson};</script><script>${plannerJs}</script>
+</script><script>window.ARENA=${arenaJson};window.PLANS=${plansJson};window.MECH=${mechJson};window.PRESETS=${presetsJson};</script><script>${plannerJs}</script>
 <script>
-function view(){const pl=/^#planner/.test(location.hash);document.body.classList.toggle('planner',pl);document.getElementById('planner-root').classList.toggle('on',pl);
+function view(){const pl=/^#planner($|=)/.test(location.hash);document.body.classList.toggle('planner',pl);document.getElementById('planner-root').classList.toggle('on',pl);
  document.querySelectorAll('.topbar a').forEach(a=>a.classList.toggle('on',(a.dataset.view==='planner')===pl));if(pl)window.VloxxPlanner.boot();else document.querySelectorAll('.pl-modal').forEach(m=>m.remove());}
 window.addEventListener('hashchange',view);view();
 </script></body></html>`;
