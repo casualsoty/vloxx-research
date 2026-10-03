@@ -16,6 +16,7 @@ const steps = [
   'excision_strip.js',       // data/excision_strip.csv + excision_strip_summary.json: boon strip / Crippled and the 1.0 s lockout
   'excision_lockout_check.js', // prints the stress test of the 1.0 s strip lockout (FINDINGS §5e)
   'echoing_blade.js',        // data/echoing_blade_summary.json: spinning half-circle on Vloxx, radius, projectiles
+  'breakbars.js',            // data/breakbars.csv + breakbars_summary.json: bar size, when it opens, drain, time to break
   'build_plans.js',          // validates docs-src/plans/*.json (shared planner templates); fails the build if one is invalid
   'anonymise.js',            // player names → stable pseudonyms in data/, FINDINGS.md, README.md (before anything is printed or published)
   'key_checks.js',          // prints headline conclusions (sanity check in the CI log)

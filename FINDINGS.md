@@ -409,6 +409,35 @@ Script `scripts/echoing_blade.js` → `data/echoing_blade_summary.json` (part of
     * Range among regular accounts: 18 % to 46 %.
   * The planner's Cosmic Charge preset (beam tool) draws exactly this from the measured numbers. **[solid]** (shape, timing, stability) / **[likely]** (reach ±50)
 
+## 5i. Breakbars — size, when they open, how they drain  [solid]
+Script `scripts/breakbars.js` → `data/breakbars.csv` (one row per bar window) and `data/breakbars_summary.json` (part of the full build).
+Units: "breakbar damage" as in the game's skill facts (a 1 s Daze = 100, a 2 s Stun = 200, …). arcdps logs it in tenths.
+
+| unit | bar size | when the bar opens | own drain | time to break (median) | share done by player CC | after the break |
+|---|---|---|---|---|---|---|
+| Vloxx | **6,000** (5,984–6,199, 175 breaks) | at **70 %, 40 % and 10 %** of its health, 10–15 s into a *Visions of Eternity* cast | 86 / s | 9 s (p90 13.5 s) | 85 % | bar closed until the next threshold (~157 s later) |
+| Aspect of the Staff | **1,000** (972–1,196, 206 breaks) | when the Aspect drops to **25 % health** | 46 / s | 5.1 s (p90 13.2 s) | 49 % | 3 Ascension orbs are thrown (§5); the bar does not come back for that Aspect |
+| Aspect of the Spear | **1,000** (974–1,134, 170 breaks) | at 25 % health | 46 / s | 5.4 s (p90 12.3 s) | 42 % | same |
+| Aspect of the Sword | **1,000** (967–1,161, 46 breaks) | at 25 % health | 46 / s | 5.4 s (p90 12 s) | 41 % | same |
+| Cosmic Piercer | **700** (601–814, 136 breaks) | open from the moment it spawns | 44 / s | 7.2 s (p90 11.4 s) | 85 % | closed for **15 s**, then open again; repeats |
+| Cosmic Bulwark | **700** (614–839, 50 breaks) | open from spawn | 28 / s | 9.6 s (p90 15.9 s) | 83 % | closed 15 s, then open again |
+| Cosmic Sunderer | **700** (588–718, 12 breaks) | open from spawn | 70 / s | 7.2 s (p90 9.9 s) | 78 % | closed 15 s, then open again |
+
+* **How the size was measured.** Every bar window ends with the bar emptied, and the sum *player CC + soft CC + the bar's own drain* is a
+  constant per unit (Vloxx 5,984–6,199 over 175 breaks; Aspects 967–1,196 over 422; Cosmic adds ~600–840 over 198). Rounded: **Vloxx 6,000,
+  Aspects 1,000, Cosmic adds ~700**.
+* **All of these bars stay up until they are broken.** There is no "failed" window in the data: Vloxx's bar window is as long as the squad
+  takes (typically 6–14 s, once 31 s).
+* **The bars drain on their own while open**, one tick per 0.3 s (the unattributed negative breakbar events in the log): Vloxx 86 / s
+  (1.4 % of its bar per second), Aspects 46 / s (4.6 % per second), Piercer 44 / s, Bulwark 28 / s, Sunderer 70 / s.
+  * An **Aspect's bar empties by itself in at most ~22 s**; 17 Aspect bars broke with no player CC hit at all. Players supply 41–49 % of an Aspect break.
+  * On Vloxx and the Cosmic adds, players supply ~80–85 %: without CC, Vloxx's bar would take ~70 s to drain.
+* **Aspect bar = the orb trigger.** The bar opens at 25 % health and its break is what throws the 3 Ascension orbs (§5). In the data every
+  Aspect life has exactly one bar window, which is why all 302 logged breaks were "the first" of that Aspect.
+* **Vloxx's bar and its health thresholds.** Opens at 68.9–70 % (133 windows), 39–40 % (49) and 9–10 % (12): these look like the thresholds that lead
+  into the splits and the last phase, which was not checked separately **[likely]**. *Visions of Eternity* (cast ~19–25 s) is being channelled while the bar is up.
+* Soft CC from conditions is logged as small positive unattributed ticks (median 6–10 per tick) and counts toward the bar like player CC.
+
 ## 6. Hypotheses that were tested and REJECTED (don't redo)
 * **Range limit ~600 (last phase) / ~775 (early, = 600 + boss hitbox 150 + player 24).** Looked perfect on EI data (211/211),
   **broken by our squad's raw 2026-10-01 logs** (201030 +33 s: 3 greens with everyone 714–898 away; 213946/223543 +33 s: 3

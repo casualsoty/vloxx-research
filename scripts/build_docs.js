@@ -67,6 +67,7 @@ const CATS = [ // matching: by FINDINGS section number (first match wins)
   { id: 'echoing', name: 'Echoing Blade', icon: '◔', match: /^5f\./ },
   { id: 'worldpiercer', name: 'Worldpiercer', icon: '✳', match: /^5g\./ },
   { id: 'cosmiccharge', name: 'Cosmic Charge', icon: '➤', match: /^5h\./ },
+  { id: 'breakbars', name: 'Breakbars', icon: '▰', match: /^5i\./ },
   { id: 'rejected', name: 'Rejected hypotheses', icon: '✕', match: /^6\./ },
   { id: 'open', name: 'Open questions', icon: '?', match: /^7\./ },
 ];
@@ -79,7 +80,7 @@ const used = new Set(); const catSecs = CATS.map(c => { const s = findings.filte
 // (CATS above is the MATCHING order — first match wins — so it is kept as is.)
 const ORDER = [
   ['Attacks & mechanics, in fight order', ['fixated', 'greens', 'shackles', 'cosmiccharge', 'worldpiercer', 'excision', 'echoing', 'pd', 'bug', 'overlap', 'shapes']],
-  ['Adds, arena & planner', ['orbs', 'arena', 'plannerdata']],
+  ['Adds, breakbars, arena & planner', ['orbs', 'breakbars', 'arena', 'plannerdata']],
   ['Research notes', ['rejected', 'open']]];
 findings.filter(f => !used.has(f)).forEach(f => catSecs.push({ id: 'misc-' + catSecs.length, name: f.title.replace(/^\d+[a-z]?\.\s*/, ''), icon: '•', secs: [f] }));
 const refTitles = ['The goal behind the research', 'Important IDs', 'Datasets', 'Getting more logs', 'How to run', 'Folder layout', 'Status'];
@@ -98,6 +99,7 @@ const built = new Date().toISOString().replace('T', ' ').slice(0, 16) + ' UTC';
 
 // ---------- "Raid planner data": generated from exactly the files the planner uses, so docs and planner can't diverge ----------
 const pj = p => { try { return JSON.parse(fs.readFileSync(path.join(ROOT, p), 'utf8')); } catch (e) { return null; } };
+const BBS = pj('data/breakbars_summary.json') || {};
 const AR = pj('data/arena.json'), PRE = pj('docs-src/presets.json'), WPS = pj('data/worldpiercer_summary.json'), CCS = pj('data/cosmic_charge_summary.json');
 const mk = v => (v * 0.0254).toFixed(3); const n0 = v => Math.round(v).toLocaleString('en-US');
 const tbl = (head, rows) => `<div class="tw"><table><thead><tr>${head.map(h => `<th>${h}</th>`).join('')}</tr></thead><tbody>${rows.map(r => `<tr>${r.map(c => `<td>${c}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`;
@@ -115,7 +117,8 @@ if (AR) {
     tbl(['#', 'direction', 'map (marker tool)', 'arcdps world', 'from centre', 'Piercer / Bulwark / Sunderer seen'], (AR.cosmicPoints || []).map((p, i) => [i + 1, `${compass(p.angle)} (${p.angle}°)`, `<b>${mk(p.x)}, ${mk(p.y)}</b>`, `${p.x}, ${p.y}`, n0(p.dist),
       ['Cosmic Piercer', 'Cosmic Bulwark', 'Cosmic Sunderer'].map(k => (p.types || {})[k] || 0).join(' / ')]))]);
 }
-if (PRE && PRE.units) plannerCards.push(['Unit sizes (hitbox radius)', tbl(['unit', 'radius', 'source'], PRE.units.filter(u => u.key !== 'npc').map(u => [u.label, u.r, esc(u.source || '')]))]);
+if (PRE && PRE.units) plannerCards.push(['Units: hitbox radius and breakbar', tbl(['unit', 'hitbox radius', 'breakbar size', 'bar drains by itself', 'median time to break', 'source'], PRE.units.filter(u => u.key !== 'npc').map(u => { const b = BBS[u.label];
+    return [u.label, u.r, b && b.size ? `<b>${n0(b.size.median)}</b> (${n0(b.size.p10)}–${n0(b.size.p90)})` : '—', b && b.selfDrainPerS ? b.selfDrainPerS + ' / s' : '—', b && b.timeToBreakS ? b.timeToBreakS.median + ' s' : '—', esc(u.source || '') + (b ? '; breakbar measured (data/breakbars_summary.json)' : '')]; }))]);
 if (PRE) plannerCards.push(['Attack presets', `<p>Every attack the planner can draw, with the size it uses. "§5d" = measured from raw logs (see Attack shapes).</p>` +
   tbl(['attack', 'shape', 'size', 'caster', 'skill id', 'notes', 'source'], [
     ...(CCS ? [['<b>Cosmic Charge</b>', 'dash + knockdown band + trail', `dash ${n0(CCS.dashLength)} toward the fixated player; start knockdown r ${CCS.startRadius}; band ±${CCS.dashSideReach || 600} (front ~${CCS.dashFrontReach || 650}); trail ${2 * CCS.trailHalfWidth} wide until ~${CCS.trailEndS} s`, 'Vloxx', '80512', `cast ${CCS.castS} s; knockdown pulses at ${(CCS.knockPulsesS || []).join(', ')} s; Stability prevents it`, `measured, ${CCS.casts} casts (data/cosmic_charge_summary.json)`]] : []),

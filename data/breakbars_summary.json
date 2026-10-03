@@ -1,0 +1,327 @@
+{
+ "Vloxx": {
+  "windows": 194,
+  "broken": 186,
+  "brokenPct": 95.9,
+  "size": {
+   "median": 6079,
+   "p10": 5984,
+   "p90": 6199,
+   "n": 175
+  },
+  "playerDamageToBreak": {
+   "median": 5170,
+   "p10": 4550,
+   "p90": 5560
+  },
+  "timeToBreakS": {
+   "median": 9,
+   "p90": 13.5
+  },
+  "unbrokenWindowS": {
+   "median": 8.7,
+   "p10": 6,
+   "p90": 11.4,
+   "n": 8
+  },
+  "firstOpenAfterSpawnS": null,
+  "reopenAfterCloseS": {
+   "median": 156.9,
+   "p10": 143.4,
+   "p90": 206.4,
+   "n": 61
+  },
+  "reopenAfterBreakS": {
+   "median": 157.2,
+   "p10": 144,
+   "p90": 216.3,
+   "n": 59
+  },
+  "hpPctAtOpen": {
+   "p10": 39.1,
+   "median": 68.9,
+   "p90": 69.3
+  },
+  "selfDrainPerS": 86,
+  "playerShareOfBreakPct": 85,
+  "castingAtOpen": [
+   "(nothing) ×99",
+   "Visions of Eternity ×93",
+   "80591 ×2"
+  ],
+  "castStartedBeforeOpenS": null
+ },
+ "Aspect of the Staff": {
+  "windows": 277,
+  "broken": 277,
+  "brokenPct": 100,
+  "size": {
+   "median": 1013,
+   "p10": 972,
+   "p90": 1196,
+   "n": 206
+  },
+  "playerDamageToBreak": {
+   "median": 510,
+   "p10": 150,
+   "p90": 810
+  },
+  "timeToBreakS": {
+   "median": 5.1,
+   "p90": 13.2
+  },
+  "unbrokenWindowS": null,
+  "firstOpenAfterSpawnS": {
+   "median": 73.2,
+   "p10": 39.1,
+   "p90": 121.9
+  },
+  "reopenAfterCloseS": null,
+  "reopenAfterBreakS": null,
+  "hpPctAtOpen": {
+   "p10": 23.2,
+   "median": 24.6,
+   "p90": 25.4
+  },
+  "selfDrainPerS": 46,
+  "playerShareOfBreakPct": 49,
+  "castingAtOpen": [
+   "Ancora Strike ×172",
+   "Eternal Reflection ×80",
+   "80311 ×25"
+  ],
+  "castStartedBeforeOpenS": 2.4
+ },
+ "Aspect of the Spear": {
+  "windows": 210,
+  "broken": 210,
+  "brokenPct": 100,
+  "size": {
+   "median": 997,
+   "p10": 974,
+   "p90": 1134,
+   "n": 170
+  },
+  "playerDamageToBreak": {
+   "median": 450,
+   "p10": 150,
+   "p90": 750
+  },
+  "timeToBreakS": {
+   "median": 5.4,
+   "p90": 12.3
+  },
+  "unbrokenWindowS": null,
+  "firstOpenAfterSpawnS": {
+   "median": 48,
+   "p10": 36.4,
+   "p90": 67.9
+  },
+  "reopenAfterCloseS": null,
+  "reopenAfterBreakS": null,
+  "hpPctAtOpen": {
+   "p10": 22.8,
+   "median": 24.5,
+   "p90": 25.4
+  },
+  "selfDrainPerS": 46,
+  "playerShareOfBreakPct": 42,
+  "castingAtOpen": [
+   "Ancora Strike ×154",
+   "Thousand Strikes ×48",
+   "Cosmic Charge ×8"
+  ],
+  "castStartedBeforeOpenS": 3.1
+ },
+ "Aspect of the Sword": {
+  "windows": 56,
+  "broken": 56,
+  "brokenPct": 100,
+  "size": {
+   "median": 996,
+   "p10": 967,
+   "p90": 1161,
+   "n": 46
+  },
+  "playerDamageToBreak": {
+   "median": 460,
+   "p10": 150,
+   "p90": 790
+  },
+  "timeToBreakS": {
+   "median": 5.4,
+   "p90": 12
+  },
+  "unbrokenWindowS": null,
+  "firstOpenAfterSpawnS": {
+   "median": 59.7,
+   "p10": 42.4,
+   "p90": 80.4
+  },
+  "reopenAfterCloseS": null,
+  "reopenAfterBreakS": null,
+  "hpPctAtOpen": {
+   "p10": 23.4,
+   "median": 24.6,
+   "p90": 25.2
+  },
+  "selfDrainPerS": 46,
+  "playerShareOfBreakPct": 41,
+  "castingAtOpen": [
+   "Ancora Strike ×27",
+   "Division Eternal ×21",
+   "Excision Extremis ×8"
+  ],
+  "castStartedBeforeOpenS": 2
+ },
+ "Cosmic Piercer": {
+  "windows": 136,
+  "broken": 136,
+  "brokenPct": 100,
+  "size": {
+   "median": 692,
+   "p10": 601,
+   "p90": 814,
+   "n": 136
+  },
+  "playerDamageToBreak": {
+   "median": 580,
+   "p10": 360,
+   "p90": 710
+  },
+  "timeToBreakS": {
+   "median": 7.2,
+   "p90": 11.4
+  },
+  "unbrokenWindowS": null,
+  "firstOpenAfterSpawnS": {
+   "median": 0.1,
+   "p10": 0,
+   "p90": 0.1
+  },
+  "reopenAfterCloseS": {
+   "median": 15,
+   "p10": 14.7,
+   "p90": 15,
+   "n": 134
+  },
+  "reopenAfterBreakS": {
+   "median": 15,
+   "p10": 14.7,
+   "p90": 15.3,
+   "n": 134
+  },
+  "hpPctAtOpen": {
+   "p10": 100,
+   "median": 100,
+   "p90": 100
+  },
+  "selfDrainPerS": 44,
+  "playerShareOfBreakPct": 85,
+  "castingAtOpen": [
+   "(nothing) ×133",
+   "Eternal Reflection ×3"
+  ],
+  "castStartedBeforeOpenS": null
+ },
+ "Cosmic Bulwark": {
+  "windows": 51,
+  "broken": 51,
+  "brokenPct": 100,
+  "size": {
+   "median": 717,
+   "p10": 614,
+   "p90": 839,
+   "n": 50
+  },
+  "playerDamageToBreak": {
+   "median": 600,
+   "p10": 330,
+   "p90": 760
+  },
+  "timeToBreakS": {
+   "median": 9.6,
+   "p90": 15.9
+  },
+  "unbrokenWindowS": null,
+  "firstOpenAfterSpawnS": {
+   "median": 0.1,
+   "p10": 0,
+   "p90": 0.1
+  },
+  "reopenAfterCloseS": {
+   "median": 15,
+   "p10": 14.7,
+   "p90": 15,
+   "n": 50
+  },
+  "reopenAfterBreakS": {
+   "median": 15,
+   "p10": 15,
+   "p90": 15.6,
+   "n": 50
+  },
+  "hpPctAtOpen": {
+   "p10": 100,
+   "median": 100,
+   "p90": 100
+  },
+  "selfDrainPerS": 28,
+  "playerShareOfBreakPct": 83,
+  "castingAtOpen": [
+   "(nothing) ×49",
+   "Worldpiercer ×1",
+   "Cosmic Charge ×1"
+  ],
+  "castStartedBeforeOpenS": null
+ },
+ "Cosmic Sunderer": {
+  "windows": 12,
+  "broken": 12,
+  "brokenPct": 100,
+  "size": {
+   "median": 671,
+   "p10": 588,
+   "p90": 718,
+   "n": 12
+  },
+  "playerDamageToBreak": {
+   "median": 550,
+   "p10": 450,
+   "p90": 650
+  },
+  "timeToBreakS": {
+   "median": 7.2,
+   "p90": 9.9
+  },
+  "unbrokenWindowS": null,
+  "firstOpenAfterSpawnS": {
+   "median": 0.1,
+   "p10": 0,
+   "p90": 0.1
+  },
+  "reopenAfterCloseS": {
+   "median": 15,
+   "p10": 14.7,
+   "p90": 15,
+   "n": 12
+  },
+  "reopenAfterBreakS": {
+   "median": 15,
+   "p10": 14.7,
+   "p90": 15,
+   "n": 12
+  },
+  "hpPctAtOpen": {
+   "p10": 100,
+   "median": 100,
+   "p90": 100
+  },
+  "selfDrainPerS": 70,
+  "playerShareOfBreakPct": 78,
+  "castingAtOpen": [
+   "(nothing) ×12"
+  ],
+  "castStartedBeforeOpenS": null
+ }
+}
