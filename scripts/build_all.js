@@ -13,12 +13,17 @@ const steps = [
   'cosmic_charge_shape.js',  // data/cosmic_charge_summary.json: dash length, knockdown pulses/reach, trail → planner preset
   'cosmic_charge_knocks.js', // data/cosmic_charge_knocks.csv: knockdowns per player × cast (Stability-aware)
   'build_plans.js',          // validates docs-src/plans/*.json (shared planner templates); fails the build if one is invalid
+  'anonymise.js',            // player names → stable pseudonyms in data/, FINDINGS.md, README.md (before anything is printed or published)
   'key_checks.js',          // prints headline conclusions (sanity check in the CI log)
   'build_docs.js',           // docs/index.html (or $DOCS_OUT/index.html)
+  ['anonymise.js', '--check'], // fails the build if a real player name would be published
 ];
-for (const s of steps) {
+const { load } = require('./anonymise'); const A = load(); const anon = t => A.apply(t);
+for (const st of steps) { const [s, ...args] = [].concat(st);
   const t = Date.now();
   console.log(`\n=== ${s} ===`);
-  execFileSync(process.execPath, [path.join(__dirname, s)], { stdio: 'inherit', env: process.env });
+  // output is piped through the anonymiser too: the CI log of a public repository is public
+  const out = execFileSync(process.execPath, [path.join(__dirname, s), ...args], { stdio: ['ignore', 'pipe', 'inherit'], env: process.env, maxBuffer: 64 * 1024 * 1024 }).toString();
+  process.stdout.write(anon(out));
   console.log(`--- ${s} done in ${((Date.now() - t) / 1000).toFixed(1)}s`);
 }

@@ -1,7 +1,8 @@
 name: Build data & docs
 
-# On every push to main: re-run all analysis scripts on the logs in the repo, rebuild the documentation page,
-# and publish it (plus FINDINGS/README/data/scripts) to GitHub Pages.
+# On every push to main: rebuild the documentation page from the committed (already anonymised) data/ and notes,
+# and publish it (plus FINDINGS/README/data/scripts) to GitHub Pages. The raw logs are NOT in the repository:
+# the analysis (node scripts/build_all.js) runs locally, then data/ is committed.
 on:
   push:
     branches: [main]
@@ -26,11 +27,11 @@ jobs:
         with:
           node-version: 22
 
-      - name: Run analysis scripts and build the page
+      - name: Build the page from the committed data
         env:
           DOCS_OUT: _site
           DOCS_BASE: ./
-        run: node scripts/build_all.js
+        run: node scripts/build_docs.js
 
       - name: Assemble site
         run: cp -r data scripts FINDINGS.md README.md _site/

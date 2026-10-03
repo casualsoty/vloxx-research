@@ -1,7 +1,8 @@
 # Vloxx (Nexus of Eternity) CM — mechanics research
 
 A knowledge base on the Guild Wars 2 raid boss **Vloxx** (encounter "Nexus of Eternity", arcdps boss id **28106**),
-Challenge Mode, built from arcdps logs since 2026-10-01. Our squad's raw logs are in `logs/raw`.
+Challenge Mode, built from arcdps logs since 2026-10-01. The logs themselves are **not in this repository** (they contain real
+player names): they live in `logs/` on the analysis machine only (gitignored). Everything published here is built from them and anonymised.
 
 **Start here as a new session:** read this file, then [FINDINGS.md](FINDINGS.md), then run
 `node scripts/build_all.js` to see every headline number recomputed from the logs.
@@ -25,8 +26,11 @@ docs/index.html      static documentation page (categories, search) GENERATED fr
 docs-src/planner.js  raid planner (SVG arena editor; plan JSON import/export) — inlined into docs/index.html by build_docs.js
 docs-src/planner.css planner styles (also inlined)
 docs-src/presets.json attack presets + unit sizes. The planner AND the docs "Raid planner data" section read it (single source)
+docs-src/legal.md    disclaimer / trademark / copyright notice (page footer + "About & legal" dialog)
+docs-src/feedback.js "Feedback" / "Report a bug" buttons (top bar); contact name = CONTACT_DISCORD in scripts/build_docs.js
 docs-src/plans/      shared planner templates (*.json, any exported plan); see the README there
 FINDINGS.md          every conclusion, its evidence, and hypotheses that were tested and REJECTED
+logs/                LOCAL ONLY (gitignored, not in the repository — back it up separately):
 logs/raw/            our squad's raw arcdps logs (.zevtc), CM: 162 logs from 2026-09-29 to 2026-10-03 (12 reached the last phase)
 logs/raw_nm/         raw NM logs (13; not analysed)
 logs/ei/             Elite Insights JSON of other squads' logs (gzipped). dps.report links + Wingman imports
@@ -82,11 +86,25 @@ Coordinates are arcdps world units. Objects keep the same `id` across steps, whi
 `build_docs.js` from the same files the planner reads: data/arena.json, docs-src/presets.json, data/worldpiercer_summary.json and
 data/cosmic_charge_summary.json. New planner data goes into one of those files, never only into planner.js.
 
+## Anonymisation (player names)
+Every published file uses pseudonyms instead of player names: `Player-XXXX` for characters, `Account-XXXX` for accounts. That covers
+data/*.csv and *.json, FINDINGS.md, README.md, the page and the build log. `scripts/anonymise.js` builds the name list from all logs,
+including name fragments inside Wingman / dps.report log ids. XXXX = HMAC-SHA256 with a private salt, stable between builds.
+* The salt is the local file `.anon-salt` (gitignored). The real ↔ pseudonym table is `private/name_map.json` (gitignored), for local lookups only.
+* Back up `.anon-salt` with the logs: a new salt changes every pseudonym on the next build.
+* `build_all.js` runs `anonymise.js` after the data scripts. It filters the build log, makes a final pass over the page,
+  and ends with `anonymise.js --check`, which fails the build if a real name (≥ 4 characters) is left anywhere that gets published.
+* The site's contact name (`CONTACT_DISCORD` in build_docs.js) is allowlisted and never replaced.
+* **GW2 Wingman log links are left untouched** so they keep working; their path contains the uploader's account name (already public on Wingman). Everything else, including the log ids, stays pseudonymised.
+* The raw logs in `logs/` contain real names, so they are gitignored and were removed from the git history on 2026-10-03.
+* A local **pre-push hook** (`.git/hooks/pre-push`, installed by `node scripts/install_hooks.js`) runs `anonymise.js --check` and refuses the push if a real name is left in a published file.
+
 ## Automation (GitHub Actions → GitHub Pages)
-Every push to `main` runs `.github/workflows/build-docs.yml`: Node 22 runs `scripts/build_all.js` (all dataset scripts + key checks +
-doc page) on the logs in the repo, then publishes the page with FINDINGS/README/data/scripts to GitHub Pages.
+Every push to `main` runs `.github/workflows/build-docs.yml`: Node 22 runs `scripts/build_docs.js` on the **committed** data/ and notes
+and publishes the page with FINDINGS/README/data/scripts to GitHub Pages. The analysis is not re-run there, because the logs aren't in the repository.
 One-time setup: repo **Settings → Pages → Source: GitHub Actions**.
-Locally: `node scripts/build_all.js` does the same (writes data/*.csv and docs/index.html).
+**Workflow after new logs:** copy them into `logs/raw` locally, run `node scripts/build_all.js` (all analysis + anonymisation + page +
+name check), then commit and push `data/`, `docs/` and the notes. Editing only FINDINGS / README / planner? Just push: CI rebuilds the page.
 
 ## How to run
 ```
@@ -105,7 +123,7 @@ common structure (greens, PD, fixation, stealth, downs, deaths, positions, orbs,
   * Wingman does **not** flag CM for Vloxx. Use HP: CM = 84,939,840 (EI's own rule: >70 M CM, >85 M Legendary CM); NM = 42,469,920.
     Estimate from summaries: `squadDmg / (1 - hpLeft/100)` ≈ 85 M (CM) or ≈ 42.4 M (NM).
   * CM released Tuesday 2026-09-29 23:00 CEST. On 2026-10-01 Wingman had 14 CM attempts that reached the last phase
-    (all in `logs/`), 1 CM kill.
+    (all in the local `logs/`), 1 CM kill.
 * **Raw logs are always better** than EI JSON: exact positions, every effect/buff event, agent effects (EI doesn't export).
   New raw logs: arcdps saves them in `Documents\Guild Wars 2\addons\arcdps\arcdps.cbtlogs\Vloxx (28106)`.
 

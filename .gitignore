@@ -1,0 +1,6 @@
+
+# anonymisation: salt + real-name table stay local
+.anon-salt
+# raw / EI logs contain real player names: local only (backed up outside the repo)
+logs/
+private/

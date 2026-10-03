@@ -1,5 +1,5 @@
 // Per-player hit / knock rate for one boss attack, from raw logs.
-//   node scripts/attack_hits.js <skillId> [account-or-name filter]      e.g.  node scripts/attack_hits.js 80512 Account-F4C4
+//   node scripts/attack_hits.js <skillId> [account-or-name filter]      e.g.  node scripts/attack_hits.js 80512 SomeAccount
 // A "cast" = the boss's cast start (statechange 67) → cast end (68) + 1 s. For each cast and each player who is alive and
 // present at the start: hit = any damage event of that skill on the player in the window (incl. 0-damage / evade / block
 // results); knocked = the player moved > 150 units within 0.6 s of the first hit (knockback / launch / pull).

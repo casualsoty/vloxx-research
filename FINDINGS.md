@@ -248,7 +248,7 @@ Skill **81076**, cast twice in the Staff phase (~38 s and ~85 s raw time). Marke
   (`scripts/worldpiercer_hits.js` → `data/worldpiercer_hits.csv`):
   * Measured over every cast where the player was alive and present: hit = any damage event; knocked = moved > 150 units within 0.6 s of the hit.
   * Squad-wide, 175-log set: hit **2.6 %**, knocked **1.4 %** of 3,561 player × cast.
-  * Account-F4C4 (Player-89AD): hit 2 / 278 (0.7 %), knocked 1 (0.4 %). That knock was the one hit that downed and killed him
+  * Account-F4C4 (Player-89AD): hit 2 / 278 (0.7 %), knocked 1 (0.4 %). That knock was the one hit that downed and killed them
     (170k damage, 20260930-014701 @ 299.1 s raw); the other hit (20260930-221626) moved him only 67 units.
 * **Cosmic Charge (Vloxx, skill 80512) — the Spear-phase dash toward the fixated player.** 330 casts, 133 logs
   (`scripts/cosmic_charge_shape.js` → `data/cosmic_charge_summary.json`, rebuilt every build):
@@ -274,7 +274,7 @@ Skill **81076**, cast twice in the Staff phase (~38 s and ~85 s raw time). Marke
   * **Knockdowns per player** (`scripts/cosmic_charge_knocks.js` → `data/cosmic_charge_knocks.csv`):
     * Counts every cast where the player was alive and present. Knocked = a big hit that lands (normal/crit/glance) with no Stability.
     * **Squad-wide, 175-log set: knocked in 30.6 %** of 3,159 player × casts; 85.7 % are hit by a big hit, and Stability saves 64 % of those.
-    * **Account-F4C4 (Player-89AD): knocked in 31.1 % of casts (76 / 244)**, average for the squad. Stability saved 63 % of his big hits.
+    * **Account-F4C4 (Player-89AD): knocked in 31.1 % of casts (76 / 244)**, average for the squad. Stability saved 63 % of their big hits.
     * Range among regular accounts: 18 % to 46 %.
   * The planner's Cosmic Charge preset (beam tool) draws exactly this from the measured numbers. **[solid]** (shape, timing, stability) / **[likely]** (reach ±50)
 * The other "Worldpiercer" (skill **81015**) is cast by the **Cosmic Bulwark** (Splits), with no missiles. Its shape has not been re-measured
