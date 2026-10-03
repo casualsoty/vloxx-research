@@ -12,6 +12,9 @@ const steps = [
   'worldpiercer.js',         // data/worldpiercer.csv + worldpiercer_summary.json (6-spoke star, width, range) → planner preset
   'cosmic_charge_shape.js',  // data/cosmic_charge_summary.json: dash length, knockdown pulses/reach, trail → planner preset
   'cosmic_charge_knocks.js', // data/cosmic_charge_knocks.csv: knockdowns per player × cast (Stability-aware)
+  'excision_geometry.js',    // data/excision_slashes.csv + excision_summary.json: slashes vs telegraphs, semicircle radius
+  'excision_strip.js',       // data/excision_strip.csv + excision_strip_summary.json: boon strip / Crippled and the 1.0 s lockout
+  'echoing_blade.js',        // data/echoing_blade_summary.json: spinning half-circle on Vloxx, radius, projectiles
   'build_plans.js',          // validates docs-src/plans/*.json (shared planner templates); fails the build if one is invalid
   'anonymise.js',            // player names → stable pseudonyms in data/, FINDINGS.md, README.md (before anything is printed or published)
   'key_checks.js',          // prints headline conclusions (sanity check in the CI log)

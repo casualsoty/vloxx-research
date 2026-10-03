@@ -1,0 +1,126 @@
+{
+ "logs": 50,
+ "slashes": 7742,
+ "byCaster": {
+  "Aspect of the Sword": 2063,
+  "Vloxx": 5679
+ },
+ "withTelegraph": 3914,
+ "telegraphDelayS": 2,
+ "positionOffsetOver20": 0,
+ "slashesPerVloxxCast": {
+  "0": 12,
+  "1": 1,
+  "2": 2,
+  "3": 1,
+  "4": 2,
+  "5": 1,
+  "8": 3,
+  "12": 2,
+  "16": 142,
+  "17": 17,
+  "18": 1,
+  "23": 26,
+  "24": 24
+ },
+ "vloxx": {
+  "matched": 3426,
+  "mismatch": 970,
+  "mismatchPct": 28.3,
+  "mismatchByPulseS": {
+   "4.8": {
+    "n": 221,
+    "mismatchPct": 0
+   },
+   "5.3": {
+    "n": 435,
+    "mismatchPct": 0
+   },
+   "5.8": {
+    "n": 433,
+    "mismatchPct": 0.5
+   },
+   "6.2": {
+    "n": 211,
+    "mismatchPct": 0
+   },
+   "6.3": {
+    "n": 431,
+    "mismatchPct": 27.8
+   },
+   "6.7": {
+    "n": 211,
+    "mismatchPct": 46.4
+   },
+   "6.8": {
+    "n": 421,
+    "mismatchPct": 46.6
+   },
+   "7.2": {
+    "n": 207,
+    "mismatchPct": 46.4
+   },
+   "7.3": {
+    "n": 216,
+    "mismatchPct": 46.8
+   },
+   "7.8": {
+    "n": 418,
+    "mismatchPct": 64.6
+   },
+   "8.4": {
+    "n": 210,
+    "mismatchPct": 38.6
+   }
+  },
+  "mismatchEqualsBossTurn": 836,
+  "mismatchTotal": 970
+ },
+ "hitRatePct": {
+  "slashFrame": {
+   "matching": {
+    "hitSide": 99.4,
+    "otherSide": 0.7,
+    "n": 2738
+   },
+   "mismatched": {
+    "hitSide": 99.4,
+    "otherSide": 0.7,
+    "n": 605
+   }
+  },
+  "telegraphFrame": {
+   "matching": {
+    "hitSide": 99.4,
+    "otherSide": 0.9,
+    "n": 2738
+   },
+   "mismatched": {
+    "hitSide": 53.2,
+    "otherSide": 55.4,
+    "n": 605
+   }
+  }
+ },
+ "semicircleRadius": 500,
+ "radiusBands": {
+  "0": "6/7",
+  "50": "15/16",
+  "100": "56/56",
+  "150": "73/73",
+  "200": "118/118",
+  "250": "177/177",
+  "300": "188/188",
+  "350": "267/267",
+  "400": "293/294",
+  "450": "280/282",
+  "500": "135/292",
+  "550": "0/280",
+  "600": "0/254",
+  "650": "0/254",
+  "700": "0/238",
+  "750": "0/213",
+  "800": "0/211",
+  "850": "0/214"
+ }
+}

@@ -74,24 +74,6 @@
       "source": "measured ~525 (§5d)"
     },
     {
-      "label": "Excision Extremis (Vloxx)",
-      "r": 525,
-      "color": "#f0a040",
-      "skill": "81053 / 80901",
-      "caster": "Vloxx",
-      "note": "around a ground marker ~0.9 s before",
-      "source": "measured ~525 (§5d) [likely]"
-    },
-    {
-      "label": "Echoing Blade (around Vloxx)",
-      "r": 475,
-      "color": "#f0a040",
-      "skill": "81271",
-      "caster": "Vloxx",
-      "note": "~45 % of players in range hit per pulse",
-      "source": "measured ~450–500 (§5d) [likely]"
-    },
-    {
       "label": "Visions of Eternity",
       "r": 600,
       "color": "#f0a040",
@@ -108,6 +90,24 @@
     }
   ],
   "cones": [
+    {
+      "label": "Excision Extremis slash (half-circle)",
+      "r": 525,
+      "spread": 180,
+      "skill": "81053 / 80901",
+      "caster": "Vloxx",
+      "note": "telegraphed 2.0 s before at the same spot; after the cast ends (pulses from 6.3 s) the slash can be rotated by however much Vloxx turned",
+      "source": "measured ~525 semicircle (§5e)"
+    },
+    {
+      "label": "Echoing Blade (half-circle on Vloxx)",
+      "r": 625,
+      "spread": 180,
+      "skill": "81271",
+      "caster": "Vloxx",
+      "note": "8 pulses 0.6 s apart, each rotated 40° from the previous; 1 projectile per pulse launched ~500 from Vloxx; the last pulse can be rotated vs its telegraph",
+      "source": "measured ~625 semicircle (§5f)"
+    },
     {
       "label": "Thousand Strikes (Spear)",
       "r": 1150,

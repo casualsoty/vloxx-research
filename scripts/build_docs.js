@@ -53,28 +53,33 @@ function md(text) {
 function sections(text) { const out = []; let cur = null; for (const l of text.replace(/\r/g, '').split('\n')) { const m = l.match(/^## (.*)$/); if (m) { cur = { title: m[1], body: [] }; out.push(cur); } else if (cur) cur.body.push(l); } return out.map(s => ({ ...s, body: s.body.join('\n') })); }
 
 // ---------- categorise ----------
-const CATS = [
-  { id: 'greens', name: '3-people greens', icon: '◉', match: /^1\.|green rounds/i },
-  { id: 'fixated', name: 'Fixated', icon: '◎', match: /^2\.|^Fixated/i },
-  { id: 'bug', name: 'Fewer greens (timing bug)', icon: '★', match: /^3\.|timing bug/i },
-  { id: 'overlap', name: 'Green + spread overlap', icon: '⊗', match: /^3b\.|overlap/i },
-  { id: 'pd', name: 'Probability Distribution', icon: '◌', match: /^4\.|Probability/i },
-  { id: 'shackles', name: '2-people green shackles', icon: '⛓', match: /^5b\.|Sacrifice/i },
-  { id: 'shapes', name: 'Attack shapes (verified)', icon: '◇', match: /^5d.|Attack shapes/i },
-  { id: 'orbs', name: 'Ascension orbs & Aspects', icon: '✦', match: /^5\.|orbs/i },
-  { id: 'arena', name: 'Arena coordinates', icon: '⌖', match: /^5c\.|coordinates/i },
-  { id: 'rejected', name: 'Rejected hypotheses', icon: '✕', match: /^6\.|REJECTED/i },
-  { id: 'open', name: 'Open questions', icon: '?', match: /^7\.|Open questions/i },
+const CATS = [ // matching: by FINDINGS section number (first match wins)
+  { id: 'greens', name: 'Judgment of Eternity — 3-people greens', icon: '◉', match: /^1\./ },
+  { id: 'fixated', name: 'Fixated', icon: '◎', match: /^2\./ },
+  { id: 'bug', name: 'Last phase: fewer greens (timing bug)', icon: '★', match: /^3\./ },
+  { id: 'overlap', name: 'Last phase: green + spread overlap', icon: '⊗', match: /^3b\./ },
+  { id: 'pd', name: 'Probability Distribution — spread', icon: '◌', match: /^4\./ },
+  { id: 'orbs', name: 'Ascension orbs & Aspects', icon: '✦', match: /^5\./ },
+  { id: 'shackles', name: "Ascension's Sacrifice — 2-people shackles", icon: '⛓', match: /^5b\./ },
+  { id: 'arena', name: 'Arena coordinates', icon: '⌖', match: /^5c\./ },
+  { id: 'shapes', name: 'All attack shapes (table)', icon: '◇', match: /^5d\./ },
+  { id: 'excision', name: 'Excision Extremis', icon: '◗', match: /^5e\./ },
+  { id: 'echoing', name: 'Echoing Blade', icon: '◔', match: /^5f\./ },
+  { id: 'worldpiercer', name: 'Worldpiercer', icon: '✳', match: /^5g\./ },
+  { id: 'cosmiccharge', name: 'Cosmic Charge', icon: '➤', match: /^5h\./ },
+  { id: 'rejected', name: 'Rejected hypotheses', icon: '✕', match: /^6\./ },
+  { id: 'open', name: 'Open questions', icon: '?', match: /^7\./ },
 ];
 const findings = sections(read('FINDINGS.md'));
 const readme = sections(read('README.md'));
 const intro = read('FINDINGS.md').split(/\n## /)[0].replace(/^# .*\n/, '');
 const used = new Set(); const catSecs = CATS.map(c => { const s = findings.filter(f => !used.has(f) && c.match.test(f.title)); s.forEach(x => used.add(x)); return { ...c, secs: s }; });
-// Sidebar / page order: mechanics in the order they happen in the fight, then arena & planner, then research notes.
+// Sidebar / page order: one category per attack, in the order the attacks happen in the fight (pull → Staff → Spear → Sword →
+// last phase), then the table of all other attack shapes; then adds / arena / planner; then research notes.
 // (CATS above is the MATCHING order — first match wins — so it is kept as is.)
 const ORDER = [
-  ['In fight order', ['fixated', 'greens', 'shackles', 'orbs', 'shapes', 'pd', 'bug', 'overlap']],
-  ['Arena & planner', ['arena', 'plannerdata']],
+  ['Attacks & mechanics, in fight order', ['fixated', 'greens', 'shackles', 'cosmiccharge', 'worldpiercer', 'excision', 'echoing', 'pd', 'bug', 'overlap', 'shapes']],
+  ['Adds, arena & planner', ['orbs', 'arena', 'plannerdata']],
   ['Research notes', ['rejected', 'open']]];
 findings.filter(f => !used.has(f)).forEach(f => catSecs.push({ id: 'misc-' + catSecs.length, name: f.title.replace(/^\d+[a-z]?\.\s*/, ''), icon: '•', secs: [f] }));
 const refTitles = ['The goal behind the research', 'Important IDs', 'Datasets', 'Getting more logs', 'How to run', 'Folder layout', 'Status'];
@@ -158,6 +163,14 @@ const html = `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta n
 @media (prefers-color-scheme:dark){:root{--bg:#15171a;--panel:#1d2024;--ink:#e6e6e3;--mute:#9aa1ab;--line:#30343a;--acc:#6cc3a8;--accbg:#1f3530;--code:#272b31;
 --solid:#6fd09c;--solidbg:#1d3528;--likely:#e0b54a;--likelybg:#3a3220;--open:#93a6ee;--openbg:#262c45;--rej:#f08a8a;--rejbg:#3d2526}}
 *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:16px}
+/* scrollbars follow the page palette (light / dark) everywhere: page, sidebar, tables, planner panels, dialogs */
+:root{color-scheme:light dark;--sb-thumb:color-mix(in srgb,var(--mute) 45%,transparent);--sb-thumb-hover:var(--acc)}
+*{scrollbar-width:thin;scrollbar-color:var(--sb-thumb) transparent}
+::-webkit-scrollbar{width:10px;height:10px}::-webkit-scrollbar-track{background:transparent}
+::-webkit-scrollbar-thumb{background:var(--sb-thumb);border-radius:8px;border:2px solid transparent;background-clip:padding-box}
+::-webkit-scrollbar-thumb:hover{background:var(--sb-thumb-hover);background-clip:padding-box;border:2px solid transparent}
+::-webkit-scrollbar-corner{background:transparent}
+html{scrollbar-color:var(--sb-thumb) var(--bg)}
 body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
 .wrap{display:grid;grid-template-columns:270px minmax(0,1fr);min-height:calc(100vh - 46px)}
 .topbar{position:sticky;top:0;z-index:20;height:46px;display:flex;align-items:center;gap:4px;padding:0 14px;background:var(--panel);border-bottom:1px solid var(--line)}

@@ -196,7 +196,7 @@ Skill **81076**, cast twice in the Staff phase (~38 s and ~85 s raw time). Marke
   Vloxx (16 bins, chi-square 5.3, random ≈ 15) — every area 0.76–1.32× expected, no dead zone. All candidates are within
   ±30 height of Vloxx (flat arena), so nothing to hide behind.
 
-## 5c. Arena coordinates — Aspect spawn points  [solid]
+## 5c. Arena coordinates — Aspect and Cosmic spawn points  [solid]
 * Each Aspect **always spawns at the exact same spot** (670 spawns in 128 raw logs; 822 in 162, still zero variation; all at z = −12395):
 
 | Aspect | arcdps world (inches) | map / squad-marker tool format (meters) | dist. from arena centre |
@@ -231,6 +231,121 @@ Skill **81076**, cast twice in the Staff phase (~38 s and ~85 s raw time). Marke
   Surrounding Curse 200 · Raging Storm 150 · Slice Through Reality port 220 · Excision Extremis 400 radius half-circle (Sword) ·
   Spear cone 135° · Bulwark arrow 1,850 × 100 · Vloxx staff sweep 2,400 × 1,200 ·
   Visions of Eternity 560. **[likely]** (EI's numbers, not re-measured; EI's "Worldpiercer 3,650 × 100" was **wrong**, see below)
+* Worldpiercer and Cosmic Charge have their own sections now: §5g and §5h.
+* arcdps squad markers: statechange **53**, `skill` = marker index (0 arrow, 1 circle, 2 heart, 3 square, 4 star, 5 spiral,
+  6 triangle, 7 x), position = `src` as two floats (x, y) + `value` as float z; (Infinity, Infinity) = marker removed.
+
+## 5d. All attack shapes verified from raw logs (table)  [solid unless marked]
+Method (`scripts/attack_shapes.js` → `data/attack_shapes.json`, `scripts/attack_grid.js <skill>` for maps): each attack's hits on players are
+grouped into impacts (same caster, ≤ 150 ms). At the impact ms every alive player is hit or not hit; evade, block and invulnerable
+count as hit. NPC positions are the last logged one; player positions are interpolated. Shapes tested:
+* a circle around the caster;
+* a cone or rectangle in the caster's facing frame;
+* a circle around the effect that telegraphs the attack. Effects are keyed by **GUID**, because effect ids change between logs.
+Radius = where the hit rate drops below half of the inner rate. Sizes are measured to the player's centre, so they include the player's own hitbox (radius 24).
+Elite Insights (EI) values = what the planner used before.
+
+| attack (skill) | caster | measured shape | EI / old planner | verdict |
+|---|---|---|---|---|
+| Judgment of Eternity, failed 3-people green (80629) | Vloxx | circle **~240–250** around the green marker (98 % inside, 5 % outside) | 240 | ✔ |
+| Probability Distribution spread (80809) | Vloxx | circle **~300** around the PD effect (93 % / 2 %), telegraph ~4 s | 280 | ≈ (slightly bigger) |
+| Probability Distribution (81318) | Vloxx | circle **~325** around the same effect | puddle 280 | bigger |
+| Surrounding Curse (80484 Vloxx, 81230 Staff) | Vloxx, Staff | circle **~200** around its ground marker (~1 s telegraph) | 200 | ✔ |
+| Raging Storm (80810, 81176 Vloxx; 80965 Bulwark) | Vloxx, Bulwark | circle **~150** around its ground marker (~2 s telegraph) | 150 | ✔ |
+| Visions of Eternity (80420, 81017) | Vloxx | circle **~600** (100 % / 0 %, 113 impacts) | 560 | bigger |
+| Slice Through Reality (80585) | Vloxx | circle **~525 around Vloxx**, ground marker 7 s before | "port 220" | **wrong** |
+| Excision Extremis (81053; 80901 in the last phase) | Vloxx | **semicircles of radius ~525**, 16 (sometimes 23–24) per cast, each telegraphed 2.0 s before; see §5e | 400 half-circle | bigger (radius), shape ✔ |
+| Excision Extremis (81326) | Sword | diffuse, forward ±450 out to ~2,000; no clean shape | 400 half-circle | **[open]** |
+| Thousand Strikes (80709) | Spear | **forward cone, half-angle ~55° (~110°), radius ~1,100–1,200**; nothing behind | 135°, 1,000 | corrected |
+| Thousand Strikes (80555) | Vloxx | same cone, radius ~1,200–1,500 | — | new |
+| Division Eternal (80483) | Vloxx | **forward band ~900 wide (±450)**, ≥ 1,350 long, nothing behind | "staff sweep" 2,400 × 1,200 | **narrower** |
+| Division Eternal (81330) | Sword | **forward rectangle ~750–800 wide, ~1,650–1,800 long** | — | new |
+| Worldpiercer (81015), "Bulwark arrow" | Cosmic Bulwark | Bulwark stands still for a 4 s cast. Hits 3.9–5.9 s, on **one straight line** (all hits on one bearing): within ~150 of the line → **~300 wide**, out to ≥ 1,500. The line doesn't travel. | 1,850 × 100 | **wider** |
+| Annihilating Orb (81273) | Cosmic Piercer | circle **~375** around the landing spot (ground effect ~1,200 from the Piercer) | 180 + ring 240 | **bigger** |
+| Annihilating Orb (80323) | Vloxx | a narrow line ahead along Vloxx's facing (±150), hits fade by ~900; a forward projectile, not a circle | 240 | **[open]** |
+| Echoing Blade (81271) | Vloxx | **half-circle of radius ~625 centred on Vloxx**, 8 pulses 0.6 s apart, each rotated 40° from the previous; 1 projectile per pulse; see §5f | — | new |
+| Ancora Strike (80940 Staff/Spear, 81327 Sword) | Aspects | short frontal swing ~200–300 ahead, ±150 (the tank hit) | — | new |
+| 80717 | Cosmic Bulwark | short frontal ~250 ahead | — | new |
+| Ascension's Sacrifice (81076) | Vloxx | its damage only lands on the marked player (r ≈ 0); the 2-person circle (150) has no separate failure hit to measure | 150 | not verifiable |
+| Cosmic Charge (80512), Worldpiercer (80916) | Vloxx | measured separately: §5h and §5g | | ✔ |
+
+Names of skills that are unnamed in raw logs come from Elite Insights' skill map (80484/81230 Surrounding Curse, 80585 Slice Through Reality,
+80483 Division Eternal, 81273/81238 Annihilating Orb). The planner presets now use the measured sizes.
+
+## 5e. Excision Extremis — slashes vs telegraphs, boon strip and its lockout  [solid]
+Scripts `scripts/excision_geometry.js` (→ `data/excision_slashes.csv`, `excision_summary.json`) and `scripts/excision_strip.js`
+(→ `data/excision_strip.csv`, `excision_strip_summary.json`). 50 logs with the attack, 7,742 slashes, 7,475 hits that landed.
+
+**How the attack is built (Vloxx, skill 81053; 80901 in the last phase).**
+* Cast **6.2 s**. Vloxx lays semicircle **telegraphs** (ground effect GUID A5962B65…, 2.5 s) in pairs every ~0.5 s, in four directions 90° apart,
+  marching outward from Vloxx.
+* Exactly **2.0 s** after each telegraph the **slash** (ground effect GUID B4868841…) appears at the same spot. That is the damage pulse.
+  Pulses land at 4.8, 5.3, 5.8, 6.2/6.3, 6.7/6.8, 7.2/7.3, 7.8 and 8.4 s after the cast starts; a cast has 16 slashes (142 casts), sometimes 17 or 23–24.
+* Each slash is a **semicircle of radius ~525** around its origin: 100 % of players hit out to 500, 46 % at 500–550, 0 % beyond 550
+  (Elite Insights draws 400). On the hit side 99.4 % are hit, on the other side 0.7 %.
+* Effect rotation = int16 at byte 26 of the event, in mrad, **clockwise**: a player at bearing b from the origin is hit when
+  norm(b + rotation) is negative. The slash effect is stored 180° from its telegraph when they agree.
+* The Aspect of the Sword's version (81326) uses the same slash effect but no A5962B65 telegraph; not analysed for mismatch. **[open]**
+* **All of these slashes are Excision Extremis (damage skill 81053), the ones on Vloxx and the ones further out, and it fires no projectiles.**
+  The half-circle on the boss that throws projectiles is a different skill, **Echoing Blade (81271)**, see §5f. Both skills draw the same
+  telegraph effect (A5962B65), which is why they look alike.
+
+**Claim: "the slashes don't match the semicircles ~25 % of the time". Confirmed, with a cause.**
+* **Position never differs:** all 3,914 telegraphed slashes sit at exactly their telegraph's position (0 with an offset over 20 units).
+  The "400–800 units offset" part is **not** in the data. **[REJECTED]**
+* **Rotation differs for 28.3 % of Vloxx's slashes** (970 / 3426), by any angle, not just 90° or 180°.
+* **Cause: Vloxx turning.** In 836 / 970 mismatched slashes the extra rotation equals how much Vloxx's facing changed
+  between the telegraph and the slash. The telegraph is drawn with the facing at that moment; the slash uses the facing 2 s later.
+* **Only after the cast ends.** Mismatch rate by pulse: 4.8 s 0 % · 5.3 s 0 % · 5.8 s 1 % · 6.2 s 0 % · 6.3 s 28 % · 6.7 s 46 % · 6.8 s 47 % · 7.2 s 46 % · 7.3 s 47 % · 7.8 s 65 % · 8.4 s 39 %. While Vloxx is still casting (≤ 6.2 s) it can't turn, so the first
+  four pulses always match; from 6.3 s on it turns freely (toward its target) and about half the slashes rotate with it.
+* **Both the half-circles on Vloxx and the ones further out are affected; it depends on when they land, not where.** Share of slashes / rotated,
+  by distance of the slash origin from Vloxx: on Vloxx (< 150) 14 % / 10 % · 150–450 19 % / 27 % · 450–800 54 % / 35 % · 800–1,200 9 % / 27 % · 1,200+ 4 % / 15 %.
+  The on-Vloxx half-circles land at 4.8, 5.3, 6.2 and 6.8 s: the first three are during the cast and always match, only the 6.8 s one can be
+  rotated (roughly 4 in 10). The outer ones (86 % of slashes, 5.3–8.4 s) mostly land after the cast ends, so they carry most of the mismatches.
+* **The damage follows the slash, not the telegraph.** For mismatched slashes: slash frame 99.4 % / 0.7 % (hit side / other side);
+  telegraph frame 53.2 % / 55.4 %, i.e. a coin flip.
+* **In practice:** the telegraphs of the first four pulses are reliable. For the later ones, only the 525 circle around each telegraph
+  origin is reliably dangerous or safe: leave the circle, don't pick a side.
+
+**Claim: "hits strip, with an internal cooldown around 1–2 s". Confirmed and made precise.**
+* A hit that lands removes **one stack of a boon** (often more: 2+ boons in ~30 % of strips) and applies **Crippled** (10 s from Vloxx, 5 s from the Sword).
+  Strip and Crippled always go together. **Bleeding** is applied on every hit (98 %), with no lockout.
+* **The rule is a 1.0 s lockout that every landed hit restarts**, not a timer from the last strip:
+
+  | time since the player's previous Excision hit that landed | hits | Crippled | boons stripped |
+  |---|---|---|---|
+  | under 1.0 s | 3804 | 0.4 % | 3 % |
+  | 1.0–3 s | 833 | 85.5 % | 84.3 % |
+  | 3–8 s | 176 | 94.9 % | 94.3 % |
+  | 8 s or more | 2192 | 94.6 % | 94.1 % |
+  | first hit of the fight | 470 | 94.7 % | |
+
+* Pulses are 0.5 s apart, so a player who stays inside the slashes keeps the lockout running and is stripped **once** (the typical sequence
+  in one cast is strip, then 4–6 hits without). Missing one pulse (a 1.0 s gap) makes the next hit strip again.
+* **Blocked, evaded and invulnerable hits don't restart the lockout** (a landed hit right after one still strips 91–99 %).
+* Measured from the *last strip* instead, the picture is blurry (no strips under 1.0 s, then 20–60 % up to 4 s, ~95 % after 5 s). That is why
+  it looks like "a 1–2 s cooldown"; the "all non-strips within 2.04 s of a strip" observation doesn't hold on this data (non-strips occur up to several seconds after a strip, as long as the player keeps getting hit).
+* Not the cause (tested): whether the player still has Crippled; which of the four slash directions hit; the damage of the hit.
+
+## 5f. Echoing Blade — the spinning half-circle on Vloxx, with projectiles  [solid]
+Skill **81271**, Vloxx only, 205 casts in 49 logs. A different attack from Excision Extremis (§5e), with the same telegraph effect.
+Script `scripts/echoing_blade.js` → `data/echoing_blade_summary.json` (part of the full build).
+* **Cast 5.4 s.** It often follows Judgment of Eternity (~4.5 s after its cast start) or Excision Extremis (~6.2 s after).
+* **8 half-circles, all centred on Vloxx** (slash origin within ~5 units of the boss; 1,591 slashes). Telegraph (GUID A5962B65…) at
+  0.2, 0.8, … 4.4 s; the slash (GUID 40EF37BF…) and its damage land **0.8 s** later, at 1.0, 1.6, 2.2, 2.8, 3.4, 4.0, 4.6 and 5.2 s.
+* **It spins:** each half-circle is rotated **40°** from the previous one, always the same way, so the 8 pulses sweep 280° around Vloxx
+  (160 of 195 full casts). In 35 casts the first step is 90°, then 40° steps.
+  The first half-circle usually points 90° to one side of Vloxx's facing (131 of 195).
+* **Radius ~625:** on the hit side 93–98 % of players are hit out to 600, 68 % at 600–650, 11 % at 650–700, none beyond 750. On the other side 1–2 %.
+* **Telegraphs:** pulses 1–7 always match their telegraph (0 % rotated). The **8th and last pulse (5.2 s) is rotated in 66 %** of casts;
+  as with Excision, the damage follows the slash.
+* **Projectiles:** one missile is launched with every pulse, from a point ~500 units from Vloxx (p50 499, p90 504), plus a few extra
+  between pulses: 8–15 per cast. They fly 200–840 units further out. Hits between pulses (2.0, 2.6, 3.2, 3.8 s) are these projectiles.
+  Excision Extremis launches none.
+* **Reflecting them:** not verifiable from the logs. A reflected projectile would show as 81271 damage on Vloxx from a player, and there is
+  none in 205 casts, which only means nobody reflected one onto the boss in these logs. **[open]**
+
+## 5g. Worldpiercer — the 6-spoke projectile star (Spear phase)  [solid]
 * **Worldpiercer (Vloxx, skill 80916) = 6 projectiles in a star, exactly 60° apart** (330 casts / 1,964 projectiles; 175-log set
   380 casts / 2,264 projectiles — every cast has 6, every gap 60°). It is **not aimed at players** (median 31–35° from the nearest player).
   First cast ~170 s into the fight (median, 132 logs). Timeline: cast start →
@@ -250,6 +365,10 @@ Skill **81076**, cast twice in the Staff phase (~38 s and ~85 s raw time). Marke
   * Squad-wide, 175-log set: hit **2.6 %**, knocked **1.4 %** of 3,561 player × cast.
   * Account-F4C4 (Player-89AD): hit 2 / 278 (0.7 %), knocked 1 (0.4 %). That knock was the one hit that downed and killed them
     (170k damage, 20260930-014701 @ 299.1 s raw); the other hit (20260930-221626) moved him only 67 units.
+* The other "Worldpiercer" (skill **81015**) is cast by the **Cosmic Bulwark** (Splits), with no missiles. Its shape has not been re-measured
+  (EI: Bulwark arrow 1,850 × 100).
+
+## 5h. Cosmic Charge — the dash toward the fixated player (Spear phase)  [solid]
 * **Cosmic Charge (Vloxx, skill 80512) — the Spear-phase dash toward the fixated player.** 330 casts, 133 logs
   (`scripts/cosmic_charge_shape.js` → `data/cosmic_charge_summary.json`, rebuilt every build):
   * **Cast 7.8 s.** Vloxx dashes exactly **1398** units toward the **fixated player**, aimed at the start of the cast:
@@ -277,47 +396,6 @@ Skill **81076**, cast twice in the Staff phase (~38 s and ~85 s raw time). Marke
     * **Account-F4C4 (Player-89AD): knocked in 31.1 % of casts (76 / 244)**, average for the squad. Stability saved 63 % of their big hits.
     * Range among regular accounts: 18 % to 46 %.
   * The planner's Cosmic Charge preset (beam tool) draws exactly this from the measured numbers. **[solid]** (shape, timing, stability) / **[likely]** (reach ±50)
-* The other "Worldpiercer" (skill **81015**) is cast by the **Cosmic Bulwark** (Splits), with no missiles. Its shape has not been re-measured
-  (EI: Bulwark arrow 1,850 × 100).
-* arcdps squad markers: statechange **53**, `skill` = marker index (0 arrow, 1 circle, 2 heart, 3 square, 4 star, 5 spiral,
-  6 triangle, 7 x), position = `src` as two floats (x, y) + `value` as float z; (Infinity, Infinity) = marker removed.
-
-## 5d. Attack shapes verified from raw logs  [solid unless marked]
-Method (`scripts/attack_shapes.js` → `data/attack_shapes.json`, `scripts/attack_grid.js <skill>` for maps): each attack's hits on players are
-grouped into impacts (same caster, ≤ 150 ms). At the impact ms every alive player is hit or not hit; evade, block and invulnerable
-count as hit. NPC positions are the last logged one; player positions are interpolated. Shapes tested:
-* a circle around the caster;
-* a cone or rectangle in the caster's facing frame;
-* a circle around the effect that telegraphs the attack. Effects are keyed by **GUID**, because effect ids change between logs.
-Radius = where the hit rate drops below half of the inner rate. Sizes are measured to the player's centre, so they include the player's own hitbox (radius 24).
-Elite Insights (EI) values = what the planner used before.
-
-| attack (skill) | caster | measured shape | EI / old planner | verdict |
-|---|---|---|---|---|
-| Judgment of Eternity, failed 3-people green (80629) | Vloxx | circle **~240–250** around the green marker (98 % inside, 5 % outside) | 240 | ✔ |
-| Probability Distribution spread (80809) | Vloxx | circle **~300** around the PD effect (93 % / 2 %), telegraph ~4 s | 280 | ≈ (slightly bigger) |
-| Probability Distribution (81318) | Vloxx | circle **~325** around the same effect | puddle 280 | bigger |
-| Surrounding Curse (80484 Vloxx, 81230 Staff) | Vloxx, Staff | circle **~200** around its ground marker (~1 s telegraph) | 200 | ✔ |
-| Raging Storm (80810, 81176 Vloxx; 80965 Bulwark) | Vloxx, Bulwark | circle **~150** around its ground marker (~2 s telegraph) | 150 | ✔ |
-| Visions of Eternity (80420, 81017) | Vloxx | circle **~600** (100 % / 0 %, 113 impacts) | 560 | bigger |
-| Slice Through Reality (80585) | Vloxx | circle **~525 around Vloxx**, ground marker 7 s before | "port 220" | **wrong** |
-| Excision Extremis (81053; 80901 in the last phase) | Vloxx | circle **~525** around a ground marker ~0.9 s before (~200 from Vloxx) | 400 half-circle | **wrong** **[likely]** |
-| Excision Extremis (81326) | Sword | diffuse, forward ±450 out to ~2,000; no clean shape | 400 half-circle | **[open]** |
-| Thousand Strikes (80709) | Spear | **forward cone, half-angle ~55° (~110°), radius ~1,100–1,200**; nothing behind | 135°, 1,000 | corrected |
-| Thousand Strikes (80555) | Vloxx | same cone, radius ~1,200–1,500 | — | new |
-| Division Eternal (80483) | Vloxx | **forward band ~900 wide (±450)**, ≥ 1,350 long, nothing behind | "staff sweep" 2,400 × 1,200 | **narrower** |
-| Division Eternal (81330) | Sword | **forward rectangle ~750–800 wide, ~1,650–1,800 long** | — | new |
-| Worldpiercer (81015), "Bulwark arrow" | Cosmic Bulwark | Bulwark stands still for a 4 s cast. Hits 3.9–5.9 s, on **one straight line** (all hits on one bearing): within ~150 of the line → **~300 wide**, out to ≥ 1,500. The line doesn't travel. | 1,850 × 100 | **wider** |
-| Annihilating Orb (81273) | Cosmic Piercer | circle **~375** around the landing spot (ground effect ~1,200 from the Piercer) | 180 + ring 240 | **bigger** |
-| Annihilating Orb (80323) | Vloxx | a narrow line ahead along Vloxx's facing (±150), hits fade by ~900; a forward projectile, not a circle | 240 | **[open]** |
-| Echoing Blade (81271) | Vloxx | circle ~450–500 around Vloxx, ~45 % hit per pulse | — | **[likely]** |
-| Ancora Strike (80940 Staff/Spear, 81327 Sword) | Aspects | short frontal swing ~200–300 ahead, ±150 (the tank hit) | — | new |
-| 80717 | Cosmic Bulwark | short frontal ~250 ahead | — | new |
-| Ascension's Sacrifice (81076) | Vloxx | its damage only lands on the marked player (r ≈ 0); the 2-person circle (150) has no separate failure hit to measure | 150 | not verifiable |
-| Cosmic Charge (80512), Worldpiercer (80916) | Vloxx | measured separately (see the sections above) | | ✔ |
-
-Names of skills that are unnamed in raw logs come from Elite Insights' skill map (80484/81230 Surrounding Curse, 80585 Slice Through Reality,
-80483 Division Eternal, 81273/81238 Annihilating Orb). The planner presets now use the measured sizes.
 
 ## 6. Hypotheses that were tested and REJECTED (don't redo)
 * **Range limit ~600 (last phase) / ~775 (early, = 600 + boss hitbox 150 + player 24).** Looked perfect on EI data (211/211),

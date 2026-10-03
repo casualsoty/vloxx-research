@@ -1,0 +1,30 @@
+{
+ "hits": 7475,
+ "lockoutS": 1,
+ "bySinceLastHit": {
+  "1.0–3 s": {
+   "n": 833,
+   "crippledPct": 85.5,
+   "strippedPct": 84.3
+  },
+  "8 s or more": {
+   "n": 2192,
+   "crippledPct": 94.6,
+   "strippedPct": 94.1
+  },
+  "under 1.0 s": {
+   "n": 3804,
+   "crippledPct": 0.4,
+   "strippedPct": 3
+  },
+  "3–8 s": {
+   "n": 176,
+   "crippledPct": 94.9,
+   "strippedPct": 94.3
+  }
+ },
+ "firstHit": {
+  "n": 470,
+  "crippledPct": 94.7
+ }
+}

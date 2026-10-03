@@ -150,7 +150,8 @@ common structure (greens, PD, fixation, stealth, downs, deaths, positions, orbs,
 
 **Working rule: whenever something new is learned, save it here** (FINDINGS.md / README / data / scripts)
 in the same turn, **then rebuild the doc page**: `node scripts/build_docs.js`. New FINDINGS sections (`## N. Title`) appear
-automatically; to give one its own sidebar category, add an entry to `CATS` in `scripts/build_docs.js`.
+automatically; to give one its own sidebar category, add an entry to `CATS` in `scripts/build_docs.js` and place it in `ORDER`
+(one category per attack, in the order the attacks happen in the fight).
 
 ## Status / open questions (see FINDINGS §7)
 1. **Untested:** does stealthing off Fixated *during Split 3* (before the last phase starts) let the +2.5 s tick apply a fresh
