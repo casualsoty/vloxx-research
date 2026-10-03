@@ -14,6 +14,7 @@ const steps = [
   'cosmic_charge_knocks.js', // data/cosmic_charge_knocks.csv: knockdowns per player × cast (Stability-aware)
   'excision_geometry.js',    // data/excision_slashes.csv + excision_summary.json: slashes vs telegraphs, semicircle radius
   'excision_strip.js',       // data/excision_strip.csv + excision_strip_summary.json: boon strip / Crippled and the 1.0 s lockout
+  'excision_lockout_check.js', // prints the stress test of the 1.0 s strip lockout (FINDINGS §5e)
   'echoing_blade.js',        // data/echoing_blade_summary.json: spinning half-circle on Vloxx, radius, projectiles
   'build_plans.js',          // validates docs-src/plans/*.json (shared planner templates); fails the build if one is invalid
   'anonymise.js',            // player names → stable pseudonyms in data/, FINDINGS.md, README.md (before anything is printed or published)

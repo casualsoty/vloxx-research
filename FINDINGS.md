@@ -325,6 +325,18 @@ Scripts `scripts/excision_geometry.js` (→ `data/excision_slashes.csv`, `excisi
 * **Blocked, evaded and invulnerable hits don't restart the lockout** (a landed hit right after one still strips 91–99 %).
 * Measured from the *last strip* instead, the picture is blurry (no strips under 1.0 s, then 20–60 % up to 4 s, ~95 % after 5 s). That is why
   it looks like "a 1–2 s cooldown"; the "all non-strips within 2.04 s of a strip" observation doesn't hold on this data (non-strips occur up to several seconds after a strip, as long as the player keeps getting hit).
+* **Double-checked** (`scripts/excision_lockout_check.js`, every single damage event, 7,478 landed hits, 49 logs):
+  * *Which clock matters:* hits ≥ 1.0 s after the player's last strip but < 0.95 s after their last hit → Crippled **0 / 1,644**
+    (boons stripped 2.4 %). Hits ≥ 0.95 s after their last hit → Crippled 92.8 % of 3,157. Still 0 when the strip was 2–4 s (0 / 308) or 4+ s (0 / 61) earlier.
+  * *Chains of back-to-back hits* (every gap < 0.95 s): hit #1 Crippled 92.7 % (3,664); hits #2 to #9+ 0–0.6 %. Longest chain 4.6 s;
+    315 hits came ≥ 2 s into a chain and none applied Crippled.
+  * *Threshold:* gap 0.9–1.0 s → 0 / 245; 1.0–1.1 s → 85 %; above 1.1 s → 93–100 %.
+  * *Shared between casters:* a hit from Vloxx blocks the Sword's strip and the reverse (0 / 96).
+  * ***Echoing Blade* shares it too:** when an Echoing Blade hit landed < 0.95 s before, Excision strips only 31 % (131 hits). With a gap
+    ≥ 1.05 s and no Echoing Blade hit in the last 0.95 s, Excision strips **97.6 %** (2,748 hits).
+  * *Consistency:* holds in 46 of 49 logs (the other 3 have few hits); no player with ≥ 5 hits at ≥ 1.05 s is under 70 %.
+  * *Exceptions:* 15 of 3,814 lockout hits still applied Crippled (0.4 %). The last-phase version (80901) is weaker: 10 of 100 lockout hits
+    applied Crippled. **[likely]** for the last phase.
 * Not the cause (tested): whether the player still has Crippled; which of the four slash directions hit; the damage of the hit.
 
 ## 5f. Echoing Blade — the spinning half-circle on Vloxx, with projectiles  [solid]
