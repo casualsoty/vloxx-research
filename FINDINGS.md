@@ -731,6 +731,42 @@ So the big circle (525) is only the first hit. What stays on the ground afterwar
 The distance between entrance and exit is fixed (2,000 ± 50 in 77 of 85 casts; shorter in the other 8, down to ~1,000), so the planner has a single "Slice Through Reality" attack: click on Vloxx, drag toward
 the teleport direction, and it places the 525 hit, the entrance and the exit.
 
+## 5n. Vloxx's Damage Immunity (70 / 40 / 10 %) — what still damages it  [solid]
+Script `scripts/damage_immunity.js` → `data/damage_immunity.csv`, `data/damage_immunity_summary.json` (part of the full build). 195 immunity windows in 133 logs.
+
+**When.** Vloxx gets the buff **Damage Immunity (80608)** at each health threshold, for the whole *Visions of Eternity* breakbar, not only at 10 %:
+| threshold | windows | lasts (median, range) | windows where some damage went through | damage through (median / max) | health lost (median / max) |
+|---|---|---|---|---|---|
+| 70 % | 133 | 23.7 s (13.5–51.7) | 93 | 612 / 73,430 | 0.01 % / 0.12 % |
+| 40 % | 50 | 29.8 s (6.1–66.2) | 33 | 1,642 / 13,566 | 0.01 % / 0.11 % |
+| 10 % | 12 | 38.8 s (31–44.3) | 12 | 13,607 / 24,831 | 0.02 % / 0.06 % |
+
+At 10 % the immunity continues for 15 s into the last phase (a second, 15 s application when the channel starts).
+
+**What is blocked.**
+* **Direct hits: all of them** (38,764 hits of 97 skills did 0). 11 hits in total did damage (Symbol of Luminance, Piercing Stance, Oppressive Collapse, Manifest Sand Shade, …); they are isolated events
+  (the same skills did 0 on every other hit), not a skill that works; why those few got through was not looked into.
+* **The five damaging conditions tick for 0**: Bleeding (29,142 ticks), Torment (27,713 ticks), Burning (25,144 ticks), Poisoned (18,500 ticks), Confusion (7,449 ticks). They stay on Vloxx and keep ticking, each tick does 0.
+
+**What goes through: damage from effects that are not one of those five conditions.** Every tick did its normal damage:
+| effect | skill id | windows seen | ticks | ticks with damage | total | per tick |
+|---|---|---|---|---|---|---|
+| Binding Blade | 9148 | 78 | 407 | 99 % | 435,488 | 1,083 |
+| Painful Bond | 77128 | 10 | 133 | 99 % | 231,257 | 1,752 |
+| Nightmare Weapon | 76923 | 5 | 32 | 100 % | 47,279 | 1,477 |
+| Nightmare Weapon | 79077 | 7 | 21 | 100 % | 32,375 | 1,542 |
+| Soul Shards | 72975 | 2 | 12 | 100 % | 25,120 | 2,093 |
+| Vampiric Strikes | 13814 | 3 | 80 | 100 % | 2,720 | 34 |
+| Nourishment | 57244 | 1 | 1 | 100 % | 325 | 325 |
+| Nourishment | 57356 | 1 | 1 | 100 % | 325 | 325 |
+
+* **Confirmed from the list that was circulating:** *Binding Blade* (Guardian greatsword 5) and *Painful Bond*. Not in these logs, so neither confirmed
+  nor denied: Fulgor, Fear with Terror, Relic of Agony. **[open]**
+* **Also going through, not on that list:** *Nightmare Weapon*, *Soul Shards*, and life steal (*Vampiric Strikes*, food).
+* The rule fits what the logs show: the immunity zeroes direct hits and the five damaging conditions, and nothing else.
+* **It is too small to matter.** The best window let 73,430 damage through; Vloxx lost at most 0.12 % of its health during an immunity window
+  (median 0.01–0.02 %). It does not shorten the fight in any useful way.
+
 ## 6. Hypotheses that were tested and REJECTED (don't redo)
 * **Range limit ~600 (last phase) / ~775 (early, = 600 + boss hitbox 150 + player 24).** Looked perfect on EI data (211/211),
   **broken by our squad's raw 2026-10-01 logs** (201030 +33 s: 3 greens with everyone 714–898 away; 213946/223543 +33 s: 3

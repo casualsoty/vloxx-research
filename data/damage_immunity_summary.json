@@ -1,0 +1,268 @@
+{
+ "logs": 133,
+ "windows": 195,
+ "byThreshold": {
+  "70 %": {
+   "windows": 133,
+   "durationS": {
+    "median": 23.7,
+    "min": 13.5,
+    "max": 51.7
+   },
+   "windowsWithDamageThrough": 93,
+   "damageThrough": {
+    "median": 612,
+    "max": 73430
+   },
+   "healthLostPct": {
+    "median": 0.01,
+    "max": 0.12
+   }
+  },
+  "40 %": {
+   "windows": 50,
+   "durationS": {
+    "median": 29.8,
+    "min": 6.1,
+    "max": 66.2
+   },
+   "windowsWithDamageThrough": 33,
+   "damageThrough": {
+    "median": 1642,
+    "max": 13566
+   },
+   "healthLostPct": {
+    "median": 0.01,
+    "max": 0.11
+   }
+  },
+  "10 %": {
+   "windows": 12,
+   "durationS": {
+    "median": 38.8,
+    "min": 31,
+    "max": 44.3
+   },
+   "windowsWithDamageThrough": 12,
+   "damageThrough": {
+    "median": 13607,
+    "max": 24831
+   },
+   "healthLostPct": {
+    "median": 0.02,
+    "max": 0.06
+   }
+  }
+ },
+ "worksThrough": [
+  {
+   "skill": "Binding Blade",
+   "skill_id": 9148,
+   "kind": "buff tick",
+   "windows": 78,
+   "events": 407,
+   "zero": 5,
+   "damage": 435488,
+   "damagePerEvent": 1083,
+   "passPct": 99
+  },
+  {
+   "skill": "Painful Bond",
+   "skill_id": 77128,
+   "kind": "buff tick",
+   "windows": 10,
+   "events": 133,
+   "zero": 1,
+   "damage": 231257,
+   "damagePerEvent": 1752,
+   "passPct": 99
+  },
+  {
+   "skill": "Nightmare Weapon",
+   "skill_id": 76923,
+   "kind": "buff tick",
+   "windows": 5,
+   "events": 32,
+   "zero": 0,
+   "damage": 47279,
+   "damagePerEvent": 1477,
+   "passPct": 100
+  },
+  {
+   "skill": "Nightmare Weapon",
+   "skill_id": 79077,
+   "kind": "buff tick",
+   "windows": 7,
+   "events": 21,
+   "zero": 0,
+   "damage": 32375,
+   "damagePerEvent": 1542,
+   "passPct": 100
+  },
+  {
+   "skill": "Soul Shards",
+   "skill_id": 72975,
+   "kind": "buff tick",
+   "windows": 2,
+   "events": 12,
+   "zero": 0,
+   "damage": 25120,
+   "damagePerEvent": 2093,
+   "passPct": 100
+  },
+  {
+   "skill": "Symbol of Luminance",
+   "skill_id": 73132,
+   "kind": "direct hit",
+   "windows": 52,
+   "events": 276,
+   "zero": 272,
+   "damage": 22637,
+   "damagePerEvent": 5659,
+   "passPct": 1
+  },
+  {
+   "skill": "Piercing Stance",
+   "skill_id": 77078,
+   "kind": "direct hit",
+   "windows": 87,
+   "events": 99,
+   "zero": 98,
+   "damage": 7219,
+   "damagePerEvent": 7219,
+   "passPct": 1
+  },
+  {
+   "skill": "Vampiric Strikes",
+   "skill_id": 13814,
+   "kind": "buff tick",
+   "windows": 3,
+   "events": 80,
+   "zero": 0,
+   "damage": 2720,
+   "damagePerEvent": 34,
+   "passPct": 100
+  },
+  {
+   "skill": "Oppressive Collapse",
+   "skill_id": 44296,
+   "kind": "direct hit",
+   "windows": 188,
+   "events": 573,
+   "zero": 571,
+   "damage": 2289,
+   "damagePerEvent": 1145,
+   "passPct": 0
+  },
+  {
+   "skill": "Manifest Sand Shade",
+   "skill_id": 46824,
+   "kind": "direct hit",
+   "windows": 179,
+   "events": 608,
+   "zero": 607,
+   "damage": 672,
+   "damagePerEvent": 672,
+   "passPct": 0
+  },
+  {
+   "skill": "Manifest Sand Shade",
+   "skill_id": 43485,
+   "kind": "direct hit",
+   "windows": 194,
+   "events": 1763,
+   "zero": 1762,
+   "damage": 427,
+   "damagePerEvent": 427,
+   "passPct": 0
+  },
+  {
+   "skill": "Flamestrike",
+   "skill_id": 5508,
+   "kind": "direct hit",
+   "windows": 133,
+   "events": 1710,
+   "zero": 1709,
+   "damage": 349,
+   "damagePerEvent": 349,
+   "passPct": 0
+  },
+  {
+   "skill": "Nourishment",
+   "skill_id": 57244,
+   "kind": "buff tick",
+   "windows": 1,
+   "events": 1,
+   "zero": 0,
+   "damage": 325,
+   "damagePerEvent": 325,
+   "passPct": 100
+  },
+  {
+   "skill": "Nourishment",
+   "skill_id": 57356,
+   "kind": "buff tick",
+   "windows": 1,
+   "events": 1,
+   "zero": 0,
+   "damage": 325,
+   "damagePerEvent": 325,
+   "passPct": 100
+  },
+  {
+   "skill": "Desert Shroud",
+   "skill_id": 46726,
+   "kind": "direct hit",
+   "windows": 193,
+   "events": 4157,
+   "zero": 4156,
+   "damage": 287,
+   "damagePerEvent": 287,
+   "passPct": 0
+  },
+  {
+   "skill": "23279",
+   "skill_id": 23279,
+   "kind": "direct hit",
+   "windows": 92,
+   "events": 100,
+   "zero": 0,
+   "damage": 100,
+   "damagePerEvent": 1,
+   "passPct": 100
+  }
+ ],
+ "fullyBlocked": {
+  "directHits": {
+   "events": 38764,
+   "skills": 97
+  },
+  "buffTicks": [
+   {
+    "skill": "Bleeding",
+    "skill_id": 736,
+    "events": 29142
+   },
+   {
+    "skill": "Torment",
+    "skill_id": 19426,
+    "events": 27713
+   },
+   {
+    "skill": "Burning",
+    "skill_id": 737,
+    "events": 25144
+   },
+   {
+    "skill": "Poisoned",
+    "skill_id": 723,
+    "events": 18500
+   },
+   {
+    "skill": "Confusion",
+    "skill_id": 861,
+    "events": 7449
+   }
+  ]
+ }
+}
