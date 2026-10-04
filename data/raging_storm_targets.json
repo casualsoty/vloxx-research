@@ -1,0 +1,58 @@
+{
+ "logs": 26,
+ "spears": 1898,
+ "onAPlayerPct": 92,
+ "onADownedPlayer": 83,
+ "sets": 105,
+ "model": {
+  "sameTargetsInBothSingleWaves": {
+   "yes": 87,
+   "of": 95,
+   "pct": 92
+  },
+  "setContainedInTheDoubleWaveBefore": {
+   "yes": 79,
+   "of": 92,
+   "pct": 86
+  },
+  "setContainedInTheDoubleWaveAfter": {
+   "yes": 79,
+   "of": 88,
+   "pct": 90
+  }
+ },
+ "fixatedInTheSet": {
+  "yes": 63,
+  "of": 70,
+  "pct": 90
+ },
+ "setSize": {
+  "fixated": {
+   "2": 8,
+   "3": 62
+  },
+  "nobodyFixated": {
+   "1": 2,
+   "2": 26,
+   "3": 7
+  }
+ },
+ "otherTargetsByDistanceFromCentre": {
+  "closest third": 69,
+  "middle third": 68,
+  "farthest third": 77
+ },
+ "otherTargetsKeptFromThePreviousSet": {
+  "kept": 41,
+  "of": 144,
+  "pct": 28,
+  "byChancePct": 29
+ },
+ "perPlayerOverAPhase": {
+  "playersNeverTargetedPct": 20,
+  "mostSpearsOnOnePlayer": {
+   "median": 20,
+   "max": 32
+  }
+ }
+}

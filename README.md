@@ -31,7 +31,7 @@ docs-src/feedback.js "Feedback" / "Report a bug" buttons (top bar); contact name
 docs-src/plans/      shared planner templates (*.json, any exported plan); see the README there
 FINDINGS.md          every conclusion, its evidence, and hypotheses that were tested and REJECTED
 logs/                LOCAL ONLY (gitignored, not in the repository — back it up separately):
-logs/raw/            our squad's raw arcdps logs (.zevtc), CM: 209 logs from 2026-09-29 to 2026-10-04 (20 reached the last phase, 4 kills)
+logs/raw/            our squad's raw arcdps logs (.zevtc), CM: 237 logs from 2026-09-29 to 2026-10-04 (26 reached the last phase, 4 kills)
 logs/raw_nm/         raw NM logs (13; not analysed)
 logs/ei/             Elite Insights JSON of other squads' logs (gzipped). dps.report links + Wingman imports
 logs/sources.json    log id -> URL (dps.report / Wingman)
@@ -63,7 +63,7 @@ Times are seconds from log start. **Raw logs start ~3 s later than EI** (EI show
 ## Raid planner (docs page, "Raid planner" tab)
 A fight planner in the style of raidplan.io, built for Vloxx CM. The map is drawn in real game coordinates from `data/arena.json`;
 the cursor readout shows world, map (×0.0254) and distance from centre. Features:
-- Players: 10, each with name, profession colour, role and subgroup. Squad markers: one of each per step.
+- Players: 10, each with name, profession colour, role and subgroup. Squad markers and the commander tag: one of each per step.
 - Units: Vloxx, Aspects, Cosmic adds, orbs, custom NPCs.
 - Shapes: AoE circles with EI-sized presets (they can be attached to a token), cones, beams, lines and arrows, text, freehand drawing, a ruler and an eraser.
 - Steps (phases) with name, time and notes. Play animates the tokens between steps.

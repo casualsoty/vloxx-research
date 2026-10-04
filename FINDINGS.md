@@ -2,12 +2,13 @@
 
 Confidence tags: **[solid]** many cases, no counter-example · **[likely]** consistent but small sample · **[open]** unresolved ·
 **[REJECTED]** tested and disproved (kept so nobody re-tests it blindly).
-Current sample (2026-10-04): **240 CM logs** — 208 raw from our squad + 32 EI from other squads (18 of them CM kills from GW2 Wingman) — of which
-**52 reached the last phase** (20 raw, 4 of them kills); 1,648 green rounds; 1,361 Fixated applications; 2,384 Ascension Orbs; plus NM logs.
-Numbers quoted as "175-log set" below are from the previous sample; headline rules re-checked on the 240-log set: green count rule **1,295/1,297**,
-Probability Distribution count 151/154, orb throws 377/379 (same 2 Staff misses), +63 s overlap 17/17 with a fixated player and 0/20 without. History: first written on 49 CM logs
+Current sample (2026-10-04): **268 CM logs** — 236 raw from our squad + 32 EI from other squads (18 of them CM kills from GW2 Wingman) — of which
+**58 reached the last phase** (26 raw, 4 of them kills); 1,822 green rounds; 1,500 Fixated applications; 2,753 Ascension Orbs; plus NM logs.
+Numbers quoted as "175-log set" below are from the previous sample; headline rules re-checked on the 268-log set: green count rule **1,434/1,436**,
+Probability Distribution count 171/175, orb throws 423/425 (same 2 Staff misses), +63 s overlap 19/19 with a fixated player and 0/22 without. History: first written on 49 CM logs
 (35 raw + 14 EI, 24 last phase); 141 after 2026-10-02; 175 after adding the 2026-10-02 afternoon/evening session (34 CM logs, 2 last phases);
-240 after adding the 2026-10-03 sessions (47 raw logs) and 18 CM kills from Wingman.
+240 after adding the 2026-10-03 sessions (47 raw logs) and 18 CM kills from Wingman;
+268 after adding the 2026-10-04 session (28 raw logs).
 
 ---
 ## 1. Green rounds — the basics
@@ -17,7 +18,7 @@ Probability Distribution count 151/154, orb throws 377/379 (same 2 Staff misses)
 * **Slot 1 = the Fixated player**, at any distance. If nobody holds Fixated, slot 1 stays empty and the first marker lands
   ~80 ms late. **[solid]** (165/165 rounds with a fixated player had them first.)
 * **Count = min(3, floor(players up / 3))**, downed/dead players don't count. **[solid]** — 338/338 rounds with a fixated
-  player (excluding the fight-start round) match (141 CM logs: 757/758; 175 CM logs: 873/875; **240 CM logs: 1,295/1,297** — both exceptions are rounds
+  player (excluding the fight-start round) match (141 CM logs: 757/758; 175 CM logs: 873/875; **268 CM logs: 1,434/1,436** — both exceptions are rounds
   2–3 s before a wipe ended the log: 20260930-225808 and 20261002-223258, 6 up → 1 green instead of 2). Every short round in our squad's own logs is explained by downs/deaths.
 * **Fight start (first round, ~3 s / ~6 s raw):** always only the fixated player (48/49 logs). The others are still at the
   entrance ~4,400 units away. The exception (224233) had 6 players already hitting the boss and got 3. In CM players standing at
@@ -158,7 +159,7 @@ applies one (3 of 7 skipped in the 175-log set) and that new holder gets the ove
   | `20261003-001430.zevtc` | 2:06.2 | 129.2 s | 7:24.8 | **Staff, not thrown.** Staff died 2.4 s after; Corrosive Poison Cloud cast 8.4 s before |
   | `20260930-203947.zevtc` | 2:49.7 | 172.7 s | 2:54.8 | Spear: thrown (3 missiles at +0.0/+0.2/+0.4 s); the log ended 2.1 s later, before they landed |
 
-  So **300/302 CCs threw the orbs** (240-log set: **377/379**, the same 2 misses). In the 2 Staff misses there is **no 80520 missile at all**. Per-CC data: `data/orb_throws.csv`
+  So **300/302 CCs threw the orbs** (268-log set: **423/425**, the same 2 misses). In the 2 Staff misses there is **no 80520 missile at all**. Per-CC data: `data/orb_throws.csv`
   (`scripts/orb_throws.js`, rebuilt every build), with the throw count, the orbs seen and any projectile-hate skill cast nearby.
   Tested and **[REJECTED]** as explanations:
   * **Picking the orbs up before they land** (suggested from the replay): a throw would still be logged, and orbs grabbed the
@@ -286,7 +287,7 @@ Elite Insights (EI) values = what the planner used before.
 | Division Eternal (81330) | Sword | first hit ~500 around the Sword, then a **line of 6 half-circle slashes: ~1,050 wide (±500–550), ~1,800 long**; see §5j | — | corrected |
 | Worldpiercer (81015), "Bulwark arrow" | Cosmic Bulwark | Bulwark stands still for a 4 s cast. Hits 3.9–5.9 s, on **one straight line** (all hits on one bearing): within ~150 of the line → **~300 wide**, out to ≥ 1,500. The line doesn't travel. | 1,850 × 100 | **wider** |
 | Annihilating Orb (81273) | Cosmic Piercer | circle **~375** around the landing spot (ground effect ~1,200 from the Piercer) | 180 + ring 240 | **bigger** |
-| Annihilating Orb (80323) | Vloxx | a narrow line ahead along Vloxx's facing (±150), hits fade by ~900; a forward projectile, not a circle | 240 | **[open]** |
+| Annihilating Orb (80323 / 81238) | Vloxx | orb thrown along Vloxx's facing: **path ~500 wide, lands 1,500 away**, damage zone ~300 there, then a **ring expanding** from that point to ~1,200; see §5p | 240 | **wrong** |
 | Echoing Blade (81271) | Vloxx | **half-circle of radius ~625 centred on Vloxx**, 8 pulses 0.6 s apart, each rotated 40° from the previous; 1 projectile per pulse; see §5f | — | new |
 | Ancora Strike (80940 Staff/Spear, 81327 Sword) | Aspects | short frontal swing ~200–300 ahead, ±150 (the tank hit) | — | new |
 | 80717 | Cosmic Bulwark | short frontal ~250 ahead | — | new |
@@ -504,7 +505,7 @@ Sample for the safe cases is small (4 casts with Vloxx 300+ behind the Sword). *
 
 ## 5k. Excision Extremis — is there a safe spot in melee, depending on where the fixated player stands?  [solid / likely]
 Script `scripts/excision_safespot.js` → `data/excision_melee.csv` (one row per non-fixated player per cast) and
-`data/excision_safespot_summary.json` (part of the full build). 304 casts in 64 logs, 235 with a fixated player.
+`data/excision_safespot_summary.json` (part of the full build). 345 casts in 72 logs, 271 with a fixated player.
 "Melee" = stayed within **300 of the edge of Vloxx's hitbox** (hitbox radius 150, so within 450 of its centre) for all eight pulses.
 A blocked or evaded hit counts as a hit. Distances Vloxx ↔ fixated are centre to centre.
 
@@ -513,24 +514,24 @@ gets safer the further the fixated player stands, slowly: at 500–1,000 it is s
 **~1,000+ from Vloxx** does the back of Vloxx stay mostly clean.
 
 **How the 16 slashes are laid out.**
-* **4 slashes on Vloxx** (20 % of slashes; origin ~108 from its centre, at 4.8, 5.3, 6.2 and 6.8 s). They face **forward**: the half-circle
+* **4 slashes on Vloxx** (20 % of slashes; origin ~110 from its centre, at 4.8, 5.3, 6.2 and 6.8 s). They face **forward**: the half-circle
   covers the side Vloxx is looking at, i.e. toward the fixated player, out to ~525 + the offset. Directly behind Vloxx they don't reach.
-* **12 slashes further out**, origins 425–959 from Vloxx (median 568), in three groups: from the left, from the right and from beyond.
+* **12 slashes further out**, origins 425–951 from Vloxx (median 564), in three groups: from the left, from the right and from beyond.
   In casts where the fixated player stands still they sit roughly 400 around that player and face back toward them; no exact placement
-  rule was found. **41 % of these origins are within 525 of Vloxx's centre**, so they sweep over the melee area from the sides, including behind Vloxx. **[likely]**
+  rule was found. **42 % of these origins are within 525 of Vloxx's centre**, so they sweep over the melee area from the sides, including behind Vloxx. **[likely]**
 * All half-circles are aligned on Vloxx's facing (0° off), which is the direction of the fixated player at that moment.
-* The fixated player moved a median of 278 units during the pulses (p90 634).
+* The fixated player moved a median of 241 units during the pulses (p90 622).
 
 **What happened to players in melee of Vloxx**, by distance between Vloxx and the fixated player (mean over the pulses).
 Cells: % of players hit at least once (players, mean number of hits).
 | Vloxx ↔ fixated | all melee players | on the fixated player's side | on the far side of Vloxx | casts with ≥ 3 in melee / nobody hit |
 |---|---|---|---|---|
-| 0–200 | 89 % (576, 4.3 hits) | 96 % (221, 5.5 hits) | 73 % (164, 2.4 hits) | 74 / 5 |
-| 200–300 | 94 % (378, 4.1 hits) | 98 % (181, 5 hits) | 87 % (110, 2.5 hits) | 49 / 0 |
-| 300–400 | 96 % (236, 5.2 hits) | 100 % (112, 7.2 hits) | 83 % (53, 2 hits) | 32 / 0 |
-| 400–500 | 85 % (88, 3.7 hits) | 100 % (27, 5.4 hits) | 64 % (33, 1.5 hits) | 12 / 1 |
+| 0–200 | 86 % (694, 4.1 hits) | 97 % (240, 5.6 hits) | 72 % (230, 2.2 hits) | 88 / 6 |
+| 200–300 | 94 % (423, 3.9 hits) | 98 % (184, 5 hits) | 87 % (141, 2.4 hits) | 55 / 0 |
+| 300–400 | 91 % (293, 5 hits) | 100 % (128, 7.3 hits) | 70 % (84, 1.8 hits) | 39 / 0 |
+| 400–500 | 86 % (98, 3.7 hits) | 96 % (28, 5.2 hits) | 71 % (41, 2 hits) | 15 / 1 |
 | 500–700 | 65 % (77, 2.5 hits) | 81 % (21, 4.4 hits) | 45 % (38, 1.1 hits) | 13 / 0 |
-| 700+ | 78 % (55, 2.9 hits) | 75 % (4, 2.5 hits) | 67 % (30, 1.3 hits) | 8 / 1 |
+| 700+ | 81 % (64, 2.6 hits) | 75 % (4, 2.5 hits) | 74 % (39, 1.2 hits) | 9 / 1 |
 
 **From the slash effects alone** (no player needed, so every cast counts): the part of Vloxx's melee area (hitbox edge to 300 beyond it)
 that none of the cast's slashes covers. "Back sector" = the 120° directly opposite the fixated player. A "standing spot" = a point with
@@ -538,223 +539,224 @@ a free radius of 75 around it inside the melee area. The slash effect is used, n
 its orientation is wrong for about half of the late slashes (§5e).
 | Vloxx ↔ fixated | casts | melee area never covered | back sector never covered | casts with the back sector fully clean | casts with a standing spot (behind Vloxx) | where the spot is, degrees off "directly behind" (p25 / median / p75) |
 |---|---|---|---|---|---|---|
-| 0–200 | 74 | 7 % | 8 % | 0 | 21 (10) | 40 / 80 / 140 |
-| 200–300 | 60 | 10 % | 15 % | 0 | 16 (14) | 20 / 50 / 90 |
-| 300–400 | 38 | 11 % | 20 % | 2 | 15 (14) | 20 / 40 / 80 |
-| 400–500 | 20 | 20 % | 27 % | 2 | 9 (8) | 30 / 70 / 120 |
+| 0–200 | 88 | 6 % | 8 % | 0 | 22 (11) | 40 / 80 / 140 |
+| 200–300 | 66 | 10 % | 14 % | 0 | 17 (14) | 30 / 50 / 90 |
+| 300–400 | 46 | 11 % | 22 % | 2 | 22 (20) | 20 / 40 / 70 |
+| 400–500 | 23 | 18 % | 24 % | 2 | 10 (8) | 30 / 70 / 120 |
 | 500–600 | 12 | 23 % | 37 % | 1 | 8 (7) | 20 / 50 / 80 |
-| 600–700 | 6 | 23 % | 38 % | 1 | 4 (4) | 30 / 50 / 80 |
-| 700–850 | 4 | 38 % | 52 % | 1 | 3 (3) | 20 / 50 / 80 |
-| 850–1000 | 6 | 17 % | 32 % | 0 | 3 (3) | 20 / 30 / 60 |
-| 1000+ | 9 | 64 % | 79 % | 5 | 8 (8) | 40 / 80 / 130 |
+| 600–700 | 7 | 32 % | 47 % | 2 | 5 (5) | 30 / 60 / 80 |
+| 700–850 | 5 | 30 % | 42 % | 1 | 3 (3) | 20 / 50 / 80 |
+| 850–1000 | 7 | 17 % | 31 % | 0 | 4 (4) | 20 / 40 / 60 |
+| 1000+ | 10 | 59 % | 73 % | 5 | 8 (8) | 40 / 80 / 130 |
 
 * **The safe area grows slowly up to ~1,000 and then jumps.** Below 1,000 the back sector is on average about half clean at best and was fully
-  clean in 7 of 220 casts. **At 1,000+ it is 79 % clean, fully clean in 5 of 9 casts.** [likely: 9 casts]
-* **From ~300 on there usually is a small safe pocket behind Vloxx** (a standing spot in 39–75 % of casts), but it is not in the same
+  clean in 8 of 254 casts. **At 1,000+ it is 73 % clean, fully clean in 5 of 10 casts.** [likely: 10 casts]
+* **From ~300 on there usually is a small safe pocket behind Vloxx** (a standing spot in 43–71 % of casts), but it is not in the same
   place from cast to cast: anywhere from directly behind to ~80° off. It cannot be pre-positioned on.
 * **A fixated player who stands still does not help.** Back sector clean, fixated player moved < 200 vs ≥ 200 during the pulses:
-  Vloxx ↔ fixated under 500: 8 % (84 casts) vs 20 % (108); 500–1,000: 33 % (8) vs 40 % (20).
+  Vloxx ↔ fixated under 500: 9 % (109 casts) vs 19 % (114); 500–1,000: 30 % (10) vs 43 % (21).
 
-**By distance from the fixated player** (any position): 0–250: 95 % hit, 5.4 hits · 250–450: 90 % hit, 4.1 hits · 450–650: 86 % hit, 3.1 hits · 650–1000: 73 % hit, 2.6 hits · 1000+: 66 % hit, 2 hits.
-Without a fixated player the attack still happens around Vloxx's current target: 92 % of 381 melee players hit.
+**By distance from the fixated player** (any position): 0–250: 94 % hit, 5.4 hits · 250–450: 89 % hit, 3.9 hits · 450–650: 84 % hit, 2.9 hits · 650–1000: 75 % hit, 2.6 hits · 1000+: 66 % hit, 1.9 hits.
+Without a fixated player the attack still happens around Vloxx's current target: 93 % of 419 melee players hit.
 
 **What to take from it.**
-* **Fixated player within ~300 of Vloxx's centre (the usual case; median 261): everybody in melee is hit**, wherever they stand
+* **Fixated player within ~300 of Vloxx's centre (the usual case; median 259): everybody in melee is hit**, wherever they stand
   (87–98 %). There is no gap to stand in. Standing behind Vloxx only lowers the **number** of hits (about 2–3 instead of 5).
-* **Fixated player 300–500 away, stack behind Vloxx** (opposite the fixated player): 83 % hit at 300–400, 64 % at 400–500, 1–2 hits.
+* **Fixated player 300–500 away, stack behind Vloxx** (opposite the fixated player): 70 % hit at 300–400, 71 % at 400–500, 1–2 hits.
 * **Fixated player 500–700 away, stack behind Vloxx:** 45 % hit (38 players), 1.1 hits on average. 
-* **700–1,000:** still not safe. Players behind Vloxx were hit 67 % of the time at 700+ (30 players), and the slash geometry leaves the back sector only 32–52 % clean.
+* **700–1,000:** still not safe. Players behind Vloxx were hit 74 % of the time at 700+ (39 players), and the slash geometry leaves the back sector only 31–42 % clean.
 * **1,000+:** the first range where the back is mostly clean (table above). Small sample. **[likely]**
 * The side between Vloxx and the fixated player is hit at every distance (75–100 %).
 * One slash is enough to strip a boon and apply Crippled (§5e), so "fewer hits" does not save the strip; it only lowers the damage.
 
 ## 5l. Usual order of Vloxx's attacks in each phase  [solid for the first cycle, likely later]
 Script `scripts/cast_order.js` → `data/cast_order.csv` (one row per phase × position) and `data/cast_order_summary.json` (part of the
-full build). 209 logs. Phases are cut on Vloxx's *Visions of Eternity* casts (70 %, 40 %, 10 % health). Times: P1 from the start of
+full build). 237 logs. Phases are cut on Vloxx's *Visions of Eternity* casts (70 %, 40 %, 10 % health). Times: P1 from the start of
 the fight, P2 and P3 from the moment the breakbar of *Visions of Eternity* is broken.
 
 **How it works.** Each phase has a fixed **main rotation**, and on top of it a few attacks that run on **their own timers** (the greens
 *Judgment of Eternity*, *Probability Distribution*, in P1 also *Eternal Reflection*). The timer attacks slot in between the rotation
 attacks. The first cycle is the same in almost every log (start times within about a second); after ~100 s in P2 and ~50 s in P3 the
-logs start to differ, both in where the timer attacks land and in the rotation itself (in P2 the first 12 rotation attacks are identical in 57 of the 99 logs that got that far). The cause of those differences was not looked into. **[open]**
+logs start to differ, both in where the timer attacks land and in the rotation itself (in P2 the first 12 rotation attacks are identical in 63 of the 109 logs that got that far). The cause of those differences was not looked into. **[open]**
 
 **Fixated swaps (last column).** Fixated lasts 60 s and the next one comes ~7.7 s after it ends (§2), so a swap happens every ~68 s
 counted from the previous application, not from the start of the phase.
 * **P1 is fixed:** first Fixated at 3 s, second at 70.7 s (94 % of logs within 2 s), third at ~132 s if the phase lasts that long.
-* **P2 and P3 are not fixed:** 94 % / 93 % of these phases start with a Fixated already running (applied during the split or the breakbar), so the
+* **P2 and P3 are not fixed:** 94 % / 94 % of these phases start with a Fixated already running (applied during the split or the breakbar), so the
   first swap of the phase comes ~68 s after *that* application. The column shows the most common times with how many logs had them;
   a time shared by fewer than 15 % of the logs is left out. A Fixated that ends early (holder downed, stealth) moves everything after it.
 
 ### P1 (Staff, 100 → 70 %)
-Reached in 209 logs, finished in 171; a full phase lasts about 127 s (23 casts). Times are from the start of the fight.
-* **Main rotation** (same start in 148 of 150 logs that got that far): Surrounding Curse → Annihilating Orb → Ascension's Sacrifice → Annihilating Orb → Surrounding Curse → Annihilating Orb → Ascension's Sacrifice → Annihilating Orb → Surrounding Curse.
+Reached in 237 logs, finished in 192; a full phase lasts about 126 s (23 casts). Times are from the start of the fight.
+* **Main rotation** (same start in 173 of 175 logs that got that far): Surrounding Curse → Annihilating Orb → Ascension's Sacrifice → Annihilating Orb → Surrounding Curse → Annihilating Orb → Ascension's Sacrifice → Annihilating Orb → Surrounding Curse.
 * **On their own timers:** *Judgment of Eternity* first at 4.4 s, then about every 47 s (44–65); *Probability Distribution* first at 20 s, then about every 45 s (32–55); *Eternal Reflection* first at 22.1 s, then about every 10 s (9–26).
 
 | # | starts at | attack | cast time | logs that agree | otherwise | new Fixated during this attack |
 |---|---|---|---|---|---|---|
-| 1 | 4.4 s | Judgment of Eternity | 4.4 s | 100 % of 209 |  | Fixated #1 at ~3 s (207 of 209 logs) |
-| 2 | 8.9 s | Surrounding Curse | 4 s | 100 % of 209 |  |  |
-| 3 | 13 s | Annihilating Orb | 6.9 s | 100 % of 209 |  |  |
-| 4 | 20 s | Probability Distribution | 2 s | 100 % of 207 |  |  |
-| 5 | 22.1 s | Eternal Reflection | 3.8 s | 100 % of 205 |  |  |
-| 6 | 31.2 s | Eternal Reflection | 3.8 s | 100 % of 204 |  |  |
-| 7 | 37.3 s | Ascension's Sacrifice | 6 s | 100 % of 202 |  |  |
-| 8 | 43.4 s | Annihilating Orb | 6.9 s | 100 % of 201 |  |  |
-| 9 | 51.8 s | Judgment of Eternity | 4.4 s | 100 % of 198 |  |  |
-| 10 | 56.3 s | Eternal Reflection | 3.8 s | 100 % of 197 |  |  |
-| 11 | 60.2 s | Surrounding Curse | 4 s | 100 % of 195 |  |  |
-| 12 | 64.2 s | Probability Distribution | 2 s | 100 % of 194 |  |  |
-| 13 | 66.3 s | Eternal Reflection | 3.8 s | 100 % of 192 |  | Fixated #2 at ~70.7 s (173 of 185 logs) |
-| 14 | 73.8 s | Annihilating Orb | 6.9 s | 100 % of 181 |  |  |
-| 15 | 80.8 s | Eternal Reflection | 3.8 s | 100 % of 180 |  |  |
-| 16 | 84.6 s | Ascension's Sacrifice | 6 s | 100 % of 179 |  |  |
-| 17 | 91 s | Eternal Reflection | 3.8 s | 100 % of 179 |  |  |
-| 18 | 96.6 s | Judgment of Eternity | 4.4 s | 96 % of 179 | Probability Distribution x7 |  |
-| 19 | 101.3 s | Eternal Reflection | 3.8 s | 100 % of 176 |  |  |
-| 20 | 105.1 s | Annihilating Orb | 6.9 s | 99 % of 175 | Probability Distribution x1 / Surrounding Curse x1 |  |
-| 21 | 112.3 s | Surrounding Curse | 4 s | 98 % of 150 | Judgment of Eternity x2 / Probability Distribution x1 |  |
-| 22 | 117.6 s | Probability Distribution | 2 s | 95 % of 126 | Annihilating Orb x2 / Surrounding Curse x2 |  |
-| 23 | 119.7 s | Eternal Reflection | 3.8 s | 100 % of 107 |  |  |
-| 24 | 128.9 s | Eternal Reflection | 3.8 s | 100 % of 61 |  |  |
+| 1 | 4.4 s | Judgment of Eternity | 4.4 s | 100 % of 237 |  | Fixated #1 at ~3 s (235 of 237 logs) |
+| 2 | 8.9 s | Surrounding Curse | 4 s | 100 % of 237 |  |  |
+| 3 | 13 s | Annihilating Orb | 6.9 s | 100 % of 237 |  |  |
+| 4 | 20 s | Probability Distribution | 2 s | 100 % of 235 |  |  |
+| 5 | 22.1 s | Eternal Reflection | 3.8 s | 100 % of 233 |  |  |
+| 6 | 31.2 s | Eternal Reflection | 3.8 s | 100 % of 232 |  |  |
+| 7 | 37.3 s | Ascension's Sacrifice | 6 s | 100 % of 230 |  |  |
+| 8 | 43.4 s | Annihilating Orb | 6.9 s | 100 % of 229 |  |  |
+| 9 | 51.8 s | Judgment of Eternity | 4.4 s | 100 % of 226 |  |  |
+| 10 | 56.3 s | Eternal Reflection | 3.8 s | 100 % of 225 |  |  |
+| 11 | 60.2 s | Surrounding Curse | 4 s | 100 % of 223 |  |  |
+| 12 | 64.2 s | Probability Distribution | 2 s | 100 % of 222 |  |  |
+| 13 | 66.3 s | Eternal Reflection | 3.8 s | 100 % of 220 |  | Fixated #2 at ~70.7 s (199 of 213 logs) |
+| 14 | 73.8 s | Annihilating Orb | 6.9 s | 100 % of 208 |  |  |
+| 15 | 80.8 s | Eternal Reflection | 3.8 s | 100 % of 207 |  |  |
+| 16 | 84.6 s | Ascension's Sacrifice | 6 s | 100 % of 206 |  |  |
+| 17 | 91 s | Eternal Reflection | 3.8 s | 100 % of 206 |  |  |
+| 18 | 96.6 s | Judgment of Eternity | 4.4 s | 97 % of 206 | Probability Distribution x7 |  |
+| 19 | 101.2 s | Eternal Reflection | 3.8 s | 100 % of 202 |  |  |
+| 20 | 105.1 s | Annihilating Orb | 6.9 s | 99 % of 201 | Probability Distribution x1 / Surrounding Curse x1 |  |
+| 21 | 112.3 s | Surrounding Curse | 4 s | 98 % of 175 | Judgment of Eternity x2 / Probability Distribution x1 |  |
+| 22 | 117.6 s | Probability Distribution | 2 s | 96 % of 148 | Annihilating Orb x2 / Surrounding Curse x2 |  |
+| 23 | 119.6 s | Eternal Reflection | 3.8 s | 100 % of 128 |  |  |
+| 24 | 128.8 s | Eternal Reflection | 3.8 s | 100 % of 65 |  |  |
 
 ### P2 (Spear, 70 → 40 %)
-Reached in 170 logs, finished in 70; a full phase lasts about 129 s (19 casts). The first cast starts the moment the breakbar is broken.
-* **Main rotation** (same start in 57 of 99 logs that got that far): Cosmic Charge → Worldpiercer → Raging Storm → Thousand Strikes → Thousand Strikes → Worldpiercer → Cosmic Charge → Raging Storm → Thousand Strikes → Worldpiercer → Thousand Strikes → Cosmic Charge.
+Reached in 191 logs, finished in 78; a full phase lasts about 129 s (19 casts). The first cast starts the moment the breakbar is broken.
+* **Main rotation** (same start in 63 of 109 logs that got that far): Cosmic Charge → Worldpiercer → Raging Storm → Thousand Strikes → Thousand Strikes → Worldpiercer → Cosmic Charge → Raging Storm → Thousand Strikes → Worldpiercer → Thousand Strikes → Cosmic Charge.
 * **On their own timers:** *Judgment of Eternity* first at 0 s, then about every 55 s (44–61); *Probability Distribution* first at 33.5 s, then about every 49 s (45–55).
 
 | # | starts at | attack | cast time | logs that agree | otherwise | new Fixated during this attack |
 |---|---|---|---|---|---|---|
-| 1 | 0 s | Judgment of Eternity | 4.4 s | 95 % of 170 | Cosmic Charge x8 |  |
-| 2 | 4.5 s | Cosmic Charge | 7.8 s | 95 % of 170 | Judgment of Eternity x7 / Worldpiercer x1 |  |
-| 3 | 12.4 s | Worldpiercer | 6 s | 99 % of 170 | Judgment of Eternity x1 |  |
-| 4 | 18.5 s | Raging Storm | 7.4 s | 99 % of 161 | Thousand Strikes x1 |  |
-| 5 | 27.4 s | Thousand Strikes | 6 s | 99 % of 151 | Raging Storm x1 |  |
-| 6 | 33.5 s | Probability Distribution | 2 s | 99 % of 150 | Thousand Strikes x1 |  |
-| 7 | 38.9 s | Thousand Strikes | 6 s | 99 % of 149 | Probability Distribution x1 |  |
-| 8 | 48.7 s | Worldpiercer | 6 s | 94 % of 142 | Cosmic Charge x8 | Fixated #1 at ~48 s (31 of 147 logs) |
-| 9 | 54.8 s | Judgment of Eternity | 4.4 s | 99 % of 139 | Cosmic Charge x1 |  |
-| 10 | 59.6 s | Cosmic Charge | 7.8 s | 93 % of 134 | Worldpiercer x8 / Judgment of Eternity x1 |  |
-| 11 | 68.6 s | Raging Storm | 7.4 s | 99 % of 130 | Thousand Strikes x1 | Fixated #1 at ~68 s (30 of 147 logs) |
-| 12 | 76.1 s | Thousand Strikes | 6 s | 99 % of 120 | Raging Storm x1 |  |
-| 13 | 82.4 s | Probability Distribution | 2 s | 99 % of 117 | Thousand Strikes x1 |  |
-| 14 | 85.3 s | Worldpiercer | 6 s | 94 % of 116 | Thousand Strikes x7 |  |
-| 15 | 92.6 s | Thousand Strikes | 6 s | 94 % of 108 | Cosmic Charge x6 / Probability Distribution x1 | Fixated #2 at ~92 s (24 of 95 logs) |
-| 16 | 100.1 s | Judgment of Eternity | 4.4 s | 82 % of 102 | Raging Storm x12 / Worldpiercer x5 |  |
-| 17 | 106.3 s | Cosmic Charge | 7.8 s | 71 % of 99 | Thousand Strikes x23 / Judgment of Eternity x5 |  |
+| 1 | 0 s | Judgment of Eternity | 4.4 s | 96 % of 191 | Cosmic Charge x8 |  |
+| 2 | 4.5 s | Cosmic Charge | 7.8 s | 96 % of 191 | Judgment of Eternity x7 / Worldpiercer x1 |  |
+| 3 | 12.4 s | Worldpiercer | 6 s | 99 % of 191 | Judgment of Eternity x1 |  |
+| 4 | 18.5 s | Raging Storm | 7.4 s | 99 % of 182 | Thousand Strikes x1 |  |
+| 5 | 27.4 s | Thousand Strikes | 6 s | 99 % of 170 | Raging Storm x1 |  |
+| 6 | 33.5 s | Probability Distribution | 2 s | 99 % of 168 | Thousand Strikes x1 |  |
+| 7 | 38.9 s | Thousand Strikes | 6 s | 99 % of 165 | Probability Distribution x1 |  |
+| 8 | 48.7 s | Worldpiercer | 6 s | 95 % of 157 | Cosmic Charge x8 | Fixated #1 at ~48 s (31 of 163 logs) |
+| 9 | 54.8 s | Judgment of Eternity | 4.4 s | 99 % of 154 | Cosmic Charge x1 |  |
+| 10 | 59.6 s | Cosmic Charge | 7.8 s | 94 % of 148 | Worldpiercer x8 / Judgment of Eternity x1 | Fixated #1 at ~60 s (26 of 163 logs) |
+| 11 | 68.6 s | Raging Storm | 7.4 s | 99 % of 144 | Thousand Strikes x1 | Fixated #1 at ~68 s (37 of 163 logs) |
+| 12 | 76.1 s | Thousand Strikes | 6 s | 99 % of 133 | Raging Storm x1 |  |
+| 13 | 82.4 s | Probability Distribution | 2 s | 99 % of 128 | Thousand Strikes x1 |  |
+| 14 | 85.3 s | Worldpiercer | 6 s | 94 % of 126 | Thousand Strikes x7 |  |
+| 15 | 92.6 s | Thousand Strikes | 6 s | 94 % of 118 | Cosmic Charge x6 / Probability Distribution x1 | Fixated #2 at ~92 s (24 of 99 logs) |
+| 16 | 100.1 s | Judgment of Eternity | 4.4 s | 83 % of 112 | Raging Storm x13 / Worldpiercer x5 |  |
+| 17 | 106.3 s | Cosmic Charge | 7.8 s | 71 % of 109 | Thousand Strikes x26 / Judgment of Eternity x5 |  |
 
 After ~100 s the order starts to differ between logs (the later rows above are less certain).
 
 ### P3 (Sword, 40 → 10 %)
-Reached in 69 logs, finished in 20; a full phase lasts about 155 s (28 casts). The first cast starts the moment the breakbar is broken.
-* **Main rotation** (same start in 30 of 41 logs that got that far): Echoing Blade → Slice Through Reality → Excision Extremis → Division Eternal → Echoing Blade → Excision Extremis → Division Eternal → Excision Extremis → Echoing Blade → Division Eternal → Excision Extremis → Division Eternal.
+Reached in 77 logs, finished in 26; a full phase lasts about 155 s (29 casts). The first cast starts the moment the breakbar is broken.
+* **Main rotation** (same start in 35 of 47 logs that got that far): Echoing Blade → Slice Through Reality → Excision Extremis → Division Eternal → Echoing Blade → Excision Extremis → Division Eternal → Excision Extremis → Echoing Blade → Division Eternal → Excision Extremis → Division Eternal.
 * **On their own timers:** *Judgment of Eternity* first at 0 s, then about every 47 s (44–56); *Probability Distribution* first at 23.2 s, then about every 42 s (34–63).
 
 | # | starts at | attack | cast time | logs that agree | otherwise | new Fixated during this attack |
 |---|---|---|---|---|---|---|
-| 1 | 0 s | Judgment of Eternity | 4.4 s | 94 % of 69 | Echoing Blade x4 |  |
-| 2 | 4.5 s | Echoing Blade | 5.4 s | 94 % of 69 | Judgment of Eternity x3 / Slice Through Reality x1 |  |
-| 3 | 9.9 s | Slice Through Reality | 5.4 s | 94 % of 69 | Excision Extremis x4 |  |
-| 4 | 15.4 s | Excision Extremis | 6.2 s | 94 % of 69 | Slice Through Reality x3 / Judgment of Eternity x1 | Fixated #1 at ~20 s (26 of 58 logs) |
-| 5 | 23.1 s | Probability Distribution | 2 s | 94 % of 66 | Division Eternal x4 |  |
-| 6 | 25.2 s | Division Eternal | 3.7 s | 94 % of 66 | Echoing Blade x4 |  |
-| 7 | 30.2 s | Echoing Blade | 5.4 s | 94 % of 62 | Excision Extremis x4 |  |
-| 8 | 35.6 s | Excision Extremis | 6.2 s | 94 % of 62 | Probability Distribution x4 |  |
-| 9 | 43.3 s | Division Eternal | 3.7 s | 100 % of 59 |  | Fixated #2 at ~44 s (7 of 43 logs) |
-| 10 | 47.2 s | Judgment of Eternity | 4.4 s | 94 % of 53 | Excision Extremis x3 |  |
-| 11 | 52.3 s | Excision Extremis | 6.2 s | 72 % of 50 | Division Eternal x11 / Echoing Blade x3 |  |
-| 12 | 58.6 s | Echoing Blade | 5.4 s | 73 % of 48 | Excision Extremis x10 / Judgment of Eternity x3 | Fixated #1 at ~64 s (17 of 58 logs) |
-| 13 | 65.4 s | Probability Distribution | 2 s | 72 % of 47 | Echoing Blade x10 / Excision Extremis x3 |  |
-| 14 | 67.5 s | Division Eternal | 3.7 s | 73 % of 45 | Probability Distribution x12 |  |
-| 15 | 71.2 s | Excision Extremis | 6.2 s | 73 % of 44 | Division Eternal x12 |  |
-| 16 | 77.6 s | Division Eternal | 3.7 s | 73 % of 41 | Excision Extremis x9 / Echoing Blade x2 |  |
-| 17 | 82.8 s | Slice Through Reality | 5.4 s | 73 % of 41 | Division Eternal x8 / Excision Extremis x2 | Fixated #2 at ~88 s (10 of 43 logs) |
-| 18 | 89.6 s | Echoing Blade | 5.4 s | 63 % of 41 | Slice Through Reality x11 / Excision Extremis x4 |  |
-| 19 | 95.3 s | Judgment of Eternity | 4.4 s | 73 % of 40 | Echoing Blade x8 / Division Eternal x2 |  |
-| 20 | 99.7 s | Excision Extremis | 6.2 s | 68 % of 40 | Judgment of Eternity x9 / Echoing Blade x4 |  |
-| 21 | 106 s | Probability Distribution | 2 s | 70 % of 40 | Excision Extremis x9 / Judgment of Eternity x2 |  |
-| 22 | 108.2 s | Division Eternal | 3.7 s | 63 % of 40 | Probability Distribution x9 / Excision Extremis x3 | Fixated #3 at ~112 s (5 of 23 logs) |
-| 23 | 115.3 s | Echoing Blade | 5.4 s | 62 % of 39 | Division Eternal x12 / Excision Extremis x3 | Fixated #3 at ~116 s (5 of 23 logs) |
-| 24 | 120.9 s | Excision Extremis | 6.2 s | 75 % of 36 | Echoing Blade x7 / Probability Distribution x2 |  |
-| 25 | 127.2 s | Division Eternal | 3.7 s | 71 % of 35 | Excision Extremis x7 / Echoing Blade x3 | Fixated #2 at ~132 s (7 of 43 logs); Fixated #3 at ~132 s (6 of 23 logs) |
-| 26 | 135.9 s | Division Eternal | 3.7 s | 93 % of 29 | Excision Extremis x2 |  |
-| 29 | 150.3 s | Slice Through Reality | 5.4 s | 61 % of 18 | Echoing Blade x6 / Division Eternal x1 |  |
+| 1 | 0 s | Judgment of Eternity | 4.4 s | 95 % of 77 | Echoing Blade x4 |  |
+| 2 | 4.5 s | Echoing Blade | 5.4 s | 95 % of 77 | Judgment of Eternity x3 / Slice Through Reality x1 |  |
+| 3 | 9.9 s | Slice Through Reality | 5.4 s | 95 % of 77 | Excision Extremis x4 |  |
+| 4 | 15.4 s | Excision Extremis | 6.2 s | 95 % of 77 | Slice Through Reality x3 / Judgment of Eternity x1 | Fixated #1 at ~20 s (26 of 66 logs) |
+| 5 | 23.2 s | Probability Distribution | 2 s | 95 % of 74 | Division Eternal x4 |  |
+| 6 | 25.2 s | Division Eternal | 3.7 s | 95 % of 74 | Echoing Blade x4 |  |
+| 7 | 30.2 s | Echoing Blade | 5.4 s | 94 % of 70 | Excision Extremis x4 |  |
+| 8 | 35.6 s | Excision Extremis | 6.2 s | 94 % of 70 | Probability Distribution x4 |  |
+| 9 | 43.3 s | Division Eternal | 3.7 s | 100 % of 67 |  |  |
+| 10 | 47.1 s | Judgment of Eternity | 4.4 s | 95 % of 61 | Excision Extremis x3 |  |
+| 11 | 52.3 s | Excision Extremis | 6.2 s | 74 % of 57 | Division Eternal x12 / Echoing Blade x3 |  |
+| 12 | 58.6 s | Echoing Blade | 5.4 s | 74 % of 54 | Excision Extremis x11 / Judgment of Eternity x3 | Fixated #1 at ~64 s (19 of 66 logs) |
+| 13 | 65.4 s | Probability Distribution | 2 s | 74 % of 53 | Echoing Blade x11 / Excision Extremis x3 |  |
+| 14 | 67.5 s | Division Eternal | 3.7 s | 75 % of 51 | Probability Distribution x13 |  |
+| 15 | 71.2 s | Excision Extremis | 6.2 s | 74 % of 50 | Division Eternal x13 |  |
+| 16 | 77.6 s | Division Eternal | 3.7 s | 74 % of 47 | Excision Extremis x10 / Echoing Blade x2 |  |
+| 17 | 82.8 s | Slice Through Reality | 5.4 s | 74 % of 47 | Division Eternal x9 / Excision Extremis x2 | Fixated #2 at ~88 s (10 of 49 logs) |
+| 18 | 89.6 s | Echoing Blade | 5.4 s | 66 % of 47 | Slice Through Reality x12 / Excision Extremis x4 |  |
+| 19 | 95.3 s | Judgment of Eternity | 4.4 s | 74 % of 46 | Echoing Blade x9 / Division Eternal x2 |  |
+| 20 | 99.6 s | Excision Extremis | 6.2 s | 70 % of 46 | Judgment of Eternity x10 / Echoing Blade x4 |  |
+| 21 | 106 s | Probability Distribution | 2 s | 72 % of 46 | Excision Extremis x10 / Judgment of Eternity x2 |  |
+| 22 | 108.1 s | Division Eternal | 3.7 s | 65 % of 46 | Probability Distribution x10 / Excision Extremis x3 | Fixated #3 at ~112 s (5 of 26 logs) |
+| 23 | 115.3 s | Echoing Blade | 5.4 s | 64 % of 45 | Division Eternal x13 / Excision Extremis x3 | Fixated #3 at ~116 s (5 of 26 logs) |
+| 24 | 120.7 s | Excision Extremis | 6.2 s | 76 % of 42 | Echoing Blade x8 / Probability Distribution x2 |  |
+| 25 | 127 s | Division Eternal | 3.7 s | 73 % of 41 | Excision Extremis x8 / Echoing Blade x3 | Fixated #2 at ~132 s (9 of 49 logs); Fixated #3 at ~132 s (7 of 26 logs) |
+| 26 | 135.8 s | Division Eternal | 3.7 s | 94 % of 35 | Excision Extremis x2 |  |
+| 27 | 140 s | Judgment of Eternity | 4.4 s | 64 % of 33 | Division Eternal x8 / Excision Extremis x2 |  |
+| 29 | 149.6 s | Slice Through Reality | 5.4 s | 64 % of 22 | Echoing Blade x7 / Division Eternal x1 |  |
 
 In a few logs the phase starts with *Echoing Blade* before the greens. From the third greens round (~95 s) on, the order differs more.
 
 ### Last phase (10 → 0 %)
-Reached in 20 logs. Vloxx casts a single 65 s channel (skill 81071); its attacks are not logged as casts, so this list comes from the
+Reached in 26 logs. Vloxx casts a single 65 s channel (skill 81071); its attacks are not logged as casts, so this list comes from the
 damage they deal (seconds after the channel starts, median and range over the logs). All three Aspects are up as well and keep their own attacks.
 | at | attack of Vloxx | range | logs |
 |---|---|---|---|
-| 16.2 s | Surrounding Curse (80484), burst 1 | 15–36.1 s | 20 |
-| 17.5 s | Raging Storm (81176), burst 1 | 17.5–41.5 s | 20 |
-| 20 s | Excision Extremis (80901), burst 1 | 20–21.6 s | 20 |
-| 29.6 s | Raging Storm (81176), burst 2 | 20.5–51 s | 19 |
-| 35 s | Excision Extremis (80901), burst 2 | 35–36.6 s | 20 |
-| 35.5 s | Raging Storm (81176), burst 3 | 26.5–80.5 s | 17 |
-| 36.1 s | Surrounding Curse (80484), burst 2 | 20–86.4 s | 19 |
-| 41 s | Judgment of Eternity (80378), burst 1 | 11–71.1 s | 13 |
-| 44.7 s | Surrounding Curse (80484), burst 3 | 35.9–76.2 s | 16 |
-| 46.2 s | Surrounding Curse (80484), burst 4 | 39.8–86.3 s | 11 |
-| 47.5 s | Raging Storm (81176), burst 4 | 29.5–83.5 s | 16 |
-| 50 s | Excision Extremis (80901), burst 3 | 50–50.5 s | 15 |
-| 53.9 s | Probability Distribution (81318), burst 1 | 33.1–71 s | 14 |
-| 56.5 s | Raging Storm (81176), burst 5 | 35.5–65.5 s | 12 |
-| 65 s | Excision Extremis (80901), burst 4 | 65–66.6 s | 12 |
+| 16.2 s | Surrounding Curse (80484), burst 1 | 15–36.1 s | 26 |
+| 20 s | Excision Extremis (80901), burst 1 | 20–21.6 s | 26 |
+| 20.5 s | Raging Storm (81176), burst 1 | 17.5–41.5 s | 26 |
+| 30 s | Raging Storm (81176), burst 2 | 20.5–68.5 s | 25 |
+| 35 s | Excision Extremis (80901), burst 2 | 35–36.6 s | 26 |
+| 35.5 s | Raging Storm (81176), burst 3 | 26.5–89.8 s | 23 |
+| 35.9 s | Surrounding Curse (80484), burst 2 | 20–86.4 s | 25 |
+| 41 s | Judgment of Eternity (80378), burst 1 | 11–71.1 s | 18 |
+| 44.7 s | Surrounding Curse (80484), burst 3 | 35.9–76.2 s | 22 |
+| 46.2 s | Surrounding Curse (80484), burst 4 | 39.4–86.3 s | 14 |
+| 47.5 s | Raging Storm (81176), burst 4 | 29.5–83.5 s | 20 |
+| 50 s | Excision Extremis (80901), burst 3 | 50–51.5 s | 21 |
+| 54.4 s | Probability Distribution (81318), burst 1 | 31–71 s | 19 |
+| 56.5 s | Raging Storm (81176), burst 5 | 35.5–74.5 s | 16 |
+| 65 s | Excision Extremis (80901), burst 4 | 65–66.6 s | 16 |
 
 * **Excision Extremis is on a strict 15 s timer here: 20, 35, 50, 65 s.** The other times depend on players being hit, so they are looser.
 * The greens of the last phase and their timing are in §1 and §3.
 
 ## 5m. Slice Through Reality — a 525 hit, then a portal (entrance and exit ~300)  [solid]
-Script `scripts/slice_through_reality.js` → `data/slice_through_reality_summary.json` (part of the full build). 122 casts in 69 logs. Cast 5.4 s.
+Script `scripts/slice_through_reality.js` → `data/slice_through_reality_summary.json` (part of the full build). 139 casts in 77 logs. Cast 5.4 s.
 Vloxx's logged position only updates ~4.2 s into the cast, so everything here is measured from the ground effects of the skill.
 
 **Sequence.**
-1. **1.24 s: a hit around Vloxx, circle of radius ~525** (0–500: 100 % (481) hit · 500–550: 33 % (15) · 550+: 0 % (83)).
+1. **1.24 s: a hit around Vloxx, circle of radius ~525** (0–500: 100 % (535) hit · 500–550: 32 % (19) · 550+: 0 % (90)).
 2. **2.2 s: a portal opens where Vloxx stands** (effect GUID D33CD046…, lasts 9 s). **2.6 s: Vloxx teleports 2,000 units away**
    (996–2,009), and at 3.6 s the same portal effect appears on the arrival point.
-3. **From 2.6 s on, the entrance portal hits whoever is inside it and teleports them to the exit.** 94 % of the 789 hits
+3. **From 2.6 s on, the entrance portal hits whoever is inside it and teleports them to the exit.** 95 % of the 883 hits
    were followed by the player standing at the exit about a second later.
 
 **Size of the portal: ~300 radius, the same at both ends.**
-* **Entrance:** players were 227 from its centre when hit (median), 90 % within 282. Hit rate by distance from the centre:
-  0–300: 99 % (520) · 300–400: 53 % (47) · 400–550: 23 % (51) · 550+: 0 % (112). Beside the teleport line it stops at ~300
-  (200–300: 95 % (56), 300–400: 13 % (8)).
-* **Exit:** players land 171 from its centre (median), 90 % within 292: the same spread as at the entrance, so a player keeps
+* **Entrance:** players were 226 from its centre when hit (median), 90 % within 282. Hit rate by distance from the centre:
+  0–300: 99 % (586) · 300–400: 55 % (53) · 400–550: 21 % (62) · 550+: 0 % (116). Beside the teleport line it stops at ~300
+  (200–300: 94 % (66), 300–400: 11 % (9)).
+* **Exit:** players land 171 from its centre (median), 90 % within 291: the same spread as at the entrance, so a player keeps
   their offset from the centre and the exit area is the same size.
-* **It stays open.** 92 of the hits came 4–10 s into the cast (players walking into the entrance later), all 81–269 from its centre, and they were teleported too.
-* **Standing at the exit is safe**: 0 of 373 players who were already there were hit in the first 1.6 s. Whether the exit sends players back was not
+* **It stays open.** 104 of the hits came 4–10 s into the cast (players walking into the entrance later), all 81–272 from its centre, and they were teleported too.
+* **Standing at the exit is safe**: 0 of 447 players who were already there were hit in the first 1.6 s. Whether the exit sends players back was not
   measurable (only 2 players walked onto it). **[open]**
 
 So the big circle (525) is only the first hit. What stays on the ground afterwards, at both ends, is the ~300 portal.
-The distance between entrance and exit is fixed (2,000 ± 50 in 112 of 122 casts; shorter in the others, down to ~1000), so the planner has a single "Slice Through Reality" attack: click on Vloxx, drag toward
+The distance between entrance and exit is fixed (2,000 ± 50 in 129 of 139 casts; shorter in the others, down to ~1000), so the planner has a single "Slice Through Reality" attack: click on Vloxx, drag toward
 the teleport direction, and it places the 525 hit, the entrance and the exit.
 
 ## 5n. Vloxx's Damage Immunity (70 / 40 / 10 %) — what still damages it  [solid]
-Script `scripts/damage_immunity.js` → `data/damage_immunity.csv`, `data/damage_immunity_summary.json` (part of the full build). 262 immunity windows in 172 logs.
+Script `scripts/damage_immunity.js` → `data/damage_immunity.csv`, `data/damage_immunity_summary.json` (part of the full build). 297 immunity windows in 193 logs.
 
 **When.** Vloxx gets the buff **Damage Immunity (80608)** at each health threshold, for the whole *Visions of Eternity* breakbar, not only at 10 %:
 | threshold | windows | lasts (median, range) | windows where some damage went through | damage through (median / max) | health lost (median / max) |
 |---|---|---|---|---|---|
-| 70 % | 172 | 23.9 s (1–51.7) | 125 | 650 / 73,430 | 0.01 % / 0.12 % |
-| 40 % | 70 | 29.9 s (6.1–66.2) | 48 | 1,026 / 13,721 | 0.01 % / 0.11 % |
-| 10 % | 20 | 41.3 s (31–53) | 20 | 12,327 / 24,831 | 0.02 % / 0.06 % |
+| 70 % | 193 | 24.8 s (1–51.7) | 132 | 612 / 73,430 | 0.01 % / 0.12 % |
+| 40 % | 78 | 29.8 s (6.1–66.2) | 51 | 1,180 / 86,321 | 0.01 % / 0.11 % |
+| 10 % | 26 | 41.4 s (31–53) | 26 | 11,718 / 113,545 | 0.02 % / 0.14 % |
 
 At 10 % the immunity continues for 15 s into the last phase (a second, 15 s application when the channel starts).
 
 **What is blocked.**
-* **Direct hits: all of them** (55,711 hits of 118 skills did 0). 20 hits in total did damage (Symbol of Luminance, Piercing Stance, Oppressive Collapse, Mind the Gap, …); they are isolated events
+* **Direct hits: all of them** (66,094 hits of 137 skills did 0). 23 hits in total did damage (Symbol of Luminance, Piercing Stance, Oppressive Collapse, Mind the Gap, …); they are isolated events
   (the same skills did 0 on every other hit), not a skill that works; why those few got through was not looked into.
-* **The five damaging conditions tick for 0**: Bleeding (41,180 ticks), Torment (37,956 ticks), Burning (35,638 ticks), Poisoned (24,368 ticks), Confusion (11,626 ticks). They stay on Vloxx and keep ticking, each tick does 0.
+* **The five damaging conditions tick for 0**: Bleeding (47,934 ticks), Torment (42,590 ticks), Burning (41,479 ticks), Poisoned (27,216 ticks), Confusion (12,207 ticks). They stay on Vloxx and keep ticking, each tick does 0.
 
 **What goes through: damage from effects that are not one of those five conditions.** Every tick did its normal damage:
 | effect | skill id | windows seen | ticks | ticks with damage | total | per tick |
 |---|---|---|---|---|---|---|
+| Painful Bond | 77128 | 17 | 326 | 100 % | 564,123 | 1,736 |
 | Binding Blade | 9148 | 112 | 538 | 99 % | 563,197 | 1,061 |
-| Painful Bond | 77128 | 10 | 133 | 99 % | 231,257 | 1,752 |
-| Nightmare Weapon | 76923 | 5 | 32 | 100 % | 47,279 | 1,477 |
-| Nightmare Weapon | 79077 | 7 | 21 | 100 % | 32,375 | 1,542 |
-| Soul Shards | 72975 | 2 | 12 | 100 % | 25,120 | 2,093 |
+| Nightmare Weapon | 76923 | 9 | 67 | 100 % | 98,438 | 1,469 |
+| Soul Shards | 72975 | 7 | 36 | 100 % | 88,838 | 2,468 |
+| Nightmare Weapon | 79077 | 11 | 36 | 100 % | 55,577 | 1,544 |
 | Nourishment | 57409 | 15 | 48 | 100 % | 15,600 | 325 |
 | Vampiric Strikes | 13814 | 3 | 80 | 100 % | 2,720 | 34 |
 | Nourishment | 57244 | 1 | 1 | 100 % | 325 | 325 |
@@ -764,7 +766,7 @@ At 10 % the immunity continues for 15 s into the last phase (a second, 15 s appl
   nor denied: Fulgor, Fear with Terror, Relic of Agony. **[open]**
 * **Also going through, not on that list:** *Nightmare Weapon*, *Soul Shards*, and life steal (*Vampiric Strikes*, food).
 * The rule fits what the logs show: the immunity zeroes direct hits and the five damaging conditions, and nothing else.
-* **It is too small to matter.** The best window let 73,430 damage through; Vloxx lost at most 0.12 % of its health during an immunity window
+* **It is too small to matter.** The best window let 113,545 damage through; Vloxx lost at most 0.14 % of its health during an immunity window
   (median 0.01–0.02 %). It does not shorten the fight in any useful way.
 
 ## 5o. DPS per specialisation and build on kills — target and cleave, average and highest  [solid for builds with many samples]
@@ -805,6 +807,113 @@ Kill times 511–596 s (average 562 s).
 | Heal Paragon | 1 | 345 | [345](https://dps.report/oPU0-20260930-224233_boss) | 592 | [592](https://dps.report/oPU0-20260930-224233_boss) | 2 % |
 
 Kills come from several squads, but the mix of builds is still narrow (Condition Scourge is 50 % of all samples).
+
+## 5p. Annihilating Orb (Vloxx, P1) — path, landing zone and expanding ring  [solid]
+Script `scripts/annihilating_orb.js` → `data/annihilating_orb_summary.json` (part of the full build). 869 casts in 237 logs. Cast 6.9 s.
+
+1. **The orb is thrown straight along Vloxx's facing** (100 % of casts within 10°, median 0°). It does not track a player by itself: the
+   landing point is within 10° of the fixated player in 37 % of casts (median 13° off), of the farthest player in 19 %, of the closest in 16 %.
+2. **It lands 1,500 from Vloxx** (802 of 869 casts; 1,000 in 52, 500 in 15). The landing point is marked from 1.6 s into the cast
+   (ground effect EE7B1787…) and the orb arrives at ~5.6 s.
+3. **On the way it hits everything within ~250 of its path** (hits at 2.0–3.0 s): beside the line Vloxx → landing point, 0–200: 95 % (2,871) hit ·
+   200–250: 80 % (744) · 250–300: 39 % (484) · 300+: 1 % (478). So a band **~500 wide**, starting on Vloxx.
+4. **Where it lands it leaves a damage zone of ~300 radius** for about 4 s (same skill 80323): 85 % of the 1,405 hits after the landing
+   were within 350 of the landing point, most of them at 150–300 (few players are ever closer than that).
+5. **Then a ring expands from the landing point** (damage skill 81238): its radius is 386 at 0.3 s, 518 at 0.6 s, 641 at 0.9 s, 761 at 1.2 s, 897 at 1.5 s, 1033 at 1.8 s, 1185 at 2.1 s, 1332 at 2.7 s after
+   the landing, i.e. **~394 units per second, out to ~1,350**. It crosses most of the arena. 38 % of the 7,609 players in
+   its way were hit (one hit per player; how the others avoided it was not looked into).
+
+The earlier entry for this skill ("a narrow line ±150, fading by ~900") is replaced by this. The planner draws it as one attack:
+click on Vloxx, drag along its facing.
+
+## 5q. Last phase: the falling spears (Raging Storm): sequence, targets and the Spear Aspect  [solid]
+Script `scripts/raging_storm_last_phase.js` → `data/raging_storm_last_phase.json` (part of the full build). 26 logs, 1,968 s of last phase.
+Each impact of Vloxx's *Raging Storm* (damage skill 81176) is announced by a 3 s ground effect (GUID D1132020…); those are counted per second.
+
+| Aspect | impacts per second while it is alive | while it is dead |
+|---|---|---|
+| Staff | 0.95 (1,359 s) | 0.99 (609 s) |
+| Spear | 1.01 (1,359 s) | 0.87 (609 s) |
+| Sword | 0.99 (1,379 s) | 0.89 (589 s) |
+
+* **About the same rate either way: ~0.96 per second.** The spears come from Vloxx and keep falling with the Spear Aspect dead.
+* By time window (Spear alive / dead): 0–15 s: 0.12 / 0.13 · 15–30 s: 1.13 / 1.13 · 30–45 s: 1.43 / 1.12 · 45–60 s: 1.23 / 1.11 · 60–200 s: 1.04 / 1.17. The differences go both ways and
+  follow the timing of the bursts, not the Aspect.
+* **The sequence.** A wave lands **every 3 s, starting 15 s into the last phase**. The pattern is fixed: **four single waves (15, 18, 21, 24 s), then
+  alternating pairs: two double waves, two single waves**, and so on (double at 27/30, 39/42, 51/54, 63/66, 75/78, 87/90 s). A single wave is
+  3 spears (sometimes 2), a double wave is two of them at once: 6 (or 5, or 4).
+
+  | at | kind | usual number of spears | logs with that number | all sizes seen |
+  |---|---|---|---|---|
+  | 15 s | single | 3 | 20 of 26 | 2 × 6, 3 × 20 |
+  | 18 s | single | 3 | 20 of 26 | 2 × 6, 3 × 20 |
+  | 21 s | single | 3 | 20 of 26 | 2 × 6, 3 × 20 |
+  | 24 s | single | 3 | 20 of 26 | 2 × 6, 3 × 20 |
+  | 27 s | double | 6 | 14 of 26 | 4 × 3, 5 × 9, 6 × 14 |
+  | 30 s | double | 6 | 14 of 26 | 4 × 3, 5 × 9, 6 × 14 |
+  | 33 s | single | 3 | 17 of 26 | 2 × 9, 3 × 17 |
+  | 36 s | single | 3 | 16 of 25 | 2 × 9, 3 × 16 |
+  | 39 s | double | 6 | 13 of 24 | 3 × 1, 4 × 8, 5 × 2, 6 × 13 |
+  | 42 s | double | 6 | 13 of 24 | 3 × 1, 4 × 8, 5 × 2, 6 × 13 |
+  | 45 s | single | 3 | 13 of 23 | 2 × 10, 3 × 13 |
+  | 48 s | single | 3 | 13 of 23 | 2 × 10, 3 × 13 |
+  | 51 s | double | 5 | 12 of 22 | 3 × 2, 5 × 12, 6 × 8 |
+  | 54 s | double | 5 | 11 of 19 | 5 × 11, 6 × 8 |
+  | 57 s | single | 3 | 16 of 19 | 2 × 3, 3 × 16 |
+  | 60 s | single | 3 | 15 of 18 | 2 × 3, 3 × 15 |
+  | 63 s | double | 5 | 9 of 18 | 4 × 2, 5 × 9, 6 × 7 |
+  | 66 s | double | 5 | 8 of 16 | 4 × 2, 5 × 8, 6 × 6 |
+  | 69 s | single | 2 | 7 of 14 | 2 × 7, 3 × 7 |
+  | 72 s | single | 2 | 7 of 13 | 2 × 7, 3 × 6 |
+  | 75 s | double | 4 | 6 of 12 | 3 × 2, 4 × 6, 5 × 1, 6 × 3 |
+  | 78 s | double | 4 | 6 of 12 | 3 × 2, 4 × 6, 5 × 1, 6 × 3 |
+  | 81 s | single | 2 | 6 of 10 | 1 × 1, 2 × 6, 3 × 3 |
+  | 84 s | single | 2 | 6 of 9 | 1 × 1, 2 × 6, 3 × 2 |
+  | 87 s | double | 5 | 4 of 9 | 2 × 1, 3 × 1, 4 × 2, 5 × 4, 6 × 1 |
+  | 90 s | double | 5 | 4 of 7 | 2 × 1, 4 × 1, 5 × 4, 6 × 1 |
+  | 93 s | single | 3 | 3 of 5 | 2 × 2, 3 × 3 |
+
+* The two waves of a pair have the same size in every log seen.
+* **How many fall at once.** A wave lands every 3 s from ~15 s into the phase. A set is **2 or 3 spears**, each on a player, and repeats once 3 s later;
+  every other pair of waves two sets overlap, giving 4, 5 or 6 (sizes seen: 1 × 5, 2 × 99, 3 × 203, 4 × 45, 5 × 72, 6 × 91).
+* **Spears per wave with each Aspect alive / dead:** Staff 3.66 / 3.74 · Spear 3.76 / 3.51 · Sword 3.68 / 3.7. With all ten players up, Spear alive / dead: 3.75 / 3.44.
+  The small gap for the Spear most likely comes from the targeting rule below (a set has 3 spears when somebody is fixated, 2 when nobody is) and not from the Aspect; this link was not tested directly.
+* What the Spear Aspect adds while alive is **its own attack, *Thousand Strikes*** (80709): 1,991 hits on players with the Spear alive, 0 with it dead.
+
+**Who the spears target** (`scripts/raging_storm_targets.js` → `data/raging_storm_targets.csv`, `raging_storm_targets.json`; 105 sets in 26 logs).
+* **Every 12 s (at 15, 27, 39, 51 s, …) Vloxx picks a set of targets, and each target then gets a spear every 3 s for six waves (18 s).** The last two waves
+  of a set overlap the first two of the next set: those are the double waves. Checks: the two single waves of a set hit the same players in
+  87 of 95 sets; the set is part of the double wave before it in 79 of 92 and of the one after it in 79 of 88
+  (a spear is matched to the player within 80 units of where it appears, so some misses may be matching errors).
+* **Each spear appears on its target's position** (92 % of 1,898 spears within 80 units of a living player) and its 3 s ground effect stays at that spot.
+* **The fixated player is in the set: 63 of 70 sets (90 %).**
+* **Set size = 2 players, plus the fixated player.** With a fixated player: 3 targets in 62 sets, 2 in 8. With nobody fixated: 2 targets in 26 sets, 3 in 7, 1 in 2.
+  That is why a wave is 3 spears in most logs and 2 in some.
+* **The two other targets look random** (details below). By distance from the arena centre among the non-fixated players: closest third 69, middle third 68, farthest third 77.
+  A target of the previous set is picked again 28 % of the time (29 % expected by chance). Downed players can be targeted (83 spears).
+* **No rule was found for the two other targets** (script raging_storm_target_rule.js, 97 sets). The candidates were ranked by each feature below; a real rule
+  would put the two targets among the 2 lowest or the 2 highest almost every time. Every feature is at chance level (~26 %):
+
+  | candidates ranked by | targets among the 2 lowest | among the 2 highest | chance |
+  |---|---|---|---|
+  | distance from Vloxx | 26 % | 24 % | 26 % |
+  | distance from arena centre | 26 % | 24 % | 26 % |
+  | health % | 21 % | 27 % | 26 % |
+  | squad order in the log | 21 % | 25 % | 26 % |
+  | instance id | 23 % | 24 % | 26 % |
+  | damage to Vloxx in the last 12 s | 25 % | 27 % | 26 % |
+  | damage to Vloxx in the last 30 s | 27 % | 26 % | 26 % |
+  | toughness flag | 23 % | 26 % | 26 % |
+  | time since last targeted | 27 % | 26 % | 26 % |
+  | downed first | 19 % | 27 % | 26 % |
+  | distance from the Spear Aspect | 28 % | 26 % | 26 % |
+  | distance from the Sword Aspect | 26 % | 25 % | 25 % |
+  | distance from the fixated player | 25 % | 25 % | 26 % |
+  | distance from the Staff Aspect | 25 % | 23 % | 28 % |
+
+  The two targets are not close to each other either (median 221 apart; any two candidates: 209). So for planning purposes:
+  **the fixated player, plus two random players.** [likely: a rule on something not tested here cannot be excluded]
+* Over a whole last phase the spread is uneven (the most-hit player gets a median of 20 spears, up to 32), while 20 % of players are never targeted.
 
 ## 6. Hypotheses that were tested and REJECTED (don't redo)
 * **Range limit ~600 (last phase) / ~775 (early, = 600 + boss hitbox 150 + player 24).** Looked perfect on EI data (211/211),

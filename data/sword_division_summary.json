@@ -1,7 +1,7 @@
 {
  "skill": 81330,
- "logs": 69,
- "casts": 512,
+ "logs": 77,
+ "casts": 598,
  "zone": {
   "sideHalfWidth": 500,
   "aheadLength": 1800,
@@ -10,42 +10,42 @@
  },
  "aimedAt": {
   "a player within 3° of the line": {
-   "n": 489,
-   "pct": 85
+   "n": 569,
+   "pct": 86
   },
   "the farthest player from the Sword": {
-   "n": 415,
-   "pct": 55
+   "n": 489,
+   "pct": 56
   },
   "one of the 2 farthest from the Sword": {
-   "n": 415,
-   "pct": 67
+   "n": 489,
+   "pct": 68
   },
   "the closest player to the Sword": {
-   "n": 415,
+   "n": 489,
    "pct": 3
   },
   "the farthest player from Vloxx": {
-   "n": 415,
+   "n": 489,
    "pct": 30
   },
   "the fixated player": {
-   "n": 296,
-   "pct": 16
+   "n": 344,
+   "pct": 19
   },
   "(chance = 1 / players)": {
-   "n": 415,
-   "pct": 10
+   "n": 489,
+   "pct": 9
   }
  },
  "stackOnVloxx": {
   "Vloxx ahead, < 300 beside the line": {
-   "casts": 225,
+   "casts": 270,
    "stackHitPct": 88,
    "castsNobodyHit": 10
   },
   "Vloxx ahead, 300–600 beside the line": {
-   "casts": 38,
+   "casts": 43,
    "stackHitPct": 71,
    "castsNobodyHit": 1
   },
@@ -55,9 +55,9 @@
    "castsNobodyHit": 1
   },
   "Vloxx behind the Sword by 0–300": {
-   "casts": 34,
-   "stackHitPct": 54,
-   "castsNobodyHit": 8
+   "casts": 36,
+   "stackHitPct": 52,
+   "castsNobodyHit": 9
   },
   "Vloxx behind the Sword by 300+": {
    "casts": 5,
@@ -66,8 +66,8 @@
   }
  },
  "swordToVloxx": {
-  "p10": 194,
-  "p50": 494,
-  "p90": 1120
+  "p10": 200,
+  "p50": 490,
+  "p90": 1123
  }
 }

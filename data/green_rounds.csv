@@ -1247,6 +1247,180 @@ log_id,source,phase,last_phase_tick_s,time_s,fixated_player,players_up,expected_
 20261004-001305,raw,early,,312.989,Player-BCA0,10,3,3,Player-BCA0 > Player-80A0 > Player-FBAD,,,38.37
 20261004-001305,raw,early,,360.111,Player-BCA0,10,3,3,Player-BCA0 > Player-7178 > Player-80A0,,,31.57
 20261004-001305,raw,early,,409.583,Player-FBAD,10,3,3,Player-FBAD > Player-80A0 > Player-BCA0,,,24.51
+20261004-124516,raw,early,,5.958,Player-6FCB,10,3,1,Player-6FCB,,,100
+20261004-124516,raw,early,,53.516,Player-6FCB,10,3,3,Player-6FCB > Player-74C1 > Player-010B,,,89.84
+20261004-124516,raw,early,,98.082,Player-12F8,10,3,3,Player-12F8 > Player-010B > Player-74C1,,,78.56
+20261004-124516,raw,early,,174.59,Player-010B,10,3,3,Player-010B > Player-C8B7 > Player-12E6,,,68.67
+20261004-124952,raw,early,,5.681,Player-6FCB,10,3,1,Player-6FCB,,,100
+20261004-124952,raw,early,,53.117,Player-6FCB,10,3,3,Player-6FCB > Player-AED1 > Player-F22C,,,88.52
+20261004-124952,raw,early,,97.675,Player-C8B7,10,3,3,Player-C8B7 > Player-74C1 > Player-12E6,,,75.87
+20261004-124952,raw,early,,167.593,Player-AED1,10,3,3,Player-AED1 > Player-74C1 > Player-12E6,,,68.19
+20261004-125415,raw,early,,5.961,Player-6FCB,10,3,1,Player-6FCB,,,100
+20261004-125415,raw,early,,53.717,Player-6FCB,10,3,3,Player-6FCB > Player-74C1 > Player-C8B7,,,88.19
+20261004-125415,raw,early,,98.601,Player-6FCB,10,3,3,Player-6FCB > Player-12E6 > Player-C8B7,,,76.39
+20261004-125415,raw,early,,166.079,Player-12E6,10,3,3,Player-12E6 > Player-C8B7 > Player-74C1,,,68.32
+20261004-125639,raw,early,,5.764,Player-6FCB,10,3,1,Player-6FCB,,,100
+20261004-125639,raw,early,,53.556,Player-6FCB,10,3,3,Player-6FCB > Player-74C1 > Player-12E6,,,88.89
+20261004-130036,raw,early,,5.719,Player-6FCB,10,3,1,Player-6FCB,,,100
+20261004-130036,raw,early,,52.591,Player-6FCB,10,3,3,Player-6FCB > Player-12E6 > Player-74C1,,,88.87
+20261004-130036,raw,early,,97.155,Player-C8B7,10,3,3,Player-C8B7 > Player-12E6 > Player-74C1,,,76.38
+20261004-130036,raw,early,,169.755,Player-DDA6,10,3,3,Player-DDA6 > Player-12E6 > Player-74C1,,,68.2
+20261004-130327,raw,early,,5.642,Player-6FCB,10,3,1,Player-6FCB,,,100
+20261004-130327,raw,early,,53.2,Player-6FCB,10,3,3,Player-6FCB > Player-C8B7 > Player-12E6,,,89.82
+20261004-130327,raw,early,,98.043,Player-74C1,10,3,3,Player-74C1 > Player-12E6 > Player-C2E3,,,78.28
+20261004-130836,raw,early,,5.997,Player-6FCB,10,3,1,Player-6FCB,,,100
+20261004-130836,raw,early,,53.435,Player-6FCB,10,3,3,Player-6FCB > Player-74C1 > Player-12E6,,,87.65
+20261004-130836,raw,early,,97.957,Player-DDA6,10,3,3,Player-DDA6 > Player-C8B7 > Player-74C1,,,75.12
+20261004-130836,raw,early,,165.315,Player-74C1,10,3,3,Player-74C1 > Player-C8B7 > Player-1E02,,,68.01
+20261004-130836,raw,early,,219.915,Player-C8B7,10,3,3,Player-C8B7 > Player-74C1 > Player-1E02,,,55.27
+20261004-131253,raw,early,,5.598,Player-6FCB,10,3,1,Player-6FCB,,,100
+20261004-131253,raw,early,,52.992,Player-6FCB,10,3,3,Player-6FCB > Player-74C1 > Player-12E6,,,88.8
+20261004-131253,raw,early,,97.756,Player-1E02,10,3,3,Player-1E02 > Player-C8B7 > Player-12E6,,,76.8
+20261004-131253,raw,early,,151.792,Player-1E02,10,3,3,Player-1E02 > Player-C8B7 > Player-74C1,,,68.11
+20261004-131253,raw,early,,206.59,Player-1E02,10,3,3,Player-1E02 > Player-74C1 > Player-12E6,,,56.82
+20261004-131623,raw,early,,5.681,Player-6FCB,10,3,1,Player-6FCB,,,100
+20261004-131623,raw,early,,53.441,Player-6FCB,10,3,3,Player-6FCB > Player-12E6 > Player-74C1,,,88.32
+20261004-131623,raw,early,,97.993,Player-F22C,10,3,3,Player-F22C > Player-C8B7 > Player-74C1,,,76.72
+20261004-131623,raw,early,,158.795,Player-C8B7,10,3,3,Player-C8B7 > Player-74C1 > Player-F22C,,,68.51
+20261004-132338,raw,early,,5.521,Player-6FCB,10,3,1,Player-6FCB,,,100
+20261004-132338,raw,early,,53.043,Player-6FCB,10,3,3,Player-6FCB > Player-74C1 > Player-12E6,,,88.32
+20261004-132338,raw,early,,97.597,Player-AED1,10,3,3,Player-AED1 > Player-12E6 > Player-74C1,,,76.13
+20261004-132338,raw,early,,153.523,Player-F22C,10,3,3,Player-F22C > Player-74C1 > Player-AED1,,,68.55
+20261004-132338,raw,early,,208.437,Player-F22C,10,3,3,Player-F22C > Player-74C1 > Player-12E6,,,56.13
+20261004-132338,raw,early,,269.591,Player-F22C,9,3,3,Player-F22C > Player-AED1 > Player-6FCB,,,41.05
+20261004-132338,raw,early,,319.035,Player-AED1,10,3,3,Player-AED1 > Player-74C1 > Player-1E02,,,38.93
+20261004-132603,raw,early,,5.76,Player-6FCB,10,3,1,Player-6FCB,,,100
+20261004-132603,raw,early,,52.842,Player-6FCB,10,3,3,Player-6FCB > Player-74C1 > Player-12E6,,,88.57
+20261004-132950,raw,early,,5.798,Player-6FCB,10,3,1,Player-6FCB,,,100
+20261004-132950,raw,early,,52.718,Player-6FCB,10,3,3,Player-6FCB > Player-74C1 > Player-12E6,,,88.95
+20261004-132950,raw,early,,97.16,Player-C8B7,10,3,3,Player-C8B7 > Player-12E6 > Player-74C1,,,77.81
+20261004-132950,raw,early,,176.076,Player-6FCB,10,3,3,Player-6FCB > Player-74C1 > Player-AED1,,,68.64
+20261004-133634,raw,early,,5.957,Player-6FCB,10,3,1,Player-6FCB,,,100
+20261004-133634,raw,early,,52.917,Player-6FCB,10,3,3,Player-6FCB > Player-74C1 > Player-12E6,,,88.82
+20261004-133634,raw,early,,97.833,Player-202A,10,3,3,Player-202A > Player-C8B7 > Player-12E6,,,76.32
+20261004-133634,raw,early,,164.391,Player-1E02,10,3,3,Player-1E02 > Player-C8B7 > Player-12E6,,,68.36
+20261004-133634,raw,early,,219.034,Player-1E02,10,3,3,Player-1E02 > Player-74C1 > Player-12E6,,,56.43
+20261004-133634,raw,early,,263.477,Player-74C1,10,3,3,Player-74C1 > Player-C8B7 > Player-12E6,,,46.72
+20261004-133634,raw,early,,335.831,Player-AED1,10,3,3,Player-AED1 > Player-C8B7 > Player-12E6,,,38.95
+20261004-134153,raw,early,,6.118,Player-6FCB,10,3,1,Player-6FCB,,,100
+20261004-134153,raw,early,,53.794,Player-6FCB,10,3,3,Player-6FCB > Player-12E6 > Player-AED1,,,88.37
+20261004-134153,raw,early,,98.558,Player-DDA6,10,3,3,Player-DDA6 > Player-C8B7 > Player-74C1,,,78.24
+20261004-134153,raw,early,,169.796,Player-12E6,10,3,3,Player-12E6 > Player-74C1 > Player-C8B7,,,67.94
+20261004-134153,raw,early,,224.67,,10,3,3,Player-12E6 > Player-1E02 > Player-F22C,,,57.46
+20261004-140313,raw,early,,5.673,Player-010B,5,1,1,Player-010B,,,100
+20261004-140313,raw,early,,53.273,Player-010B,5,1,1,Player-010B,,,97.81
+20261004-140313,raw,early,,97.837,Player-1E02,5,1,1,Player-1E02,,,95.98
+20261004-140313,raw,early,,150.513,Player-1E02,5,1,1,Player-1E02,,,93.73
+20261004-140313,raw,early,,197.193,Player-1E02,5,1,1,Player-1E02,,,92.11
+20261004-140313,raw,early,,247.713,Player-1E02,4,1,1,Player-1E02,,,90.74
+20261004-152618,raw,early,,6.044,Player-6FCB,10,3,1,Player-6FCB,,,100
+20261004-152618,raw,early,,53.916,Player-6FCB,10,3,3,Player-6FCB > Player-75E4 > Player-C8B7,,,88.41
+20261004-152618,raw,early,,98.636,Player-C8B7,10,3,3,Player-C8B7 > Player-12E6 > Player-816B,,,77.5
+20261004-152618,raw,early,,155.478,Player-C516,10,3,3,Player-C516 > Player-C8B7 > Player-12E6,,,68.52
+20261004-152618,raw,early,,210.156,Player-C516,10,3,3,Player-C516 > Player-5B2B > Player-C8B7,,,56.13
+20261004-152832,raw,early,,5.723,Player-6FCB,10,3,1,Player-6FCB,,,100
+20261004-152832,raw,early,,53.042,Player-6FCB,10,3,3,Player-6FCB > Player-12E6 > Player-75E4,,,88.67
+20261004-152832,raw,early,,97.833,Player-6FCB,10,3,3,Player-6FCB > Player-12E6 > Player-C8B7,,,76.23
+20261004-153051,raw,early,,5.835,Player-6FCB,10,3,1,Player-6FCB,,,100
+20261004-153051,raw,early,,53.121,Player-6FCB,10,3,3,Player-6FCB > Player-12E6 > Player-75E4,,,87.8
+20261004-153051,raw,early,,97.875,Player-12E6,10,3,3,Player-12E6 > Player-F22C > Player-816B,,,76.2
+20261004-154121,raw,early,,6.038,Player-6FCB,10,3,1,Player-6FCB,,,100
+20261004-154121,raw,early,,53.4,Player-6FCB,10,3,3,Player-6FCB > Player-C8B7 > Player-816B,,,88.52
+20261004-154121,raw,early,,98.518,Player-6FCB,10,3,3,Player-6FCB > Player-C8B7 > Player-12E6,,,76.63
+20261004-154121,raw,early,,168.478,Player-5B2B,10,3,3,Player-5B2B > Player-C8B7 > Player-12E6,,,68.4
+20261004-154121,raw,early,,222.99,Player-5B2B,10,3,3,Player-5B2B > Player-816B > Player-12E6,,,57.35
+20261004-154121,raw,early,,269.232,Player-E1F6,10,3,3,Player-E1F6 > Player-816B > Player-75E4,,,47.4
+20261004-154121,raw,early,,338.67,Player-5B2B,10,3,3,Player-5B2B > Player-12E6 > Player-816B,,,38.81
+20261004-154121,raw,early,,385.788,Player-5B2B,10,3,3,Player-5B2B > Player-816B > Player-F22C,,,30.99
+20261004-154121,raw,early,,433.546,Player-12E6,10,3,3,Player-12E6 > Player-6FCB > Player-C8B7,,,21.74
+20261004-154121,raw,early,,478.1,Player-75E4,10,3,3,Player-75E4 > Player-816B > Player-6FCB,,,14.17
+20261004-154121,raw,last,3,544.102,Player-E1F6,10,3,3,Player-E1F6 > Player-12E6 > Player-C8B7,1 2 3,,9.33
+20261004-154121,raw,last,33,574.102,Player-E1F6,10,3,3,Player-E1F6 > Player-C516 > Player-816B,1 2 3,,7.6
+20261004-155218,raw,early,,5.876,Player-6FCB,10,3,1,Player-6FCB,,,100
+20261004-155218,raw,early,,53.114,Player-6FCB,10,3,3,Player-6FCB > Player-C8B7 > Player-816B,,,88.68
+20261004-155218,raw,early,,97.874,Player-6FCB,10,3,3,Player-6FCB > Player-C8B7 > Player-12E6,,,76.82
+20261004-155218,raw,early,,162.274,Player-5B2B,10,3,3,Player-5B2B > Player-C8B7 > Player-12E6,,,68.36
+20261004-155218,raw,early,,217.152,Player-5B2B,10,3,3,Player-5B2B > Player-75E4 > Player-816B,,,54.14
+20261004-155218,raw,early,,262.308,Player-75E4,10,3,3,Player-75E4 > Player-816B > Player-12E6,,,43.5
+20261004-155218,raw,early,,326.14,Player-DDA6,10,3,3,Player-DDA6 > Player-C8B7 > Player-12E6,,,38.49
+20261004-155218,raw,early,,372.904,Player-F22C,10,3,3,Player-F22C > Player-E1F6 > Player-C516,,,30.13
+20261004-155218,raw,early,,420.542,Player-F22C,10,3,3,Player-F22C > Player-C8B7 > Player-6FCB,,,19.72
+20261004-155218,raw,early,,465.252,Player-12E6,10,3,3,Player-12E6 > Player-816B > Player-C8B7,,,10.62
+20261004-155218,raw,last,3,500.132,Player-12E6,10,3,3,Player-12E6 > Player-C8B7 > Player-816B,1 2 3,,9.13
+20261004-155218,raw,last,33,530.132,Player-12E6,10,3,3,Player-12E6 > Player-C8B7 > Player-DDA6,1 2 3,,6.03
+20261004-155218,raw,last,63,560.132,,10,3,1,Player-E1F6,2,Player-12E6 | Player-DDA6 | Player-F22C,1.37
+20261004-155218,raw,last,93,590.132,Player-6FCB,2,0,1,Player-6FCB,1,,0.46
+20261004-160448,raw,early,,5.595,Player-6FCB,10,3,1,Player-6FCB,,,100
+20261004-160448,raw,early,,52.551,Player-6FCB,10,3,3,Player-6FCB > Player-12E6 > Player-C516,,,88.43
+20261004-160448,raw,early,,97.069,Player-6FCB,10,3,3,Player-6FCB > Player-C8B7 > Player-12E6,,,76.79
+20261004-160448,raw,early,,158.225,Player-12E6,10,3,3,Player-12E6 > Player-C8B7 > Player-816B,,,68.06
+20261004-160448,raw,early,,213.105,Player-12E6,10,3,3,Player-12E6 > Player-816B > Player-C8B7,,,55.4
+20261004-160448,raw,early,,258.061,Player-5B2B,10,3,3,Player-5B2B > Player-816B > Player-12E6,,,44.23
+20261004-160448,raw,early,,315.501,Player-C516,10,3,3,Player-C516 > Player-12E6 > Player-816B,,,38.43
+20261004-160448,raw,early,,362.257,Player-5B2B,8,2,2,Player-5B2B > Player-12E6,,,30.16
+20261004-160448,raw,early,,409.545,Player-5B2B,10,3,3,Player-5B2B > Player-816B > Player-12E6,,,20.76
+20261004-160448,raw,early,,454.807,,9,3,3,Player-816B > Player-75E4 > Player-C8B7,,,12.47
+20261004-160448,raw,last,3,506.409,Player-E1F6,10,3,3,Player-E1F6 > Player-C8B7 > Player-12E6,1 2 3,,9.62
+20261004-160448,raw,last,33,536.409,,10,3,3,Player-816B > Player-12E6 > Player-C8B7,2 3 4,,6.61
+20261004-160448,raw,last,63,566.409,Player-5B2B,7,2,2,Player-5B2B > Player-75E4,1 2,Player-5B2B | Player-816B,4.06
+20261004-161448,raw,early,,5.593,Player-6FCB,10,3,1,Player-6FCB,,,100
+20261004-161448,raw,early,,53.075,Player-6FCB,10,3,3,Player-6FCB > Player-12E6 > Player-C8B7,,,88.2
+20261004-161448,raw,early,,97.509,Player-816B,10,3,3,Player-816B > Player-12E6 > Player-C8B7,,,75.57
+20261004-161448,raw,early,,154.787,Player-6FCB,10,3,3,Player-6FCB > Player-C8B7 > Player-12E6,,,68.09
+20261004-161448,raw,early,,209.783,Player-6FCB,10,3,3,Player-6FCB > Player-12E6 > Player-DDA6,,,53.96
+20261004-161448,raw,early,,254.711,Player-DDA6,10,3,3,Player-DDA6 > Player-E1F6 > Player-5B2B,,,43.65
+20261004-161448,raw,early,,312.025,Player-6FCB,10,3,3,Player-6FCB > Player-12E6 > Player-C8B7,,,38.68
+20261004-161448,raw,early,,359.021,Player-6FCB,10,3,3,Player-6FCB > Player-816B > Player-C516,,,29.96
+20261004-161448,raw,early,,406.617,Player-75E4,10,3,3,Player-75E4 > Player-C516 > Player-C8B7,,,19.99
+20261004-161448,raw,early,,451.331,Player-5B2B,10,3,3,Player-5B2B > Player-816B > Player-75E4,,,12.01
+20261004-161448,raw,last,3,504.619,Player-6FCB,10,3,3,Player-6FCB > Player-12E6 > Player-816B,1 2 3,,9.55
+20261004-161448,raw,last,33,534.619,,9,3,3,Player-75E4 > Player-816B > Player-F22C,2 3 4,,7.57
+20261004-161912,raw,early,,5.559,Player-6FCB,10,3,1,Player-6FCB,,,100
+20261004-161912,raw,early,,52.479,Player-6FCB,10,3,3,Player-6FCB > Player-12E6 > Player-C8B7,,,88.09
+20261004-161912,raw,early,,97.437,Player-E1F6,10,3,3,Player-E1F6 > Player-C8B7 > Player-816B,,,75.87
+20261004-161912,raw,early,,151.193,Player-F22C,10,3,3,Player-F22C > Player-12E6 > Player-816B,,,67.89
+20261004-162419,raw,early,,5.836,Player-6FCB,10,3,1,Player-6FCB,,,100
+20261004-162419,raw,early,,53.31,Player-6FCB,10,3,3,Player-6FCB > Player-12E6 > Player-C8B7,,,88.41
+20261004-162419,raw,early,,97.914,Player-816B,10,3,3,Player-816B > Player-C8B7 > Player-6FCB,,,75.19
+20261004-162419,raw,early,,149.026,Player-5B2B,10,3,3,Player-5B2B > Player-C8B7 > Player-816B,,,68.19
+20261004-162419,raw,early,,204.144,Player-5B2B,10,3,3,Player-5B2B > Player-816B > Player-12E6,,,55.12
+20261004-162419,raw,early,,249.338,,5,1,1,Player-E1F6,,,44.44
+20261004-163454,raw,early,,5.795,Player-6FCB,10,3,1,Player-6FCB,,,100
+20261004-163454,raw,early,,53.681,Player-6FCB,10,3,3,Player-6FCB > Player-12E6 > Player-816B,,,88.32
+20261004-163454,raw,early,,98.669,Player-75E4,10,3,3,Player-75E4 > Player-12E6 > Player-F22C,,,75.56
+20261004-163454,raw,early,,155.753,Player-75E4,10,3,3,Player-75E4 > Player-12E6 > Player-816B,,,67.96
+20261004-163454,raw,early,,210.227,Player-75E4,10,3,3,Player-75E4 > Player-816B > Player-C8B7,,,54.23
+20261004-163454,raw,early,,256.827,Player-816B,10,3,3,Player-816B > Player-E1F6 > Player-C8B7,,,43.63
+20261004-163454,raw,early,,312.741,Player-816B,10,3,3,Player-816B > Player-C8B7 > Player-12E6,,,38.48
+20261004-163454,raw,early,,359.667,Player-816B,10,3,3,Player-816B > Player-12E6 > Player-75E4,,,29.75
+20261004-163454,raw,early,,410.379,Player-5B2B,10,3,3,Player-5B2B > Player-75E4 > Player-12E6,,,19.25
+20261004-163454,raw,early,,455.179,Player-C516,10,3,3,Player-C516 > Player-C8B7 > Player-816B,,,12.33
+20261004-163454,raw,last,3,510.773,Player-75E4,10,3,3,Player-75E4 > Player-12E6 > Player-C8B7,1 2 3,,9.85
+20261004-163454,raw,last,33,540.773,Player-75E4,10,3,3,Player-75E4 > Player-7AAB > Player-E1F6,1 2 3,,6.99
+20261004-163454,raw,last,63,570.773,,8,2,1,Player-7AAB,2,Player-C8B7 | Player-816B,4.25
+20261004-164242,raw,early,,6.043,Player-6FCB,10,3,1,Player-6FCB,,,100
+20261004-164242,raw,early,,53.799,Player-6FCB,10,3,3,Player-6FCB > Player-12E6 > Player-C8B7,,,88.28
+20261004-164242,raw,early,,98.639,Player-C8B7,10,3,3,Player-C8B7 > Player-12E6 > Player-E1F6,,,76.11
+20261004-164733,raw,early,,5.832,Player-6FCB,10,3,1,Player-6FCB,,,100
+20261004-164733,raw,early,,52.638,Player-6FCB,10,3,3,Player-6FCB > Player-12E6 > Player-C8B7,,,89.05
+20261004-164733,raw,early,,97.394,Player-C516,10,3,3,Player-C516 > Player-12E6 > Player-C8B7,,,77.5
+20261004-164733,raw,early,,163.948,Player-C8B7,10,3,3,Player-C8B7 > Player-12E6 > Player-816B,,,68.18
+20261004-164733,raw,early,,219.03,Player-C8B7,10,3,3,Player-C8B7 > Player-6FCB > Player-12E6,,,55.96
+20261004-164733,raw,early,,265.784,Player-816B,10,3,3,Player-816B > Player-C516 > Player-C8B7,,,45.61
+20261004-165754,raw,early,,5.999,Player-6FCB,10,3,1,Player-6FCB,,,100
+20261004-165754,raw,early,,53.313,Player-6FCB,10,3,3,Player-6FCB > Player-12E6 > Player-C8B7,,,88.06
+20261004-165754,raw,early,,98.281,Player-816B,10,3,3,Player-816B > Player-12E6 > Player-6FCB,,,75.07
+20261004-165754,raw,early,,156.993,Player-12E6,10,3,3,Player-12E6 > Player-C8B7 > Player-816B,,,68.3
+20261004-165754,raw,early,,211.751,Player-12E6,10,3,3,Player-12E6 > Player-816B > Player-C8B7,,,55.05
+20261004-165754,raw,early,,258.263,Player-7AAB,10,3,3,Player-7AAB > Player-12E6 > Player-C8B7,,,43.65
+20261004-165754,raw,early,,312.869,Player-C516,10,3,3,Player-C516 > Player-C8B7 > Player-816B,,,38.71
+20261004-165754,raw,early,,360.258,Player-5B2B,10,3,3,Player-5B2B > Player-816B > Player-75E4,,,30.04
+20261004-165754,raw,early,,408.419,Player-5B2B,10,3,3,Player-5B2B > Player-816B > Player-75E4,,,20.3
+20261004-165754,raw,early,,453.253,Player-12E6,10,3,3,Player-12E6 > Player-816B > Player-E1F6,,,11.02
+20261004-165754,raw,last,3,496.055,Player-12E6,10,3,3,Player-12E6 > Player-C8B7 > Player-F22C,1 2 3,,8.98
+20261004-165754,raw,last,33,526.055,Player-5B2B,10,3,3,Player-5B2B > Player-12E6 > Player-816B,1 2 3,,6.16
+20261004-165754,raw,last,63,556.055,Player-12E6,6,2,2,Player-12E6 > Player-E1F6,1 2,Player-12E6 | Player-816B,3.6
+20261004-165754,raw,last,93,586.055,Player-E1F6,3,1,1,Player-E1F6,1,,3.09
 014037-fixed_dpsreport,EI,early,,2.476,Player-0BF9,10,3,1,Player-0BF9,,,100
 014037-fixed_dpsreport,EI,early,,50.19,Player-0BF9,10,3,3,Player-0BF9 > Account-C912 > Player-184B,,,86.6
 014037-fixed_dpsreport,EI,early,,94.636,Account-C912,10,3,3,Account-C912 > Player-EACF > Player-D34A,,,75.29

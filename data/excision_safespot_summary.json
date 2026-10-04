@@ -1,116 +1,116 @@
 {
- "logs": 64,
- "casts": 304,
- "castsWithFixated": 235,
+ "logs": 72,
+ "casts": 345,
+ "castsWithFixated": 271,
  "slashRadius": 525,
  "meleeRadius": 450,
  "vloxxToFixated": {
-  "p10": 109,
-  "p50": 261,
+  "p10": 108,
+  "p50": 259,
   "p90": 635
  },
  "fixatedMoved": {
-  "p50": 278,
-  "p90": 634
+  "p50": 241,
+  "p90": 622
  },
  "hitsPerPlayerPerCast": {
-  "p10": 1,
+  "p10": 0,
   "p50": 4,
   "p90": 9,
-  "neverHitPct": 9
+  "neverHitPct": 10
  },
  "noFixated": {
-  "players": 381,
-  "hitPct": 92,
-  "meanHits": 4.3
+  "players": 419,
+  "hitPct": 93,
+  "meanHits": 4.7
  },
  "melee": {
   "0–200": {
-   "players": 576,
-   "hitPct": 89,
-   "meanHits": 4.3,
-   "fixatedSide": {
-    "players": 221,
-    "hitPct": 96,
-    "meanHits": 5.5
-   },
-   "middle": {
-    "players": 191,
-    "hitPct": 93,
-    "meanHits": 4.5
-   },
-   "farSide": {
-    "players": 164,
-    "hitPct": 73,
-    "meanHits": 2.4
-   },
-   "castsWith3InMelee": 74,
-   "castsNobodyInMeleeHit": 5
-  },
-  "200–300": {
-   "players": 378,
-   "hitPct": 94,
+   "players": 694,
+   "hitPct": 86,
    "meanHits": 4.1,
    "fixatedSide": {
-    "players": 181,
+    "players": 240,
+    "hitPct": 97,
+    "meanHits": 5.6
+   },
+   "middle": {
+    "players": 224,
+    "hitPct": 91,
+    "meanHits": 4.3
+   },
+   "farSide": {
+    "players": 230,
+    "hitPct": 72,
+    "meanHits": 2.2
+   },
+   "castsWith3InMelee": 88,
+   "castsNobodyInMeleeHit": 6
+  },
+  "200–300": {
+   "players": 423,
+   "hitPct": 94,
+   "meanHits": 3.9,
+   "fixatedSide": {
+    "players": 184,
     "hitPct": 98,
     "meanHits": 5
    },
    "middle": {
-    "players": 87,
+    "players": 98,
     "hitPct": 94,
     "meanHits": 4.1
    },
    "farSide": {
-    "players": 110,
+    "players": 141,
     "hitPct": 87,
-    "meanHits": 2.5
+    "meanHits": 2.4
    },
-   "castsWith3InMelee": 49,
+   "castsWith3InMelee": 55,
    "castsNobodyInMeleeHit": 0
   },
   "300–400": {
-   "players": 236,
-   "hitPct": 96,
-   "meanHits": 5.2,
+   "players": 293,
+   "hitPct": 91,
+   "meanHits": 5,
    "fixatedSide": {
-    "players": 112,
+    "players": 128,
     "hitPct": 100,
-    "meanHits": 7.2
+    "meanHits": 7.3
    },
    "middle": {
-    "players": 71,
+    "players": 81,
     "hitPct": 99,
-    "meanHits": 4.5
+    "meanHits": 4.8
    },
    "farSide": {
-    "players": 53,
-    "hitPct": 83,
-    "meanHits": 2
+    "players": 84,
+    "hitPct": 70,
+    "meanHits": 1.8
    },
-   "castsWith3InMelee": 32,
+   "castsWith3InMelee": 39,
    "castsNobodyInMeleeHit": 0
   },
   "400–500": {
-   "players": 88,
-   "hitPct": 85,
+   "players": 98,
+   "hitPct": 86,
    "meanHits": 3.7,
    "fixatedSide": {
-    "players": 27,
-    "hitPct": 100,
-    "meanHits": 5.4
-   },
-   "middle": {
     "players": 28,
     "hitPct": 96,
+    "meanHits": 5.2
+   },
+   "middle": {
+    "players": 29,
+    "hitPct": 97,
     "meanHits": 4.6
    },
    "farSide": {
-    "players": 33,
-    "hitPct": 64,
-    "meanHits": 1.5
+    "players": 41,
+    "hitPct": 71,
+    "meanHits": 2
    },
-   "castsWith3InMelee": 12,
+   "castsWith3InMelee": 15,
    "castsNobodyInMeleeHit": 1
   },
   "500–700": {
@@ -136,9 +136,9 @@
    "castsNobodyInMeleeHit": 0
   },
   "700+": {
-   "players": 55,
-   "hitPct": 78,
-   "meanHits": 2.9,
+   "players": 64,
+   "hitPct": 81,
+   "meanHits": 2.6,
    "fixatedSide": {
     "players": 4,
     "hitPct": 75,
@@ -150,83 +150,83 @@
     "meanHits": 5.2
    },
    "farSide": {
-    "players": 30,
-    "hitPct": 67,
-    "meanHits": 1.3
+    "players": 39,
+    "hitPct": 74,
+    "meanHits": 1.2
    },
-   "castsWith3InMelee": 8,
+   "castsWith3InMelee": 9,
    "castsNobodyInMeleeHit": 1
   }
  },
  "meleeRing": {
   "0–200": {
-   "casts": 80,
+   "casts": 95,
    "towardFixated": {
-    "safePct": 5,
-    "meanSlashes": 4.9
+    "safePct": 4,
+    "meanSlashes": 4.8
    },
    "awayFromFixated": {
     "safePct": 7,
-    "meanSlashes": 3.7
+    "meanSlashes": 3.6
    },
    "castsBackThirdUntouched": 0
   },
   "200–300": {
-   "casts": 60,
+   "casts": 66,
    "towardFixated": {
     "safePct": 6,
     "meanSlashes": 4.7
    },
    "awayFromFixated": {
-    "safePct": 14,
+    "safePct": 13,
     "meanSlashes": 3.1
    },
    "castsBackThirdUntouched": 4
   },
   "300–400": {
-   "casts": 38,
+   "casts": 46,
    "towardFixated": {
     "safePct": 4,
     "meanSlashes": 6.2
    },
    "awayFromFixated": {
-    "safePct": 19,
-    "meanSlashes": 2.4
+    "safePct": 21,
+    "meanSlashes": 2.3
    },
    "castsBackThirdUntouched": 2
   },
   "400–500": {
-   "casts": 20,
+   "casts": 23,
    "towardFixated": {
     "safePct": 14,
-    "meanSlashes": 4.5
+    "meanSlashes": 4.2
    },
    "awayFromFixated": {
-    "safePct": 27,
-    "meanSlashes": 2.1
+    "safePct": 23,
+    "meanSlashes": 2.3
    },
    "castsBackThirdUntouched": 2
   },
   "500–700": {
-   "casts": 18,
-   "towardFixated": {
-    "safePct": 9,
-    "meanSlashes": 4.7
-   },
-   "awayFromFixated": {
-    "safePct": 35,
-    "meanSlashes": 1.7
-   },
-   "castsBackThirdUntouched": 2
-  },
-  "700+": {
    "casts": 19,
    "towardFixated": {
-    "safePct": 31,
-    "meanSlashes": 2.9
+    "safePct": 12,
+    "meanSlashes": 4.5
    },
    "awayFromFixated": {
-    "safePct": 55,
+    "safePct": 39,
+    "meanSlashes": 1.6
+   },
+   "castsBackThirdUntouched": 3
+  },
+  "700+": {
+   "casts": 22,
+   "towardFixated": {
+    "safePct": 27,
+    "meanSlashes": 3
+   },
+   "awayFromFixated": {
+    "safePct": 50,
     "meanSlashes": 1.1
    },
    "castsBackThirdUntouched": 6
@@ -234,55 +234,55 @@
  },
  "byDistFromFixated": {
   "0–250": {
-   "players": 873,
-   "hitPct": 95,
+   "players": 948,
+   "hitPct": 94,
    "meanHits": 5.4
   },
   "250–450": {
-   "players": 608,
-   "hitPct": 90,
-   "meanHits": 4.1
+   "players": 732,
+   "hitPct": 89,
+   "meanHits": 3.9
   },
   "450–650": {
-   "players": 244,
-   "hitPct": 86,
-   "meanHits": 3.1
+   "players": 315,
+   "hitPct": 84,
+   "meanHits": 2.9
   },
   "650–1000": {
-   "players": 129,
-   "hitPct": 73,
+   "players": 170,
+   "hitPct": 75,
    "meanHits": 2.6
   },
   "1000+": {
-   "players": 65,
+   "players": 71,
    "hitPct": 66,
-   "meanHits": 2
+   "meanHits": 1.9
   }
  },
  "origins": {
   "onVloxxSharePct": 20,
   "onVloxxDist": {
-   "p50": 108,
-   "p90": 209
+   "p50": 110,
+   "p90": 207
   },
   "outerDist": {
    "p10": 425,
-   "p50": 568,
-   "p90": 959
+   "p50": 564,
+   "p90": 951
   },
-  "outerWithinReachOfVloxxCentrePct": 41
+  "outerWithinReachOfVloxxCentrePct": 42
  },
  "safeArea": {
   "spotRadius": 75,
   "all": {
    "0–200": {
-    "casts": 74,
-    "meleeAreaSafePct": 7,
+    "casts": 88,
+    "meleeAreaSafePct": 6,
     "backSectorSafePct": 8,
     "castsBackSectorFullySafe": 0,
     "castsBackSectorMostlySafe": 0,
-    "castsWithStandingSpot": 21,
-    "castsWithStandingSpotBehind": 10,
+    "castsWithStandingSpot": 22,
+    "castsWithStandingSpotBehind": 11,
     "standingSpotAngleFromBehind": {
      "p25": 40,
      "p50": 80,
@@ -290,40 +290,40 @@
     }
    },
    "200–300": {
-    "casts": 60,
+    "casts": 66,
     "meleeAreaSafePct": 10,
-    "backSectorSafePct": 15,
+    "backSectorSafePct": 14,
     "castsBackSectorFullySafe": 0,
     "castsBackSectorMostlySafe": 6,
-    "castsWithStandingSpot": 16,
+    "castsWithStandingSpot": 17,
     "castsWithStandingSpotBehind": 14,
     "standingSpotAngleFromBehind": {
-     "p25": 20,
+     "p25": 30,
      "p50": 50,
      "p75": 90
     }
    },
    "300–400": {
-    "casts": 38,
+    "casts": 46,
     "meleeAreaSafePct": 11,
-    "backSectorSafePct": 20,
+    "backSectorSafePct": 22,
     "castsBackSectorFullySafe": 2,
-    "castsBackSectorMostlySafe": 3,
-    "castsWithStandingSpot": 15,
-    "castsWithStandingSpotBehind": 14,
+    "castsBackSectorMostlySafe": 4,
+    "castsWithStandingSpot": 22,
+    "castsWithStandingSpotBehind": 20,
     "standingSpotAngleFromBehind": {
      "p25": 20,
      "p50": 40,
-     "p75": 80
+     "p75": 70
     }
    },
    "400–500": {
-    "casts": 20,
-    "meleeAreaSafePct": 20,
-    "backSectorSafePct": 27,
+    "casts": 23,
+    "meleeAreaSafePct": 18,
+    "backSectorSafePct": 24,
     "castsBackSectorFullySafe": 2,
     "castsBackSectorMostlySafe": 3,
-    "castsWithStandingSpot": 9,
+    "castsWithStandingSpot": 10,
     "castsWithStandingSpotBehind": 8,
     "standingSpotAngleFromBehind": {
      "p25": 30,
@@ -346,23 +346,23 @@
     }
    },
    "600–700": {
-    "casts": 6,
-    "meleeAreaSafePct": 23,
-    "backSectorSafePct": 38,
-    "castsBackSectorFullySafe": 1,
-    "castsBackSectorMostlySafe": 1,
-    "castsWithStandingSpot": 4,
-    "castsWithStandingSpotBehind": 4,
+    "casts": 7,
+    "meleeAreaSafePct": 32,
+    "backSectorSafePct": 47,
+    "castsBackSectorFullySafe": 2,
+    "castsBackSectorMostlySafe": 2,
+    "castsWithStandingSpot": 5,
+    "castsWithStandingSpotBehind": 5,
     "standingSpotAngleFromBehind": {
      "p25": 30,
-     "p50": 50,
+     "p50": 60,
      "p75": 80
     }
    },
    "700–850": {
-    "casts": 4,
-    "meleeAreaSafePct": 38,
-    "backSectorSafePct": 52,
+    "casts": 5,
+    "meleeAreaSafePct": 30,
+    "backSectorSafePct": 42,
     "castsBackSectorFullySafe": 1,
     "castsBackSectorMostlySafe": 2,
     "castsWithStandingSpot": 3,
@@ -374,23 +374,23 @@
     }
    },
    "850–1000": {
-    "casts": 6,
+    "casts": 7,
     "meleeAreaSafePct": 17,
-    "backSectorSafePct": 32,
+    "backSectorSafePct": 31,
     "castsBackSectorFullySafe": 0,
     "castsBackSectorMostlySafe": 1,
-    "castsWithStandingSpot": 3,
-    "castsWithStandingSpotBehind": 3,
+    "castsWithStandingSpot": 4,
+    "castsWithStandingSpotBehind": 4,
     "standingSpotAngleFromBehind": {
      "p25": 20,
-     "p50": 30,
+     "p50": 40,
      "p75": 60
     }
    },
    "1000+": {
-    "casts": 9,
-    "meleeAreaSafePct": 64,
-    "backSectorSafePct": 79,
+    "casts": 10,
+    "meleeAreaSafePct": 59,
+    "backSectorSafePct": 73,
     "castsBackSectorFullySafe": 5,
     "castsBackSectorMostlySafe": 6,
     "castsWithStandingSpot": 8,
@@ -404,13 +404,13 @@
   },
   "fixatedStill": {
    "0–200": {
-    "casts": 29,
-    "meleeAreaSafePct": 4,
-    "backSectorSafePct": 8,
+    "casts": 43,
+    "meleeAreaSafePct": 5,
+    "backSectorSafePct": 9,
     "castsBackSectorFullySafe": 0,
     "castsBackSectorMostlySafe": 0,
-    "castsWithStandingSpot": 7,
-    "castsWithStandingSpotBehind": 4,
+    "castsWithStandingSpot": 8,
+    "castsWithStandingSpotBehind": 5,
     "standingSpotAngleFromBehind": {
      "p25": 20,
      "p50": 40,
@@ -418,9 +418,9 @@
     }
    },
    "200–300": {
-    "casts": 25,
+    "casts": 29,
     "meleeAreaSafePct": 2,
-    "backSectorSafePct": 5,
+    "backSectorSafePct": 4,
     "castsBackSectorFullySafe": 0,
     "castsBackSectorMostlySafe": 0,
     "castsWithStandingSpot": 2,
@@ -432,23 +432,23 @@
     }
    },
    "300–400": {
-    "casts": 22,
-    "meleeAreaSafePct": 5,
-    "backSectorSafePct": 12,
+    "casts": 27,
+    "meleeAreaSafePct": 7,
+    "backSectorSafePct": 16,
     "castsBackSectorFullySafe": 0,
-    "castsBackSectorMostlySafe": 0,
-    "castsWithStandingSpot": 6,
-    "castsWithStandingSpotBehind": 6,
+    "castsBackSectorMostlySafe": 1,
+    "castsWithStandingSpot": 10,
+    "castsWithStandingSpotBehind": 10,
     "standingSpotAngleFromBehind": {
      "p25": 10,
-     "p50": 10,
+     "p50": 20,
      "p75": 30
     }
    },
    "400–500": {
-    "casts": 8,
+    "casts": 10,
     "meleeAreaSafePct": 4,
-    "backSectorSafePct": 11,
+    "backSectorSafePct": 9,
     "castsBackSectorFullySafe": 0,
     "castsBackSectorMostlySafe": 0,
     "castsWithStandingSpot": 2,
@@ -488,9 +488,9 @@
     }
    },
    "700–850": {
-    "casts": 1,
-    "meleeAreaSafePct": 17,
-    "backSectorSafePct": 15,
+    "casts": 2,
+    "meleeAreaSafePct": 9,
+    "backSectorSafePct": 10,
     "castsBackSectorFullySafe": 0,
     "castsBackSectorMostlySafe": 0,
     "castsWithStandingSpot": 1,
@@ -502,17 +502,17 @@
     }
    },
    "850–1000": {
-    "casts": 3,
-    "meleeAreaSafePct": 19,
-    "backSectorSafePct": 32,
+    "casts": 4,
+    "meleeAreaSafePct": 18,
+    "backSectorSafePct": 31,
     "castsBackSectorFullySafe": 0,
     "castsBackSectorMostlySafe": 1,
-    "castsWithStandingSpot": 1,
-    "castsWithStandingSpotBehind": 1,
+    "castsWithStandingSpot": 2,
+    "castsWithStandingSpotBehind": 2,
     "standingSpotAngleFromBehind": {
      "p25": 20,
-     "p50": 30,
-     "p75": 50
+     "p50": 40,
+     "p75": 60
     }
    },
    "1000+": {
@@ -546,12 +546,12 @@
     }
    },
    "200–300": {
-    "casts": 35,
+    "casts": 37,
     "meleeAreaSafePct": 15,
-    "backSectorSafePct": 23,
+    "backSectorSafePct": 22,
     "castsBackSectorFullySafe": 0,
     "castsBackSectorMostlySafe": 6,
-    "castsWithStandingSpot": 14,
+    "castsWithStandingSpot": 15,
     "castsWithStandingSpotBehind": 13,
     "standingSpotAngleFromBehind": {
      "p25": 20,
@@ -560,13 +560,13 @@
     }
    },
    "300–400": {
-    "casts": 16,
+    "casts": 19,
     "meleeAreaSafePct": 18,
-    "backSectorSafePct": 31,
+    "backSectorSafePct": 30,
     "castsBackSectorFullySafe": 2,
     "castsBackSectorMostlySafe": 3,
-    "castsWithStandingSpot": 9,
-    "castsWithStandingSpotBehind": 8,
+    "castsWithStandingSpot": 12,
+    "castsWithStandingSpotBehind": 10,
     "standingSpotAngleFromBehind": {
      "p25": 20,
      "p50": 50,
@@ -574,12 +574,12 @@
     }
    },
    "400–500": {
-    "casts": 12,
-    "meleeAreaSafePct": 30,
-    "backSectorSafePct": 38,
+    "casts": 13,
+    "meleeAreaSafePct": 29,
+    "backSectorSafePct": 35,
     "castsBackSectorFullySafe": 2,
     "castsBackSectorMostlySafe": 3,
-    "castsWithStandingSpot": 7,
+    "castsWithStandingSpot": 8,
     "castsWithStandingSpotBehind": 6,
     "standingSpotAngleFromBehind": {
      "p25": 30,
@@ -602,17 +602,17 @@
     }
    },
    "600–700": {
-    "casts": 4,
-    "meleeAreaSafePct": 27,
-    "backSectorSafePct": 47,
-    "castsBackSectorFullySafe": 1,
-    "castsBackSectorMostlySafe": 1,
-    "castsWithStandingSpot": 3,
-    "castsWithStandingSpotBehind": 3,
+    "casts": 5,
+    "meleeAreaSafePct": 38,
+    "backSectorSafePct": 58,
+    "castsBackSectorFullySafe": 2,
+    "castsBackSectorMostlySafe": 2,
+    "castsWithStandingSpot": 4,
+    "castsWithStandingSpotBehind": 4,
     "standingSpotAngleFromBehind": {
      "p25": 30,
      "p50": 50,
-     "p75": 70
+     "p75": 80
     }
    },
    "700–850": {
@@ -644,9 +644,9 @@
     }
    },
    "1000+": {
-    "casts": 8,
-    "meleeAreaSafePct": 60,
-    "backSectorSafePct": 77,
+    "casts": 9,
+    "meleeAreaSafePct": 54,
+    "backSectorSafePct": 70,
     "castsBackSectorFullySafe": 4,
     "castsBackSectorMostlySafe": 5,
     "castsWithStandingSpot": 7,

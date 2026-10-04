@@ -1,0 +1,305 @@
+{
+ "logs": 237,
+ "casts": 869,
+ "landingDistance": {
+  "500": 15,
+  "1000": 52,
+  "1500": 802
+ },
+ "arrivalS": {
+  "500": 5.6,
+  "1000": 3.6,
+  "1500": 5.6
+ },
+ "aimOffDeg": {
+  "vloxxFacing": {
+   "p50": 0,
+   "p90": 0,
+   "within10degPct": 100,
+   "n": 869
+  },
+  "fixatedPlayer": {
+   "p50": 13,
+   "p90": 33,
+   "within10degPct": 37,
+   "n": 417
+  },
+  "farthestPlayer": {
+   "p50": 25,
+   "p90": 76,
+   "within10degPct": 19,
+   "n": 858
+  },
+  "closestPlayer": {
+   "p50": 31,
+   "p90": 100,
+   "within10degPct": 16,
+   "n": 789
+  }
+ },
+ "travellingOrb": {
+  "hitTimesS": {
+   "2.0": 5117,
+   "3.5": 167,
+   "3.0": 1809,
+   "2.5": 3531,
+   "4.0": 82,
+   "4.5": 37
+  },
+  "byDistanceBesideThePath": [
+   {
+    "from": 0,
+    "hitPct": 97,
+    "players": 532
+   },
+   {
+    "from": 50,
+    "hitPct": 96,
+    "players": 613
+   },
+   {
+    "from": 100,
+    "hitPct": 96,
+    "players": 877
+   },
+   {
+    "from": 150,
+    "hitPct": 92,
+    "players": 849
+   },
+   {
+    "from": 200,
+    "hitPct": 80,
+    "players": 744
+   },
+   {
+    "from": 250,
+    "hitPct": 39,
+    "players": 484
+   },
+   {
+    "from": 300,
+    "hitPct": 1,
+    "players": 256
+   },
+   {
+    "from": 350,
+    "hitPct": 0,
+    "players": 143
+   },
+   {
+    "from": 400,
+    "hitPct": 0,
+    "players": 44
+   },
+   {
+    "from": 450,
+    "hitPct": 0,
+    "players": 23
+   },
+   {
+    "from": 500,
+    "hitPct": 0,
+    "players": 11
+   },
+   {
+    "from": 550,
+    "hitPct": 0,
+    "players": 1
+   }
+  ],
+  "nearThePathByDistancePastTheLandingPoint": [
+   {
+    "from": -1900,
+    "hitPct": 0,
+    "players": 4
+   },
+   {
+    "from": -1800,
+    "hitPct": 0,
+    "players": 6
+   },
+   {
+    "from": -1700,
+    "hitPct": 19,
+    "players": 26
+   },
+   {
+    "from": -1600,
+    "hitPct": 82,
+    "players": 44
+   },
+   {
+    "from": -1500,
+    "hitPct": 95,
+    "players": 82
+   },
+   {
+    "from": -1400,
+    "hitPct": 97,
+    "players": 192
+   },
+   {
+    "from": -1300,
+    "hitPct": 94,
+    "players": 403
+   },
+   {
+    "from": -1200,
+    "hitPct": 97,
+    "players": 286
+   },
+   {
+    "from": -1100,
+    "hitPct": 96,
+    "players": 76
+   },
+   {
+    "from": -1000,
+    "hitPct": 97,
+    "players": 31
+   },
+   {
+    "from": -900,
+    "hitPct": 94,
+    "players": 18
+   },
+   {
+    "from": -800,
+    "hitPct": 95,
+    "players": 39
+   },
+   {
+    "from": -700,
+    "hitPct": 100,
+    "players": 15
+   },
+   {
+    "from": -600,
+    "hitPct": 67,
+    "players": 3
+   },
+   {
+    "from": -400,
+    "hitPct": 100,
+    "players": 3
+   },
+   {
+    "from": -300,
+    "hitPct": 100,
+    "players": 6
+   },
+   {
+    "from": -200,
+    "hitPct": 100,
+    "players": 3
+   },
+   {
+    "from": -100,
+    "hitPct": 100,
+    "players": 2
+   }
+  ]
+ },
+ "explosion": {
+  "skill": 81238,
+  "shape": "ring expanding from the landing point",
+  "ringRadiusByTime": [
+   {
+    "afterLandingS": 0.3,
+    "radius": 386,
+    "hits": 49
+   },
+   {
+    "afterLandingS": 0.6,
+    "radius": 518,
+    "hits": 251
+   },
+   {
+    "afterLandingS": 0.9,
+    "radius": 641,
+    "hits": 629
+   },
+   {
+    "afterLandingS": 1.2,
+    "radius": 761,
+    "hits": 948
+   },
+   {
+    "afterLandingS": 1.5,
+    "radius": 897,
+    "hits": 844
+   },
+   {
+    "afterLandingS": 1.8,
+    "radius": 1033,
+    "hits": 362
+   },
+   {
+    "afterLandingS": 2.1,
+    "radius": 1185,
+    "hits": 131
+   },
+   {
+    "afterLandingS": 2.7,
+    "radius": 1332,
+    "hits": 31
+   }
+  ],
+  "speedPerS": 394,
+  "reach": 1332,
+  "playersInItsWayHitPct": 38,
+  "playersInItsWay": 7609,
+  "hitTimesS": {
+   "8.0": 177,
+   "7.5": 373,
+   "7.0": 1776,
+   "6.5": 782,
+   "6.0": 44,
+   "5.5": 28,
+   "4.5": 202,
+   "5.0": 59,
+   "4.0": 26,
+   "3.5": 2
+  }
+ },
+ "afterLanding": {
+  "skill": 80323,
+  "hitTimesS": {
+   "8.5": 199,
+   "8.0": 223,
+   "9.0": 329,
+   "9.5": 243,
+   "7.5": 121,
+   "6.5": 93,
+   "6.0": 62,
+   "7.0": 179,
+   "5.5": 38,
+   "4.0": 14,
+   "5.0": 33,
+   "3.5": 4,
+   "4.5": 14
+  },
+  "hitsByDistanceFromLandingPoint": {
+   "0": 2,
+   "50": 13,
+   "100": 29,
+   "150": 128,
+   "200": 459,
+   "250": 481,
+   "300": 85,
+   "350": 12,
+   "400": 11,
+   "450": 8,
+   "500": 8,
+   "550": 13,
+   "600": 18,
+   "650": 28,
+   "700": 47,
+   "750": 44,
+   "800": 14,
+   "850": 3,
+   "900": 2
+  }
+ }
+}

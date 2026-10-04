@@ -55,8 +55,9 @@ function sections(text) { const out = []; let cur = null; for (const l of text.r
 // ---------- categorise ----------
 const CATS = [ // matching: by FINDINGS section number (first match wins)
   { id: 'greens', name: 'Judgment of Eternity — 3-people greens', icon: '◉', match: /^1\./ },
-  { id: 'order', name: 'Attack order per phase', icon: '☰', match: /^5l\./ },
+  { id: 'order', name: 'Attack order per phase', icon: '☰', match: /^5[lq]\./ },
   { id: 'fixated', name: 'Fixated', icon: '◎', match: /^2\./ },
+  { id: 'annorb', name: 'Annihilating Orb', icon: '◉', match: /^5p\./ },
   { id: 'bug', name: 'Last phase: fewer greens (timing bug)', icon: '★', match: /^3\./ },
   { id: 'overlap', name: 'Last phase: green + spread overlap', icon: '⊗', match: /^3b\./ },
   { id: 'pd', name: 'Probability Distribution — spread', icon: '◌', match: /^4\./ },
@@ -84,7 +85,7 @@ const used = new Set(); const catSecs = CATS.map(c => { const s = findings.filte
 // last phase), then the table of all other attack shapes; then adds / arena / planner; then research notes.
 // (CATS above is the MATCHING order — first match wins — so it is kept as is.)
 const ORDER = [
-  ['Attacks & mechanics, in fight order', ['order', 'fixated', 'greens', 'shackles', 'cosmiccharge', 'worldpiercer', 'echoing', 'slice', 'excision', 'swordadd', 'pd', 'bug', 'overlap', 'shapes']],
+  ['Attacks & mechanics, in fight order', ['order', 'fixated', 'greens', 'annorb', 'shackles', 'cosmiccharge', 'worldpiercer', 'echoing', 'slice', 'excision', 'swordadd', 'pd', 'bug', 'overlap', 'shapes']],
   ['Adds, breakbars, arena & planner', ['orbs', 'breakbars', 'immunity', 'dps', 'arena', 'plannerdata']],
   ['Research notes', ['rejected', 'open']]];
 findings.filter(f => !used.has(f)).forEach(f => catSecs.push({ id: 'misc-' + catSecs.length, name: f.title.replace(/^\d+[a-z]?\.\s*/, ''), icon: '•', secs: [f] }));
@@ -128,6 +129,7 @@ if (PRE) plannerCards.push(['Attack presets', `<p>Every attack the planner can d
   tbl(['attack', 'shape', 'size', 'caster', 'skill id', 'notes', 'source'], [
     ...(CCS ? [['<b>Cosmic Charge</b>', 'dash + knockdown band + trail', `dash ${n0(CCS.dashLength)} toward the fixated player; start knockdown r ${CCS.startRadius}; band ±${CCS.dashSideReach || 600} (front ~${CCS.dashFrontReach || 650}); trail ${2 * CCS.trailHalfWidth} wide until ~${CCS.trailEndS} s`, 'Vloxx', '80512', `cast ${CCS.castS} s; knockdown pulses at ${(CCS.knockPulsesS || []).join(', ')} s; Stability prevents it`, `measured, ${CCS.casts} casts (data/cosmic_charge_summary.json)`]] : []),
     ...(WPS ? [['<b>Worldpiercer</b>', `${Object.keys(WPS.perCast || { 6: 1 })[0]}-spoke star`, `${(WPS.gapDeg || [60])[0]}° apart, ${WPS.width} wide, to the arena edge (~${n0(WPS.endFromCentre)} from centre)`, 'Vloxx', '80916', `projectiles ~${n0(WPS.speed)} units/s, launched ~${WPS.launchDelayS} s after the cast; Spear phase only`, `measured, ${WPS.casts} casts (data/worldpiercer_summary.json)`]] : []),
+    ...(PRE.orbs || []).map(c => ['<b>' + esc(c.label) + '</b>', 'path band + landing zone + expanding ring', `path ${c.pathW} wide along Vloxx's facing, ${n0(c.distance)} long; landing zone radius ${c.fieldR}; ring expanding at ~${c.waveSpeed} units/s to ~${n0(c.waveReach)}`, esc(c.caster || ''), esc(c.skill || ''), esc(c.note || ''), esc(c.source || '')]),
     ...(PRE.portals || []).map(c => ['<b>' + esc(c.label) + '</b>', 'hit + portal (entrance and exit)', `hit radius ${c.hitR} at ${c.hitAtS} s; portal entrance radius ${c.portalR} on the same spot from ${c.portalFromS} s for ~${c.portalOpenS} s; exit radius ${c.portalR}, ${n0(c.distance)} away`, esc(c.caster || ''), esc(c.skill || ''), esc(c.note || ''), esc(c.source || '')]),
     ...PRE.circles.filter(c => c.label !== 'Custom').map(c => [esc(c.label), 'circle', `radius ${c.r}`, esc(c.caster || ''), esc(c.skill || ''), esc(c.note || ''), esc(c.source || '')]),
     ...PRE.cones.filter(c => c.label !== 'Custom').map(c => [esc(c.label), 'cone', `${c.spread}°, radius ${c.r}`, esc(c.caster || ''), esc(c.skill || ''), esc(c.note || ''), esc(c.source || '')]),

@@ -19,6 +19,12 @@ const steps = [
   'slice_through_reality.js', // data/slice_through_reality_summary.json: the two hits (525 then ~300) and the teleport
   'damage_immunity.js',      // data/damage_immunity.csv + damage_immunity_summary.json: what still damages Vloxx during Damage Immunity
   'dps_table.js',            // data/dps_samples.csv + dps_table.json: target and cleave DPS per specialisation / build
+  'annihilating_orb.js',     // data/annihilating_orb_summary.json: Vloxx's orb path, landing zone and expanding ring
+  'raging_storm_last_phase.js', // data/raging_storm_last_phase.json: falling spears per second with each Aspect alive or dead
+  'raging_storm_targets.js', // data/raging_storm_targets.csv + .json: who the last-phase spears target (sets of 2 + the fixated player)
+  'raging_storm_last_phase.js', // data/raging_storm_last_phase.json: falling spears per second with each Aspect alive or dead
+  'raging_storm_target_rule.js', // data/raging_storm_target_rule.json: tested rules for the two non-fixated spear targets (none found)
+  'raging_storm_last_phase.js', // data/raging_storm_last_phase.json: falling spears per second with each Aspect alive or dead
   'excision_safespot.js',    // data/excision_melee.csv + excision_safespot_summary.json: melee safety vs distance of the fixated player
   'echoing_blade.js',        // data/echoing_blade_summary.json: spinning half-circle on Vloxx, radius, projectiles
   'breakbars.js',            // data/breakbars.csv + breakbars_summary.json: bar size, when it opens, drain, time to break
