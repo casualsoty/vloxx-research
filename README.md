@@ -156,7 +156,7 @@ in the same turn, **then rebuild the doc page**: `node scripts/build_docs.js`. N
 automatically; to give one its own sidebar category, add an entry to `CATS` in `scripts/build_docs.js` and place it in `ORDER`
 (one category per attack, in the order the attacks happen in the fight).
 
-## Status / open questions (see FINDINGS §7)
+## Status / open questions (see "Open questions" in FINDINGS)
 1. **Untested:** does stealthing off Fixated *during Split 3* (before the last phase starts) let the +2.5 s tick apply a fresh
    Fixated? Boss-phase data says stealth makes the boss skip its next re-application ~half the time.
 2. Why later last-phase ticks (+22.5/+42.5/+62.5) sometimes skip with nobody fixated — no rule found.

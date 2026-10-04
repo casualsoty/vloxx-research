@@ -826,7 +826,7 @@ Script `scripts/annihilating_orb.js` → `data/annihilating_orb_summary.json` (p
 The earlier entry for this skill ("a narrow line ±150, fading by ~900") is replaced by this. The planner draws it as one attack:
 click on Vloxx, drag along its facing.
 
-## 5q. Last phase: the falling spears (Raging Storm): sequence, targets and the Spear Aspect  [solid]
+## 5q. Raging Storm in the last phase — the falling spears: sequence, targets and the Spear Aspect  [solid]
 Script `scripts/raging_storm_last_phase.js` → `data/raging_storm_last_phase.json` (part of the full build). 26 logs, 1,968 s of last phase.
 Each impact of Vloxx's *Raging Storm* (damage skill 81176) is announced by a 3 s ground effect (GUID D1132020…); those are counted per second.
 

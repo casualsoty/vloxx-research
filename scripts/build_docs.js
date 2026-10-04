@@ -55,7 +55,8 @@ function sections(text) { const out = []; let cur = null; for (const l of text.r
 // ---------- categorise ----------
 const CATS = [ // matching: by FINDINGS section number (first match wins)
   { id: 'greens', name: 'Judgment of Eternity — 3-people greens', icon: '◉', match: /^1\./ },
-  { id: 'order', name: 'Attack order per phase', icon: '☰', match: /^5[lq]\./ },
+  { id: 'order', name: 'Attack order per phase', icon: '☰', match: /^5l\./ },
+  { id: 'ragingstorm', name: 'Raging Storm (falling spears)', icon: '☄', match: /^5q\./ },
   { id: 'fixated', name: 'Fixated', icon: '◎', match: /^2\./ },
   { id: 'annorb', name: 'Annihilating Orb', icon: '◉', match: /^5p\./ },
   { id: 'bug', name: 'Last phase: fewer greens (timing bug)', icon: '★', match: /^3\./ },
@@ -85,7 +86,7 @@ const used = new Set(); const catSecs = CATS.map(c => { const s = findings.filte
 // last phase), then the table of all other attack shapes; then adds / arena / planner; then research notes.
 // (CATS above is the MATCHING order — first match wins — so it is kept as is.)
 const ORDER = [
-  ['Attacks & mechanics, in fight order', ['order', 'fixated', 'greens', 'annorb', 'shackles', 'cosmiccharge', 'worldpiercer', 'echoing', 'slice', 'excision', 'swordadd', 'pd', 'bug', 'overlap', 'shapes']],
+  ['Attacks & mechanics, in fight order', ['order', 'fixated', 'greens', 'annorb', 'shackles', 'cosmiccharge', 'worldpiercer', 'ragingstorm', 'echoing', 'slice', 'excision', 'swordadd', 'pd', 'bug', 'overlap', 'shapes']],
   ['Adds, breakbars, arena & planner', ['orbs', 'breakbars', 'immunity', 'dps', 'arena', 'plannerdata']],
   ['Research notes', ['rejected', 'open']]];
 findings.filter(f => !used.has(f)).forEach(f => catSecs.push({ id: 'misc-' + catSecs.length, name: f.title.replace(/^\d+[a-z]?\.\s*/, ''), icon: '•', secs: [f] }));
@@ -149,12 +150,16 @@ const orderedIds = ORDER.flatMap(([, ids]) => ids);
 const leftovers = catSecs.filter(c => !orderedIds.includes(c.id)); // FINDINGS sections without a category go at the end of the fight list
 const nav = ORDER.map(([title, ids], gi) => `<div class="navh">${esc(title)}</div>` + ids.map(id => id === 'plannerdata' ? (plannerSection ? navLink(pdCat) : '') : catById[id] ? navLink(catById[id]) : '').join('') + (gi === 0 ? leftovers.map(navLink).join('') : '')).join('') +
   '<div class="navh">Reference</div>' + ref.map((s, k) => `<a href="#ref${k}"><span class="ic">§</span>${esc(s.title)}</a>`).join('') + '<a href="#files"><span class="ic">▤</span>Data & scripts</a>';
-const secHtml = c => `<section class="cat" id="${c.id}"><h2><span class="ic">${c.icon}</span>${esc(c.name)}</h2>${c.secs.map(s => `<article class="card"><h3>${inline(s.title)}</h3>${md(s.body)}</article>`).join('')}</section>`;
-const body = ORDER.map(([, ids], gi) => ids.map(id => id === 'plannerdata' ? plannerSection : catById[id] ? secHtml(catById[id]) : '').join('') + (gi === 0 ? leftovers.map(secHtml).join('') : '')).join('') +
-  `<section class="cat" id="reference"><h2><span class="ic">§</span>Reference</h2>${ref.map((s, k) => `<article class="card" id="ref${k}"><h3>${inline(s.title)}</h3>${md(s.body)}</article>`).join('')}</section>` +
+const secNum = t => (t.match(/^(\d+[a-z]?)\.\s/) || [])[1]; const noNum = t => t.replace(/^\d+[a-z]?\.\s*/, '');
+// short name of a section for cross-references: the title without its number, tags and subtitle
+const secName = Object.fromEntries(findings.filter(s => secNum(s.title)).map(s => [secNum(s.title), noNum(s.title).replace(/\s*\*{0,2}\[[^\]]*\]\*{0,2}\s*$/, '').replace(/^★\s*/, '').split(/ — | \(|: /)[0].trim()]));
+const xref = html => html.replace(/§\s?(\d+[a-z]?)(?![\w])/g, (m, n) => secName[n] ? `<a href="#sec-${n}">${esc(secName[n])}</a>` : m);
+const secHtml = c => xref(`<section class="cat" id="${c.id}"><h2><span class="ic">${c.icon}</span>${esc(c.name)}</h2>${c.secs.map(s => `<article class="card"${secNum(s.title) ? ` id="sec-${secNum(s.title)}"` : ''}><h3>${inline(noNum(s.title))}</h3>${md(s.body)}</article>`).join('')}</section>`);
+const body = ORDER.map(([, ids], gi) => ids.map(id => id === 'plannerdata' ? xref(plannerSection) : catById[id] ? secHtml(catById[id]) : '').join('') + (gi === 0 ? leftovers.map(secHtml).join('') : '')).join('') +
+  `<section class="cat" id="reference"><h2><span class="ic">§</span>Reference</h2>${ref.map((s, k) => `<article class="card" id="ref${k}"><h3>${inline(s.title)}</h3>${xref(md(s.body))}</article>`).join('')}</section>` +
   `<section class="cat" id="files"><h2><span class="ic">▤</span>Data & scripts</h2><article class="card"><h3>Datasets (data/)</h3><div class="tw"><table><thead><tr><th>file</th><th>rows</th><th>columns</th><th>size</th></tr></thead><tbody>${dataFiles.map(d => `<tr><td><a href="${BASE}data/${d.f}"><code>${d.f}</code></a></td><td>${d.rows}</td><td>${d.cols}</td><td>${d.kb} KB</td></tr>`).join('')}</tbody></table></div>
    <p>Logs: <strong>${count('logs/raw')}</strong> raw CM .zevtc · <strong>${count('logs/ei')}</strong> EI JSON · <strong>${count('logs/raw_nm')}</strong> raw NM.</p></article>
-   <article class="card"><h3>Scripts (scripts/)</h3><div class="tw"><table><thead><tr><th>script</th><th>what it does</th></tr></thead><tbody>${scripts.map(s => `<tr><td><a href="${BASE}scripts/${s.f}"><code>${s.f}</code></a></td><td>${esc(s.d)}</td></tr>`).join('')}</tbody></table></div></article></section>`;
+   <article class="card"><h3>Scripts (scripts/)</h3><div class="tw"><table><thead><tr><th>script</th><th>what it does</th></tr></thead><tbody>${scripts.map(s => `<tr><td><a href="${BASE}scripts/${s.f}"><code>${s.f}</code></a></td><td>${xref(esc(s.d))}</td></tr>`).join('')}</tbody></table></div></article></section>`;
 
 // Raid planner tab: CSS/JS from docs-src/, arena geometry from data/arena.json (scripts/build_arena.js)
 const rd = p => { try { return fs.readFileSync(path.join(ROOT, p), 'utf8'); } catch (e) { return ''; } };
