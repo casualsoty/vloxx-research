@@ -35,7 +35,9 @@ const sp = {}; for (const [k, v] of Object.entries(spawns)) { const xs = v.map(p
   sp[k] = { x: +xs[xs.length >> 1].toFixed(1), y: +ys[ys.length >> 1].toFixed(1), n: v.length, variants: uniq.length, all: uniq.length > 1 ? uniq.slice(0, 6) : undefined }; }
 // Cosmic adds spawn on a ring of fixed points: cluster all Cosmic spawns
 const cosmic = []; for (const [k, v] of Object.entries(spawns)) if (k.startsWith('Cosmic')) for (const p of v) { let c = cosmic.find(c => Math.hypot(c.x - p[0], c.y - p[1]) < 60); if (!c) { c = { x: p[0], y: p[1], n: 0, types: {} }; cosmic.push(c); } c.n++; c.types[k] = (c.types[k] || 0) + 1; }
-const cosmicPoints = cosmic.filter(c => c.n >= 2).map(c => ({ x: +c.x.toFixed(1), y: +c.y.toFixed(1), n: c.n, types: c.types, angle: Math.round(Math.atan2(c.y - C[1], c.x - C[0]) * 180 / Math.PI), dist: Math.round(Math.hypot(c.x - C[0], c.y - C[1])) })).sort((a, b) => a.angle - b.angle);
+// a real spawn point is used ~100 times; a cluster seen a couple of times is an add whose first logged position came late (it had already moved)
+const cosmicMin = Math.max(5, 0.1 * Math.max(0, ...cosmic.map(c => c.n)));
+const cosmicPoints = cosmic.filter(c => c.n >= cosmicMin).map(c => ({ x: +c.x.toFixed(1), y: +c.y.toFixed(1), n: c.n, types: c.types, angle: Math.round(Math.atan2(c.y - C[1], c.x - C[0]) * 180 / Math.PI), dist: Math.round(Math.hypot(c.x - C[0], c.y - C[1])) })).sort((a, b) => a.angle - b.angle);
 const out = { cosmicPoints, platformRadius: 2470, centre: { x: +C[0].toFixed(1), y: +C[1].toFixed(1), samples: centres.length },
   radius: { p99: Math.round(q(0.99)), p999: Math.round(q(0.999)), max: Math.round(d[d.length - 1]) },
   entrance: entrance.length ? (() => { const m = mean(entrance); return { x: Math.round(m[0]), y: Math.round(m[1]), dist: Math.round(Math.hypot(m[0] - C[0], m[1] - C[1])) }; })() : null,

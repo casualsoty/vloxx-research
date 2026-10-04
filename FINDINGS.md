@@ -242,7 +242,7 @@ Skill **81076**, cast twice in the Staff phase (~38 s and ~85 s raw time). Marke
   was 8958, 15450 on 128 logs — it is an average of where people stand, so it moves a little);
   the first green round therefore only hits the fixated player. **[solid]**
 * **Cosmic adds (Piercer / Bulwark / Sunderer) spawn at one of 8 fixed points** on a ring 608–702 units from the centre,
-  every ~45° (angles −180, −137, −94, −48, −1, 48, 94, 138°; 486 spawns, 585 in the 175-log set with the same 8 points;
+  every ~45° (angles −180, −137, −94, −48, −1, 48, 94, 138°; 486 spawns, 585 in the 175-log set and 892 in the 268-log set with the same 8 points;
   data in `data/arena.json → cosmicPoints`).
   Piercers spawn mostly 110–170 s, Bulwarks 270–290 s (around Splits 1–2), Sunderer rarely (Split 3). **[solid]**
   World / map coordinates of the 8 points: (11519, 15321) 292.59, 389.17 · (11731, 14878) 297.97, 377.90 ·
