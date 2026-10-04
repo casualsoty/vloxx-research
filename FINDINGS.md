@@ -779,7 +779,7 @@ Kill times 511–596 s (average 562 s).
   benchmark and lower than a phase DPS.
 * **Build:** "Condition" when at least half of the player's damage was condition damage, otherwise "Power"; "Heal" / "Boon" from the healing
   and concentration stats the log records.
-* **The highest values are links** to the log they come from, when the log is online (25 of 26 kills).
+* **The highest values are links** to the log they come from, when the log is online; otherwise the name of the log is written (25 of 26 kills).
 * **Whole squad:** target 151,610 on average (best [166,757](https://gw2wingman.nevermindcreations.de/log/14de4-20261004-011214_noe_kill)), cleave 255,659 (best [283,177](https://gw2wingman.nevermindcreations.de/log/14de4-20261004-011214_noe_kill)).
 
 | build | samples | target avg | target highest | cleave avg | cleave highest | condition share |
@@ -914,6 +914,25 @@ Each impact of Vloxx's *Raging Storm* (damage skill 81176) is announced by a 3 s
   The two targets are not close to each other either (median 221 apart; any two candidates: 209). So for planning purposes:
   **the fixated player, plus two random players.** [likely: a rule on something not tested here cannot be excluded]
 * Over a whole last phase the spread is uneven (the most-hit player gets a median of 20 spears, up to 32), while 20 % of players are never targeted.
+
+## 5r. Phase times — fastest and average per phase  [solid]
+Script `scripts/phase_times.js` → `data/phase_times.csv` (one row per log × finished phase) and `data/phase_times.json` (part of the full build).
+224 CM logs, 834 finished phases. A phase only counts in a log where it was finished; the last phase and the full fight only on kills.
+Phases are cut like Elite Insights does: a split = the *Visions of Eternity* cast with its breakbar; Split 3 runs until the Damage Immunity of the
+last phase ends. Raw logs start 3.0 s before the fight (checked on two kills that exist in both forms), which is subtracted.
+
+In fight order. The fastest time is a link to its log when that log is online; when it is not, the name of the log is written and the fastest one that is online is given too.
+
+| phase | what it covers | fastest | average | median | slowest | logs |
+|---|---|---|---|---|---|---|
+| Staff Phase | pull → 70 % | 1 min 48.2 s (log `20261003-232757`, not uploaded) (fastest online: [1 min 53.7 s](https://gw2wingman.nevermindcreations.de/log/081e5-Seel6214_20261001-210656_noe_kill)) | 2 min 08.1 s | 2 min 06.4 s | 2 min 53.0 s | 224 |
+| Split 1 | Visions of Eternity + breakbar at 70 % | 13.6 s (log `20260930-220831`, not uploaded) (fastest online: [15.2 s](https://b.dps.report/ST7h-20261002-005256_boss)) | 25.9 s | 25.0 s | 52.4 s | 223 |
+| Spear Phase | 70 → 40 % | [1 min 49.4 s](https://gw2wingman.nevermindcreations.de/log/14de4-20261004-011214_noe_kill) | 2 min 14.8 s | 2 min 08.3 s | 4 min 05.9 s | 110 |
+| Split 2 | Visions of Eternity + breakbar at 40 % | [18.2 s](https://gw2wingman.nevermindcreations.de/log/23f47-Mimslade4271_20261002-004636_noe_kill) | 31.5 s | 29.6 s | 1 min 07.8 s | 109 |
+| Sword Phase | 40 → 10 % | 2 min 15.5 s (log `20261003-234425`, not uploaded) (fastest online: [2 min 15.7 s](https://gw2wingman.nevermindcreations.de/log/85c0f-20261002-215404_noe_kill)) | 2 min 49.7 s | 2 min 46.0 s | 3 min 40.9 s | 58 |
+| Split 3 | Visions of Eternity + breakbar at 10 %, until the Damage Immunity ends | [29.7 s](https://gw2wingman.nevermindcreations.de/log/6f88a-Clemyyy4217_20261001-213947_noe_kill) | 40.6 s | 40.8 s | 54.4 s | 58 |
+| Final Form Phase | last phase → kill | [45.4 s](https://gw2wingman.nevermindcreations.de/log/14de4-20261004-011214_noe_kill) | 59.3 s | 57.9 s | 1 min 18.6 s | 26 |
+| Full fight (kill) | pull → kill | [8 min 31.0 s](https://gw2wingman.nevermindcreations.de/log/14de4-20261004-011214_noe_kill) | 9 min 19.5 s | 9 min 13.0 s | 9 min 55.8 s | 26 |
 
 ## 6. Hypotheses that were tested and REJECTED (don't redo)
 * **Range limit ~600 (last phase) / ~775 (early, = 600 + boss hitbox 150 + player 24).** Looked perfect on EI data (211/211),

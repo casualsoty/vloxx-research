@@ -74,6 +74,7 @@ const CATS = [ // matching: by FINDINGS section number (first match wins)
   { id: 'swordadd', name: 'Aspect of the Sword — Division Eternal', icon: '⚔', match: /^5j\./ },
   { id: 'breakbars', name: 'Breakbars', icon: '▰', match: /^5i\./ },
   { id: 'immunity', name: 'Damage Immunity', icon: '⛨', match: /^5n\./ },
+  { id: 'phasetimes', name: 'Phase times', icon: '⏱', match: /^5r\./ },
   { id: 'dps', name: 'DPS per build', icon: '⚑', match: /^5o\./ },
   { id: 'rejected', name: 'Rejected hypotheses', icon: '✕', match: /^6\./ },
   { id: 'open', name: 'Open questions', icon: '?', match: /^7\./ },
@@ -87,7 +88,7 @@ const used = new Set(); const catSecs = CATS.map(c => { const s = findings.filte
 // (CATS above is the MATCHING order — first match wins — so it is kept as is.)
 const ORDER = [
   ['Attacks & mechanics, in fight order', ['order', 'fixated', 'greens', 'annorb', 'shackles', 'cosmiccharge', 'worldpiercer', 'ragingstorm', 'echoing', 'slice', 'excision', 'swordadd', 'pd', 'bug', 'overlap', 'shapes']],
-  ['Adds, breakbars, arena & planner', ['orbs', 'breakbars', 'immunity', 'dps', 'arena', 'plannerdata']],
+  ['Adds, breakbars, arena & planner', ['orbs', 'breakbars', 'immunity', 'phasetimes', 'dps', 'arena', 'plannerdata']],
   ['Research notes', ['rejected', 'open']]];
 findings.filter(f => !used.has(f)).forEach(f => catSecs.push({ id: 'misc-' + catSecs.length, name: f.title.replace(/^\d+[a-z]?\.\s*/, ''), icon: '•', secs: [f] }));
 const refTitles = ['The goal behind the research', 'Important IDs', 'Datasets', 'Getting more logs', 'How to run', 'Folder layout', 'Status'];

@@ -18,6 +18,7 @@ const steps = [
   'cast_order.js',           // data/cast_order.csv + cast_order_summary.json: usual order of Vloxx's attacks per phase
   'slice_through_reality.js', // data/slice_through_reality_summary.json: the two hits (525 then ~300) and the teleport
   'damage_immunity.js',      // data/damage_immunity.csv + damage_immunity_summary.json: what still damages Vloxx during Damage Immunity
+  'phase_times.js',          // data/phase_times.csv + phase_times.json: fastest / average time per phase, with the link of the fastest
   'dps_table.js',            // data/dps_samples.csv + dps_table.json: target and cleave DPS per specialisation / build
   'annihilating_orb.js',     // data/annihilating_orb_summary.json: Vloxx's orb path, landing zone and expanding ring
   'raging_storm_last_phase.js', // data/raging_storm_last_phase.json: falling spears per second with each Aspect alive or dead
