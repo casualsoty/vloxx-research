@@ -824,6 +824,235 @@ log_id,time_s,phase,player,held_s,end_cause,gap_since_previous_end_s,previous_en
 20261003-002526,2.995,,Player-F494,60.006,expired,,,0
 20261003-002526,70.083,,Player-BCA0,59.99,expired,7.082,expired,0
 20261003-002526,145.351,,Player-8FDE,17.122,down,15.278,expired,0
+20261003-143958,2.999,,Player-A866,59.998,expired,,,0
+20261003-144217,2.996,,Player-A866,60,expired,,,0
+20261003-144217,70.916,,Player-B055,39.658,dead,7.92,expired,0
+20261003-144623,2.999,,Player-A866,60,expired,,,0
+20261003-144623,70.635,,Player-B055,60.006,expired,7.636,expired,0
+20261003-144623,156.717,,Player-CC68,59.996,expired,26.076,expired,0
+20261003-144623,224.793,,Player-B055,1.32,dead,8.08,expired,0
+20261003-145054,2.996,,Player-A866,60.002,expired,,,0
+20261003-145054,70.122,,Player-CC68,59.996,expired,7.124,expired,0
+20261003-145054,162.996,,Player-DDA6,41.666,dead,32.878,expired,0
+20261003-145412,2.992,,Player-A866,60.002,expired,,,0
+20261003-145412,70.996,,Player-C842,38.324,dead,8.002,expired,0
+20261003-150148,2.998,,Player-A866,59.998,expired,,,0
+20261003-150148,70.686,,Player-C842,59.996,expired,7.69,expired,0
+20261003-150148,160.086,,Player-BCA0,59.99,expired,29.404,expired,0
+20261003-150148,229.394,,Player-9A49,59.996,expired,9.318,expired,0
+20261003-150148,333.998,,Player-9A49,39.554,down,44.608,expired,1
+20261003-150148,375.752,,Player-B055,0.442,down,2.2,down,0
+20261003-150905,2.997,,Player-A866,59.994,expired,,,0
+20261003-150905,71.201,,Player-DDA6,59.99,expired,8.21,expired,0
+20261003-150905,162.751,,Player-CC68,43.598,down,31.56,expired,0
+20261003-150905,210.189,,Player-9A49,60.004,expired,3.84,down,0
+20261003-150905,275.545,,Player-C842,60,expired,5.352,expired,0
+20261003-150905,353.983,,Player-5112,15.122,down,18.438,expired,0
+20261003-151632,3.002,,Player-A866,59.998,expired,,,0
+20261003-151632,70.486,,Player-5397,59.994,expired,7.486,expired,0
+20261003-151632,156.402,,Player-CC68,59.992,expired,25.922,expired,0
+20261003-151632,217.554,,Player-F22C,60,expired,1.16,expired,0
+20261003-151632,330.912,,Player-9A49,44.284,down,53.358,expired,0
+20261003-152049,2.999,,Player-A866,59.998,expired,,,0
+20261003-152218,2.999,,Player-A866,60.006,expired,,,0
+20261003-152721,3.001,,Player-A866,59.996,expired,,,0
+20261003-152721,70.605,,Player-BCA0,59.99,expired,7.608,expired,0
+20261003-152721,169.395,,Player-F22C,37.644,stealth,38.8,expired,0
+20261003-152721,217.001,,Player-C842,59.992,expired,9.962,stealth,0
+20261003-153810,3.002,,Player-A866,60.004,expired,,,0
+20261003-153810,70.926,,Player-CC68,59.99,expired,7.92,expired,0
+20261003-153810,155.64,,Player-F22C,32.844,stealth,24.724,expired,0
+20261003-153810,202.918,,Player-BCA0,59.996,expired,14.434,stealth,0
+20261003-153810,274.076,,Player-C842,59.998,expired,11.162,expired,0
+20261003-153810,352.556,,Player-DDA6,59.996,expired,18.482,expired,0
+20261003-153810,418.156,,Player-CC68,59.992,expired,5.604,expired,0
+20261003-153810,485.546,,Player-A866,60,expired,7.398,expired,0
+20261003-153810,566.752,last+2.5,Player-CC68,33.238,dead,21.206,expired,0
+20261003-154559,2.999,,Player-A866,60,expired,,,0
+20261003-154559,70.473,,Player-C842,59.998,expired,7.474,expired,0
+20261003-154559,162.679,,Player-CC68,18.82,dead,32.208,expired,0
+20261003-165843,2.995,,Player-858A,60.002,expired,,,0
+20261003-165843,70.519,,Player-DDA6,59.996,expired,7.522,expired,0
+20261003-165843,158.911,,Player-5397,60.006,expired,28.396,expired,0
+20261003-165843,219.675,,Player-4DDF,59.994,expired,0.758,expired,0
+20261003-165843,312.147,,Player-858A,59.994,expired,32.478,expired,0
+20261003-165843,376.861,,Player-0FB2,6.326,down,4.72,expired,0
+20261003-165843,400.901,,Player-DDA6,59.998,expired,17.714,down,0
+20261003-165843,507.981,last+2.5,Player-BBC8,39.394,down,47.082,expired,0
+20261003-165843,547.983,last+42.5,Player-8F17,10.996,down,0.608,down,0
+20261003-165843,587.979,last+82.5,Player-5112,12.006,other,29,down,0
+20261003-170507,2.999,,Player-858A,59.996,expired,,,0
+20261003-170507,71.483,,Player-858A,59.992,expired,8.488,expired,1
+20261003-170507,150.277,,Player-BBC8,16.422,dead,18.802,expired,0
+20261003-171045,2.999,,Player-858A,60.004,expired,,,0
+20261003-171045,70.395,,Player-5112,60,expired,7.392,expired,0
+20261003-171045,153.273,,Player-4DDF,60.008,expired,22.878,expired,0
+20261003-171045,221.635,,Player-4DDF,59.996,expired,8.354,expired,1
+20261003-171045,304.155,,Player-BBC8,17.156,dead,22.524,expired,0
+20261003-171605,2.997,,Player-858A,60,expired,,,0
+20261003-171605,70.839,,Player-5397,60,expired,7.842,expired,0
+20261003-171605,149.675,,Player-DDA6,60,expired,18.836,expired,0
+20261003-171605,210.831,,Player-BBC8,57.536,dead,1.156,expired,0
+20261003-172039,3.004,,Player-858A,59.995,expired,,,0
+20261003-172039,71.363,,Player-BBC8,59.996,expired,8.364,expired,0
+20261003-172039,145.919,,Player-8F17,60,expired,14.56,expired,0
+20261003-172039,214.475,,Player-0FB2,21.04,down,8.556,expired,0
+20261003-172039,238.595,,Player-BBC8,2.452,dead,3.08,down,0
+20261003-172858,3.001,,Player-858A,60,expired,,,0
+20261003-172858,70.963,,Player-BCA0,60.002,expired,7.962,expired,0
+20261003-172858,150.355,,Player-5112,60,expired,19.39,expired,0
+20261003-172858,211.639,,Player-DDA6,59.996,expired,1.284,expired,0
+20261003-172858,307.985,,Player-858A,60,expired,36.35,expired,0
+20261003-172858,373.754,,Player-5112,59.991,expired,5.769,expired,0
+20261003-172858,441.349,,Player-DDA6,17.674,down,7.604,expired,0
+20261003-173208,2.999,,Player-858A,60.002,expired,,,0
+20261003-173208,71.119,,Player-4DDF,60.004,expired,8.118,expired,0
+20261003-173208,146.797,,Player-5112,11.918,down,15.674,expired,0
+20261003-173523,3.003,,Player-858A,59.988,expired,,,0
+20261003-173523,70.313,,Player-5397,59.998,expired,7.322,expired,0
+20261003-173523,147.835,,Player-5112,17.816,other,17.524,expired,0
+20261003-174507,3.003,,Player-858A,59.997,expired,,,0
+20261003-174507,71.046,,Player-EAD0,59.988,expired,8.046,expired,0
+20261003-174507,144.914,,Player-4DDF,60.002,expired,13.88,expired,0
+20261003-174507,220.636,,Player-BBC8,59.998,expired,15.72,expired,0
+20261003-174507,294.872,,Player-DDA6,60,expired,14.238,expired,0
+20261003-174507,360.746,,Player-5112,60.002,expired,5.874,expired,0
+20261003-174507,432.706,,Player-8F17,59.996,expired,11.958,expired,0
+20261003-174507,522.822,last+42.5,Player-BBC8,9.886,dead,30.12,expired,0
+20261003-175607,3.001,,Player-858A,60,expired,,,0
+20261003-175607,70.641,,Player-EAD0,60,expired,7.64,expired,0
+20261003-175607,148.121,,Player-0FB2,59.99,expired,17.48,expired,0
+20261003-175607,216.595,,Player-8F17,60,expired,8.484,expired,0
+20261003-175607,299.513,,Player-DDA6,59.994,expired,22.918,expired,0
+20261003-175607,364.597,,Player-8F17,59.996,expired,5.09,expired,0
+20261003-175607,434.903,,Player-BCA0,60.004,expired,10.31,expired,0
+20261003-175607,514.345,last+2.5,Player-BBC8,59.992,expired,19.438,expired,0
+20261003-210118,3.002,,Player-DDA6,60,expired,,,0
+20261003-210118,71.046,,Player-DDA6,59.99,expired,8.044,expired,1
+20261003-210118,161.72,,Player-FBAD,59.992,expired,30.684,expired,0
+20261003-210118,230.192,,Player-FAE3,17.246,dead,8.48,expired,0
+20261003-211223,3,,Player-DDA6,60,expired,,,0
+20261003-211223,70.49,,Player-DDA6,59.988,expired,7.49,expired,1
+20261003-211223,150.998,,Player-C842,59.999,expired,20.52,expired,0
+20261003-211223,219.236,,Player-FBAD,60,expired,8.239,expired,0
+20261003-211223,305.914,,Player-BCA0,60,expired,26.678,expired,0
+20261003-211223,370.628,,Player-89AD,12.721,down,4.714,expired,0
+20261003-211223,395.43,,Player-FAE3,60,expired,12.081,down,0
+20261003-211223,484.942,last+2.5,Player-C842,60.006,expired,29.512,expired,0
+20261003-212216,3.004,,Player-1172,32.602,down,,,0
+20261003-212216,50.562,,Player-1BA4,1.888,dead,14.956,down,0
+20261003-212652,2.994,,Player-1172,60.016,expired,,,0
+20261003-212652,70.318,,Player-C842,59.996,expired,7.308,expired,0
+20261003-212652,146.396,,Player-ED3C,15.562,other,16.082,expired,0
+20261003-212652,173.556,,Player-89AD,59.994,expired,11.598,other,0
+20261003-212652,238.834,,Player-ED3C,24.352,down,5.284,expired,0
+20261003-213542,2.998,,Player-1172,60,expired,,,0
+20261003-213542,70.88,,Player-89AD,59.99,expired,7.882,expired,0
+20261003-213542,139.51,,Player-FBAD,6.208,other,8.64,expired,0
+20261003-213542,166.556,,Player-FBAD,10.276,down,20.838,other,1
+20261003-213542,194.188,,Player-A34F,60.002,expired,17.356,down,0
+20261003-213542,300.516,,Player-1172,8.19,down,46.326,expired,0
+20261003-213542,323.824,,Player-A34F,60.014,expired,15.118,down,0
+20261003-213542,393.586,,Player-BCA0,59.998,expired,9.748,expired,0
+20261003-214253,2.998,,Player-1172,60.006,expired,,,0
+20261003-214253,70.444,,Player-C842,59.99,expired,7.44,expired,0
+20261003-214253,142.684,,Player-BCA0,44.632,other,12.25,expired,0
+20261003-214253,203.432,,Player-1172,60,expired,16.116,other,0
+20261003-214253,291.914,,Player-1BA4,55.356,down,28.482,expired,0
+20261003-214253,360.18,,Player-ED3C,2.086,down,12.91,down,0
+20261003-214443,3,,Player-1172,34.132,dead,,,0
+20261003-215125,2.997,,Player-1172,59.998,expired,,,0
+20261003-215125,70.631,,Player-80A0,60.006,expired,7.636,expired,0
+20261003-215125,149.473,,Player-FBAD,44.6,other,18.836,expired,0
+20261003-215125,210.909,,Player-80A0,59.998,expired,16.836,other,0
+20261003-215125,295.915,,Player-C2E3,59.99,expired,25.008,expired,0
+20261003-215125,361.139,,Player-89AD,3.128,other,5.234,expired,0
+20261003-220139,3.001,,Player-1172,59.996,expired,,,0
+20261003-220139,70.915,,Player-C2E3,59.998,expired,7.918,expired,0
+20261003-220139,136.637,,Player-C842,34.44,other,5.724,expired,0
+20261003-220139,190.595,,Player-1BA4,60,expired,19.518,other,0
+20261003-220139,289.029,,Player-1BA4,45.56,down,38.434,expired,1
+20261003-220139,335.507,,Player-1172,60,expired,0.918,down,0
+20261003-220139,404.23,,Player-82BE,32.399,other,8.723,expired,0
+20261003-220139,470.985,last+2.5,Player-1172,60.004,expired,34.356,other,0
+20261003-220139,550.979,last+82.5,Player-1172,2.262,dead,19.99,expired,1
+20261003-221232,2.996,,Player-1172,60.006,expired,,,0
+20261003-221232,71.154,,Player-80A0,59.998,expired,8.152,expired,0
+20261003-221232,147.712,,Player-82BE,45.718,other,16.56,expired,0
+20261003-221232,195.428,,Player-ED3C,60.004,expired,1.998,other,0
+20261003-221232,300.112,,Player-82BE,59.994,expired,44.68,expired,0
+20261003-221232,365.632,,Player-82BE,60.002,expired,5.526,expired,1
+20261003-221232,434.502,,Player-82BE,6.2,down,8.868,expired,1
+20261003-222355,3.003,,Player-1172,60.002,expired,,,0
+20261003-222355,71.723,,Player-82BE,59.986,expired,8.718,expired,0
+20261003-222355,139.195,,Player-89AD,34.474,other,7.486,expired,0
+20261003-222355,179.631,,Player-1BA4,60.006,expired,5.962,other,0
+20261003-222355,248.715,,Player-80A0,59.99,expired,9.078,expired,0
+20261003-222355,326.833,,Player-1172,59.99,expired,18.128,expired,0
+20261003-222355,394.141,,Player-1172,22.604,down,7.318,expired,1
+20261003-222355,417.823,,Player-C2E3,22.518,down,1.078,down,0
+20261003-222355,482.667,last+2.5,Player-BCA0,59.992,expired,42.326,down,0
+20261003-230650,2.998,,Player-1172,59.994,expired,,,0
+20261003-230915,2.996,,Player-1172,60,expired,,,0
+20261003-230915,71.234,,Player-D751,45.508,dead,8.238,expired,0
+20261003-231134,3,,Player-1172,60,expired,,,0
+20261003-231134,70.518,,Player-68BB,48.52,dead,7.518,expired,0
+20261003-231557,3,,Player-1172,60,expired,,,0
+20261003-231557,70.718,,Player-1172,59.994,expired,7.718,expired,1
+20261003-231557,133.276,,Player-0693,32.724,other,2.564,expired,0
+20261003-231557,173.792,,Player-7178,44.56,down,7.792,other,0
+20261003-231557,220.154,,Player-BCA0,1.342,dead,1.802,down,0
+20261003-232004,2.997,,Player-1172,59.998,expired,,,0
+20261003-232004,70.551,,Player-FBAD,59.998,expired,7.556,expired,0
+20261003-232004,139.197,,Player-AF1C,29.312,other,8.648,expired,0
+20261003-232004,185.071,,Player-80A0,22.706,dead,16.562,other,0
+20261003-232322,2.995,,Player-1172,59.998,expired,,,0
+20261003-232322,71.003,,Player-AF1C,59.992,expired,8.01,expired,0
+20261003-232322,142.755,,Player-AF1C,23.16,dead,11.76,expired,1
+20261003-232757,2.999,,Player-1172,60.002,expired,,,0
+20261003-232757,71.001,,Player-858A,60.001,expired,8,expired,0
+20261003-232757,149.639,,Player-BCA0,30.36,other,18.637,expired,0
+20261003-232757,197.191,,Player-858A,42.48,down,17.192,other,0
+20261003-233303,2.993,,Player-1172,60.006,expired,,,0
+20261003-233303,70.353,,Player-7178,60.004,expired,7.354,expired,0
+20261003-233303,145.551,,Player-BCA0,18.76,other,15.194,expired,0
+20261003-233303,165.713,,Player-68BB,59.996,expired,1.402,other,0
+20261003-233303,228.991,,Player-AF1C,37.636,down,3.282,expired,0
+20261003-234425,2.997,,Player-1172,59.996,expired,,,0
+20261003-234425,70.715,,Player-AF1C,59.994,expired,7.722,expired,0
+20261003-234425,150.193,,Player-AF1C,31.518,other,19.484,expired,1
+20261003-234425,197.709,,Player-68BB,59.996,expired,15.998,other,0
+20261003-234425,316.381,,Player-7178,46.964,down,58.676,expired,0
+20261003-234425,382.097,,Player-858A,60.002,expired,18.752,down,0
+20261003-234425,485.531,last+2.5,Player-1172,31.042,other,43.432,expired,0
+20261003-234425,525.531,last+42.5,Player-80A0,40.082,down,8.958,other,0
+20261003-235149,2.995,,Player-1172,59.998,expired,,,0
+20261003-235149,71.433,,Player-7178,60,expired,8.44,expired,0
+20261003-235149,151.357,,Player-BCA0,43.72,down,19.924,expired,0
+20261003-235149,199.111,,Player-D751,2.841,other,4.034,down,0
+20261003-235149,226.305,,Player-BCA0,59.996,expired,24.353,other,0
+20261003-235149,295.437,,Player-D751,28.09,dead,9.136,expired,0
+20261003-235615,2.999,,Player-1172,60.002,expired,,,0
+20261003-235615,70.363,,Player-BCA0,59.992,expired,7.362,expired,0
+20261003-235615,142.113,,Player-7178,16.606,down,11.758,expired,0
+20261003-235615,169.279,,Player-FBAD,5.832,other,10.56,down,0
+20261003-235615,189.669,,Player-BCA0,24.82,other,14.558,other,0
+20261004-000409,2.996,,Player-1172,60.002,expired,,,0
+20261004-000409,70.604,,Player-7178,59.992,expired,7.606,expired,0
+20261004-000409,136.436,,Player-0693,37.124,other,5.84,expired,0
+20261004-000409,176.676,,Player-7178,59.99,expired,3.116,other,0
+20261004-000409,242.834,,Player-BCA0,59.994,expired,6.168,expired,0
+20261004-000409,312.586,,Player-7178,5.802,down,9.758,expired,0
+20261004-000409,336.228,,Player-0693,36.882,down,17.84,down,0
+20261004-000409,381.704,,Player-68BB,45.744,dead,8.594,down,0
+20261004-001305,3.001,,Player-1172,60,expired,,,0
+20261004-001305,70.353,,Player-858A,59.998,expired,7.352,expired,0
+20261004-001305,138.271,,Player-858A,43.278,other,7.92,expired,1
+20261004-001305,191.949,,Player-68BB,59.998,expired,10.4,other,0
+20261004-001305,310.025,,Player-BCA0,59.997,expired,58.078,expired,0
+20261004-001305,375.745,,Player-0693,8.722,down,5.723,expired,0
+20261004-001305,400.303,,Player-FBAD,21.154,dead,15.836,down,0
+20261004-001305,426.417,,Player-858A,1.204,down,4.96,dead,0
 014037-fixed_dpsreport,0,Staff Phase,Player-0BF9,59.992,expired,,,0
 014037-fixed_dpsreport,67.828,Staff Phase,Account-C912,60,expired,7.836,expired,0
 014037-fixed_dpsreport,135.644,Spear Phase,Account-C912,59.984,expired,7.816,expired,1
@@ -882,6 +1111,34 @@ log_id,time_s,phase,player,held_s,end_cause,gap_since_previous_end_s,previous_en
 224233_dpsreport,351.826,Sword Phase,Player-91F4,60,expired,6.926,expired,0
 224233_dpsreport,420.826,Sword Phase,Player-F6E3,60,expired,9,expired,0
 224233_dpsreport,498.66,last+22.5,Player-46CC,,still_on,17.834,expired,0
+wingman_005f1-20261001-215126_noe_kill,0,Staff Phase,Player-9381,60,expired,,,0
+wingman_005f1-20261001-215126_noe_kill,67.366,Staff Phase,Player-2F7A,59.99,expired,7.366,expired,0
+wingman_005f1-20261001-215126_noe_kill,136.924,Spear Phase,Player-5B08,30.8,stealth,9.568,expired,0
+wingman_005f1-20261001-215126_noe_kill,184.758,Spear Phase,Player-2F7A,31.684,stealth,17.034,stealth,0
+wingman_005f1-20261001-215126_noe_kill,229.602,Spear Phase,Player-C794,15.474,down,13.16,stealth,0
+wingman_005f1-20261001-215126_noe_kill,256.28,Spear Phase,Player-AAA4,4.842,stealth,11.204,down,0
+wingman_005f1-20261001-215126_noe_kill,300.284,Sword Phase,Player-9381,12.516,stealth,39.162,stealth,0
+wingman_005f1-20261001-215126_noe_kill,323.366,Sword Phase,Player-AAA4,16.842,stealth,10.566,stealth,0
+wingman_005f1-20261001-215126_noe_kill,344.512,Sword Phase,Player-2F7A,60,expired,4.304,stealth,0
+wingman_005f1-20261001-215126_noe_kill,410.118,Sword Phase,Player-9381,19.962,stealth,5.606,expired,0
+wingman_005f1-20261001-215126_noe_kill,432.832,Sword Phase,Player-1A64,60,expired,2.752,stealth,0
+wingman_005f1-20261001-215126_noe_kill,496.24,last+2.5,Player-950D,59.988,expired,3.408,expired,0
+wingman_081e5-Account-81AD_20261001-210656_noe_kill,0,Staff Phase,Player-0BF9,60,expired,,,0
+wingman_081e5-Account-81AD_20261001-210656_noe_kill,68.672,Staff Phase,Player-FA74,60,expired,8.672,expired,0
+wingman_081e5-Account-81AD_20261001-210656_noe_kill,130.524,Spear Phase,Player-0BF9,59.996,expired,1.852,expired,0
+wingman_081e5-Account-81AD_20261001-210656_noe_kill,210.726,Spear Phase,Player-903A,2.586,stealth,20.206,expired,0
+wingman_081e5-Account-81AD_20261001-210656_noe_kill,236.316,Spear Phase,Account-C912,59.998,expired,23.004,stealth,0
+wingman_081e5-Account-81AD_20261001-210656_noe_kill,308.916,Sword Phase,Player-1BC3,60,expired,12.602,expired,0
+wingman_081e5-Account-81AD_20261001-210656_noe_kill,374.916,Sword Phase,Player-903A,60,expired,6,expired,0
+wingman_081e5-Account-81AD_20261001-210656_noe_kill,463.198,last+2.5,Player-0BF9,59.99,expired,28.282,expired,0
+wingman_14de4-20261004-011214_noe_kill,0,Staff Phase,Player-C927,60,expired,,,0
+wingman_14de4-20261004-011214_noe_kill,67.76,Staff Phase,Player-9DB4,60,expired,7.76,expired,0
+wingman_14de4-20261004-011214_noe_kill,137.572,Spear Phase,Player-EAD0,59.986,expired,9.812,expired,0
+wingman_14de4-20261004-011214_noe_kill,206.774,Spear Phase,Player-EAD0,25.668,down,9.216,expired,1
+wingman_14de4-20261004-011214_noe_kill,272.236,Sword Phase,Player-3CAD,59.994,expired,39.794,down,0
+wingman_14de4-20261004-011214_noe_kill,340.316,Sword Phase,Player-58F8,59.994,expired,8.086,expired,0
+wingman_14de4-20261004-011214_noe_kill,408.95,Sword Phase,Player-EAD0,59.994,expired,8.64,expired,0
+wingman_14de4-20261004-011214_noe_kill,493.116,last+42.5,Player-EAD0,,still_on,24.172,expired,1
 wingman_1f564-20260930-164742_noe_fail,-0.017,start,Player-D572,60,expired,,,0
 wingman_1f564-20260930-164742_noe_fail,66.977,Staff Phase,Player-ACE4,59.998,expired,6.994,expired,0
 wingman_1f564-20260930-164742_noe_fail,142.981,Spear Phase,Player-D572,59.994,expired,16.006,expired,0
@@ -891,6 +1148,30 @@ wingman_1f564-20260930-164742_noe_fail,366.339,Sword Phase,Player-D572,60,expire
 wingman_1f564-20260930-164742_noe_fail,434.819,Sword Phase,Player-9B43,60,expired,8.48,expired,0
 wingman_1f564-20260930-164742_noe_fail,520.261,last+2.5,Player-ACE4,18.002,down,25.442,expired,0
 wingman_1f564-20260930-164742_noe_fail,560.259,last+42.5,Player-A65F,7.492,down,21.996,down,0
+wingman_202f1-20261002-212232_noe_kill,0,Staff Phase,Player-484B,59.998,expired,,,0
+wingman_202f1-20261002-212232_noe_kill,67.832,Staff Phase,Player-EBC5,52.76,stealth,7.834,expired,0
+wingman_202f1-20261002-212232_noe_kill,139.354,Spear Phase,Player-9381,29.158,stealth,18.762,stealth,0
+wingman_202f1-20261002-212232_noe_kill,187.348,Spear Phase,Player-8FDA,30.958,stealth,18.836,stealth,0
+wingman_202f1-20261002-212232_noe_kill,231.946,Spear Phase,Player-0939,60,expired,13.64,stealth,0
+wingman_202f1-20261002-212232_noe_kill,314.906,Sword Phase,Player-1A64,13.164,stealth,22.96,expired,0
+wingman_202f1-20261002-212232_noe_kill,337.382,Sword Phase,Player-EBC5,20.52,stealth,9.312,stealth,0
+wingman_202f1-20261002-212232_noe_kill,361.664,Sword Phase,Player-8FDA,46.44,other,3.762,stealth,0
+wingman_202f1-20261002-212232_noe_kill,408.978,Sword Phase,Player-EBC5,13.526,down,0.874,other,0
+wingman_202f1-20261002-212232_noe_kill,429.858,Sword Phase,Player-1A64,38.598,stealth,7.354,down,0
+wingman_202f1-20261002-212232_noe_kill,476.056,Sword Phase,Player-484B,24.964,other,7.6,stealth,0
+wingman_202f1-20261002-212232_noe_kill,505.212,last+2.5,Player-9381,14.364,stealth,4.192,other,0
+wingman_202f1-20261002-212232_noe_kill,525.216,last+22.5,Player-82C1,,still_on,5.64,stealth,0
+wingman_23f47-Account-013D_20261002-004636_noe_kill,0,Staff Phase,Player-35A0,60,expired,,,0
+wingman_23f47-Account-013D_20261002-004636_noe_kill,68.446,Staff Phase,Player-1C9D,60,expired,8.446,expired,0
+wingman_23f47-Account-013D_20261002-004636_noe_kill,143.928,Spear Phase,Player-0240,28.202,stealth,15.482,expired,0
+wingman_23f47-Account-013D_20261002-004636_noe_kill,191.768,Spear Phase,Player-9369,60,expired,19.638,stealth,0
+wingman_23f47-Account-013D_20261002-004636_noe_kill,263.01,Spear Phase,Player-35A0,60,expired,11.242,expired,0
+wingman_23f47-Account-013D_20261002-004636_noe_kill,338.932,Sword Phase,Player-0240,2.402,stealth,15.922,expired,0
+wingman_23f47-Account-013D_20261002-004636_noe_kill,362.45,Sword Phase,Player-BC4C,17.488,stealth,21.116,stealth,0
+wingman_23f47-Account-013D_20261002-004636_noe_kill,405.296,Sword Phase,Player-BC4C,20.082,stealth,25.358,stealth,1
+wingman_23f47-Account-013D_20261002-004636_noe_kill,429.734,Sword Phase,Player-5652,25.85,stealth,4.356,stealth,0
+wingman_23f47-Account-013D_20261002-004636_noe_kill,475.734,Sword Phase,Player-1C9D,60,expired,20.15,stealth,0
+wingman_23f47-Account-013D_20261002-004636_noe_kill,548.096,last+42.5,Player-1C9D,28.488,down,12.362,expired,1
 wingman_3273c-20261001-011226_noe_fail,0,Staff Phase,Player-CF48,60,expired,,,0
 wingman_3273c-20261001-011226_noe_fail,67.686,Staff Phase,Player-582B,60,expired,7.686,expired,0
 wingman_3273c-20261001-011226_noe_fail,144.722,Spear Phase,Player-700E,23.846,stealth,17.036,expired,0
@@ -911,6 +1192,28 @@ wingman_3c4a4-20260930-233824_noe_fail,369.03,Sword Phase,Player-44A2,59.996,exp
 wingman_3c4a4-20260930-233824_noe_fail,437.062,Sword Phase,Player-D488,40.886,down,8.036,expired,0
 wingman_3c4a4-20260930-233824_noe_fail,516.71,last+2.5,Player-700E,39.002,down,38.762,down,0
 wingman_3c4a4-20260930-233824_noe_fail,556.704,last+42.5,Player-582B,7.118,dead,0.992,down,0
+wingman_47495-Account-8B25_20261001-234602_noe_fail,0,Staff Phase,Player-35A0,60,expired,,,0
+wingman_47495-Account-8B25_20261001-234602_noe_fail,67.536,Staff Phase,Player-BC4C,59.978,expired,7.536,expired,0
+wingman_47495-Account-8B25_20261001-234602_noe_fail,144.296,Spear Phase,Player-5112,59.99,expired,16.782,expired,0
+wingman_47495-Account-8B25_20261001-234602_noe_fail,205.602,Spear Phase,Player-5652,59.994,expired,1.316,expired,0
+wingman_47495-Account-8B25_20261001-234602_noe_fail,292.292,Sword Phase,Player-0240,59.982,expired,26.696,expired,0
+wingman_47495-Account-8B25_20261001-234602_noe_fail,363.112,Sword Phase,Player-B9E0,4.244,stealth,10.838,expired,0
+wingman_47495-Account-8B25_20261001-234602_noe_fail,384.83,Sword Phase,Player-B9E0,20.014,down,17.474,stealth,1
+wingman_47495-Account-8B25_20261001-234602_noe_fail,406.322,Sword Phase,Player-53ED,22.896,stealth,1.478,down,0
+wingman_47495-Account-8B25_20261001-234602_noe_fail,430.552,Sword Phase,Player-E1EF,25.964,stealth,1.334,stealth,0
+wingman_47495-Account-8B25_20261001-234602_noe_fail,476.726,Sword Phase,Player-5652,3.206,down,20.21,stealth,0
+wingman_47495-Account-8B25_20261001-234602_noe_fail,514.326,last+2.5,Player-1C9D,59.992,expired,34.394,down,0
+wingman_47495-Account-8B25_20261001-234602_noe_fail,594.328,last+82.5,Player-E1EF,2.686,dead,20.01,expired,0
+wingman_47d67-20261004-012811_noe_kill,0,Staff Phase,Player-3896,60,expired,,,0
+wingman_47d67-20261004-012811_noe_kill,67.844,Staff Phase,Player-4041,59.998,expired,7.844,expired,0
+wingman_47d67-20261004-012811_noe_kill,154.002,Spear Phase,Player-1955,59.998,expired,26.16,expired,0
+wingman_47d67-20261004-012811_noe_kill,222.362,Spear Phase,Player-BF1D,7.714,stealth,8.362,expired,0
+wingman_47d67-20261004-012811_noe_kill,246.77,Spear Phase,Player-2E32,12.594,stealth,16.694,stealth,0
+wingman_47d67-20261004-012811_noe_kill,267.794,Spear Phase,Player-2E32,60,expired,8.43,stealth,1
+wingman_47d67-20261004-012811_noe_kill,333.72,Sword Phase,Player-63DC,59.998,expired,5.926,expired,0
+wingman_47d67-20261004-012811_noe_kill,401.082,Sword Phase,Player-4041,59.998,expired,7.364,expired,0
+wingman_47d67-20261004-012811_noe_kill,468.43,Sword Phase,Player-68BB,60,expired,7.35,expired,0
+wingman_47d67-20261004-012811_noe_kill,548.518,last+42.5,Player-DCDA,23.954,down,20.088,expired,0
 wingman_4f111-Account-81AD_20260930-183104_noe_fail,-0.007,start,Player-D572,60,expired,,,0
 wingman_4f111-Account-81AD_20260930-183104_noe_fail,67.643,Staff Phase,Player-CE71,59.996,expired,7.65,expired,0
 wingman_4f111-Account-81AD_20260930-183104_noe_fail,150.601,Spear Phase,Player-5276,59.998,expired,22.962,expired,0
@@ -932,6 +1235,31 @@ wingman_5398e-20260930-162239_noe_fail,406.415,Sword Phase,Player-2C12,59.994,ex
 wingman_5398e-20260930-162239_noe_fail,474.167,Sword Phase,Player-A65F,35.766,down,7.758,expired,0
 wingman_5398e-20260930-162239_noe_fail,545.727,last+2.5,Player-8EE7,32.486,down,35.794,down,0
 wingman_5398e-20260930-162239_noe_fail,585.727,last+42.5,Player-5B9F,0.344,dead,7.514,down,0
+wingman_5771f-Account-CDD2_20261003-011714_noe_kill,0,Staff Phase,Player-9F14,59.998,expired,,,0
+wingman_5771f-Account-CDD2_20261003-011714_noe_kill,67.876,Staff Phase,Player-9F65,60,expired,7.878,expired,0
+wingman_5771f-Account-CDD2_20261003-011714_noe_kill,144.076,Spear Phase,Player-FAC5,34.2,stealth,16.2,expired,0
+wingman_5771f-Account-CDD2_20261003-011714_noe_kill,191.876,Spear Phase,Player-9F14,43.962,stealth,13.6,stealth,0
+wingman_5771f-Account-CDD2_20261003-011714_noe_kill,287.638,Sword Phase,Player-3CAD,60,expired,51.8,stealth,0
+wingman_5771f-Account-CDD2_20261003-011714_noe_kill,353.676,Sword Phase,Player-9F14,60,expired,6.038,expired,0
+wingman_5771f-Account-CDD2_20261003-011714_noe_kill,419.676,Sword Phase,Player-371E,59.998,expired,6,expired,0
+wingman_5771f-Account-CDD2_20261003-011714_noe_kill,518.516,last+42.5,Player-3CAD,24.402,stealth,38.842,expired,0
+wingman_5771f-Account-CDD2_20261003-011714_noe_kill,558.514,last+82.5,Player-3CAD,,still_on,15.596,stealth,1
+wingman_704cb-20261003-193028_noe_kill,-0.005,start,Player-ACE4,60,expired,,,0
+wingman_704cb-20261003-193028_noe_kill,67.917,Staff Phase,Player-ECEC,59.994,expired,7.922,expired,0
+wingman_704cb-20261003-193028_noe_kill,146.471,Spear Phase,Player-12B1,59.998,expired,18.56,expired,0
+wingman_704cb-20261003-193028_noe_kill,215.507,Spear Phase,Player-ECEC,52.158,down,9.038,expired,0
+wingman_704cb-20261003-193028_noe_kill,304.911,Sword Phase,Player-5A00,60,expired,37.246,down,0
+wingman_704cb-20261003-193028_noe_kill,369.987,Sword Phase,Player-2C12,59.994,expired,5.076,expired,0
+wingman_704cb-20261003-193028_noe_kill,437.225,Sword Phase,Player-9BF2,60,expired,7.244,expired,0
+wingman_704cb-20261003-193028_noe_kill,498.227,last+2.5,Player-ECEC,53.596,down,1.002,expired,0
+wingman_81daf-20261002-154733_noe_kill,-0.009,start,Player-ACE4,59.992,expired,,,0
+wingman_81daf-20261002-154733_noe_kill,67.673,Staff Phase,Player-A65F,59.994,expired,7.69,expired,0
+wingman_81daf-20261002-154733_noe_kill,141.107,Spear Phase,Player-D8FE,59.998,expired,13.44,expired,0
+wingman_81daf-20261002-154733_noe_kill,210.145,Spear Phase,Player-13B0,60,expired,9.04,expired,0
+wingman_81daf-20261002-154733_noe_kill,292.909,Sword Phase,Player-A65F,59.99,expired,22.764,expired,0
+wingman_81daf-20261002-154733_noe_kill,357.991,Sword Phase,Player-ACE4,59.992,expired,5.092,expired,0
+wingman_81daf-20261002-154733_noe_kill,426.583,Sword Phase,Player-78D3,59.994,expired,8.6,expired,0
+wingman_81daf-20261002-154733_noe_kill,522.377,last+62.5,Player-594D,,still_on,35.8,expired,0
 wingman_8d411-20260930-191421_noe_fail,-0.007,start,Player-ACE4,60,expired,,,0
 wingman_8d411-20260930-191421_noe_fail,68.313,Staff Phase,Player-594D,60,expired,8.32,expired,0
 wingman_8d411-20260930-191421_noe_fail,142.513,Spear Phase,Player-559E,60,expired,14.2,expired,0
@@ -941,6 +1269,26 @@ wingman_8d411-20260930-191421_noe_fail,366.799,Sword Phase,Player-ACE4,60,expire
 wingman_8d411-20260930-191421_noe_fail,437.887,Sword Phase,Player-5FDF,59.99,expired,11.088,expired,0
 wingman_8d411-20260930-191421_noe_fail,531.841,last+2.5,Player-ECEC,18.52,down,33.964,expired,0
 wingman_8d411-20260930-191421_noe_fail,551.837,last+22.5,Player-ACE4,19.006,down,1.476,down,0
+wingman_9fe05-20261002-155233_noe_kill,-0.011,start,Player-ACE4,60,expired,,,0
+wingman_9fe05-20261002-155233_noe_kill,67.475,Staff Phase,Player-5FDF,59.998,expired,7.486,expired,0
+wingman_9fe05-20261002-155233_noe_kill,152.753,Spear Phase,Player-5FDF,59.992,expired,25.28,expired,1
+wingman_9fe05-20261002-155233_noe_kill,221.543,Spear Phase,Player-CE71,60,expired,8.798,expired,0
+wingman_9fe05-20261002-155233_noe_kill,306.337,Sword Phase,Player-CE71,60,expired,24.794,expired,1
+wingman_9fe05-20261002-155233_noe_kill,371.553,Sword Phase,Player-ACE4,59.988,expired,5.216,expired,0
+wingman_9fe05-20261002-155233_noe_kill,439.265,Sword Phase,Player-CE71,59.984,expired,7.724,expired,0
+wingman_9fe05-20261002-155233_noe_kill,516.903,last+42.5,Player-78D3,,still_on,17.654,expired,0
+wingman_b139e-20261001-201501_noe_kill,0,Staff Phase,Player-9381,59.994,expired,,,0
+wingman_b139e-20261001-201501_noe_kill,68.16,Staff Phase,Player-C794,60,expired,8.166,expired,0
+wingman_b139e-20261001-201501_noe_kill,144.198,Spear Phase,Player-1A64,59.996,expired,16.038,expired,0
+wingman_b139e-20261001-201501_noe_kill,212.844,Spear Phase,Player-0939,6.832,stealth,8.65,expired,0
+wingman_b139e-20261001-201501_noe_kill,236.988,Spear Phase,Player-1A64,17.486,stealth,17.312,stealth,0
+wingman_b139e-20261001-201501_noe_kill,259.992,Spear Phase,Player-56FC,59.992,expired,5.518,stealth,0
+wingman_b139e-20261001-201501_noe_kill,320.748,Sword Phase,Player-82C1,59.992,expired,0.764,expired,0
+wingman_b139e-20261001-201501_noe_kill,385.228,Sword Phase,Player-484B,2.082,stealth,4.488,expired,0
+wingman_b139e-20261001-201501_noe_kill,409.502,Sword Phase,Player-5820,60,expired,22.192,stealth,0
+wingman_b139e-20261001-201501_noe_kill,484.818,last+2.5,Player-82C1,14.684,stealth,15.316,expired,0
+wingman_b139e-20261001-201501_noe_kill,524.822,last+42.5,Player-9381,28.478,down,25.32,stealth,0
+wingman_b139e-20261001-201501_noe_kill,564.814,last+82.5,Player-484B,,still_on,11.514,down,0
 wingman_c654b-20260930-172031_noe_fail,-0.009,start,Player-A65F,60,expired,,,0
 wingman_c654b-20260930-172031_noe_fail,67.317,Staff Phase,Player-C7EB,59.992,expired,7.326,expired,0
 wingman_c654b-20260930-172031_noe_fail,148.831,Spear Phase,Player-4E6D,59.998,expired,21.522,expired,0
@@ -951,6 +1299,50 @@ wingman_c654b-20260930-172031_noe_fail,412.505,Sword Phase,Player-BC81,21.768,do
 wingman_c654b-20260930-172031_noe_fail,435.663,Sword Phase,Player-8EE7,60,expired,1.39,down,0
 wingman_c654b-20260930-172031_noe_fail,499.907,last+2.5,Player-BC81,18.52,down,4.244,expired,0
 wingman_c654b-20260930-172031_noe_fail,519.905,last+22.5,Player-78D3,7.318,down,1.478,down,0
+wingman_c8506-20261003-120005_noe_kill,-0.007,start,Player-D572,60,expired,,,0
+wingman_c8506-20261003-120005_noe_kill,67.591,Staff Phase,Player-AFEF,60,expired,7.598,expired,0
+wingman_c8506-20261003-120005_noe_kill,140.565,Spear Phase,Player-F65B,59.992,expired,12.974,expired,0
+wingman_c8506-20261003-120005_noe_kill,201.593,Spear Phase,Player-7415,60,expired,1.036,expired,0
+wingman_c8506-20261003-120005_noe_kill,292.845,Sword Phase,Player-9933,59.992,expired,31.252,expired,0
+wingman_c8506-20261003-120005_noe_kill,361.279,Sword Phase,Player-D1B1,60,expired,8.442,expired,0
+wingman_c8506-20261003-120005_noe_kill,428.517,Sword Phase,Player-32F8,59.998,expired,7.238,expired,0
+wingman_c8506-20261003-120005_noe_kill,502.717,last+2.5,Player-9933,60,expired,14.202,expired,0
+wingman_c8506-20261003-120005_noe_kill,582.723,last+82.5,Player-7415,,still_on,20.006,expired,0
+wingman_d3053-20261001-213328_noe_kill,-0.009,start,Player-BC81,59.998,expired,,,0
+wingman_d3053-20261001-213328_noe_kill,67.955,Staff Phase,Player-BC81,59.992,expired,7.966,expired,1
+wingman_d3053-20261001-213328_noe_kill,144.789,Spear Phase,Player-DA39,59.992,expired,16.842,expired,0
+wingman_d3053-20261001-213328_noe_kill,213.341,Spear Phase,Player-6CD6,59.996,expired,8.56,expired,0
+wingman_d3053-20261001-213328_noe_kill,292.737,Sword Phase,Player-A65F,59.998,expired,19.4,expired,0
+wingman_d3053-20261001-213328_noe_kill,363.609,Sword Phase,Player-BC81,59.994,expired,10.874,expired,0
+wingman_d3053-20261001-213328_noe_kill,426.375,Sword Phase,Player-BC81,59.99,expired,2.772,expired,1
+wingman_d3053-20261001-213328_noe_kill,523.283,last+42.5,Player-A65F,,still_on,36.918,expired,0
+wingman_dc6a8-Account-81AD_20261002-011054_noe_kill,-0.013,start,Player-E8B3,60,expired,,,0
+wingman_dc6a8-Account-81AD_20261002-011054_noe_kill,68.148,Staff Phase,Player-F65B,59.997,expired,8.161,expired,0
+wingman_dc6a8-Account-81AD_20261002-011054_noe_kill,144.073,Spear Phase,Player-6CD6,59.99,expired,15.928,expired,0
+wingman_dc6a8-Account-81AD_20261002-011054_noe_kill,212.301,Spear Phase,Player-78D3,60,expired,8.238,expired,0
+wingman_dc6a8-Account-81AD_20261002-011054_noe_kill,294.309,Sword Phase,Player-78D3,60,expired,22.008,expired,1
+wingman_dc6a8-Account-81AD_20261002-011054_noe_kill,360.185,Sword Phase,Player-6CD6,59.996,expired,5.876,expired,0
+wingman_dc6a8-Account-81AD_20261002-011054_noe_kill,424.627,Sword Phase,Player-E970,59.99,expired,4.446,expired,0
+wingman_dc6a8-Account-81AD_20261002-011054_noe_kill,509.109,last+2.5,Player-B9A4,60,expired,24.492,expired,0
+wingman_dc6a8-Account-81AD_20261002-011054_noe_kill,589.105,last+82.5,Player-F65B,,still_on,19.996,expired,0
+wingman_e1a59-20261002-214446_noe_kill,0,Staff Phase,Player-9381,59.994,expired,,,0
+wingman_e1a59-20261002-214446_noe_kill,68.364,Staff Phase,Player-0BF5,59.988,expired,8.37,expired,0
+wingman_e1a59-20261002-214446_noe_kill,137.482,Spear Phase,Player-B4B0,30.634,stealth,9.13,expired,0
+wingman_e1a59-20261002-214446_noe_kill,185.16,Spear Phase,Player-C794,34.71,stealth,17.044,stealth,0
+wingman_e1a59-20261002-214446_noe_kill,229.672,Spear Phase,Player-C794,59.99,expired,9.802,stealth,1
+wingman_e1a59-20261002-214446_noe_kill,309.986,Sword Phase,Player-8FDA,11.642,stealth,20.324,expired,0
+wingman_e1a59-20261002-214446_noe_kill,330.664,Sword Phase,Player-9381,22.848,down,9.036,stealth,0
+wingman_e1a59-20261002-214446_noe_kill,377.142,Sword Phase,Player-9381,27.52,down,23.63,down,1
+wingman_e1a59-20261002-214446_noe_kill,420.896,Sword Phase,Player-1014,46.998,stealth,16.234,down,0
+wingman_e1a59-20261002-214446_noe_kill,507.298,last+2.5,Player-8FDA,59.992,expired,39.404,stealth,0
+wingman_e961b-20261003-211028_noe_kill,0,Staff Phase,Player-DDA6,59.996,expired,,,0
+wingman_e961b-20261003-211028_noe_kill,67.48,Staff Phase,Player-DDA6,59.998,expired,7.484,expired,1
+wingman_e961b-20261003-211028_noe_kill,148.002,Spear Phase,Player-C842,60,expired,20.524,expired,0
+wingman_e961b-20261003-211028_noe_kill,216.244,Spear Phase,Player-FBAD,59.998,expired,8.242,expired,0
+wingman_e961b-20261003-211028_noe_kill,302.926,Sword Phase,Player-BCA0,60,expired,26.684,expired,0
+wingman_e961b-20261003-211028_noe_kill,367.642,Sword Phase,Player-89AD,12.726,down,4.716,expired,0
+wingman_e961b-20261003-211028_noe_kill,392.444,Sword Phase,Player-FAE3,60,expired,12.076,down,0
+wingman_e961b-20261003-211028_noe_kill,481.966,last+2.5,Player-C842,60,expired,29.522,expired,0
 wingman_eadca-Account-7C4C_20261001-001023_noe_fail,-0.002,start,Player-CF48,60,expired,,,0
 wingman_eadca-Account-7C4C_20261001-001023_noe_fail,67.078,Staff Phase,Player-700E,60,expired,7.08,expired,0
 wingman_eadca-Account-7C4C_20261001-001023_noe_fail,142.642,Spear Phase,Player-44A2,37.602,stealth,15.564,expired,0
@@ -960,3 +1352,11 @@ wingman_eadca-Account-7C4C_20261001-001023_noe_fail,307.758,Sword Phase,Player-7
 wingman_eadca-Account-7C4C_20261001-001023_noe_fail,374.632,Sword Phase,Player-44A2,59.998,expired,6.88,expired,0
 wingman_eadca-Account-7C4C_20261001-001023_noe_fail,438.946,Sword Phase,Player-247A,60,expired,4.316,expired,0
 wingman_eadca-Account-7C4C_20261001-001023_noe_fail,519.226,last+2.5,Player-700E,35.958,down,20.28,expired,0
+wingman_f9dda-20261002-215908_noe_kill,-0.007,start,Player-BC81,60,expired,,,0
+wingman_f9dda-20261002-215908_noe_kill,68.901,Staff Phase,Player-9039,60,expired,8.908,expired,0
+wingman_f9dda-20261002-215908_noe_kill,138.467,Spear Phase,Player-9BA7,29.162,down,9.566,expired,0
+wingman_f9dda-20261002-215908_noe_kill,179.537,Spear Phase,Player-BC81,60,expired,11.908,down,0
+wingman_f9dda-20261002-215908_noe_kill,285.417,Sword Phase,Account-0ABA,59.998,expired,45.88,expired,0
+wingman_f9dda-20261002-215908_noe_kill,351.091,Sword Phase,Player-CFDD,60,expired,5.676,expired,0
+wingman_f9dda-20261002-215908_noe_kill,419.345,Sword Phase,Player-BC81,59.99,expired,8.254,expired,0
+wingman_f9dda-20261002-215908_noe_kill,496.299,last+22.5,Player-9039,,still_on,16.964,expired,0

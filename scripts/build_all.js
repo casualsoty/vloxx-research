@@ -18,6 +18,7 @@ const steps = [
   'cast_order.js',           // data/cast_order.csv + cast_order_summary.json: usual order of Vloxx's attacks per phase
   'slice_through_reality.js', // data/slice_through_reality_summary.json: the two hits (525 then ~300) and the teleport
   'damage_immunity.js',      // data/damage_immunity.csv + damage_immunity_summary.json: what still damages Vloxx during Damage Immunity
+  'dps_table.js',            // data/dps_samples.csv + dps_table.json: target and cleave DPS per specialisation / build
   'excision_safespot.js',    // data/excision_melee.csv + excision_safespot_summary.json: melee safety vs distance of the fixated player
   'echoing_blade.js',        // data/echoing_blade_summary.json: spinning half-circle on Vloxx, radius, projectiles
   'breakbars.js',            // data/breakbars.csv + breakbars_summary.json: bar size, when it opens, drain, time to break
