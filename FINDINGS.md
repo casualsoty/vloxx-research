@@ -684,28 +684,29 @@ Reached in 77 logs, finished in 26; a full phase lasts about 155 s (29 casts). T
 In a few logs the phase starts with *Echoing Blade* before the greens. From the third greens round (~95 s) on, the order differs more.
 
 ### Last phase (10 → 0 %)
-Reached in 26 logs. Vloxx casts a single 65 s channel (skill 81071); its attacks are not logged as casts, so this list comes from the
-damage they deal (seconds after the channel starts, median and range over the logs). All three Aspects are up as well and keep their own attacks.
-| at | attack of Vloxx | range | logs |
-|---|---|---|---|
-| 16.2 s | Surrounding Curse (80484), burst 1 | 15–36.1 s | 26 |
-| 20 s | Excision Extremis (80901), burst 1 | 20–21.6 s | 26 |
-| 20.5 s | Raging Storm (81176), burst 1 | 17.5–41.5 s | 26 |
-| 30 s | Raging Storm (81176), burst 2 | 20.5–68.5 s | 25 |
-| 35 s | Excision Extremis (80901), burst 2 | 35–36.6 s | 26 |
-| 35.5 s | Raging Storm (81176), burst 3 | 26.5–89.8 s | 23 |
-| 35.9 s | Surrounding Curse (80484), burst 2 | 20–86.4 s | 25 |
-| 41 s | Judgment of Eternity (80378), burst 1 | 11–71.1 s | 18 |
-| 44.7 s | Surrounding Curse (80484), burst 3 | 35.9–76.2 s | 22 |
-| 46.2 s | Surrounding Curse (80484), burst 4 | 39.4–86.3 s | 14 |
-| 47.5 s | Raging Storm (81176), burst 4 | 29.5–83.5 s | 20 |
-| 50 s | Excision Extremis (80901), burst 3 | 50–51.5 s | 21 |
-| 54.4 s | Probability Distribution (81318), burst 1 | 31–71 s | 19 |
-| 56.5 s | Raging Storm (81176), burst 5 | 35.5–74.5 s | 16 |
-| 65 s | Excision Extremis (80901), burst 4 | 65–66.6 s | 16 |
+Reached in 26 raw logs. Vloxx casts a single 65 s channel (skill 81071) and its attacks are not logged as casts. They are timed here from the
+markers and ground effects that announce them, which are exact (seconds after the channel starts). All three Aspects are up as well and keep their own attacks.
+| at | attack of Vloxx | # | range over the logs | logs | note |
+|---|---|---|---|---|---|
+| 3 s | Judgment of Eternity (greens): markers on players | 1 | 3–3 s | 18 | resolves ~8 s later |
+| 15 s | Raging Storm (falling spears): first wave | 1 | 15–15 s | 26 | then a wave every 3 s until the end |
+| 16.2 s | Surrounding Curse: first hits (from the damage, so less exact) | 1 | 15–36.1 s | 26 |  |
+| 18 s | Excision Extremis: telegraph | 1 | 18–18 s | 26 | slashes from 2 s later |
+| 23 s | Probability Distribution (spread): markers on players | 1 | 23–23 s | 26 |  |
+| 33 s | Judgment of Eternity (greens): markers on players | 2 | 33–33.1 s | 17 | resolves ~8 s later |
+| 33 s | Excision Extremis: telegraph | 2 | 33–33 s | 26 | slashes from 2 s later |
+| 35.9 s | Surrounding Curse: first hits (from the damage, so less exact) | 2 | 20–86.4 s | 25 |  |
+| 43 s | Probability Distribution (spread): markers on players | 2 | 43–43 s | 23 |  |
+| 48 s | Excision Extremis: telegraph | 3 | 48–48 s | 23 | slashes from 2 s later |
+| 63.1 s | Judgment of Eternity (greens): markers on players | 3 | 63–63.1 s | 10 | resolves ~8 s later |
+| 63 s | Excision Extremis: telegraph | 4 | 63–63 s | 18 | slashes from 2 s later |
+| 63 s | Probability Distribution (spread): markers on players | 3 | 63–63 s | 18 |  |
+| 78 s | Excision Extremis: telegraph | 5 | 78–93 s | 9 | slashes from 2 s later |
+| 83 s | Probability Distribution (spread): markers on players | 4 | 83–83 s | 10 |  |
 
-* **Excision Extremis is on a strict 15 s timer here: 20, 35, 50, 65 s.** The other times depend on players being hit, so they are looser.
-* The greens of the last phase and their timing are in §1 and §3.
+* **Everything is on a fixed timer from the start of the channel:** greens at 3 s then every 30 s; falling spears from 15 s, a wave every 3 s (§5q);
+  Excision Extremis telegraph at 18 s then every 15 s; spread markers at 23 s then every 20 s.
+* A green round is only counted in a log where at least one green appeared, which is why the greens have fewer logs than the other attacks (§1, §3).
 
 ## 5m. Slice Through Reality — a 525 hit, then a portal (entrance and exit ~300)  [solid]
 Script `scripts/slice_through_reality.js` → `data/slice_through_reality_summary.json` (part of the full build). 139 casts in 77 logs. Cast 5.4 s.
