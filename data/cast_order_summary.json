@@ -1801,5 +1801,145 @@
     "start_max_s": 66.6
    }
   ]
+ },
+ "lastPhaseTimeline": {
+  "logs": 26,
+  "events": [
+   {
+    "atS": 3,
+    "minS": 3,
+    "maxS": 3,
+    "what": "Judgment of Eternity (greens): markers on players",
+    "round": 1,
+    "logs": 18,
+    "note": "resolves ~8 s later"
+   },
+   {
+    "atS": 15,
+    "minS": 15,
+    "maxS": 15,
+    "what": "Raging Storm (falling spears): first wave",
+    "round": 1,
+    "logs": 26,
+    "note": "then a wave every 3 s until the end"
+   },
+   {
+    "atS": 16.2,
+    "minS": 15,
+    "maxS": 36.1,
+    "what": "Surrounding Curse: first hits (from the damage, so less exact)",
+    "round": 1,
+    "logs": 26,
+    "note": ""
+   },
+   {
+    "atS": 18,
+    "minS": 18,
+    "maxS": 18,
+    "what": "Excision Extremis: telegraph",
+    "round": 1,
+    "logs": 26,
+    "note": "slashes from 2 s later"
+   },
+   {
+    "atS": 23,
+    "minS": 23,
+    "maxS": 23,
+    "what": "Probability Distribution (spread): markers on players",
+    "round": 1,
+    "logs": 26,
+    "note": ""
+   },
+   {
+    "atS": 33,
+    "minS": 33,
+    "maxS": 33.1,
+    "what": "Judgment of Eternity (greens): markers on players",
+    "round": 2,
+    "logs": 17,
+    "note": "resolves ~8 s later"
+   },
+   {
+    "atS": 33,
+    "minS": 33,
+    "maxS": 33,
+    "what": "Excision Extremis: telegraph",
+    "round": 2,
+    "logs": 26,
+    "note": "slashes from 2 s later"
+   },
+   {
+    "atS": 35.9,
+    "minS": 20,
+    "maxS": 86.4,
+    "what": "Surrounding Curse: first hits (from the damage, so less exact)",
+    "round": 2,
+    "logs": 25,
+    "note": ""
+   },
+   {
+    "atS": 43,
+    "minS": 43,
+    "maxS": 43,
+    "what": "Probability Distribution (spread): markers on players",
+    "round": 2,
+    "logs": 23,
+    "note": ""
+   },
+   {
+    "atS": 48,
+    "minS": 48,
+    "maxS": 48,
+    "what": "Excision Extremis: telegraph",
+    "round": 3,
+    "logs": 23,
+    "note": "slashes from 2 s later"
+   },
+   {
+    "atS": 63.1,
+    "minS": 63,
+    "maxS": 63.1,
+    "what": "Judgment of Eternity (greens): markers on players",
+    "round": 3,
+    "logs": 10,
+    "note": "resolves ~8 s later"
+   },
+   {
+    "atS": 63,
+    "minS": 63,
+    "maxS": 63,
+    "what": "Excision Extremis: telegraph",
+    "round": 4,
+    "logs": 18,
+    "note": "slashes from 2 s later"
+   },
+   {
+    "atS": 63,
+    "minS": 63,
+    "maxS": 63,
+    "what": "Probability Distribution (spread): markers on players",
+    "round": 3,
+    "logs": 18,
+    "note": ""
+   },
+   {
+    "atS": 78,
+    "minS": 78,
+    "maxS": 93,
+    "what": "Excision Extremis: telegraph",
+    "round": 5,
+    "logs": 9,
+    "note": "slashes from 2 s later"
+   },
+   {
+    "atS": 83,
+    "minS": 83,
+    "maxS": 83,
+    "what": "Probability Distribution (spread): markers on players",
+    "round": 4,
+    "logs": 10,
+    "note": ""
+   }
+  ]
  }
 }
