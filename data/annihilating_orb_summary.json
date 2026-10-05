@@ -1,10 +1,10 @@
 {
- "logs": 237,
- "casts": 869,
+ "logs": 284,
+ "casts": 1023,
  "landingDistance": {
-  "500": 15,
-  "1000": 52,
-  "1500": 802
+  "500": 26,
+  "1000": 84,
+  "1500": 913
  },
  "arrivalS": {
   "500": 5.6,
@@ -16,91 +16,91 @@
    "p50": 0,
    "p90": 0,
    "within10degPct": 100,
-   "n": 869
+   "n": 1023
   },
   "fixatedPlayer": {
-   "p50": 13,
-   "p90": 33,
-   "within10degPct": 37,
-   "n": 417
+   "p50": 14,
+   "p90": 36,
+   "within10degPct": 35,
+   "n": 522
   },
   "farthestPlayer": {
-   "p50": 25,
-   "p90": 76,
-   "within10degPct": 19,
-   "n": 858
+   "p50": 26,
+   "p90": 84,
+   "within10degPct": 18,
+   "n": 1012
   },
   "closestPlayer": {
-   "p50": 31,
-   "p90": 100,
+   "p50": 32,
+   "p90": 106,
    "within10degPct": 16,
-   "n": 789
+   "n": 915
   }
  },
  "travellingOrb": {
   "hitTimesS": {
-   "2.0": 5117,
-   "3.5": 167,
-   "3.0": 1809,
-   "2.5": 3531,
-   "4.0": 82,
-   "4.5": 37
+   "2.0": 6125,
+   "3.5": 197,
+   "3.0": 2095,
+   "2.5": 4176,
+   "4.0": 98,
+   "4.5": 45
   },
   "byDistanceBesideThePath": [
    {
     "from": 0,
     "hitPct": 97,
-    "players": 532
+    "players": 640
    },
    {
     "from": 50,
-    "hitPct": 96,
-    "players": 613
+    "hitPct": 97,
+    "players": 734
    },
    {
     "from": 100,
     "hitPct": 96,
-    "players": 877
+    "players": 1012
    },
    {
     "from": 150,
     "hitPct": 92,
-    "players": 849
+    "players": 976
    },
    {
     "from": 200,
-    "hitPct": 80,
-    "players": 744
+    "hitPct": 82,
+    "players": 867
    },
    {
     "from": 250,
     "hitPct": 39,
-    "players": 484
+    "players": 566
    },
    {
     "from": 300,
     "hitPct": 1,
-    "players": 256
+    "players": 326
    },
    {
     "from": 350,
     "hitPct": 0,
-    "players": 143
+    "players": 170
    },
    {
     "from": 400,
     "hitPct": 0,
-    "players": 44
+    "players": 52
    },
    {
     "from": 450,
     "hitPct": 0,
-    "players": 23
+    "players": 26
    },
    {
     "from": 500,
     "hitPct": 0,
-    "players": 11
+    "players": 13
    },
    {
     "from": 550,
@@ -110,6 +110,11 @@
   ],
   "nearThePathByDistancePastTheLandingPoint": [
    {
+    "from": -2000,
+    "hitPct": 0,
+    "players": 1
+   },
+   {
     "from": -1900,
     "hitPct": 0,
     "players": 4
@@ -117,77 +122,77 @@
    {
     "from": -1800,
     "hitPct": 0,
-    "players": 6
+    "players": 9
    },
    {
     "from": -1700,
-    "hitPct": 19,
-    "players": 26
+    "hitPct": 26,
+    "players": 34
    },
    {
     "from": -1600,
-    "hitPct": 82,
-    "players": 44
+    "hitPct": 85,
+    "players": 62
    },
    {
     "from": -1500,
     "hitPct": 95,
-    "players": 82
+    "players": 102
    },
    {
     "from": -1400,
     "hitPct": 97,
-    "players": 192
+    "players": 239
    },
    {
     "from": -1300,
     "hitPct": 94,
-    "players": 403
+    "players": 470
    },
    {
     "from": -1200,
-    "hitPct": 97,
-    "players": 286
+    "hitPct": 98,
+    "players": 332
    },
    {
     "from": -1100,
     "hitPct": 96,
-    "players": 76
+    "players": 93
    },
    {
     "from": -1000,
     "hitPct": 97,
-    "players": 31
+    "players": 33
    },
    {
     "from": -900,
-    "hitPct": 94,
-    "players": 18
+    "hitPct": 93,
+    "players": 29
    },
    {
     "from": -800,
-    "hitPct": 95,
-    "players": 39
+    "hitPct": 97,
+    "players": 63
    },
    {
     "from": -700,
     "hitPct": 100,
-    "players": 15
+    "players": 18
    },
    {
     "from": -600,
-    "hitPct": 67,
-    "players": 3
+    "hitPct": 75,
+    "players": 4
    },
    {
     "from": -400,
     "hitPct": 100,
-    "players": 3
+    "players": 5
    },
    {
     "from": -300,
     "hitPct": 100,
-    "players": 6
+    "players": 8
    },
    {
     "from": -200,
@@ -196,8 +201,8 @@
    },
    {
     "from": -100,
-    "hitPct": 100,
-    "players": 2
+    "hitPct": 67,
+    "players": 3
    }
   ]
  },
@@ -207,99 +212,99 @@
   "ringRadiusByTime": [
    {
     "afterLandingS": 0.3,
-    "radius": 386,
-    "hits": 49
+    "radius": 381,
+    "hits": 84
    },
    {
     "afterLandingS": 0.6,
-    "radius": 518,
-    "hits": 251
+    "radius": 520,
+    "hits": 415
    },
    {
     "afterLandingS": 0.9,
-    "radius": 641,
-    "hits": 629
+    "radius": 646,
+    "hits": 834
    },
    {
     "afterLandingS": 1.2,
-    "radius": 761,
-    "hits": 948
+    "radius": 766,
+    "hits": 1122
    },
    {
     "afterLandingS": 1.5,
-    "radius": 897,
-    "hits": 844
+    "radius": 898,
+    "hits": 906
    },
    {
     "afterLandingS": 1.8,
     "radius": 1033,
-    "hits": 362
+    "hits": 390
    },
    {
     "afterLandingS": 2.1,
     "radius": 1185,
-    "hits": 131
+    "hits": 137
    },
    {
     "afterLandingS": 2.7,
-    "radius": 1332,
-    "hits": 31
+    "radius": 1328,
+    "hits": 34
    }
   ],
-  "speedPerS": 394,
-  "reach": 1332,
-  "playersInItsWayHitPct": 38,
-  "playersInItsWay": 7609,
+  "speedPerS": 395,
+  "reach": 1328,
+  "playersInItsWayHitPct": 39,
+  "playersInItsWay": 8834,
   "hitTimesS": {
-   "8.0": 177,
-   "7.5": 373,
-   "7.0": 1776,
-   "6.5": 782,
-   "6.0": 44,
-   "5.5": 28,
-   "4.5": 202,
-   "5.0": 59,
-   "4.0": 26,
-   "3.5": 2
+   "8.0": 190,
+   "7.5": 401,
+   "7.0": 1950,
+   "6.5": 1020,
+   "6.0": 69,
+   "5.5": 46,
+   "4.5": 386,
+   "5.0": 135,
+   "4.0": 58,
+   "3.5": 12
   }
  },
  "afterLanding": {
   "skill": 80323,
   "hitTimesS": {
-   "8.5": 199,
-   "8.0": 223,
-   "9.0": 329,
-   "9.5": 243,
-   "7.5": 121,
-   "6.5": 93,
-   "6.0": 62,
-   "7.0": 179,
-   "5.5": 38,
-   "4.0": 14,
-   "5.0": 33,
-   "3.5": 4,
-   "4.5": 14
+   "8.5": 260,
+   "8.0": 280,
+   "9.0": 432,
+   "9.5": 301,
+   "7.5": 163,
+   "6.5": 149,
+   "6.0": 112,
+   "7.0": 270,
+   "5.5": 69,
+   "4.0": 43,
+   "5.0": 67,
+   "3.5": 23,
+   "4.5": 39
   },
   "hitsByDistanceFromLandingPoint": {
-   "0": 2,
-   "50": 13,
-   "100": 29,
-   "150": 128,
-   "200": 459,
-   "250": 481,
-   "300": 85,
+   "0": 6,
+   "50": 17,
+   "100": 63,
+   "150": 176,
+   "200": 584,
+   "250": 637,
+   "300": 103,
    "350": 12,
-   "400": 11,
-   "450": 8,
-   "500": 8,
-   "550": 13,
-   "600": 18,
-   "650": 28,
-   "700": 47,
-   "750": 44,
-   "800": 14,
-   "850": 3,
-   "900": 2
+   "400": 15,
+   "450": 9,
+   "500": 11,
+   "550": 21,
+   "600": 36,
+   "650": 70,
+   "700": 98,
+   "750": 106,
+   "800": 24,
+   "850": 5,
+   "900": 4
   }
  }
 }

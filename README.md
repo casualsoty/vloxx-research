@@ -31,7 +31,7 @@ docs-src/feedback.js "Feedback" / "Report a bug" buttons (top bar); contact name
 docs-src/plans/      shared planner templates (*.json, any exported plan); see the README there
 FINDINGS.md          every conclusion, its evidence, and hypotheses that were tested and REJECTED
 logs/                LOCAL ONLY (gitignored, not in the repository — back it up separately):
-logs/raw/            our squad's raw arcdps logs (.zevtc), CM: 237 logs from 2026-09-29 to 2026-10-04 (26 reached the last phase, 4 kills)
+logs/raw/            our squad's raw arcdps logs (.zevtc), CM: 284 logs from 2026-09-29 to 2026-10-05 (31 reached the last phase, 5 kills)
 logs/raw_nm/         raw NM logs (13; not analysed)
 logs/ei/             Elite Insights JSON of other squads' logs (gzipped). dps.report links + Wingman imports
 logs/sources.json    log id -> URL (dps.report / Wingman)
@@ -124,7 +124,7 @@ common structure (greens, PD, fixation, stealth, downs, deaths, positions, orbs,
     Estimate from summaries: `squadDmg / (1 - hpLeft/100)` ≈ 85 M (CM) or ≈ 42.4 M (NM).
   * CM released Tuesday 2026-09-29 23:00 CEST. On 2026-10-01 Wingman had 14 CM attempts that reached the last phase
     (all in the local `logs/`), 1 CM kill.
-  * On 2026-10-04 Wingman had 24 CM kills (`onlyKills=OnlyKills` in the same call, then the HP rule). 17 are in `logs/ei/` as
+  * On 2026-10-05 Wingman had 36 CM kills (12 more added that day); on 2026-10-04 it had 24 CM kills (`onlyKills=OnlyKills` in the same call, then the HP rule). 17 are in `logs/ei/` as
     `wingman_<id>_noe_kill.json.gz`; the other 7 are the same fights as logs already present (dps.report copies or our own raw kills, which are
     linked to their Wingman page in `logs/sources.json` instead).
 * **Raw logs are always better** than EI JSON: exact positions, every effect/buff event, agent effects (EI doesn't export).

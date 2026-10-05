@@ -277,12 +277,12 @@
       "pathW": 500,
       "distance": 1500,
       "fieldR": 300,
-      "waveSpeed": 394,
+      "waveSpeed": 395,
       "waveReach": 1350,
       "launchAtS": 2,
       "landsAtS": 5.6,
       "note": "thrown straight along Vloxx's facing: hits everything within ~250 of its path, leaves a damage zone where it lands, then a ring expands from that point",
-      "source": "measured, 869 casts (§5p, data/annihilating_orb_summary.json)"
+      "source": "measured, 1023 casts (§5p, data/annihilating_orb_summary.json)"
     }
   ]
 }

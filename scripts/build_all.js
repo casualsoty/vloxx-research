@@ -43,7 +43,8 @@ for (const st of steps) { const [s, ...args] = [].concat(st);
   const t = Date.now();
   console.log(`\n=== ${s} ===`);
   // output is piped through the anonymiser too: the CI log of a public repository is public
-  const out = execFileSync(process.execPath, [path.join(__dirname, s), ...args], { stdio: ['ignore', 'pipe', 'inherit'], env: process.env, maxBuffer: 64 * 1024 * 1024 }).toString();
+  const out = execFileSync(process.execPath, ['--max-old-space-size=8192', path.join(__dirname, s), ...args], // build_dataset keeps every log in memory: more than the default heap once there are ~300 logs
+ { stdio: ['ignore', 'pipe', 'inherit'], env: process.env, maxBuffer: 64 * 1024 * 1024 }).toString();
   process.stdout.write(anon(out));
   console.log(`--- ${s} done in ${((Date.now() - t) / 1000).toFixed(1)}s`);
 }

@@ -1,58 +1,58 @@
 {
- "logs": 26,
- "spears": 1898,
+ "logs": 31,
+ "spears": 2306,
  "onAPlayerPct": 92,
- "onADownedPlayer": 83,
- "sets": 105,
+ "onADownedPlayer": 127,
+ "sets": 130,
  "model": {
   "sameTargetsInBothSingleWaves": {
-   "yes": 87,
-   "of": 95,
-   "pct": 92
+   "yes": 107,
+   "of": 119,
+   "pct": 90
   },
   "setContainedInTheDoubleWaveBefore": {
-   "yes": 79,
-   "of": 92,
-   "pct": 86
+   "yes": 96,
+   "of": 113,
+   "pct": 85
   },
   "setContainedInTheDoubleWaveAfter": {
-   "yes": 79,
-   "of": 88,
-   "pct": 90
+   "yes": 95,
+   "of": 109,
+   "pct": 87
   }
  },
  "fixatedInTheSet": {
-  "yes": 63,
-  "of": 70,
-  "pct": 90
+  "yes": 75,
+  "of": 85,
+  "pct": 88
  },
  "setSize": {
   "fixated": {
-   "2": 8,
-   "3": 62
+   "2": 12,
+   "3": 73
   },
   "nobodyFixated": {
    "1": 2,
-   "2": 26,
+   "2": 36,
    "3": 7
   }
  },
  "otherTargetsByDistanceFromCentre": {
-  "closest third": 69,
-  "middle third": 68,
-  "farthest third": 77
+  "closest third": 84,
+  "middle third": 83,
+  "farthest third": 96
  },
  "otherTargetsKeptFromThePreviousSet": {
-  "kept": 41,
-  "of": 144,
+  "kept": 50,
+  "of": 181,
   "pct": 28,
-  "byChancePct": 29
+  "byChancePct": 30
  },
  "perPlayerOverAPhase": {
-  "playersNeverTargetedPct": 20,
+  "playersNeverTargetedPct": 19,
   "mostSpearsOnOnePlayer": {
    "median": 20,
-   "max": 32
+   "max": 44
   }
  }
 }

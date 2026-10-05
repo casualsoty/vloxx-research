@@ -1,9 +1,9 @@
 {
- "kills": 25,
+ "kills": 38,
  "atKill": {
   "lowest": 25,
-  "median": 41,
-  "highest": 87
+  "median": 38,
+  "highest": 89
  },
  "at70": {
   "lowest": 0,
@@ -11,21 +11,21 @@
   "highest": 3
  },
  "at40": {
-  "lowest": 6,
-  "median": 12,
+  "lowest": 5,
+  "median": 11,
   "highest": 18
  },
  "at10": {
-  "lowest": 17,
+  "lowest": 15,
   "median": 25,
   "highest": 34
  },
  "atLastPhaseStart": {
   "lowest": 25,
-  "median": 35,
+  "median": 34,
   "highest": 46
  },
- "correlationKillTimeVsStacks": 0.43,
+ "correlationKillTimeVsStacks": 0.35,
  "kills_sorted": [
   {
    "log": "wingman_14de4-20261004-011214_noe_kill",
@@ -40,6 +40,18 @@
    "at_last_phase_start": 25
   },
   {
+   "log": "20261005-145748",
+   "source": "raw",
+   "url": "",
+   "kill_time_s": 532,
+   "stacks_at_kill": 28,
+   "highest": 36,
+   "at_70": 0,
+   "at_40": 10,
+   "at_10": 19,
+   "at_last_phase_start": 35
+  },
+  {
    "log": "wingman_81daf-20261002-154733_noe_kill",
    "source": "EI",
    "url": "https://gw2wingman.nevermindcreations.de/log/81daf-20261002-154733_noe_kill",
@@ -50,6 +62,18 @@
    "at_40": 14,
    "at_10": 25,
    "at_last_phase_start": 31
+  },
+  {
+   "log": "wingman_755ee-Account-059D_20261004-184040_noe_kill",
+   "source": "EI",
+   "url": "https://gw2wingman.nevermindcreations.de/log/755ee-McFIT1398_20261004-184040_noe_kill",
+   "kill_time_s": 584,
+   "stacks_at_kill": 30,
+   "highest": 30,
+   "at_70": 1,
+   "at_40": 5,
+   "at_10": 15,
+   "at_last_phase_start": 29
   },
   {
    "log": "220703_Account-E5E7_dpsreport",
@@ -76,6 +100,42 @@
    "at_last_phase_start": 27
   },
   {
+   "log": "wingman_bf5ea-20261004-210412_noe_kill",
+   "source": "EI",
+   "url": "https://gw2wingman.nevermindcreations.de/log/bf5ea-20261004-210412_noe_kill",
+   "kill_time_s": 489,
+   "stacks_at_kill": 33,
+   "highest": 38,
+   "at_70": 0,
+   "at_40": 9,
+   "at_10": 27,
+   "at_last_phase_start": 33
+  },
+  {
+   "log": "wingman_3OrP-20261004-023256_boss",
+   "source": "EI",
+   "url": "https://gw2wingman.nevermindcreations.de/log/3OrP-20261004-023256_boss",
+   "kill_time_s": 527,
+   "stacks_at_kill": 33,
+   "highest": 33,
+   "at_70": 0,
+   "at_40": 11,
+   "at_10": 22,
+   "at_last_phase_start": 31
+  },
+  {
+   "log": "wingman_886ff-20261004-223748_noe_kill",
+   "source": "EI",
+   "url": "https://gw2wingman.nevermindcreations.de/log/886ff-20261004-223748_noe_kill",
+   "kill_time_s": 541,
+   "stacks_at_kill": 33,
+   "highest": 39,
+   "at_70": 0,
+   "at_40": 10,
+   "at_10": 26,
+   "at_last_phase_start": 36
+  },
+  {
    "log": "20261001-213946",
    "source": "raw",
    "url": "https://gw2wingman.nevermindcreations.de/log/6f88a-Clemyyy4217_20261001-213947_noe_kill",
@@ -98,6 +158,30 @@
    "at_40": 9,
    "at_10": 25,
    "at_last_phase_start": 34
+  },
+  {
+   "log": "wingman_2ca3c-20261004-215302_noe_kill",
+   "source": "EI",
+   "url": "https://gw2wingman.nevermindcreations.de/log/2ca3c-20261004-215302_noe_kill",
+   "kill_time_s": 539,
+   "stacks_at_kill": 34,
+   "highest": 38,
+   "at_70": 0,
+   "at_40": 13,
+   "at_10": 24,
+   "at_last_phase_start": 37
+  },
+  {
+   "log": "wingman_4c55f-20261005-181952_noe_kill",
+   "source": "EI",
+   "url": "https://gw2wingman.nevermindcreations.de/log/4c55f-20261005-181952_noe_kill",
+   "kill_time_s": 564,
+   "stacks_at_kill": 34,
+   "highest": 34,
+   "at_70": 3,
+   "at_40": 12,
+   "at_10": 23,
+   "at_last_phase_start": 32
   },
   {
    "log": "wingman_47d67-20261004-012811_noe_kill",
@@ -134,6 +218,18 @@
    "at_40": 12,
    "at_10": 26,
    "at_last_phase_start": 35
+  },
+  {
+   "log": "wingman_23819-20261004-223108_noe_kill",
+   "source": "EI",
+   "url": "https://gw2wingman.nevermindcreations.de/log/23819-20261004-223108_noe_kill",
+   "kill_time_s": 500,
+   "stacks_at_kill": 37,
+   "highest": 37,
+   "at_70": 1,
+   "at_40": 9,
+   "at_10": 21,
+   "at_last_phase_start": 28
   },
   {
    "log": "wingman_f9dda-20261002-215908_noe_kill",
@@ -196,6 +292,18 @@
    "at_last_phase_start": 41
   },
   {
+   "log": "wingman_c4e3e-20261003-225545_noe_kill",
+   "source": "EI",
+   "url": "https://gw2wingman.nevermindcreations.de/log/c4e3e-20261003-225545_noe_kill",
+   "kill_time_s": 519,
+   "stacks_at_kill": 44,
+   "highest": 45,
+   "at_70": 2,
+   "at_40": 15,
+   "at_10": 33,
+   "at_last_phase_start": 43
+  },
+  {
    "log": "wingman_081e5-Account-81AD_20261001-210656_noe_kill",
    "source": "EI",
    "url": "https://gw2wingman.nevermindcreations.de/log/081e5-Seel6214_20261001-210656_noe_kill",
@@ -244,6 +352,30 @@
    "at_last_phase_start": 46
   },
   {
+   "log": "wingman_22ade-20261004-165755_noe_kill",
+   "source": "EI",
+   "url": "https://gw2wingman.nevermindcreations.de/log/22ade-20261004-165755_noe_kill",
+   "kill_time_s": 527,
+   "stacks_at_kill": 50,
+   "highest": 56,
+   "at_70": 1,
+   "at_40": 9,
+   "at_10": 23,
+   "at_last_phase_start": 36
+  },
+  {
+   "log": "wingman_4bfb1-Account-F0CC_20261004-232956_noe_kill",
+   "source": "EI",
+   "url": "https://gw2wingman.nevermindcreations.de/log/4bfb1-Salieri7962_20261004-232956_noe_kill",
+   "kill_time_s": 584,
+   "stacks_at_kill": 50,
+   "highest": 50,
+   "at_70": 1,
+   "at_40": 11,
+   "at_10": 27,
+   "at_last_phase_start": 34
+  },
+  {
    "log": "wingman_b139e-20261001-201501_noe_kill",
    "source": "EI",
    "url": "https://gw2wingman.nevermindcreations.de/log/b139e-20261001-201501_noe_kill",
@@ -266,6 +398,18 @@
    "at_40": 18,
    "at_10": 34,
    "at_last_phase_start": 41
+  },
+  {
+   "log": "wingman_1fa32-20261004-213126_noe_kill",
+   "source": "EI",
+   "url": "https://gw2wingman.nevermindcreations.de/log/1fa32-20261004-213126_noe_kill",
+   "kill_time_s": 578,
+   "stacks_at_kill": 55,
+   "highest": 55,
+   "at_70": 1,
+   "at_40": 7,
+   "at_10": 26,
+   "at_last_phase_start": 31
   },
   {
    "log": "20261003-222355",
@@ -326,6 +470,18 @@
    "at_40": 8,
    "at_10": 24,
    "at_last_phase_start": 34
+  },
+  {
+   "log": "wingman_45f7e-Account-81AD_20261004-012814_noe_kill",
+   "source": "EI",
+   "url": "https://gw2wingman.nevermindcreations.de/log/45f7e-Seel6214_20261004-012814_noe_kill",
+   "kill_time_s": 551,
+   "stacks_at_kill": 89,
+   "highest": 89,
+   "at_70": 1,
+   "at_40": 13,
+   "at_10": 34,
+   "at_last_phase_start": 42
   }
  ]
 }

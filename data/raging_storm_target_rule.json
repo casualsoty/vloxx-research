@@ -1,93 +1,93 @@
 {
- "sets": 97,
+ "sets": 121,
  "features": {
   "distance from Vloxx (1 = closest)": {
-   "targetChecks": 194,
-   "inTheTwoLowestPct": 26,
-   "inTheTwoHighestPct": 24,
+   "targetChecks": 242,
+   "inTheTwoLowestPct": 28,
+   "inTheTwoHighestPct": 26,
    "chancePct": 26
   },
   "distance from arena centre": {
-   "targetChecks": 194,
-   "inTheTwoLowestPct": 26,
-   "inTheTwoHighestPct": 24,
+   "targetChecks": 242,
+   "inTheTwoLowestPct": 28,
+   "inTheTwoHighestPct": 26,
    "chancePct": 26
   },
   "health % (1 = lowest)": {
-   "targetChecks": 194,
-   "inTheTwoLowestPct": 21,
-   "inTheTwoHighestPct": 27,
+   "targetChecks": 242,
+   "inTheTwoLowestPct": 23,
+   "inTheTwoHighestPct": 29,
    "chancePct": 26
   },
   "squad order in the log": {
-   "targetChecks": 194,
-   "inTheTwoLowestPct": 21,
-   "inTheTwoHighestPct": 25,
-   "chancePct": 26
-  },
-  "instance id": {
-   "targetChecks": 194,
-   "inTheTwoLowestPct": 23,
-   "inTheTwoHighestPct": 24,
-   "chancePct": 26
-  },
-  "damage to Vloxx in the last 12 s (1 = least)": {
-   "targetChecks": 194,
-   "inTheTwoLowestPct": 25,
+   "targetChecks": 242,
+   "inTheTwoLowestPct": 22,
    "inTheTwoHighestPct": 27,
    "chancePct": 26
   },
+  "instance id": {
+   "targetChecks": 242,
+   "inTheTwoLowestPct": 22,
+   "inTheTwoHighestPct": 25,
+   "chancePct": 26
+  },
+  "damage to Vloxx in the last 12 s (1 = least)": {
+   "targetChecks": 242,
+   "inTheTwoLowestPct": 24,
+   "inTheTwoHighestPct": 28,
+   "chancePct": 26
+  },
   "damage to Vloxx in the last 30 s (1 = least)": {
-   "targetChecks": 194,
-   "inTheTwoLowestPct": 27,
+   "targetChecks": 242,
+   "inTheTwoLowestPct": 26,
    "inTheTwoHighestPct": 26,
    "chancePct": 26
   },
   "toughness flag (1 = lowest)": {
-   "targetChecks": 194,
-   "inTheTwoLowestPct": 23,
-   "inTheTwoHighestPct": 26,
+   "targetChecks": 242,
+   "inTheTwoLowestPct": 24,
+   "inTheTwoHighestPct": 25,
    "chancePct": 26
   },
   "time since last targeted (1 = most recent)": {
-   "targetChecks": 194,
+   "targetChecks": 242,
    "inTheTwoLowestPct": 27,
-   "inTheTwoHighestPct": 26,
+   "inTheTwoHighestPct": 28,
    "chancePct": 26
   },
   "downed first": {
-   "targetChecks": 194,
-   "inTheTwoLowestPct": 19,
-   "inTheTwoHighestPct": 27,
+   "targetChecks": 242,
+   "inTheTwoLowestPct": 21,
+   "inTheTwoHighestPct": 29,
    "chancePct": 26
   },
   "distance from the Spear Aspect": {
-   "targetChecks": 124,
+   "targetChecks": 148,
    "inTheTwoLowestPct": 28,
    "inTheTwoHighestPct": 26,
    "chancePct": 26
   },
   "distance from the Sword Aspect": {
-   "targetChecks": 138,
-   "inTheTwoLowestPct": 26,
-   "inTheTwoHighestPct": 25,
-   "chancePct": 25
+   "targetChecks": 166,
+   "inTheTwoLowestPct": 27,
+   "inTheTwoHighestPct": 27,
+   "chancePct": 26
   },
   "distance from the fixated player": {
-   "targetChecks": 142,
-   "inTheTwoLowestPct": 25,
-   "inTheTwoHighestPct": 25,
+   "targetChecks": 170,
+   "inTheTwoLowestPct": 26,
+   "inTheTwoHighestPct": 26,
    "chancePct": 26
   },
   "distance from the Staff Aspect": {
-   "targetChecks": 126,
-   "inTheTwoLowestPct": 25,
-   "inTheTwoHighestPct": 23,
-   "chancePct": 28
+   "targetChecks": 148,
+   "inTheTwoLowestPct": 26,
+   "inTheTwoHighestPct": 25,
+   "chancePct": 29
   }
  },
  "distanceBetweenTheTwoTargets": {
-  "median": 221,
-  "anyTwoCandidatesMedian": 209
+  "median": 247,
+  "anyTwoCandidatesMedian": 217
  }
 }

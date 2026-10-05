@@ -80,6 +80,24 @@ log_id,last_phase_tick_s,time_s,fixated_player,players_up,expected,targets,targe
 20261004-165754,43,536.055,Player-12E6,8,2,2,Player-12E6 | Player-F22C
 20261004-165754,63,556.055,Player-12E6,6,2,2,Player-12E6 | Player-816B
 20261004-165754,83,576.055,Player-E1F6,3,1,1,Player-E1F6
+20261004-223752,23,481.061,,9,3,3,Player-D808 | Player-FBAD | Player-8AE5
+20261004-223752,43,501.061,,4,1,1,Player-BCA0
+20261004-234835,23,530.375,,9,3,3,Player-D751 | Player-2E5B | Player-F22C
+20261004-234835,43,550.375,Player-F22C,9,3,3,Player-F22C | Player-8F17 | Player-2E5B
+20261004-234835,63,570.375,Player-F22C,7,2,2,Player-F22C | Player-BCA0
+20261004-234835,83,590.375,Player-BCA0,1,1,1,Player-BCA0
+20261005-001631,23,520.454,Player-FBAD,10,3,3,Player-FBAD | Player-BCA0 | Player-F22C
+20261005-001631,43,540.454,Player-FBAD,10,3,3,Player-FBAD | Player-BCA0 | Player-D751
+20261005-001631,63,560.454,,10,3,3,Player-8F17 | Player-DDA6 | Player-F22C
+20261005-001631,83,580.454,Player-DDA6,3,1,1,Player-DDA6
+20261005-145748,23,492.95,,10,3,3,Player-DE24 | Player-DDA6 | Player-0FB2
+20261005-145748,43,512.95,Player-BCA0,10,3,3,Player-BCA0 | Player-CC68 | Player-3803
+20261005-145748,63,532.95,Player-BCA0,10,3,3,Player-BCA0 | Player-3803 | Player-A0E8
+20261005-220403,23,519.027,,3,1,1,Player-1B8E
+20261005-220403,43,539.027,Player-1BA4,10,3,3,Player-1BA4 | Player-8F17 | Player-202A
+20261005-220403,63,559.027,Player-1BA4,10,3,3,Player-1BA4 | Player-1B8E | Player-F494
+20261005-220403,83,579.027,Player-DDA6,4,1,1,Player-DDA6
+20261005-220403,103,599.027,,0,1,0,
 014037-fixed_dpsreport,23,489.994,Player-D34A,10,3,3,Player-D34A | Player-B5C2 | Player-EACF
 014037-fixed_dpsreport,43,509.994,,8,2,2,Player-184B | Player-9884
 014037-fixed_dpsreport,63,529.994,Player-B5C2,10,3,3,Player-B5C2 | Player-D34A | Player-0BF9
@@ -109,17 +127,34 @@ wingman_14de4-20261004-011214_noe_kill,23,473.596,,10,3,3,Player-FAC5 | Player-3
 wingman_14de4-20261004-011214_noe_kill,43,493.596,Player-EAD0,10,3,3,Player-EAD0 | Player-0939 | Player-A5E5
 wingman_1f564-20260930-164742_noe_fail,23,540.755,,8,2,2,Player-4230 | Player-67E4
 wingman_1f564-20260930-164742_noe_fail,43,560.755,Player-A65F,3,1,1,Player-A65F
+wingman_1fa32-20261004-213126_noe_kill,23,521.186,,10,3,3,Player-ADDA | Player-0B31 | Player-0346
+wingman_1fa32-20261004-213126_noe_kill,43,541.186,Player-463D,10,3,3,Player-463D | Player-ADDA | Player-899E
+wingman_1fa32-20261004-213126_noe_kill,63,561.186,Player-463D,10,3,3,Player-463D | Player-899E | Player-3AF2
 wingman_202f1-20261002-212232_noe_kill,23,525.696,Player-82C1,10,3,3,Player-82C1 | Player-B4B0 | Player-484B
 wingman_202f1-20261002-212232_noe_kill,43,545.696,Player-82C1,10,3,3,Player-82C1 | Player-EBC5 | Player-C794
 wingman_202f1-20261002-212232_noe_kill,63,565.696,Player-82C1,10,3,3,Player-82C1 | Player-484B | Player-2F7A
+wingman_22ade-20261004-165755_noe_kill,23,478.544,Player-69D5,7,2,2,Player-69D5 | Player-25E3
+wingman_22ade-20261004-165755_noe_kill,43,498.544,Player-69D5,9,3,3,Player-69D5 | Player-A09F | Player-4E56
+wingman_22ade-20261004-165755_noe_kill,63,518.544,Player-C967,9,3,3,Player-C967 | Player-8F3F | Player-1DE9
+wingman_23819-20261004-223108_noe_kill,23,464.15,Player-4023,10,3,3,Player-4023 | Player-C1D6 | Player-4E56
+wingman_23819-20261004-223108_noe_kill,43,484.15,Player-1DE9,10,3,3,Player-1DE9 | Player-4E56 | Player-C967
 wingman_23f47-Account-013D_20261002-004636_noe_kill,23,528.578,Player-1C9D,9,3,3,Player-1C9D | Player-9369 | Player-BC4C
 wingman_23f47-Account-013D_20261002-004636_noe_kill,43,548.578,Player-1C9D,10,3,3,Player-1C9D | Player-BC4C | Player-35A0
 wingman_23f47-Account-013D_20261002-004636_noe_kill,63,568.578,Player-1C9D,10,3,3,Player-1C9D | Player-35A0 | Player-B9E0
+wingman_2ca3c-20261004-215302_noe_kill,23,498.778,,10,3,3,Player-8F3B | Player-365D | Player-2D33
+wingman_2ca3c-20261004-215302_noe_kill,43,518.778,Player-BA71,10,3,3,Player-BA71 | Player-AC69 | Player-8F3B
+wingman_2ca3c-20261004-215302_noe_kill,63,538.778,Player-BA71,10,3,3,Player-BA71 | Player-DB0E | Player-8F3B
 wingman_3273c-20261001-011226_noe_fail,23,549.212,Player-582B,10,3,3,Player-582B | Player-247A | Player-D132
 wingman_3273c-20261001-011226_noe_fail,43,569.212,Player-582B,9,3,3,Player-582B | Player-700E | Player-6E8F
 wingman_3273c-20261001-011226_noe_fail,63,589.212,,6,2,2,Player-247A | Player-55E0
+wingman_3OrP-20261004-023256_boss,23,485.192,,10,3,3,Player-7726 | Player-BD4C | Player-13F1
+wingman_3OrP-20261004-023256_boss,43,505.192,Player-7726,10,3,3,Player-7726 | Player-BF1D | Player-BD4C
+wingman_3OrP-20261004-023256_boss,63,525.192,Player-7726,10,3,3,Player-7726 | Player-2E32 | Player-13F1
 wingman_3c4a4-20260930-233824_noe_fail,23,537.182,Player-700E,10,3,3,Player-700E | Player-6E8F | Player-D132
 wingman_3c4a4-20260930-233824_noe_fail,43,557.182,Player-582B,5,1,1,Player-582B
+wingman_45f7e-Account-81AD_20261004-012814_noe_kill,23,492.585,,10,3,3,Player-67E4 | Player-BC81 | Player-A65F
+wingman_45f7e-Account-81AD_20261004-012814_noe_kill,43,512.585,Player-2C12,10,3,3,Player-2C12 | Player-9BAB | Player-B41C
+wingman_45f7e-Account-81AD_20261004-012814_noe_kill,63,532.585,Player-2C12,9,3,3,Player-2C12 | Player-6CD6 | Player-B41C
 wingman_47495-Account-8B25_20261001-234602_noe_fail,23,534.8,Player-1C9D,10,3,3,Player-1C9D | Player-0240 | Player-B9E0
 wingman_47495-Account-8B25_20261001-234602_noe_fail,43,554.8,Player-1C9D,10,3,3,Player-1C9D | Player-5652 | Player-5112
 wingman_47495-Account-8B25_20261001-234602_noe_fail,63,574.8,,10,3,3,Player-35A0 | Player-1C9D | Player-E1EF
@@ -127,6 +162,13 @@ wingman_47495-Account-8B25_20261001-234602_noe_fail,83,594.8,Player-E1EF,8,2,2,P
 wingman_47d67-20261004-012811_noe_kill,23,528.992,,7,2,2,Player-4041 | Player-63DC
 wingman_47d67-20261004-012811_noe_kill,43,548.992,Player-DCDA,10,3,3,Player-DCDA | Player-60FC | Player-68BB
 wingman_47d67-20261004-012811_noe_kill,63,568.992,Player-DCDA,10,3,3,Player-DCDA | Player-63DC | Player-BF1D
+wingman_4bfb1-Account-F0CC_20261004-232956_noe_kill,23,520.792,Player-7702,10,3,3,Player-7702 | Player-B4B0 | Player-1A64
+wingman_4bfb1-Account-F0CC_20261004-232956_noe_kill,43,540.792,Player-7702,10,3,3,Player-7702 | Player-1A64 | Player-82C1
+wingman_4bfb1-Account-F0CC_20261004-232956_noe_kill,63,560.792,,10,3,3,Player-7702 | Player-1A64 | Player-8FDA
+wingman_4bfb1-Account-F0CC_20261004-232956_noe_kill,83,580.792,,9,3,2,Player-B606 | Player-C794
+wingman_4c55f-20261005-181952_noe_kill,23,507.431,Player-FE12,10,3,3,Player-FE12 | Player-5DBE | Player-67E4-02
+wingman_4c55f-20261005-181952_noe_kill,43,527.431,Player-FE12,10,3,3,Player-FE12 | Player-5DBE | Player-4DDF
+wingman_4c55f-20261005-181952_noe_kill,63,547.431,Player-FE12,10,3,3,Player-FE12 | Player-4DDF | Player-78B9
 wingman_4f111-Account-81AD_20260930-183104_noe_fail,23,533.037,Player-A65F,10,3,3,Player-A65F | Player-78D3 | Player-CE71
 wingman_4f111-Account-81AD_20260930-183104_noe_fail,43,553.037,Player-7267,5,1,1,Player-7267
 wingman_4f111-Account-81AD_20260930-183104_noe_fail,63,573.037,Player-6CD6,1,1,1,Player-6CD6
@@ -139,9 +181,14 @@ wingman_5771f-Account-CDD2_20261003-011714_noe_kill,83,559.01,Player-3CAD,5,1,1,
 wingman_704cb-20261003-193028_noe_kill,23,518.705,Player-ECEC,10,3,3,Player-ECEC | Player-2C12 | Player-6302
 wingman_704cb-20261003-193028_noe_kill,43,538.705,Player-ECEC,10,3,3,Player-ECEC | Player-5A00 | Player-ACE4
 wingman_704cb-20261003-193028_noe_kill,63,558.705,,10,3,3,Player-2C12 | Player-ECEC | Player-9BF2
+wingman_755ee-Account-059D_20261004-184040_noe_kill,23,541.545,,10,3,3,Player-B055 | Player-D52D | Player-A96C
+wingman_755ee-Account-059D_20261004-184040_noe_kill,43,561.545,Player-1D39,10,3,3,Player-1D39 | Player-5397 | Player-168D
+wingman_755ee-Account-059D_20261004-184040_noe_kill,63,581.545,Player-1D39,10,3,3,Player-1D39 | Player-E1F6 | Player-D52D
 wingman_81daf-20261002-154733_noe_kill,23,482.865,Player-78D3,10,3,3,Player-78D3 | Player-ACE4 | Player-594D
 wingman_81daf-20261002-154733_noe_kill,43,502.865,,10,3,3,Player-78D3 | Player-ACE4 | Player-13B0
 wingman_81daf-20261002-154733_noe_kill,63,522.865,Player-594D,10,3,3,Player-594D | Player-8EE7 | Player-78D3
+wingman_886ff-20261004-223748_noe_kill,23,503.196,Player-2E32,10,3,3,Player-2E32 | Player-9285 | Player-8F3B
+wingman_886ff-20261004-223748_noe_kill,43,523.196,Player-2E32,10,3,3,Player-2E32 | Player-AC69 | Player-8F3B
 wingman_8d411-20260930-191421_noe_fail,23,552.313,Player-ACE4,8,2,2,Player-ACE4 | Player-559E
 wingman_8d411-20260930-191421_noe_fail,43,572.313,,7,2,2,Player-9A42 | Player-5FDF
 wingman_9fe05-20261002-155233_noe_kill,23,497.379,Player-CE71,10,3,3,Player-CE71 | Player-C7EB | Player-6302
@@ -150,6 +197,11 @@ wingman_b139e-20261001-201501_noe_kill,23,505.3,,10,3,3,Player-423D | Player-2F7
 wingman_b139e-20261001-201501_noe_kill,43,525.3,Player-9381,10,3,3,Player-9381 | Player-C794 | Player-82C1
 wingman_b139e-20261001-201501_noe_kill,63,545.3,Player-9381,10,3,3,Player-9381 | Player-2F7A | Player-C794
 wingman_b139e-20261001-201501_noe_kill,83,565.3,Player-484B,9,3,3,Player-484B | Player-2F7A | Player-9381
+wingman_bf5ea-20261004-210412_noe_kill,23,454.702,Player-8F3F,10,3,3,Player-8F3F | Player-69D5 | Player-4023
+wingman_bf5ea-20261004-210412_noe_kill,43,474.702,Player-1DE9,10,3,3,Player-1DE9 | Player-69D5 | Player-8F3F
+wingman_c4e3e-20261003-225545_noe_kill,23,475.081,,10,3,3,Player-9BAB | Player-8EE7 | Player-B41C
+wingman_c4e3e-20261003-225545_noe_kill,43,495.081,,10,3,3,Player-8EE7 | Player-9BAB | Player-BC81
+wingman_c4e3e-20261003-225545_noe_kill,63,515.081,Player-78D3,10,3,3,Player-78D3 | Player-8EE7 | Player-9BAB
 wingman_c654b-20260930-172031_noe_fail,23,520.389,Player-78D3,4,1,1,Player-78D3
 wingman_c654b-20260930-172031_noe_fail,43,540.389,,5,1,1,Player-C7EB
 wingman_c8506-20261003-120005_noe_kill,23,523.195,Player-9933,10,3,3,Player-9933 | Player-F65B | Player-4230

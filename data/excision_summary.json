@@ -1,127 +1,129 @@
 {
- "logs": 78,
- "slashes": 13252,
+ "logs": 94,
+ "slashes": 15733,
  "byCaster": {
-  "Aspect of the Sword": 3551,
-  "Vloxx": 9701
+  "Aspect of the Sword": 4227,
+  "Vloxx": 11506
  },
- "withTelegraph": 6779,
+ "withTelegraph": 8079,
  "telegraphDelayS": 2,
  "positionOffsetOver20": 0,
  "slashesPerVloxxCast": {
-  "0": 17,
-  "1": 1,
+  "0": 20,
+  "1": 2,
   "2": 2,
   "3": 1,
   "4": 3,
   "5": 1,
   "8": 4,
-  "12": 3,
+  "9": 1,
+  "11": 1,
+  "12": 4,
   "15": 2,
-  "16": 227,
-  "17": 26,
+  "16": 270,
+  "17": 31,
   "18": 2,
-  "23": 46,
-  "24": 42
+  "23": 51,
+  "24": 52
  },
  "vloxx": {
-  "matched": 5608,
-  "mismatch": 1589,
-  "mismatchPct": 28.3,
+  "matched": 6648,
+  "mismatch": 1908,
+  "mismatchPct": 28.7,
   "mismatchByPulseS": {
    "4.8": {
-    "n": 358,
+    "n": 425,
     "mismatchPct": 0
    },
    "5.3": {
-    "n": 710,
+    "n": 842,
     "mismatchPct": 0
    },
    "5.8": {
-    "n": 708,
-    "mismatchPct": 0.3
+    "n": 840,
+    "mismatchPct": 0.2
    },
    "6.2": {
-    "n": 347,
+    "n": 412,
     "mismatchPct": 0
    },
    "6.3": {
-    "n": 706,
-    "mismatchPct": 29.2
+    "n": 838,
+    "mismatchPct": 29.8
    },
    "6.7": {
-    "n": 347,
-    "mismatchPct": 46.1
+    "n": 412,
+    "mismatchPct": 46.6
    },
    "6.8": {
-    "n": 691,
-    "mismatchPct": 46.3
+    "n": 821,
+    "mismatchPct": 46.9
    },
    "7.2": {
-    "n": 342,
-    "mismatchPct": 46.2
+    "n": 405,
+    "mismatchPct": 46.7
    },
    "7.3": {
-    "n": 352,
-    "mismatchPct": 46.3
+    "n": 416,
+    "mismatchPct": 47.1
    },
    "7.8": {
-    "n": 686,
-    "mismatchPct": 64.3
+    "n": 809,
+    "mismatchPct": 65.5
    },
    "8.4": {
-    "n": 341,
-    "mismatchPct": 38.1
+    "n": 403,
+    "mismatchPct": 37.5
    }
   },
-  "mismatchEqualsBossTurn": 1363,
-  "mismatchTotal": 1589
+  "mismatchEqualsBossTurn": 1639,
+  "mismatchTotal": 1908
  },
  "hitRatePct": {
   "slashFrame": {
    "matching": {
     "hitSide": 99.6,
-    "otherSide": 0.9,
-    "n": 4531
+    "otherSide": 0.8,
+    "n": 5433
    },
    "mismatched": {
-    "hitSide": 99.2,
-    "otherSide": 0.7,
-    "n": 956
+    "hitSide": 99.3,
+    "otherSide": 0.6,
+    "n": 1138
    }
   },
   "telegraphFrame": {
    "matching": {
     "hitSide": 99.5,
-    "otherSide": 1.1,
-    "n": 4531
+    "otherSide": 0.9,
+    "n": 5433
    },
    "mismatched": {
-    "hitSide": 57,
-    "otherSide": 53.8,
-    "n": 956
+    "hitSide": 55.7,
+    "otherSide": 49.7,
+    "n": 1138
    }
   }
  },
  "semicircleRadius": 500,
  "radiusBands": {
-  "0": "16/17",
-  "50": "29/31",
-  "100": "96/96",
-  "150": "125/125",
-  "200": "189/189",
-  "250": "295/295",
-  "300": "360/360",
-  "350": "431/431",
-  "400": "480/481",
-  "450": "458/460",
-  "500": "205/460",
-  "550": "0/456",
-  "600": "0/418",
-  "650": "0/421",
-  "700": "0/384",
-  "750": "0/393",
-  "800": "0/377",
-  "850": "0/392"
+  "0": "23/24",
+  "50": "38/40",
+  "100": "118/118",
+  "150": "149/149",
+  "200": "222/222",
+  "250": "336/336",
+  "300": "419/419",
+  "350": "498/498",
+  "400": "555/556",
+  "450": "511/513",
+  "500": "236/536",
+  "550": "0/525",
+  "600": "0/486",
+  "650": "0/485",
+  "700": "0/439",
+  "750": "0/450",
+  "800": "0/416",
+  "850": "0/440"
  }
 }
