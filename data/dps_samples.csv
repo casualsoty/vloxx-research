@@ -199,16 +199,6 @@ wingman_e1a59-20261002-214446_noe_kill,EI,https://gw2wingman.nevermindcreations.
 wingman_e1a59-20261002-214446_noe_kill,EI,https://gw2wingman.nevermindcreations.de/log/e1a59-20261002-214446_noe_kill,585,Scourge,Condition,19973,35141,94
 wingman_e1a59-20261002-214446_noe_kill,EI,https://gw2wingman.nevermindcreations.de/log/e1a59-20261002-214446_noe_kill,585,Scourge,Condition,20178,33354,95
 wingman_e1a59-20261002-214446_noe_kill,EI,https://gw2wingman.nevermindcreations.de/log/e1a59-20261002-214446_noe_kill,585,Specter,Boon Condition,12586,16750,90
-wingman_e961b-20261003-211028_noe_kill,EI,https://gw2wingman.nevermindcreations.de/log/e961b-20261003-211028_noe_kill,544,Scourge,Condition,20593,33271,93
-wingman_e961b-20261003-211028_noe_kill,EI,https://gw2wingman.nevermindcreations.de/log/e961b-20261003-211028_noe_kill,544,Troubadour,Heal,826,1637,7
-wingman_e961b-20261003-211028_noe_kill,EI,https://gw2wingman.nevermindcreations.de/log/e961b-20261003-211028_noe_kill,544,Scourge,Condition,20386,34085,92
-wingman_e961b-20261003-211028_noe_kill,EI,https://gw2wingman.nevermindcreations.de/log/e961b-20261003-211028_noe_kill,544,Evoker,Condition,15185,27083,93
-wingman_e961b-20261003-211028_noe_kill,EI,https://gw2wingman.nevermindcreations.de/log/e961b-20261003-211028_noe_kill,544,Evoker,Condition,17177,29865,82
-wingman_e961b-20261003-211028_noe_kill,EI,https://gw2wingman.nevermindcreations.de/log/e961b-20261003-211028_noe_kill,544,Evoker,Condition,21099,36391,86
-wingman_e961b-20261003-211028_noe_kill,EI,https://gw2wingman.nevermindcreations.de/log/e961b-20261003-211028_noe_kill,544,Scourge,Condition,19169,33998,94
-wingman_e961b-20261003-211028_noe_kill,EI,https://gw2wingman.nevermindcreations.de/log/e961b-20261003-211028_noe_kill,544,Troubadour,Boon Condition,6467,10934,70
-wingman_e961b-20261003-211028_noe_kill,EI,https://gw2wingman.nevermindcreations.de/log/e961b-20261003-211028_noe_kill,544,Luminary,Power,12099,23579,0
-wingman_e961b-20261003-211028_noe_kill,EI,https://gw2wingman.nevermindcreations.de/log/e961b-20261003-211028_noe_kill,544,Scourge,Condition,23366,36316,92
 wingman_f9dda-20261002-215908_noe_kill,EI,https://gw2wingman.nevermindcreations.de/log/f9dda-20261002-215908_noe_kill,538,Troubadour,Heal,895,1783,5
 wingman_f9dda-20261002-215908_noe_kill,EI,https://gw2wingman.nevermindcreations.de/log/f9dda-20261002-215908_noe_kill,538,Conduit,Condition,18146,28880,89
 wingman_f9dda-20261002-215908_noe_kill,EI,https://gw2wingman.nevermindcreations.de/log/f9dda-20261002-215908_noe_kill,538,Luminary,Power,16069,29531,1
@@ -239,16 +229,16 @@ wingman_f9dda-20261002-215908_noe_kill,EI,https://gw2wingman.nevermindcreations.
 20261002-225404,raw,https://gw2wingman.nevermindcreations.de/log/85c0f-20261002-215404_noe_kill,548,Scourge,Condition,19690,33792,95
 20261002-225404,raw,https://gw2wingman.nevermindcreations.de/log/85c0f-20261002-215404_noe_kill,548,Scourge,Condition,20063,30917,94
 20261002-225404,raw,https://gw2wingman.nevermindcreations.de/log/85c0f-20261002-215404_noe_kill,548,Scourge,Condition,21323,32040,92
-20261003-211223,raw,,562,Evoker,Condition,20416,35218,86
-20261003-211223,raw,,562,Troubadour,Boon Condition,6258,10581,70
-20261003-211223,raw,,562,Luminary,Power,11708,22824,2
-20261003-211223,raw,,562,Evoker,Condition,16618,28898,82
-20261003-211223,raw,,562,Scourge,Condition,22613,35142,92
-20261003-211223,raw,,562,Scourge,Condition,19936,32204,93
-20261003-211223,raw,,562,Scourge,Condition,19724,32977,92
-20261003-211223,raw,,562,Troubadour,Heal,799,1586,7
-20261003-211223,raw,,562,Scourge,Condition,18548,32882,94
-20261003-211223,raw,,562,Evoker,Condition,14702,26237,93
+20261003-211223,raw,https://gw2wingman.nevermindcreations.de/log/e961b-20261003-211028_noe_kill,562,Evoker,Condition,20416,35218,86
+20261003-211223,raw,https://gw2wingman.nevermindcreations.de/log/e961b-20261003-211028_noe_kill,562,Troubadour,Boon Condition,6258,10581,70
+20261003-211223,raw,https://gw2wingman.nevermindcreations.de/log/e961b-20261003-211028_noe_kill,562,Luminary,Power,11708,22824,2
+20261003-211223,raw,https://gw2wingman.nevermindcreations.de/log/e961b-20261003-211028_noe_kill,562,Evoker,Condition,16618,28898,82
+20261003-211223,raw,https://gw2wingman.nevermindcreations.de/log/e961b-20261003-211028_noe_kill,562,Scourge,Condition,22613,35142,92
+20261003-211223,raw,https://gw2wingman.nevermindcreations.de/log/e961b-20261003-211028_noe_kill,562,Scourge,Condition,19936,32204,93
+20261003-211223,raw,https://gw2wingman.nevermindcreations.de/log/e961b-20261003-211028_noe_kill,562,Scourge,Condition,19724,32977,92
+20261003-211223,raw,https://gw2wingman.nevermindcreations.de/log/e961b-20261003-211028_noe_kill,562,Troubadour,Heal,799,1586,7
+20261003-211223,raw,https://gw2wingman.nevermindcreations.de/log/e961b-20261003-211028_noe_kill,562,Scourge,Condition,18548,32882,94
+20261003-211223,raw,https://gw2wingman.nevermindcreations.de/log/e961b-20261003-211028_noe_kill,562,Evoker,Condition,14702,26237,93
 20261003-222355,raw,https://gw2wingman.nevermindcreations.de/log/90921-Sejter9746_20261003-222354_noe_kill,570,Virtuoso,Condition,16989,27270,74
 20261003-222355,raw,https://gw2wingman.nevermindcreations.de/log/90921-Sejter9746_20261003-222354_noe_kill,570,Troubadour,Boon Condition,6672,10622,69
 20261003-222355,raw,https://gw2wingman.nevermindcreations.de/log/90921-Sejter9746_20261003-222354_noe_kill,570,Luminary,Power,13121,24808,2

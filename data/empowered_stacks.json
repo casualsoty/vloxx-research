@@ -1,0 +1,331 @@
+{
+ "kills": 25,
+ "atKill": {
+  "lowest": 25,
+  "median": 41,
+  "highest": 87
+ },
+ "at70": {
+  "lowest": 0,
+  "median": 1,
+  "highest": 3
+ },
+ "at40": {
+  "lowest": 6,
+  "median": 12,
+  "highest": 18
+ },
+ "at10": {
+  "lowest": 17,
+  "median": 25,
+  "highest": 34
+ },
+ "atLastPhaseStart": {
+  "lowest": 25,
+  "median": 35,
+  "highest": 46
+ },
+ "correlationKillTimeVsStacks": 0.43,
+ "kills_sorted": [
+  {
+   "log": "wingman_14de4-20261004-011214_noe_kill",
+   "source": "EI",
+   "url": "https://gw2wingman.nevermindcreations.de/log/14de4-20261004-011214_noe_kill",
+   "kill_time_s": 511,
+   "stacks_at_kill": 25,
+   "highest": 28,
+   "at_70": 1,
+   "at_40": 10,
+   "at_10": 17,
+   "at_last_phase_start": 25
+  },
+  {
+   "log": "wingman_81daf-20261002-154733_noe_kill",
+   "source": "EI",
+   "url": "https://gw2wingman.nevermindcreations.de/log/81daf-20261002-154733_noe_kill",
+   "kill_time_s": 523,
+   "stacks_at_kill": 29,
+   "highest": 34,
+   "at_70": 1,
+   "at_40": 14,
+   "at_10": 25,
+   "at_last_phase_start": 31
+  },
+  {
+   "log": "220703_Account-E5E7_dpsreport",
+   "source": "EI",
+   "url": "https://dps.report/qVZX-20260930-220703_boss",
+   "kill_time_s": 588,
+   "stacks_at_kill": 31,
+   "highest": 35,
+   "at_70": 1,
+   "at_40": 11,
+   "at_10": 21,
+   "at_last_phase_start": 31
+  },
+  {
+   "log": "wingman_9fe05-20261002-155233_noe_kill",
+   "source": "EI",
+   "url": "https://gw2wingman.nevermindcreations.de/log/9fe05-20261002-155233_noe_kill",
+   "kill_time_s": 537,
+   "stacks_at_kill": 32,
+   "highest": 32,
+   "at_70": 2,
+   "at_40": 12,
+   "at_10": 20,
+   "at_last_phase_start": 27
+  },
+  {
+   "log": "20261001-213946",
+   "source": "raw",
+   "url": "https://gw2wingman.nevermindcreations.de/log/6f88a-Clemyyy4217_20261001-213947_noe_kill",
+   "kill_time_s": 550,
+   "stacks_at_kill": 33,
+   "highest": 33,
+   "at_70": 2,
+   "at_40": 9,
+   "at_10": 21,
+   "at_last_phase_start": 28
+  },
+  {
+   "log": "050224_dpsreport",
+   "source": "EI",
+   "url": "https://dps.report/oOYc-20260930-050224_boss",
+   "kill_time_s": 553,
+   "stacks_at_kill": 33,
+   "highest": 35,
+   "at_70": 0,
+   "at_40": 9,
+   "at_10": 25,
+   "at_last_phase_start": 34
+  },
+  {
+   "log": "wingman_47d67-20261004-012811_noe_kill",
+   "source": "EI",
+   "url": "https://gw2wingman.nevermindcreations.de/log/47d67-20261004-012811_noe_kill",
+   "kill_time_s": 576,
+   "stacks_at_kill": 34,
+   "highest": 36,
+   "at_70": 0,
+   "at_40": 14,
+   "at_10": 23,
+   "at_last_phase_start": 33
+  },
+  {
+   "log": "20261002-225404",
+   "source": "raw",
+   "url": "https://gw2wingman.nevermindcreations.de/log/85c0f-20261002-215404_noe_kill",
+   "kill_time_s": 529,
+   "stacks_at_kill": 35,
+   "highest": 39,
+   "at_70": 1,
+   "at_40": 10,
+   "at_10": 24,
+   "at_last_phase_start": 38
+  },
+  {
+   "log": "20261002-010435_dpsreport",
+   "source": "EI",
+   "url": "https://b.dps.report/rKIr-20261002-010435_boss",
+   "kill_time_s": 581,
+   "stacks_at_kill": 35,
+   "highest": 38,
+   "at_70": 0,
+   "at_40": 12,
+   "at_10": 26,
+   "at_last_phase_start": 35
+  },
+  {
+   "log": "wingman_f9dda-20261002-215908_noe_kill",
+   "source": "EI",
+   "url": "https://gw2wingman.nevermindcreations.de/log/f9dda-20261002-215908_noe_kill",
+   "kill_time_s": 538,
+   "stacks_at_kill": 37,
+   "highest": 39,
+   "at_70": 2,
+   "at_40": 11,
+   "at_10": 31,
+   "at_last_phase_start": 37
+  },
+  {
+   "log": "wingman_704cb-20261003-193028_noe_kill",
+   "source": "EI",
+   "url": "https://gw2wingman.nevermindcreations.de/log/704cb-20261003-193028_noe_kill",
+   "kill_time_s": 566,
+   "stacks_at_kill": 38,
+   "highest": 44,
+   "at_70": 1,
+   "at_40": 12,
+   "at_10": 28,
+   "at_last_phase_start": 41
+  },
+  {
+   "log": "014037-fixed_dpsreport",
+   "source": "EI",
+   "url": "https://dps.report/MsKX-20260930-014037-fixed_boss",
+   "kill_time_s": 548,
+   "stacks_at_kill": 40,
+   "highest": 43,
+   "at_70": 1,
+   "at_40": 12,
+   "at_10": 21,
+   "at_last_phase_start": 33
+  },
+  {
+   "log": "20261003-211223",
+   "source": "raw",
+   "url": "https://gw2wingman.nevermindcreations.de/log/e961b-20261003-211028_noe_kill",
+   "kill_time_s": 544,
+   "stacks_at_kill": 41,
+   "highest": 41,
+   "at_70": 0,
+   "at_40": 10,
+   "at_10": 20,
+   "at_last_phase_start": 29
+  },
+  {
+   "log": "wingman_202f1-20261002-212232_noe_kill",
+   "source": "EI",
+   "url": "https://gw2wingman.nevermindcreations.de/log/202f1-20261002-212232_noe_kill",
+   "kill_time_s": 577,
+   "stacks_at_kill": 42,
+   "highest": 44,
+   "at_70": 0,
+   "at_40": 11,
+   "at_10": 28,
+   "at_last_phase_start": 41
+  },
+  {
+   "log": "wingman_081e5-Account-81AD_20261001-210656_noe_kill",
+   "source": "EI",
+   "url": "https://gw2wingman.nevermindcreations.de/log/081e5-Seel6214_20261001-210656_noe_kill",
+   "kill_time_s": 536,
+   "stacks_at_kill": 44,
+   "highest": 44,
+   "at_70": 0,
+   "at_40": 13,
+   "at_10": 24,
+   "at_last_phase_start": 29
+  },
+  {
+   "log": "wingman_e1a59-20261002-214446_noe_kill",
+   "source": "EI",
+   "url": "https://gw2wingman.nevermindcreations.de/log/e1a59-20261002-214446_noe_kill",
+   "kill_time_s": 585,
+   "stacks_at_kill": 44,
+   "highest": 46,
+   "at_70": 1,
+   "at_40": 14,
+   "at_10": 32,
+   "at_last_phase_start": 45
+  },
+  {
+   "log": "wingman_005f1-20261001-215126_noe_kill",
+   "source": "EI",
+   "url": "https://gw2wingman.nevermindcreations.de/log/005f1-20261001-215126_noe_kill",
+   "kill_time_s": 580,
+   "stacks_at_kill": 46,
+   "highest": 49,
+   "at_70": 0,
+   "at_40": 9,
+   "at_10": 31,
+   "at_last_phase_start": 41
+  },
+  {
+   "log": "wingman_c8506-20261003-120005_noe_kill",
+   "source": "EI",
+   "url": "https://gw2wingman.nevermindcreations.de/log/c8506-20261003-120005_noe_kill",
+   "kill_time_s": 594,
+   "stacks_at_kill": 49,
+   "highest": 51,
+   "at_70": 0,
+   "at_40": 13,
+   "at_10": 28,
+   "at_last_phase_start": 46
+  },
+  {
+   "log": "wingman_b139e-20261001-201501_noe_kill",
+   "source": "EI",
+   "url": "https://gw2wingman.nevermindcreations.de/log/b139e-20261001-201501_noe_kill",
+   "kill_time_s": 572,
+   "stacks_at_kill": 52,
+   "highest": 59,
+   "at_70": 0,
+   "at_40": 13,
+   "at_10": 29,
+   "at_last_phase_start": 40
+  },
+  {
+   "log": "224233_dpsreport",
+   "source": "EI",
+   "url": "https://dps.report/oPU0-20260930-224233_boss",
+   "kill_time_s": 551,
+   "stacks_at_kill": 54,
+   "highest": 55,
+   "at_70": 3,
+   "at_40": 18,
+   "at_10": 34,
+   "at_last_phase_start": 41
+  },
+  {
+   "log": "20261003-222355",
+   "source": "raw",
+   "url": "https://gw2wingman.nevermindcreations.de/log/90921-Sejter9746_20261003-222354_noe_kill",
+   "kill_time_s": 550,
+   "stacks_at_kill": 56,
+   "highest": 56,
+   "at_70": 3,
+   "at_40": 16,
+   "at_10": 29,
+   "at_last_phase_start": 40
+  },
+  {
+   "log": "wingman_23f47-Account-013D_20261002-004636_noe_kill",
+   "source": "EI",
+   "url": "https://gw2wingman.nevermindcreations.de/log/23f47-Mimslade4271_20261002-004636_noe_kill",
+   "kill_time_s": 587,
+   "stacks_at_kill": 62,
+   "highest": 62,
+   "at_70": 1,
+   "at_40": 6,
+   "at_10": 17,
+   "at_last_phase_start": 30
+  },
+  {
+   "log": "wingman_dc6a8-Account-81AD_20261002-011054_noe_kill",
+   "source": "EI",
+   "url": "https://gw2wingman.nevermindcreations.de/log/dc6a8-Seel6214_20261002-011054_noe_kill",
+   "kill_time_s": 596,
+   "stacks_at_kill": 68,
+   "highest": 68,
+   "at_70": 0,
+   "at_40": 14,
+   "at_10": 30,
+   "at_last_phase_start": 42
+  },
+  {
+   "log": "wingman_d3053-20261001-213328_noe_kill",
+   "source": "EI",
+   "url": "https://gw2wingman.nevermindcreations.de/log/d3053-20261001-213328_noe_kill",
+   "kill_time_s": 564,
+   "stacks_at_kill": 73,
+   "highest": 73,
+   "at_70": 0,
+   "at_40": 12,
+   "at_10": 29,
+   "at_last_phase_start": 40
+  },
+  {
+   "log": "wingman_5771f-Account-CDD2_20261003-011714_noe_kill",
+   "source": "EI",
+   "url": "https://gw2wingman.nevermindcreations.de/log/5771f-Caemlyn4801_20261003-011714_noe_kill",
+   "kill_time_s": 569,
+   "stacks_at_kill": 87,
+   "highest": 87,
+   "at_70": 0,
+   "at_40": 8,
+   "at_10": 24,
+   "at_last_phase_start": 34
+  }
+ ]
+}

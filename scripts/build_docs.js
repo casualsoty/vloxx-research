@@ -55,7 +55,7 @@ function sections(text) { const out = []; let cur = null; for (const l of text.r
 // ---------- categorise ----------
 const CATS = [ // matching: by FINDINGS section number (first match wins)
   { id: 'greens', name: 'Judgment of Eternity — 3-people greens', icon: '◉', match: /^1\./ },
-  { id: 'order', name: 'Attack order per phase', icon: '☰', match: /^5l\./ },
+  { id: 'order', name: 'Attack order per phase', icon: '☰', match: /^5[lq]\./ },
   { id: 'ragingstorm', name: 'Raging Storm (falling spears)', icon: '☄', match: /^5q\./ },
   { id: 'fixated', name: 'Fixated', icon: '◎', match: /^2\./ },
   { id: 'annorb', name: 'Annihilating Orb', icon: '◉', match: /^5p\./ },
@@ -75,6 +75,7 @@ const CATS = [ // matching: by FINDINGS section number (first match wins)
   { id: 'breakbars', name: 'Breakbars', icon: '▰', match: /^5i\./ },
   { id: 'immunity', name: 'Damage Immunity', icon: '⛨', match: /^5n\./ },
   { id: 'phasetimes', name: 'Phase times', icon: '⏱', match: /^5r\./ },
+  { id: 'empowered', name: 'Empowered stacks', icon: '▲', match: /^5s\./ },
   { id: 'dps', name: 'DPS per build', icon: '⚑', match: /^5o\./ },
   { id: 'rejected', name: 'Rejected hypotheses', icon: '✕', match: /^6\./ },
   { id: 'open', name: 'Open questions', icon: '?', match: /^7\./ },
@@ -88,7 +89,7 @@ const used = new Set(); const catSecs = CATS.map(c => { const s = findings.filte
 // (CATS above is the MATCHING order — first match wins — so it is kept as is.)
 const ORDER = [
   ['Attacks & mechanics, in fight order', ['order', 'fixated', 'greens', 'annorb', 'shackles', 'cosmiccharge', 'worldpiercer', 'ragingstorm', 'echoing', 'slice', 'excision', 'swordadd', 'pd', 'bug', 'overlap', 'shapes']],
-  ['Adds, breakbars, arena & planner', ['orbs', 'breakbars', 'immunity', 'phasetimes', 'dps', 'arena', 'plannerdata']],
+  ['Adds, breakbars, arena & planner', ['orbs', 'breakbars', 'immunity', 'phasetimes', 'empowered', 'dps', 'arena', 'plannerdata']],
   ['Research notes', ['rejected', 'open']]];
 findings.filter(f => !used.has(f)).forEach(f => catSecs.push({ id: 'misc-' + catSecs.length, name: f.title.replace(/^\d+[a-z]?\.\s*/, ''), icon: '•', secs: [f] }));
 const refTitles = ['The goal behind the research', 'Important IDs', 'Datasets', 'Getting more logs', 'How to run', 'Folder layout', 'Status'];

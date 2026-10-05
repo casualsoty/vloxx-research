@@ -213,14 +213,6 @@ wingman_e1a59-20261002-214446_noe_kill,EI,https://gw2wingman.nevermindcreations.
 wingman_e1a59-20261002-214446_noe_kill,EI,https://gw2wingman.nevermindcreations.de/log/e1a59-20261002-214446_noe_kill,Split 3,37.6
 wingman_e1a59-20261002-214446_noe_kill,EI,https://gw2wingman.nevermindcreations.de/log/e1a59-20261002-214446_noe_kill,Final Form Phase,65.2
 wingman_e1a59-20261002-214446_noe_kill,EI,https://gw2wingman.nevermindcreations.de/log/e1a59-20261002-214446_noe_kill,Full fight (kill),584.9
-wingman_e961b-20261003-211028_noe_kill,EI,https://gw2wingman.nevermindcreations.de/log/e961b-20261003-211028_noe_kill,Staff Phase,114.8
-wingman_e961b-20261003-211028_noe_kill,EI,https://gw2wingman.nevermindcreations.de/log/e961b-20261003-211028_noe_kill,Split 1,32.2
-wingman_e961b-20261003-211028_noe_kill,EI,https://gw2wingman.nevermindcreations.de/log/e961b-20261003-211028_noe_kill,Spear Phase,126.8
-wingman_e961b-20261003-211028_noe_kill,EI,https://gw2wingman.nevermindcreations.de/log/e961b-20261003-211028_noe_kill,Split 2,28.2
-wingman_e961b-20261003-211028_noe_kill,EI,https://gw2wingman.nevermindcreations.de/log/e961b-20261003-211028_noe_kill,Sword Phase,145.8
-wingman_e961b-20261003-211028_noe_kill,EI,https://gw2wingman.nevermindcreations.de/log/e961b-20261003-211028_noe_kill,Split 3,46.7
-wingman_e961b-20261003-211028_noe_kill,EI,https://gw2wingman.nevermindcreations.de/log/e961b-20261003-211028_noe_kill,Final Form Phase,49.5
-wingman_e961b-20261003-211028_noe_kill,EI,https://gw2wingman.nevermindcreations.de/log/e961b-20261003-211028_noe_kill,Full fight (kill),543.9
 wingman_eadca-Account-7C4C_20261001-001023_noe_fail,EI,https://gw2wingman.nevermindcreations.de/log/eadca-Graba8094_20261001-001023_noe_fail,Staff Phase,126.3
 wingman_eadca-Account-7C4C_20261001-001023_noe_fail,EI,https://gw2wingman.nevermindcreations.de/log/eadca-Graba8094_20261001-001023_noe_fail,Split 1,15.3
 wingman_eadca-Account-7C4C_20261001-001023_noe_fail,EI,https://gw2wingman.nevermindcreations.de/log/eadca-Graba8094_20261001-001023_noe_fail,Spear Phase,137.3
@@ -692,14 +684,14 @@ wingman_f9dda-20261002-215908_noe_kill,EI,https://gw2wingman.nevermindcreations.
 20261003-175607,raw,,Split 3,53
 20261003-210118,raw,,Staff Phase,118
 20261003-210118,raw,,Split 1,42.4
-20261003-211223,raw,,Staff Phase,116.8
-20261003-211223,raw,,Split 1,32.6
-20261003-211223,raw,,Spear Phase,126.4
-20261003-211223,raw,,Split 2,28.4
-20261003-211223,raw,,Sword Phase,143.6
-20261003-211223,raw,,Split 3,46.7
-20261003-211223,raw,,Final Form Phase,49.5
-20261003-211223,raw,,Full fight (kill),543.9
+20261003-211223,raw,https://gw2wingman.nevermindcreations.de/log/e961b-20261003-211028_noe_kill,Staff Phase,116.8
+20261003-211223,raw,https://gw2wingman.nevermindcreations.de/log/e961b-20261003-211028_noe_kill,Split 1,32.6
+20261003-211223,raw,https://gw2wingman.nevermindcreations.de/log/e961b-20261003-211028_noe_kill,Spear Phase,126.4
+20261003-211223,raw,https://gw2wingman.nevermindcreations.de/log/e961b-20261003-211028_noe_kill,Split 2,28.4
+20261003-211223,raw,https://gw2wingman.nevermindcreations.de/log/e961b-20261003-211028_noe_kill,Sword Phase,143.6
+20261003-211223,raw,https://gw2wingman.nevermindcreations.de/log/e961b-20261003-211028_noe_kill,Split 3,46.7
+20261003-211223,raw,https://gw2wingman.nevermindcreations.de/log/e961b-20261003-211028_noe_kill,Final Form Phase,49.5
+20261003-211223,raw,https://gw2wingman.nevermindcreations.de/log/e961b-20261003-211028_noe_kill,Full fight (kill),543.9
 20261003-212652,raw,,Staff Phase,110.2
 20261003-212652,raw,,Split 1,34.5
 20261003-213542,raw,,Staff Phase,111.4

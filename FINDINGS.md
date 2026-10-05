@@ -2,13 +2,13 @@
 
 Confidence tags: **[solid]** many cases, no counter-example · **[likely]** consistent but small sample · **[open]** unresolved ·
 **[REJECTED]** tested and disproved (kept so nobody re-tests it blindly).
-Current sample (2026-10-04): **268 CM logs** — 236 raw from our squad + 32 EI from other squads (18 of them CM kills from GW2 Wingman) — of which
-**58 reached the last phase** (26 raw, 4 of them kills); 1,822 green rounds; 1,500 Fixated applications; 2,753 Ascension Orbs; plus NM logs.
-Numbers quoted as "175-log set" below are from the previous sample; headline rules re-checked on the 268-log set: green count rule **1,434/1,436**,
-Probability Distribution count 171/175, orb throws 423/425 (same 2 Staff misses), +63 s overlap 19/19 with a fixated player and 0/22 without. History: first written on 49 CM logs
+Current sample (2026-10-04): **267 CM logs** — 236 raw from our squad + 31 EI from other squads (17 of them CM kills from GW2 Wingman) — of which
+**57 reached the last phase** (26 raw, 4 of them kills); 1,810 green rounds; 1,492 Fixated applications; 2,753 Ascension Orbs; plus NM logs.
+Numbers quoted as "175-log set" below are from the previous sample; headline rules re-checked on the 267-log set: green count rule **1,424/1,426**,
+Probability Distribution count 168/172, orb throws 423/425 (same 2 Staff misses), +63 s overlap 19/19 with a fixated player and 0/21 without. History: first written on 49 CM logs
 (35 raw + 14 EI, 24 last phase); 141 after 2026-10-02; 175 after adding the 2026-10-02 afternoon/evening session (34 CM logs, 2 last phases);
 240 after adding the 2026-10-03 sessions (47 raw logs) and 18 CM kills from Wingman;
-268 after adding the 2026-10-04 session (28 raw logs).
+268 after adding the 2026-10-04 session (28 raw logs); 267 after removing one more Wingman kill that was the same fight as one of our raw kills.
 
 ---
 ## 1. Green rounds — the basics
@@ -18,7 +18,7 @@ Probability Distribution count 171/175, orb throws 423/425 (same 2 Staff misses)
 * **Slot 1 = the Fixated player**, at any distance. If nobody holds Fixated, slot 1 stays empty and the first marker lands
   ~80 ms late. **[solid]** (165/165 rounds with a fixated player had them first.)
 * **Count = min(3, floor(players up / 3))**, downed/dead players don't count. **[solid]** — 338/338 rounds with a fixated
-  player (excluding the fight-start round) match (141 CM logs: 757/758; 175 CM logs: 873/875; **268 CM logs: 1,434/1,436** — both exceptions are rounds
+  player (excluding the fight-start round) match (141 CM logs: 757/758; 175 CM logs: 873/875; **267 CM logs: 1,424/1,426** — both exceptions are rounds
   2–3 s before a wipe ended the log: 20260930-225808 and 20261002-223258, 6 up → 1 green instead of 2). Every short round in our squad's own logs is explained by downs/deaths.
 * **Fight start (first round, ~3 s / ~6 s raw):** always only the fixated player (48/49 logs). The others are still at the
   entrance ~4,400 units away. The exception (224233) had 6 players already hitting the boss and got 3. In CM players standing at
@@ -159,7 +159,7 @@ applies one (3 of 7 skipped in the 175-log set) and that new holder gets the ove
   | `20261003-001430.zevtc` | 2:06.2 | 129.2 s | 7:24.8 | **Staff, not thrown.** Staff died 2.4 s after; Corrosive Poison Cloud cast 8.4 s before |
   | `20260930-203947.zevtc` | 2:49.7 | 172.7 s | 2:54.8 | Spear: thrown (3 missiles at +0.0/+0.2/+0.4 s); the log ended 2.1 s later, before they landed |
 
-  So **300/302 CCs threw the orbs** (268-log set: **423/425**, the same 2 misses). In the 2 Staff misses there is **no 80520 missile at all**. Per-CC data: `data/orb_throws.csv`
+  So **300/302 CCs threw the orbs** (267-log set: **423/425**, the same 2 misses). In the 2 Staff misses there is **no 80520 missile at all**. Per-CC data: `data/orb_throws.csv`
   (`scripts/orb_throws.js`, rebuilt every build), with the throw count, the orbs seen and any projectile-hate skill cast nearby.
   Tested and **[REJECTED]** as explanations:
   * **Picking the orbs up before they land** (suggested from the replay): a throw would still be logged, and orbs grabbed the
@@ -242,7 +242,7 @@ Skill **81076**, cast twice in the Staff phase (~38 s and ~85 s raw time). Marke
   was 8958, 15450 on 128 logs — it is an average of where people stand, so it moves a little);
   the first green round therefore only hits the fixated player. **[solid]**
 * **Cosmic adds (Piercer / Bulwark / Sunderer) spawn at one of 8 fixed points** on a ring 608–702 units from the centre,
-  every ~45° (angles −180, −137, −94, −48, −1, 48, 94, 138°; 486 spawns, 585 in the 175-log set and 892 in the 268-log set with the same 8 points;
+  every ~45° (angles −180, −137, −94, −48, −1, 48, 94, 138°; 486 spawns, 585 in the 175-log set and 892 in the 267-log set with the same 8 points;
   data in `data/arena.json → cosmicPoints`).
   Piercers spawn mostly 110–170 s, Bulwarks 270–290 s (around Splits 1–2), Sunderer rarely (Split 3). **[solid]**
   World / map coordinates of the 8 points: (11519, 15321) 292.59, 389.17 · (11731, 14878) 297.97, 377.90 ·
@@ -772,26 +772,26 @@ At 10 % the immunity continues for 15 s into the last phase (a second, 15 s appl
 
 ## 5o. DPS per specialisation and build on kills — target and cleave, average and highest  [solid for builds with many samples]
 Script `scripts/dps_table.js` → `data/dps_samples.csv` (one row per player per kill, no names) and `data/dps_table.json` (part of the full build).
-**Kills only:** 26 CM kills (22 Elite Insights logs from dps.report / GW2 Wingman, 4 raw logs), 260 samples (one player in one kill).
-Kill times 511–596 s (average 562 s).
+**Kills only:** 25 CM kills (21 Elite Insights logs from dps.report / GW2 Wingman, 4 raw logs), 250 samples (one player in one kill).
+Kill times 511–596 s (average 563 s).
 
 * **Target** = damage on Vloxx ÷ length of the fight. **Cleave** = damage on every enemy (Vloxx, Aspects, Cosmic adds) ÷ length of the fight.
   The whole fight counts as time, including the splits and the Damage Immunity windows (§5n), so these numbers are lower than a
   benchmark and lower than a phase DPS.
 * **Build:** "Condition" when at least half of the player's damage was condition damage, otherwise "Power"; "Heal" / "Boon" from the healing
   and concentration stats the log records.
-* **The highest values are links** to the log they come from, when the log is online; otherwise the name of the log is written (25 of 26 kills).
-* **Whole squad:** target 151,610 on average (best [166,757](https://gw2wingman.nevermindcreations.de/log/14de4-20261004-011214_noe_kill)), cleave 255,659 (best [283,177](https://gw2wingman.nevermindcreations.de/log/14de4-20261004-011214_noe_kill)).
+* **The highest values are links** to the log they come from, when the log is online; otherwise the name of the log is written (25 of 25 kills).
+* **Whole squad:** target 151,419 on average (best [166,757](https://gw2wingman.nevermindcreations.de/log/14de4-20261004-011214_noe_kill)), cleave 255,199 (best [283,177](https://gw2wingman.nevermindcreations.de/log/14de4-20261004-011214_noe_kill)).
 
 | build | samples | target avg | target highest | cleave avg | cleave highest | condition share |
 |---|---|---|---|---|---|---|
 | Condition Weaver | 10 | 22,650 | [24,414](https://gw2wingman.nevermindcreations.de/log/081e5-Seel6214_20261001-210656_noe_kill) | 35,875 | [38,331](https://gw2wingman.nevermindcreations.de/log/81daf-20261002-154733_noe_kill) | 93 % |
-| Condition Scourge | 129 | 19,500 | [23,366](https://gw2wingman.nevermindcreations.de/log/e961b-20261003-211028_noe_kill) | 33,915 | [40,629](https://gw2wingman.nevermindcreations.de/log/14de4-20261004-011214_noe_kill) | 94 % |
-| Condition Evoker | 26 | 18,113 | [21,233](https://gw2wingman.nevermindcreations.de/log/f9dda-20261002-215908_noe_kill) | 29,772 | [36,391](https://gw2wingman.nevermindcreations.de/log/e961b-20261003-211028_noe_kill) | 92 % |
-| Power Luminary | 10 | 14,266 | [17,366](https://gw2wingman.nevermindcreations.de/log/85c0f-20261002-215404_noe_kill) | 26,043 | [29,531](https://gw2wingman.nevermindcreations.de/log/f9dda-20261002-215908_noe_kill) | 1 % |
+| Condition Scourge | 125 | 19,456 | [22,613](https://gw2wingman.nevermindcreations.de/log/e961b-20261003-211028_noe_kill) | 33,898 | [40,629](https://gw2wingman.nevermindcreations.de/log/14de4-20261004-011214_noe_kill) | 94 % |
+| Condition Evoker | 23 | 18,152 | [21,233](https://gw2wingman.nevermindcreations.de/log/f9dda-20261002-215908_noe_kill) | 29,597 | [35,218](https://gw2wingman.nevermindcreations.de/log/e961b-20261003-211028_noe_kill) | 92 % |
+| Power Luminary | 9 | 14,507 | [17,366](https://gw2wingman.nevermindcreations.de/log/85c0f-20261002-215404_noe_kill) | 26,317 | [29,531](https://gw2wingman.nevermindcreations.de/log/f9dda-20261002-215908_noe_kill) | 1 % |
 | Boon Condition Specter | 20 | 11,610 | [15,022](https://gw2wingman.nevermindcreations.de/log/47d67-20261004-012811_noe_kill) | 16,036 | [19,425](https://gw2wingman.nevermindcreations.de/log/47d67-20261004-012811_noe_kill) | 89 % |
-| Boon Condition Troubadour | 9 | 7,053 | [8,256](https://gw2wingman.nevermindcreations.de/log/081e5-Seel6214_20261001-210656_noe_kill) | 10,763 | [11,862](https://dps.report/MsKX-20260930-014037-fixed_boss) | 72 % |
-| Heal Troubadour | 42 | 1,037 | [6,382](https://gw2wingman.nevermindcreations.de/log/14de4-20261004-011214_noe_kill) | 1,842 | [9,176](https://gw2wingman.nevermindcreations.de/log/14de4-20261004-011214_noe_kill) | 11 % |
+| Boon Condition Troubadour | 8 | 7,126 | [8,256](https://gw2wingman.nevermindcreations.de/log/081e5-Seel6214_20261001-210656_noe_kill) | 10,742 | [11,862](https://dps.report/MsKX-20260930-014037-fixed_boss) | 73 % |
+| Heal Troubadour | 41 | 1,042 | [6,382](https://gw2wingman.nevermindcreations.de/log/14de4-20261004-011214_noe_kill) | 1,847 | [9,176](https://gw2wingman.nevermindcreations.de/log/14de4-20261004-011214_noe_kill) | 12 % |
 
 **Fewer than 5 samples (not reliable):**
 | build | samples | target avg | target highest | cleave avg | cleave highest | condition share |
@@ -918,7 +918,7 @@ Each impact of Vloxx's *Raging Storm* (damage skill 81176) is announced by a 3 s
 
 ## 5r. Phase times — fastest and average per phase  [solid]
 Script `scripts/phase_times.js` → `data/phase_times.csv` (one row per log × finished phase) and `data/phase_times.json` (part of the full build).
-224 CM logs, 834 finished phases. A phase only counts in a log where it was finished; the last phase and the full fight only on kills.
+223 CM logs, 826 finished phases. A phase only counts in a log where it was finished; the last phase and the full fight only on kills.
 Phases are cut like Elite Insights does: a split = the *Visions of Eternity* cast with its breakbar; Split 3 runs until the Damage Immunity of the
 last phase ends. Raw logs start 3.0 s before the fight (checked on two kills that exist in both forms), which is subtracted.
 
@@ -926,14 +926,52 @@ In fight order. The fastest time is a link to its log when that log is online; w
 
 | phase | what it covers | fastest | average | median | slowest | logs |
 |---|---|---|---|---|---|---|
-| Staff Phase | pull → 70 % | 1 min 48.2 s (log `20261003-232757`, not uploaded) (fastest online: [1 min 53.7 s](https://gw2wingman.nevermindcreations.de/log/081e5-Seel6214_20261001-210656_noe_kill)) | 2 min 08.1 s | 2 min 06.4 s | 2 min 53.0 s | 224 |
-| Split 1 | Visions of Eternity + breakbar at 70 % | 13.6 s (log `20260930-220831`, not uploaded) (fastest online: [15.2 s](https://b.dps.report/ST7h-20261002-005256_boss)) | 25.9 s | 25.0 s | 52.4 s | 223 |
-| Spear Phase | 70 → 40 % | [1 min 49.4 s](https://gw2wingman.nevermindcreations.de/log/14de4-20261004-011214_noe_kill) | 2 min 14.8 s | 2 min 08.3 s | 4 min 05.9 s | 110 |
-| Split 2 | Visions of Eternity + breakbar at 40 % | [18.2 s](https://gw2wingman.nevermindcreations.de/log/23f47-Mimslade4271_20261002-004636_noe_kill) | 31.5 s | 29.6 s | 1 min 07.8 s | 109 |
-| Sword Phase | 40 → 10 % | 2 min 15.5 s (log `20261003-234425`, not uploaded) (fastest online: [2 min 15.7 s](https://gw2wingman.nevermindcreations.de/log/85c0f-20261002-215404_noe_kill)) | 2 min 49.7 s | 2 min 46.0 s | 3 min 40.9 s | 58 |
-| Split 3 | Visions of Eternity + breakbar at 10 %, until the Damage Immunity ends | [29.7 s](https://gw2wingman.nevermindcreations.de/log/6f88a-Clemyyy4217_20261001-213947_noe_kill) | 40.6 s | 40.8 s | 54.4 s | 58 |
-| Final Form Phase | last phase → kill | [45.4 s](https://gw2wingman.nevermindcreations.de/log/14de4-20261004-011214_noe_kill) | 59.3 s | 57.9 s | 1 min 18.6 s | 26 |
-| Full fight (kill) | pull → kill | [8 min 31.0 s](https://gw2wingman.nevermindcreations.de/log/14de4-20261004-011214_noe_kill) | 9 min 19.5 s | 9 min 13.0 s | 9 min 55.8 s | 26 |
+| Staff Phase | pull → 70 % | 1 min 48.2 s (log `20261003-232757`, not uploaded) (fastest online: [1 min 53.7 s](https://gw2wingman.nevermindcreations.de/log/081e5-Seel6214_20261001-210656_noe_kill)) | 2 min 08.2 s | 2 min 06.4 s | 2 min 53.0 s | 223 |
+| Split 1 | Visions of Eternity + breakbar at 70 % | 13.6 s (log `20260930-220831`, not uploaded) (fastest online: [15.2 s](https://b.dps.report/ST7h-20261002-005256_boss)) | 25.9 s | 25.0 s | 52.4 s | 222 |
+| Spear Phase | 70 → 40 % | [1 min 49.4 s](https://gw2wingman.nevermindcreations.de/log/14de4-20261004-011214_noe_kill) | 2 min 14.9 s | 2 min 08.4 s | 4 min 05.9 s | 109 |
+| Split 2 | Visions of Eternity + breakbar at 40 % | [18.2 s](https://gw2wingman.nevermindcreations.de/log/23f47-Mimslade4271_20261002-004636_noe_kill) | 31.6 s | 29.6 s | 1 min 07.8 s | 108 |
+| Sword Phase | 40 → 10 % | 2 min 15.5 s (log `20261003-234425`, not uploaded) (fastest online: [2 min 15.7 s](https://gw2wingman.nevermindcreations.de/log/85c0f-20261002-215404_noe_kill)) | 2 min 50.1 s | 2 min 46.0 s | 3 min 40.9 s | 57 |
+| Split 3 | Visions of Eternity + breakbar at 10 %, until the Damage Immunity ends | [29.7 s](https://gw2wingman.nevermindcreations.de/log/6f88a-Clemyyy4217_20261001-213947_noe_kill) | 40.5 s | 40.8 s | 54.4 s | 57 |
+| Final Form Phase | last phase → kill | [45.4 s](https://gw2wingman.nevermindcreations.de/log/14de4-20261004-011214_noe_kill) | 59.7 s | 59.3 s | 1 min 18.6 s | 25 |
+| Full fight (kill) | pull → kill | [8 min 31.0 s](https://gw2wingman.nevermindcreations.de/log/14de4-20261004-011214_noe_kill) | 9 min 20.2 s | 9 min 23.8 s | 9 min 55.8 s | 25 |
+
+## 5s. Empowered stacks on Vloxx at kill time  [solid]
+Script `scripts/empowered_stacks.js` → `data/empowered_stacks.csv`, `data/empowered_stacks.json` (part of the full build). 25 CM kills.
+*Empowered* is buff 81002 on Vloxx; it gains stacks during the fight (applied by Vloxx and the Aspects).
+
+* **Lowest at kill time so far: 25 stacks** (median 41, highest 87).
+* Stacks when each threshold is reached (lowest / median / highest): 70 %: 0 / 1 / 3 · 40 %: 6 / 12 / 18 · 10 %: 17 / 25 / 34 · start of the last phase: 25 / 35 / 46.
+* Longer kills tend to end with more stacks, loosely (correlation 0.43). What gives a stack and what the stacks do was not looked into. **[open]**
+
+Sorted by stacks at kill time. The number is a link to the log when it is online.
+
+| stacks at kill | kill time | at 70 % | at 40 % | at 10 % | at the start of the last phase | highest during the fight |
+|---|---|---|---|---|---|---|
+| [25](https://gw2wingman.nevermindcreations.de/log/14de4-20261004-011214_noe_kill) | 8 min 31 s | 1 | 10 | 17 | 25 | 28 |
+| [29](https://gw2wingman.nevermindcreations.de/log/81daf-20261002-154733_noe_kill) | 8 min 43 s | 1 | 14 | 25 | 31 | 34 |
+| [31](https://dps.report/qVZX-20260930-220703_boss) | 9 min 48 s | 1 | 11 | 21 | 31 | 35 |
+| [32](https://gw2wingman.nevermindcreations.de/log/9fe05-20261002-155233_noe_kill) | 8 min 57 s | 2 | 12 | 20 | 27 | 32 |
+| [33](https://gw2wingman.nevermindcreations.de/log/6f88a-Clemyyy4217_20261001-213947_noe_kill) | 9 min 10 s | 2 | 9 | 21 | 28 | 33 |
+| [33](https://dps.report/oOYc-20260930-050224_boss) | 9 min 13 s | 0 | 9 | 25 | 34 | 35 |
+| [34](https://gw2wingman.nevermindcreations.de/log/47d67-20261004-012811_noe_kill) | 9 min 36 s | 0 | 14 | 23 | 33 | 36 |
+| [35](https://gw2wingman.nevermindcreations.de/log/85c0f-20261002-215404_noe_kill) | 8 min 49 s | 1 | 10 | 24 | 38 | 39 |
+| [35](https://b.dps.report/rKIr-20261002-010435_boss) | 9 min 41 s | 0 | 12 | 26 | 35 | 38 |
+| [37](https://gw2wingman.nevermindcreations.de/log/f9dda-20261002-215908_noe_kill) | 8 min 58 s | 2 | 11 | 31 | 37 | 39 |
+| [38](https://gw2wingman.nevermindcreations.de/log/704cb-20261003-193028_noe_kill) | 9 min 26 s | 1 | 12 | 28 | 41 | 44 |
+| [40](https://dps.report/MsKX-20260930-014037-fixed_boss) | 9 min 08 s | 1 | 12 | 21 | 33 | 43 |
+| [41](https://gw2wingman.nevermindcreations.de/log/e961b-20261003-211028_noe_kill) | 9 min 04 s | 0 | 10 | 20 | 29 | 41 |
+| [42](https://gw2wingman.nevermindcreations.de/log/202f1-20261002-212232_noe_kill) | 9 min 37 s | 0 | 11 | 28 | 41 | 44 |
+| [44](https://gw2wingman.nevermindcreations.de/log/081e5-Seel6214_20261001-210656_noe_kill) | 8 min 56 s | 0 | 13 | 24 | 29 | 44 |
+| [44](https://gw2wingman.nevermindcreations.de/log/e1a59-20261002-214446_noe_kill) | 9 min 45 s | 1 | 14 | 32 | 45 | 46 |
+| [46](https://gw2wingman.nevermindcreations.de/log/005f1-20261001-215126_noe_kill) | 9 min 40 s | 0 | 9 | 31 | 41 | 49 |
+| [49](https://gw2wingman.nevermindcreations.de/log/c8506-20261003-120005_noe_kill) | 9 min 54 s | 0 | 13 | 28 | 46 | 51 |
+| [52](https://gw2wingman.nevermindcreations.de/log/b139e-20261001-201501_noe_kill) | 9 min 32 s | 0 | 13 | 29 | 40 | 59 |
+| [54](https://dps.report/oPU0-20260930-224233_boss) | 9 min 11 s | 3 | 18 | 34 | 41 | 55 |
+| [56](https://gw2wingman.nevermindcreations.de/log/90921-Sejter9746_20261003-222354_noe_kill) | 9 min 10 s | 3 | 16 | 29 | 40 | 56 |
+| [62](https://gw2wingman.nevermindcreations.de/log/23f47-Mimslade4271_20261002-004636_noe_kill) | 9 min 47 s | 1 | 6 | 17 | 30 | 62 |
+| [68](https://gw2wingman.nevermindcreations.de/log/dc6a8-Seel6214_20261002-011054_noe_kill) | 9 min 56 s | 0 | 14 | 30 | 42 | 68 |
+| [73](https://gw2wingman.nevermindcreations.de/log/d3053-20261001-213328_noe_kill) | 9 min 24 s | 0 | 12 | 29 | 40 | 73 |
+| [87](https://gw2wingman.nevermindcreations.de/log/5771f-Caemlyn4801_20261003-011714_noe_kill) | 9 min 29 s | 0 | 8 | 24 | 34 | 87 |
 
 ## 6. Hypotheses that were tested and REJECTED (don't redo)
 * **Range limit ~600 (last phase) / ~775 (early, = 600 + boss hitbox 150 + player 24).** Looked perfect on EI data (211/211),

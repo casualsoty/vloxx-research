@@ -124,8 +124,8 @@ common structure (greens, PD, fixation, stealth, downs, deaths, positions, orbs,
     Estimate from summaries: `squadDmg / (1 - hpLeft/100)` ≈ 85 M (CM) or ≈ 42.4 M (NM).
   * CM released Tuesday 2026-09-29 23:00 CEST. On 2026-10-01 Wingman had 14 CM attempts that reached the last phase
     (all in the local `logs/`), 1 CM kill.
-  * On 2026-10-04 Wingman had 24 CM kills (`onlyKills=OnlyKills` in the same call, then the HP rule). 18 are in `logs/ei/` as
-    `wingman_<id>_noe_kill.json.gz`; the other 6 are the same fights as logs already present (dps.report copies or our own raw kills, which are
+  * On 2026-10-04 Wingman had 24 CM kills (`onlyKills=OnlyKills` in the same call, then the HP rule). 17 are in `logs/ei/` as
+    `wingman_<id>_noe_kill.json.gz`; the other 7 are the same fights as logs already present (dps.report copies or our own raw kills, which are
     linked to their Wingman page in `logs/sources.json` instead).
 * **Raw logs are always better** than EI JSON: exact positions, every effect/buff event, agent effects (EI doesn't export).
   New raw logs: arcdps saves them in `Documents\Guild Wars 2\addons\arcdps\arcdps.cbtlogs\Vloxx (28106)`.

@@ -1784,18 +1784,6 @@ wingman_e1a59-20261002-214446_noe_kill,EI,early,,429.456,Player-1014,10,3,3,Play
 wingman_e1a59-20261002-214446_noe_kill,EI,last,3,507.772,Player-8FDA,10,3,3,Player-8FDA > Player-F817 > Player-1A64,1 2 3,,9.54
 wingman_e1a59-20261002-214446_noe_kill,EI,last,33,537.772,Player-8FDA,10,3,3,Player-8FDA > Player-9381 > Player-1014,1 2 3,,6.76
 wingman_e1a59-20261002-214446_noe_kill,EI,last,63,567.772,,10,3,1,Player-8FDA,2,Player-F817 | Player-1A64 | Player-C794,2.59
-wingman_e961b-20261003-211028_noe_kill,EI,early,,2.756,Player-DDA6,10,3,1,Player-DDA6,,,100
-wingman_e961b-20261003-211028_noe_kill,EI,early,,50.036,Player-DDA6,10,3,3,Player-DDA6 > Player-A34F > Player-FBAD,,,87.27
-wingman_e961b-20261003-211028_noe_kill,EI,early,,94.636,Player-DDA6,10,3,3,Player-DDA6 > Player-80A0 > Player-BCA0,,,74.49
-wingman_e961b-20261003-211028_noe_kill,EI,early,,150.726,Player-C842,10,3,3,Player-C842 > Player-80A0 > Player-FBAD,,,68.47
-wingman_e961b-20261003-211028_noe_kill,EI,early,,205.284,Player-C842,10,3,3,Player-C842 > Player-80A0 > Player-FBAD,,,53.76
-wingman_e961b-20261003-211028_noe_kill,EI,early,,250.124,Player-FBAD,10,3,3,Player-FBAD > Player-80A0 > Player-89AD,,,43.81
-wingman_e961b-20261003-211028_noe_kill,EI,early,,305.482,Player-BCA0,10,3,3,Player-BCA0 > Player-80A0 > Player-FBAD,,,38.73
-wingman_e961b-20261003-211028_noe_kill,EI,early,,352.368,Player-BCA0,10,3,3,Player-BCA0 > Player-80A0 > Player-FBAD,,,28.34
-wingman_e961b-20261003-211028_noe_kill,EI,early,,400.606,Player-FAE3,10,3,3,Player-FAE3 > Player-89AD > Player-FBAD,,,18.17
-wingman_e961b-20261003-211028_noe_kill,EI,last,3,482.446,Player-C842,10,3,3,Player-C842 > Player-FBAD > Player-A34F,1 2 3,,9.22
-wingman_e961b-20261003-211028_noe_kill,EI,last,33,512.446,Player-C842,10,3,3,Player-C842 > Player-FBAD > Player-1BA4,1 2 3,,5.74
-wingman_e961b-20261003-211028_noe_kill,EI,last,63,542.446,,9,3,1,Player-A34F,2,Player-FAE3 | Player-FBAD | Player-DDA6,0.26
 wingman_eadca-Account-7C4C_20261001-001023_noe_fail,EI,early,,2.526,Player-CF48,10,3,1,Player-CF48,,,100
 wingman_eadca-Account-7C4C_20261001-001023_noe_fail,EI,early,,49.52,Player-CF48,10,3,3,Player-CF48 > Player-247A > Player-700E,,,89.59
 wingman_eadca-Account-7C4C_20261001-001023_noe_fail,EI,early,,94.164,Player-700E,10,3,3,Player-700E > Player-6E8F > Player-247A,,,77.71
