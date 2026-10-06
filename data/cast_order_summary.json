@@ -1,17 +1,17 @@
 {
- "logs": 284,
+ "logs": 315,
  "phases": [
   {
    "phase": "P1 (Staff, 100 → 70 %)",
-   "logsReached": 284,
-   "logsFinished": 229,
+   "logsReached": 315,
+   "logsFinished": 254,
    "castsPerFinishedPhase": 23,
-   "phaseLengthS": 125,
+   "phaseLengthS": 124,
    "fixated": {
     "applications": [
      {
       "n": 1,
-      "logs": 284,
+      "logs": 315,
       "at_s": 3,
       "p10_s": 3,
       "p90_s": 3,
@@ -19,7 +19,7 @@
       "clusters": [
        {
         "around_s": 4,
-        "logs": 282
+        "logs": 313
        },
        {
         "around_s": 24,
@@ -31,26 +31,26 @@
      },
      {
       "n": 2,
-      "logs": 256,
-      "at_s": 70.7,
+      "logs": 285,
+      "at_s": 70.8,
       "p10_s": 70.3,
       "p90_s": 71.3,
       "within2sPct": 95,
       "clusters": [
        {
         "around_s": 72,
-        "logs": 241
+        "logs": 269
        },
        {
         "around_s": 28,
         "logs": 4
        },
        {
-        "around_s": 24,
-        "logs": 3
+        "around_s": 52,
+        "logs": 4
        },
        {
-        "around_s": 52,
+        "around_s": 24,
         "logs": 3
        }
       ],
@@ -77,8 +77,8 @@
      "Annihilating Orb",
      "Surrounding Curse"
     ],
-    "logsWithExactlyThisStart": 185,
-    "logsLongEnough": 187
+    "logsWithExactlyThisStart": 202,
+    "logsLongEnough": 204
    },
    "timers": {
     "Judgment of Eternity": {
@@ -87,7 +87,7 @@
       "median": 47,
       "min": 44.4,
       "max": 64.8,
-      "n": 522
+      "n": 579
      }
     },
     "Probability Distribution": {
@@ -96,16 +96,16 @@
       "median": 44.5,
       "min": 32,
       "max": 54.5,
-      "n": 429
+      "n": 469
      }
     },
     "Eternal Reflection": {
-     "firstAtS": 22.1,
+     "firstAtS": 22,
      "everyS": {
       "median": 10.1,
       "min": 8.8,
       "max": 26.4,
-      "n": 1763
+      "n": 1941
      }
     }
    },
@@ -115,7 +115,7 @@
      "position": 1,
      "skill": "Judgment of Eternity",
      "skill_id": 80629,
-     "logs": 284,
+     "logs": 315,
      "agree_pct": 100,
      "start_s": 4.4,
      "start_min_s": 4.1,
@@ -129,7 +129,7 @@
      "position": 2,
      "skill": "Surrounding Curse",
      "skill_id": 80653,
-     "logs": 284,
+     "logs": 315,
      "agree_pct": 100,
      "start_s": 8.9,
      "start_min_s": 8.6,
@@ -143,7 +143,7 @@
      "position": 3,
      "skill": "Annihilating Orb",
      "skill_id": 80323,
-     "logs": 284,
+     "logs": 315,
      "agree_pct": 100,
      "start_s": 13,
      "start_min_s": 12.6,
@@ -157,7 +157,7 @@
      "position": 4,
      "skill": "Probability Distribution",
      "skill_id": 80809,
-     "logs": 282,
+     "logs": 313,
      "agree_pct": 100,
      "start_s": 20,
      "start_min_s": 19.5,
@@ -171,9 +171,9 @@
      "position": 5,
      "skill": "Eternal Reflection",
      "skill_id": 81209,
-     "logs": 280,
+     "logs": 311,
      "agree_pct": 100,
-     "start_s": 22.1,
+     "start_s": 22,
      "start_min_s": 21.6,
      "start_max_s": 25.9,
      "cast_s": 3.8,
@@ -185,7 +185,7 @@
      "position": 6,
      "skill": "Eternal Reflection",
      "skill_id": 81209,
-     "logs": 279,
+     "logs": 310,
      "agree_pct": 100,
      "start_s": 31.2,
      "start_min_s": 30.5,
@@ -199,7 +199,7 @@
      "position": 7,
      "skill": "Ascension's Sacrifice",
      "skill_id": 81076,
-     "logs": 277,
+     "logs": 308,
      "agree_pct": 100,
      "start_s": 37.3,
      "start_min_s": 36.6,
@@ -213,7 +213,7 @@
      "position": 8,
      "skill": "Annihilating Orb",
      "skill_id": 80323,
-     "logs": 276,
+     "logs": 307,
      "agree_pct": 100,
      "start_s": 43.4,
      "start_min_s": 42.7,
@@ -227,7 +227,7 @@
      "position": 9,
      "skill": "Judgment of Eternity",
      "skill_id": 80629,
-     "logs": 271,
+     "logs": 301,
      "agree_pct": 100,
      "start_s": 51.8,
      "start_min_s": 50.8,
@@ -241,7 +241,7 @@
      "position": 10,
      "skill": "Eternal Reflection",
      "skill_id": 81209,
-     "logs": 270,
+     "logs": 300,
      "agree_pct": 100,
      "start_s": 56.3,
      "start_min_s": 55.4,
@@ -255,7 +255,7 @@
      "position": 11,
      "skill": "Surrounding Curse",
      "skill_id": 80653,
-     "logs": 268,
+     "logs": 298,
      "agree_pct": 100,
      "start_s": 60.2,
      "start_min_s": 59.1,
@@ -269,7 +269,7 @@
      "position": 12,
      "skill": "Probability Distribution",
      "skill_id": 80809,
-     "logs": 267,
+     "logs": 297,
      "agree_pct": 100,
      "start_s": 64.2,
      "start_min_s": 63.2,
@@ -283,21 +283,21 @@
      "position": 13,
      "skill": "Eternal Reflection",
      "skill_id": 81209,
-     "logs": 264,
+     "logs": 293,
      "agree_pct": 100,
      "start_s": 66.3,
      "start_min_s": 65.2,
      "start_max_s": 70.7,
      "cast_s": 3.8,
      "otherwise": "",
-     "fixated": "Fixated #2 at 70.7 s (70.3-71.3; 256 logs)"
+     "fixated": "Fixated #2 at 70.8 s (70.3-71.3; 285 logs)"
     },
     {
      "phase": "P1 (Staff, 100 → 70 %)",
      "position": 14,
      "skill": "Annihilating Orb",
      "skill_id": 80323,
-     "logs": 251,
+     "logs": 279,
      "agree_pct": 100,
      "start_s": 73.8,
      "start_min_s": 72.9,
@@ -311,7 +311,7 @@
      "position": 15,
      "skill": "Eternal Reflection",
      "skill_id": 81209,
-     "logs": 250,
+     "logs": 278,
      "agree_pct": 100,
      "start_s": 80.7,
      "start_min_s": 79.9,
@@ -325,7 +325,7 @@
      "position": 16,
      "skill": "Ascension's Sacrifice",
      "skill_id": 81076,
-     "logs": 248,
+     "logs": 276,
      "agree_pct": 100,
      "start_s": 84.6,
      "start_min_s": 83.8,
@@ -339,7 +339,7 @@
      "position": 17,
      "skill": "Eternal Reflection",
      "skill_id": 81209,
-     "logs": 248,
+     "logs": 275,
      "agree_pct": 100,
      "start_s": 90.9,
      "start_min_s": 89.9,
@@ -353,13 +353,13 @@
      "position": 18,
      "skill": "Judgment of Eternity",
      "skill_id": 80629,
-     "logs": 248,
+     "logs": 275,
      "agree_pct": 96,
      "start_s": 96.6,
      "start_min_s": 95.5,
      "start_max_s": 102.2,
      "cast_s": 4.4,
-     "otherwise": "Probability Distribution x10",
+     "otherwise": "Probability Distribution x11",
      "fixated": ""
     },
     {
@@ -367,7 +367,7 @@
      "position": 19,
      "skill": "Eternal Reflection",
      "skill_id": 81209,
-     "logs": 244,
+     "logs": 271,
      "agree_pct": 100,
      "start_s": 101.2,
      "start_min_s": 99.6,
@@ -381,7 +381,7 @@
      "position": 20,
      "skill": "Annihilating Orb",
      "skill_id": 80323,
-     "logs": 235,
+     "logs": 262,
      "agree_pct": 99,
      "start_s": 105,
      "start_min_s": 103.5,
@@ -395,13 +395,13 @@
      "position": 21,
      "skill": "Surrounding Curse",
      "skill_id": 80653,
-     "logs": 187,
+     "logs": 205,
      "agree_pct": 98,
      "start_s": 112.2,
      "start_min_s": 110.5,
      "start_max_s": 115,
      "cast_s": 4,
-     "otherwise": "Judgment of Eternity x2 / Probability Distribution x1",
+     "otherwise": "Judgment of Eternity x3 / Probability Distribution x1",
      "fixated": ""
     },
     {
@@ -409,7 +409,7 @@
      "position": 22,
      "skill": "Probability Distribution",
      "skill_id": 80809,
-     "logs": 151,
+     "logs": 160,
      "agree_pct": 96,
      "start_s": 117.6,
      "start_min_s": 116.5,
@@ -423,7 +423,7 @@
      "position": 23,
      "skill": "Eternal Reflection",
      "skill_id": 81209,
-     "logs": 129,
+     "logs": 135,
      "agree_pct": 100,
      "start_s": 119.6,
      "start_min_s": 118.6,
@@ -450,35 +450,35 @@
   },
   {
    "phase": "P2 (Spear, 70 → 40 %)",
-   "logsReached": 226,
-   "logsFinished": 94,
+   "logsReached": 251,
+   "logsFinished": 104,
    "castsPerFinishedPhase": 19,
-   "phaseLengthS": 128,
+   "phaseLengthS": 127,
    "fixated": {
     "applications": [
      {
       "n": 1,
-      "logs": 189,
-      "at_s": 46.5,
+      "logs": 210,
+      "at_s": 46.6,
       "p10_s": 18.5,
       "p90_s": 67.5,
-      "within2sPct": 20,
+      "within2sPct": 18,
       "clusters": [
        {
         "around_s": 68,
-        "logs": 44
+        "logs": 50
+       },
+       {
+        "around_s": 60,
+        "logs": 36
        },
        {
         "around_s": 48,
         "logs": 31
        },
        {
-        "around_s": 60,
-        "logs": 29
-       },
-       {
         "around_s": 24,
-        "logs": 17
+        "logs": 21
        }
       ],
       "duringPosition": 7,
@@ -486,27 +486,27 @@
      },
      {
       "n": 2,
-      "logs": 104,
+      "logs": 111,
       "at_s": 91.2,
       "p10_s": 46.4,
       "p90_s": 115.8,
-      "within2sPct": 23,
+      "within2sPct": 24,
       "clusters": [
        {
         "around_s": 92,
-        "logs": 24
+        "logs": 27
        },
        {
         "around_s": 84,
-        "logs": 11
+        "logs": 12
+       },
+       {
+        "around_s": 48,
+        "logs": 10
        },
        {
         "around_s": 68,
         "logs": 10
-       },
-       {
-        "around_s": 48,
-        "logs": 9
        }
       ],
       "duringPosition": 14,
@@ -535,8 +535,8 @@
      "Thousand Strikes",
      "Cosmic Charge"
     ],
-    "logsWithExactlyThisStart": 66,
-    "logsLongEnough": 128
+    "logsWithExactlyThisStart": 72,
+    "logsLongEnough": 139
    },
    "timers": {
     "Judgment of Eternity": {
@@ -545,7 +545,7 @@
       "median": 54.6,
       "min": 44.4,
       "max": 63.7,
-      "n": 326
+      "n": 355
      }
     },
     "Probability Distribution": {
@@ -554,7 +554,7 @@
       "median": 49,
       "min": 44.8,
       "max": 55.3,
-      "n": 189
+      "n": 205
      }
     }
    },
@@ -564,8 +564,8 @@
      "position": 1,
      "skill": "Judgment of Eternity",
      "skill_id": 80629,
-     "logs": 226,
-     "agree_pct": 89,
+     "logs": 251,
+     "agree_pct": 90,
      "start_s": 0,
      "start_min_s": 0,
      "start_max_s": 0,
@@ -578,8 +578,8 @@
      "position": 2,
      "skill": "Cosmic Charge",
      "skill_id": 80512,
-     "logs": 226,
-     "agree_pct": 89,
+     "logs": 251,
+     "agree_pct": 90,
      "start_s": 4.5,
      "start_min_s": 4.4,
      "start_max_s": 4.6,
@@ -592,7 +592,7 @@
      "position": 3,
      "skill": "Worldpiercer",
      "skill_id": 80916,
-     "logs": 226,
+     "logs": 251,
      "agree_pct": 98,
      "start_s": 12.4,
      "start_min_s": 12.3,
@@ -606,7 +606,7 @@
      "position": 4,
      "skill": "Raging Storm",
      "skill_id": 80810,
-     "logs": 215,
+     "logs": 237,
      "agree_pct": 98,
      "start_s": 18.5,
      "start_min_s": 18.3,
@@ -620,7 +620,7 @@
      "position": 5,
      "skill": "Thousand Strikes",
      "skill_id": 80555,
-     "logs": 200,
+     "logs": 220,
      "agree_pct": 98,
      "start_s": 27.4,
      "start_min_s": 26.9,
@@ -634,7 +634,7 @@
      "position": 6,
      "skill": "Probability Distribution",
      "skill_id": 80809,
-     "logs": 198,
+     "logs": 218,
      "agree_pct": 98,
      "start_s": 33.5,
      "start_min_s": 33,
@@ -648,22 +648,22 @@
      "position": 7,
      "skill": "Thousand Strikes",
      "skill_id": 80555,
-     "logs": 194,
+     "logs": 214,
      "agree_pct": 98,
      "start_s": 38.9,
      "start_min_s": 38,
      "start_max_s": 41,
      "cast_s": 6,
      "otherwise": "Probability Distribution x4",
-     "fixated": "Fixated #1 at 46.5 s (18.5-67.5; 189 logs)"
+     "fixated": "Fixated #1 at 46.6 s (18.5-67.5; 210 logs)"
     },
     {
      "phase": "P2 (Spear, 70 → 40 %)",
      "position": 8,
      "skill": "Worldpiercer",
      "skill_id": 80916,
-     "logs": 184,
-     "agree_pct": 91,
+     "logs": 203,
+     "agree_pct": 92,
      "start_s": 48.7,
      "start_min_s": 44.1,
      "start_max_s": 49.5,
@@ -676,7 +676,7 @@
      "position": 9,
      "skill": "Judgment of Eternity",
      "skill_id": 80629,
-     "logs": 179,
+     "logs": 197,
      "agree_pct": 98,
      "start_s": 54.8,
      "start_min_s": 53.1,
@@ -690,8 +690,8 @@
      "position": 10,
      "skill": "Cosmic Charge",
      "skill_id": 80512,
-     "logs": 173,
-     "agree_pct": 88,
+     "logs": 191,
+     "agree_pct": 90,
      "start_s": 59.5,
      "start_min_s": 59,
      "start_max_s": 61.6,
@@ -704,7 +704,7 @@
      "position": 11,
      "skill": "Raging Storm",
      "skill_id": 80810,
-     "logs": 169,
+     "logs": 187,
      "agree_pct": 98,
      "start_s": 68.6,
      "start_min_s": 63.8,
@@ -718,9 +718,9 @@
      "position": 12,
      "skill": "Thousand Strikes",
      "skill_id": 80555,
-     "logs": 157,
-     "agree_pct": 97,
-     "start_s": 76.1,
+     "logs": 174,
+     "agree_pct": 98,
+     "start_s": 76,
      "start_min_s": 71.2,
      "start_max_s": 77.2,
      "cast_s": 6,
@@ -732,8 +732,8 @@
      "position": 13,
      "skill": "Probability Distribution",
      "skill_id": 80809,
-     "logs": 150,
-     "agree_pct": 97,
+     "logs": 166,
+     "agree_pct": 98,
      "start_s": 82.3,
      "start_min_s": 78.6,
      "start_max_s": 84.7,
@@ -746,22 +746,22 @@
      "position": 14,
      "skill": "Worldpiercer",
      "skill_id": 80916,
-     "logs": 148,
+     "logs": 164,
      "agree_pct": 91,
      "start_s": 85.3,
      "start_min_s": 83.5,
      "start_max_s": 86.6,
      "cast_s": 6,
      "otherwise": "Thousand Strikes x14",
-     "fixated": "Fixated #2 at 91.2 s (46.4-115.8; 104 logs)"
+     "fixated": "Fixated #2 at 91.2 s (46.4-115.8; 111 logs)"
     },
     {
      "phase": "P2 (Spear, 70 → 40 %)",
      "position": 15,
      "skill": "Thousand Strikes",
      "skill_id": 80555,
-     "logs": 138,
-     "agree_pct": 88,
+     "logs": 153,
+     "agree_pct": 89,
      "start_s": 92.6,
      "start_min_s": 90.7,
      "start_max_s": 93.9,
@@ -774,13 +774,13 @@
      "position": 16,
      "skill": "Judgment of Eternity",
      "skill_id": 80629,
-     "logs": 131,
+     "logs": 144,
      "agree_pct": 76,
      "start_s": 100.1,
      "start_min_s": 99.1,
      "start_max_s": 103.2,
      "cast_s": 4.4,
-     "otherwise": "Raging Storm x16 / Worldpiercer x11",
+     "otherwise": "Raging Storm x20 / Worldpiercer x11",
      "fixated": ""
     },
     {
@@ -788,13 +788,13 @@
      "position": 17,
      "skill": "Cosmic Charge",
      "skill_id": 80512,
-     "logs": 124,
-     "agree_pct": 67,
+     "logs": 135,
+     "agree_pct": 69,
      "start_s": 106.3,
      "start_min_s": 99.4,
      "start_max_s": 108.1,
      "cast_s": 7.8,
-     "otherwise": "Thousand Strikes x29 / Judgment of Eternity x10",
+     "otherwise": "Thousand Strikes x30 / Judgment of Eternity x10",
      "fixated": ""
     },
     {
@@ -802,13 +802,13 @@
      "position": 18,
      "skill": "Raging Storm",
      "skill_id": 80810,
-     "logs": 115,
-     "agree_pct": 55,
+     "logs": 124,
+     "agree_pct": 56,
      "start_s": 114.4,
      "start_min_s": 109.5,
      "start_max_s": 115.9,
      "cast_s": 7.4,
-     "otherwise": "Cosmic Charge x28 / Judgment of Eternity x13",
+     "otherwise": "Cosmic Charge x29 / Judgment of Eternity x15",
      "fixated": ""
     },
     {
@@ -816,44 +816,44 @@
      "position": 19,
      "skill": "Worldpiercer",
      "skill_id": 80916,
-     "logs": 77,
+     "logs": 80,
      "agree_pct": 36,
      "start_s": 122.2,
      "start_min_s": 121,
      "start_max_s": 123.2,
      "cast_s": 6,
-     "otherwise": "Raging Storm x24 / Thousand Strikes x23",
+     "otherwise": "Thousand Strikes x25 / Raging Storm x24",
      "fixated": ""
     }
    ]
   },
   {
    "phase": "P3 (Sword, 40 → 10 %)",
-   "logsReached": 93,
-   "logsFinished": 31,
-   "castsPerFinishedPhase": 29,
-   "phaseLengthS": 155,
+   "logsReached": 102,
+   "logsFinished": 36,
+   "castsPerFinishedPhase": 28,
+   "phaseLengthS": 154,
    "fixated": {
     "applications": [
      {
       "n": 1,
-      "logs": 79,
-      "at_s": 41.9,
+      "logs": 88,
+      "at_s": 42,
       "p10_s": 21.6,
       "p90_s": 64.2,
-      "within2sPct": 14,
+      "within2sPct": 13,
       "clusters": [
        {
         "around_s": 20,
-        "logs": 31
+        "logs": 32
        },
        {
         "around_s": 64,
-        "logs": 24
+        "logs": 29
        },
        {
         "around_s": 44,
-        "logs": 9
+        "logs": 10
        },
        {
         "around_s": 40,
@@ -865,27 +865,27 @@
      },
      {
       "n": 2,
-      "logs": 59,
+      "logs": 67,
       "at_s": 89,
-      "p10_s": 41.8,
+      "p10_s": 41.9,
       "p90_s": 132.1,
       "within2sPct": 24,
       "clusters": [
        {
         "around_s": 88,
+        "logs": 13
+       },
+       {
+        "around_s": 112,
         "logs": 11
        },
        {
         "around_s": 132,
-        "logs": 10
+        "logs": 11
        },
        {
-        "around_s": 112,
+        "around_s": 64,
         "logs": 8
-       },
-       {
-        "around_s": 44,
-        "logs": 7
        }
       ],
       "duringPosition": 17,
@@ -893,15 +893,15 @@
      },
      {
       "n": 3,
-      "logs": 31,
-      "at_s": 114.3,
+      "logs": 33,
+      "at_s": 114.8,
       "p10_s": 87.8,
-      "p90_s": 154.6,
-      "within2sPct": 26,
+      "p90_s": 134.7,
+      "within2sPct": 18,
       "clusters": [
        {
         "around_s": 132,
-        "logs": 8
+        "logs": 10
        },
        {
         "around_s": 112,
@@ -925,7 +925,7 @@
      "min": 60,
      "max": 60
     },
-    "phasesEnteredWithFixatedPct": 94
+    "phasesEnteredWithFixatedPct": 93
    },
    "mainRotation": {
     "skills": [
@@ -942,8 +942,8 @@
      "Excision Extremis",
      "Division Eternal"
     ],
-    "logsWithExactlyThisStart": 45,
-    "logsLongEnough": 58
+    "logsWithExactlyThisStart": 52,
+    "logsLongEnough": 67
    },
    "timers": {
     "Judgment of Eternity": {
@@ -952,16 +952,16 @@
       "median": 47.3,
       "min": 44.4,
       "max": 55.9,
-      "n": 163
+      "n": 183
      }
     },
     "Probability Distribution": {
      "firstAtS": 23.2,
      "everyS": {
-      "median": 42,
+      "median": 41.9,
       "min": 34,
       "max": 62.8,
-      "n": 128
+      "n": 145
      }
     }
    },
@@ -971,7 +971,7 @@
      "position": 1,
      "skill": "Judgment of Eternity",
      "skill_id": 80629,
-     "logs": 93,
+     "logs": 102,
      "agree_pct": 95,
      "start_s": 0,
      "start_min_s": 0,
@@ -985,7 +985,7 @@
      "position": 2,
      "skill": "Echoing Blade",
      "skill_id": 81271,
-     "logs": 93,
+     "logs": 102,
      "agree_pct": 95,
      "start_s": 4.5,
      "start_min_s": 4.4,
@@ -999,7 +999,7 @@
      "position": 3,
      "skill": "Slice Through Reality",
      "skill_id": 80585,
-     "logs": 93,
+     "logs": 102,
      "agree_pct": 95,
      "start_s": 9.9,
      "start_min_s": 9.8,
@@ -1013,7 +1013,7 @@
      "position": 4,
      "skill": "Excision Extremis",
      "skill_id": 81053,
-     "logs": 93,
+     "logs": 102,
      "agree_pct": 95,
      "start_s": 15.4,
      "start_min_s": 15.2,
@@ -1027,8 +1027,8 @@
      "position": 5,
      "skill": "Probability Distribution",
      "skill_id": 80809,
-     "logs": 88,
-     "agree_pct": 94,
+     "logs": 97,
+     "agree_pct": 95,
      "start_s": 23.1,
      "start_min_s": 22.6,
      "start_max_s": 23.5,
@@ -1041,8 +1041,8 @@
      "position": 6,
      "skill": "Division Eternal",
      "skill_id": 80483,
-     "logs": 87,
-     "agree_pct": 94,
+     "logs": 96,
+     "agree_pct": 95,
      "start_s": 25.2,
      "start_min_s": 24.7,
      "start_max_s": 25.6,
@@ -1055,8 +1055,8 @@
      "position": 7,
      "skill": "Echoing Blade",
      "skill_id": 81271,
-     "logs": 83,
-     "agree_pct": 94,
+     "logs": 92,
+     "agree_pct": 95,
      "start_s": 30.2,
      "start_min_s": 29.8,
      "start_max_s": 31,
@@ -1069,21 +1069,21 @@
      "position": 8,
      "skill": "Excision Extremis",
      "skill_id": 81053,
-     "logs": 83,
-     "agree_pct": 94,
+     "logs": 92,
+     "agree_pct": 95,
      "start_s": 35.6,
      "start_min_s": 35.2,
      "start_max_s": 36.5,
      "cast_s": 6.2,
      "otherwise": "Probability Distribution x5",
-     "fixated": "Fixated #1 at 41.9 s (21.6-64.2; 79 logs)"
+     "fixated": "Fixated #1 at 42.0 s (21.6-64.2; 88 logs)"
     },
     {
      "phase": "P3 (Sword, 40 → 10 %)",
      "position": 9,
      "skill": "Division Eternal",
      "skill_id": 80483,
-     "logs": 78,
+     "logs": 87,
      "agree_pct": 100,
      "start_s": 43.3,
      "start_min_s": 40.3,
@@ -1097,8 +1097,8 @@
      "position": 10,
      "skill": "Judgment of Eternity",
      "skill_id": 80629,
-     "logs": 72,
-     "agree_pct": 94,
+     "logs": 81,
+     "agree_pct": 95,
      "start_s": 47.2,
      "start_min_s": 46.4,
      "start_max_s": 48,
@@ -1111,13 +1111,13 @@
      "position": 11,
      "skill": "Excision Extremis",
      "skill_id": 81053,
-     "logs": 68,
-     "agree_pct": 76,
+     "logs": 77,
+     "agree_pct": 77,
      "start_s": 52.2,
      "start_min_s": 51.7,
      "start_max_s": 53.2,
      "cast_s": 6.2,
-     "otherwise": "Division Eternal x12 / Echoing Blade x4",
+     "otherwise": "Division Eternal x14 / Echoing Blade x4",
      "fixated": ""
     },
     {
@@ -1125,13 +1125,13 @@
      "position": 12,
      "skill": "Echoing Blade",
      "skill_id": 81271,
-     "logs": 65,
+     "logs": 74,
      "agree_pct": 77,
-     "start_s": 58.6,
+     "start_s": 58.5,
      "start_min_s": 56.5,
      "start_max_s": 59.5,
      "cast_s": 5.4,
-     "otherwise": "Excision Extremis x11 / Judgment of Eternity x3",
+     "otherwise": "Excision Extremis x13 / Judgment of Eternity x3",
      "fixated": ""
     },
     {
@@ -1139,13 +1139,13 @@
      "position": 13,
      "skill": "Probability Distribution",
      "skill_id": 80809,
-     "logs": 64,
+     "logs": 73,
      "agree_pct": 77,
      "start_s": 65.4,
      "start_min_s": 64.7,
      "start_max_s": 66.5,
      "cast_s": 2,
-     "otherwise": "Echoing Blade x11 / Excision Extremis x3",
+     "otherwise": "Echoing Blade x13 / Excision Extremis x3",
      "fixated": ""
     },
     {
@@ -1153,13 +1153,13 @@
      "position": 14,
      "skill": "Division Eternal",
      "skill_id": 80483,
-     "logs": 62,
+     "logs": 71,
      "agree_pct": 77,
      "start_s": 67.5,
      "start_min_s": 66.7,
      "start_max_s": 68.6,
      "cast_s": 3.7,
-     "otherwise": "Probability Distribution x13 / Excision Extremis x1",
+     "otherwise": "Probability Distribution x15 / Excision Extremis x1",
      "fixated": ""
     },
     {
@@ -1167,13 +1167,13 @@
      "position": 15,
      "skill": "Excision Extremis",
      "skill_id": 81053,
-     "logs": 61,
+     "logs": 70,
      "agree_pct": 77,
      "start_s": 71.2,
      "start_min_s": 70.5,
      "start_max_s": 72.4,
      "cast_s": 6.2,
-     "otherwise": "Division Eternal x13 / Slice Through Reality x1",
+     "otherwise": "Division Eternal x15 / Slice Through Reality x1",
      "fixated": ""
     },
     {
@@ -1181,13 +1181,13 @@
      "position": 16,
      "skill": "Division Eternal",
      "skill_id": 80483,
-     "logs": 58,
+     "logs": 67,
      "agree_pct": 78,
-     "start_s": 77.6,
+     "start_s": 77.5,
      "start_min_s": 76.8,
      "start_max_s": 78.6,
      "cast_s": 3.7,
-     "otherwise": "Excision Extremis x10 / Echoing Blade x3",
+     "otherwise": "Excision Extremis x12 / Echoing Blade x3",
      "fixated": ""
     },
     {
@@ -1195,27 +1195,27 @@
      "position": 17,
      "skill": "Slice Through Reality",
      "skill_id": 80585,
-     "logs": 58,
+     "logs": 67,
      "agree_pct": 78,
      "start_s": 82.8,
      "start_min_s": 81.8,
      "start_max_s": 84.2,
      "cast_s": 5.4,
-     "otherwise": "Division Eternal x9 / Excision Extremis x3",
-     "fixated": "Fixated #2 at 89.0 s (41.8-132.1; 59 logs)"
+     "otherwise": "Division Eternal x11 / Excision Extremis x3",
+     "fixated": "Fixated #2 at 89.0 s (41.9-132.1; 67 logs)"
     },
     {
      "phase": "P3 (Sword, 40 → 10 %)",
      "position": 18,
      "skill": "Echoing Blade",
      "skill_id": 81271,
-     "logs": 57,
-     "agree_pct": 70,
+     "logs": 66,
+     "agree_pct": 71,
      "start_s": 89.6,
      "start_min_s": 88.6,
      "start_max_s": 91.1,
      "cast_s": 5.4,
-     "otherwise": "Slice Through Reality x12 / Excision Extremis x4",
+     "otherwise": "Slice Through Reality x14 / Excision Extremis x4",
      "fixated": ""
     },
     {
@@ -1223,13 +1223,13 @@
      "position": 19,
      "skill": "Judgment of Eternity",
      "skill_id": 80629,
-     "logs": 55,
-     "agree_pct": 76,
-     "start_s": 95.3,
+     "logs": 64,
+     "agree_pct": 77,
+     "start_s": 95.2,
      "start_min_s": 94,
      "start_max_s": 96.7,
      "cast_s": 4.4,
-     "otherwise": "Echoing Blade x9 / Division Eternal x3",
+     "otherwise": "Echoing Blade x11 / Division Eternal x3",
      "fixated": ""
     },
     {
@@ -1237,13 +1237,13 @@
      "position": 20,
      "skill": "Excision Extremis",
      "skill_id": 81053,
-     "logs": 54,
+     "logs": 62,
      "agree_pct": 74,
-     "start_s": 99.7,
+     "start_s": 99.6,
      "start_min_s": 98.5,
      "start_max_s": 105.1,
      "cast_s": 6.2,
-     "otherwise": "Judgment of Eternity x10 / Echoing Blade x4",
+     "otherwise": "Judgment of Eternity x12 / Echoing Blade x4",
      "fixated": ""
     },
     {
@@ -1251,13 +1251,13 @@
      "position": 21,
      "skill": "Probability Distribution",
      "skill_id": 80809,
-     "logs": 54,
+     "logs": 62,
      "agree_pct": 74,
-     "start_s": 106,
+     "start_s": 105.9,
      "start_min_s": 104.8,
      "start_max_s": 107.2,
      "cast_s": 2,
-     "otherwise": "Excision Extremis x10 / Judgment of Eternity x3",
+     "otherwise": "Excision Extremis x12 / Judgment of Eternity x3",
      "fixated": ""
     },
     {
@@ -1265,27 +1265,27 @@
      "position": 22,
      "skill": "Division Eternal",
      "skill_id": 80483,
-     "logs": 54,
+     "logs": 62,
      "agree_pct": 69,
-     "start_s": 108.1,
+     "start_s": 108,
      "start_min_s": 106.8,
      "start_max_s": 110.5,
      "cast_s": 3.7,
-     "otherwise": "Probability Distribution x10 / Echoing Blade x4",
-     "fixated": "Fixated #3 at 114.3 s (87.8-154.6; 31 logs)"
+     "otherwise": "Probability Distribution x12 / Echoing Blade x4",
+     "fixated": "Fixated #3 at 114.8 s (87.8-134.7; 33 logs)"
     },
     {
      "phase": "P3 (Sword, 40 → 10 %)",
      "position": 23,
      "skill": "Echoing Blade",
      "skill_id": 81271,
-     "logs": 53,
-     "agree_pct": 68,
+     "logs": 61,
+     "agree_pct": 69,
      "start_s": 115.4,
      "start_min_s": 114.4,
      "start_max_s": 117.2,
      "cast_s": 5.4,
-     "otherwise": "Division Eternal x13 / Excision Extremis x4",
+     "otherwise": "Division Eternal x15 / Excision Extremis x4",
      "fixated": ""
     },
     {
@@ -1293,13 +1293,13 @@
      "position": 24,
      "skill": "Excision Extremis",
      "skill_id": 81053,
-     "logs": 49,
-     "agree_pct": 78,
-     "start_s": 120.9,
+     "logs": 57,
+     "agree_pct": 77,
+     "start_s": 120.8,
      "start_min_s": 119.8,
      "start_max_s": 125.6,
      "cast_s": 6.2,
-     "otherwise": "Echoing Blade x8 / Probability Distribution x3",
+     "otherwise": "Echoing Blade x10 / Probability Distribution x3",
      "fixated": ""
     },
     {
@@ -1307,13 +1307,13 @@
      "position": 25,
      "skill": "Division Eternal",
      "skill_id": 80483,
-     "logs": 48,
+     "logs": 56,
      "agree_pct": 77,
-     "start_s": 127.2,
+     "start_s": 127.1,
      "start_min_s": 126,
      "start_max_s": 133,
      "cast_s": 3.7,
-     "otherwise": "Excision Extremis x8 / Echoing Blade x3",
+     "otherwise": "Excision Extremis x10 / Echoing Blade x3",
      "fixated": ""
     },
     {
@@ -1321,7 +1321,7 @@
      "position": 26,
      "skill": "Division Eternal",
      "skill_id": 80483,
-     "logs": 40,
+     "logs": 46,
      "agree_pct": 93,
      "start_s": 135.9,
      "start_min_s": 129.1,
@@ -1335,9 +1335,9 @@
      "position": 27,
      "skill": "Judgment of Eternity",
      "skill_id": 80629,
-     "logs": 37,
-     "agree_pct": 65,
-     "start_s": 140,
+     "logs": 39,
+     "agree_pct": 67,
+     "start_s": 140.1,
      "start_min_s": 139.1,
      "start_max_s": 141.6,
      "cast_s": 4.4,
@@ -1376,7 +1376,7 @@
   },
   {
    "phase": "Last phase (10 → 0 %)",
-   "logsReached": 31,
+   "logsReached": 36,
    "logsFinished": 0,
    "castsPerFinishedPhase": null,
    "phaseLengthS": null,
@@ -1384,23 +1384,23 @@
     "applications": [
      {
       "n": 1,
-      "logs": 29,
+      "logs": 34,
       "at_s": 22.5,
       "p10_s": 2.5,
       "p90_s": 42.5,
-      "within2sPct": 17,
+      "within2sPct": 21,
       "clusters": [
        {
         "around_s": 4,
-        "logs": 14
+        "logs": 16
        },
        {
         "around_s": 44,
-        "logs": 10
+        "logs": 11
        },
        {
         "around_s": 24,
-        "logs": 5
+        "logs": 7
        }
       ],
       "duringPosition": 1,
@@ -1408,15 +1408,15 @@
      },
      {
       "n": 2,
-      "logs": 13,
+      "logs": 14,
       "at_s": 42.5,
       "p10_s": 42.5,
       "p90_s": 82.5,
-      "within2sPct": 54,
+      "within2sPct": 57,
       "clusters": [
        {
         "around_s": 44,
-        "logs": 7
+        "logs": 8
        },
        {
         "around_s": 84,
@@ -1446,37 +1446,46 @@
      "position": 1,
      "skill": "81071",
      "skill_id": 81071,
-     "logs": 31,
+     "logs": 36,
      "agree_pct": 100,
      "start_s": 0,
      "start_min_s": 0,
      "start_max_s": 0,
-     "cast_s": 65.4,
+     "cast_s": 66.1,
      "otherwise": "",
-     "fixated": "Fixated #1 at 22.5 s (2.5-42.5; 29 logs) / Fixated #2 at 42.5 s (42.5-82.5; 13 logs)"
+     "fixated": "Fixated #1 at 22.5 s (2.5-42.5; 34 logs) / Fixated #2 at 42.5 s (42.5-82.5; 14 logs)"
     }
    ]
   }
  ],
  "lastPhaseDamage": {
-  "logs": 31,
+  "logs": 36,
   "note": "hits on players by Vloxx and the Aspects (source in brackets), seconds after the start of channel 81071",
   "bursts": [
    {
     "skill": "Ancora Strike [Aspect of the Spear]",
     "skill_id": 80940,
     "burst": 1,
-    "logs": 31,
+    "logs": 36,
     "start_s": 5.6,
     "start_min_s": 0.1,
     "start_max_s": 37
    },
    {
+    "skill": "Eternal Reflection [Aspect of the Staff]",
+    "skill_id": 80304,
+    "burst": 1,
+    "logs": 34,
+    "start_s": 10.1,
+    "start_min_s": 0,
+    "start_max_s": 54.2
+   },
+   {
     "skill": "Surrounding Curse [Aspect of the Staff]",
     "skill_id": 81230,
     "burst": 1,
-    "logs": 20,
-    "start_s": 8.3,
+    "logs": 23,
+    "start_s": 11,
     "start_min_s": 0,
     "start_max_s": 69.9
    },
@@ -1484,25 +1493,16 @@
     "skill": "Ancora Strike [Aspect of the Sword]",
     "skill_id": 81327,
     "burst": 1,
-    "logs": 28,
-    "start_s": 8.6,
+    "logs": 33,
+    "start_s": 11.4,
     "start_min_s": 0.6,
     "start_max_s": 64.9
-   },
-   {
-    "skill": "Eternal Reflection [Aspect of the Staff]",
-    "skill_id": 80304,
-    "burst": 1,
-    "logs": 29,
-    "start_s": 10.1,
-    "start_min_s": 0,
-    "start_max_s": 54.2
    },
    {
     "skill": "Division Eternal [Aspect of the Sword]",
     "skill_id": 81330,
     "burst": 1,
-    "logs": 30,
+    "logs": 35,
     "start_s": 12.8,
     "start_min_s": 0.1,
     "start_max_s": 70
@@ -1511,34 +1511,34 @@
     "skill": "Ancora Strike [Aspect of the Spear]",
     "skill_id": 80940,
     "burst": 2,
-    "logs": 29,
+    "logs": 34,
     "start_s": 14.2,
     "start_min_s": 6.8,
     "start_max_s": 58.5
    },
    {
-    "skill": "Thousand Strikes [Aspect of the Spear]",
-    "skill_id": 80709,
-    "burst": 1,
-    "logs": 30,
-    "start_s": 15.9,
-    "start_min_s": 1.2,
-    "start_max_s": 61
-   },
-   {
     "skill": "Surrounding Curse [Vloxx]",
     "skill_id": 80484,
     "burst": 1,
-    "logs": 31,
+    "logs": 36,
     "start_s": 16.2,
     "start_min_s": 14.8,
     "start_max_s": 36.1
    },
    {
+    "skill": "Thousand Strikes [Aspect of the Spear]",
+    "skill_id": 80709,
+    "burst": 1,
+    "logs": 35,
+    "start_s": 16.2,
+    "start_min_s": 1.2,
+    "start_max_s": 61
+   },
+   {
     "skill": "Excision Extremis [Aspect of the Sword]",
     "skill_id": 81326,
     "burst": 1,
-    "logs": 26,
+    "logs": 31,
     "start_s": 16.3,
     "start_min_s": 0.4,
     "start_max_s": 87.4
@@ -1547,7 +1547,7 @@
     "skill": "Excision Extremis [Vloxx]",
     "skill_id": 80901,
     "burst": 1,
-    "logs": 31,
+    "logs": 36,
     "start_s": 20,
     "start_min_s": 20,
     "start_max_s": 21.6
@@ -1556,7 +1556,7 @@
     "skill": "Raging Storm [Vloxx]",
     "skill_id": 81176,
     "burst": 1,
-    "logs": 31,
+    "logs": 36,
     "start_s": 20.5,
     "start_min_s": 17.5,
     "start_max_s": 41.5
@@ -1565,8 +1565,8 @@
     "skill": "Ancora Strike [Aspect of the Sword]",
     "skill_id": 81327,
     "burst": 2,
-    "logs": 28,
-    "start_s": 25.6,
+    "logs": 33,
+    "start_s": 25.9,
     "start_min_s": 9.8,
     "start_max_s": 87.9
    },
@@ -1574,35 +1574,35 @@
     "skill": "Eternal Reflection [Aspect of the Staff]",
     "skill_id": 80304,
     "burst": 2,
-    "logs": 26,
-    "start_s": 28.3,
+    "logs": 31,
+    "start_s": 29.8,
     "start_min_s": 13.2,
     "start_max_s": 87.5
-   },
-   {
-    "skill": "Cosmic Charge [Aspect of the Spear]",
-    "skill_id": 80871,
-    "burst": 1,
-    "logs": 24,
-    "start_s": 28.6,
-    "start_min_s": 0,
-    "start_max_s": 68.5
    },
    {
     "skill": "Division Eternal [Aspect of the Sword]",
     "skill_id": 81330,
     "burst": 2,
-    "logs": 26,
-    "start_s": 29.1,
+    "logs": 30,
+    "start_s": 30.4,
     "start_min_s": 16.5,
     "start_max_s": 87
+   },
+   {
+    "skill": "Cosmic Charge [Aspect of the Spear]",
+    "skill_id": 80871,
+    "burst": 1,
+    "logs": 28,
+    "start_s": 30.7,
+    "start_min_s": 0,
+    "start_max_s": 76.9
    },
    {
     "skill": "Raging Storm [Vloxx]",
     "skill_id": 81176,
     "burst": 2,
-    "logs": 30,
-    "start_s": 29.6,
+    "logs": 35,
+    "start_s": 32.2,
     "start_min_s": 20.5,
     "start_max_s": 68.5
    },
@@ -1610,52 +1610,52 @@
     "skill": "Excision Extremis [Vloxx]",
     "skill_id": 80901,
     "burst": 2,
-    "logs": 31,
+    "logs": 36,
     "start_s": 35,
     "start_min_s": 35,
     "start_max_s": 36.6
    },
    {
-    "skill": "Thousand Strikes [Aspect of the Spear]",
-    "skill_id": 80709,
+    "skill": "Surrounding Curse [Vloxx]",
+    "skill_id": 80484,
     "burst": 2,
-    "logs": 22,
-    "start_s": 35.4,
-    "start_min_s": 19.9,
-    "start_max_s": 76
+    "logs": 35,
+    "start_s": 35.9,
+    "start_min_s": 20,
+    "start_max_s": 86.4
    },
    {
     "skill": "Raging Storm [Vloxx]",
     "skill_id": 81176,
     "burst": 3,
-    "logs": 28,
-    "start_s": 35.5,
+    "logs": 33,
+    "start_s": 38.5,
     "start_min_s": 26.5,
     "start_max_s": 89.8
-   },
-   {
-    "skill": "Surrounding Curse [Vloxx]",
-    "skill_id": 80484,
-    "burst": 2,
-    "logs": 30,
-    "start_s": 35.8,
-    "start_min_s": 20,
-    "start_max_s": 86.4
    },
    {
     "skill": "Ancora Strike [Aspect of the Spear]",
     "skill_id": 80940,
     "burst": 3,
-    "logs": 26,
-    "start_s": 37.6,
+    "logs": 31,
+    "start_s": 38.6,
     "start_min_s": 10.1,
     "start_max_s": 67.4
+   },
+   {
+    "skill": "Thousand Strikes [Aspect of the Spear]",
+    "skill_id": 80709,
+    "burst": 2,
+    "logs": 26,
+    "start_s": 40.2,
+    "start_min_s": 19.9,
+    "start_max_s": 76
    },
    {
     "skill": "Judgment of Eternity [Vloxx]",
     "skill_id": 80378,
     "burst": 1,
-    "logs": 22,
+    "logs": 25,
     "start_s": 41.1,
     "start_min_s": 11,
     "start_max_s": 71.2
@@ -1664,7 +1664,7 @@
     "skill": "Ancora Strike [Aspect of the Sword]",
     "skill_id": 81327,
     "burst": 3,
-    "logs": 21,
+    "logs": 26,
     "start_s": 41.4,
     "start_min_s": 17,
     "start_max_s": 91.7
@@ -1673,71 +1673,80 @@
     "skill": "Surrounding Curse [Vloxx]",
     "skill_id": 80484,
     "burst": 3,
-    "logs": 27,
-    "start_s": 46.1,
+    "logs": 32,
+    "start_s": 45.8,
     "start_min_s": 35.9,
     "start_max_s": 76.2
-   },
-   {
-    "skill": "Surrounding Curse [Vloxx]",
-    "skill_id": 80484,
-    "burst": 4,
-    "logs": 18,
-    "start_s": 46.2,
-    "start_min_s": 39.4,
-    "start_max_s": 86.3
-   },
-   {
-    "skill": "Ancora Strike [Aspect of the Spear]",
-    "skill_id": 80940,
-    "burst": 4,
-    "logs": 22,
-    "start_s": 49,
-    "start_min_s": 27.2,
-    "start_max_s": 84.3
-   },
-   {
-    "skill": "Raging Storm [Vloxx]",
-    "skill_id": 81176,
-    "burst": 4,
-    "logs": 25,
-    "start_s": 49.6,
-    "start_min_s": 29.5,
-    "start_max_s": 83.5
-   },
-   {
-    "skill": "Excision Extremis [Vloxx]",
-    "skill_id": 80901,
-    "burst": 3,
-    "logs": 26,
-    "start_s": 50,
-    "start_min_s": 50,
-    "start_max_s": 51.5
    },
    {
     "skill": "Division Eternal [Aspect of the Sword]",
     "skill_id": 81330,
     "burst": 3,
-    "logs": 19,
-    "start_s": 50.8,
+    "logs": 22,
+    "start_s": 48.4,
     "start_min_s": 32.4,
     "start_max_s": 102.6
+   },
+   {
+    "skill": "Ancora Strike [Aspect of the Spear]",
+    "skill_id": 80940,
+    "burst": 4,
+    "logs": 26,
+    "start_s": 49,
+    "start_min_s": 27.2,
+    "start_max_s": 84.3
+   },
+   {
+    "skill": "Excision Extremis [Vloxx]",
+    "skill_id": 80901,
+    "burst": 3,
+    "logs": 31,
+    "start_s": 50,
+    "start_min_s": 50,
+    "start_max_s": 51.5
+   },
+   {
+    "skill": "Raging Storm [Vloxx]",
+    "skill_id": 81176,
+    "burst": 4,
+    "logs": 30,
+    "start_s": 50.5,
+    "start_min_s": 29.5,
+    "start_max_s": 83.5
    },
    {
     "skill": "Probability Distribution [Vloxx]",
     "skill_id": 81318,
     "burst": 1,
-    "logs": 22,
+    "logs": 27,
     "start_s": 51,
     "start_min_s": 31,
     "start_max_s": 71
    },
    {
+    "skill": "Surrounding Curse [Vloxx]",
+    "skill_id": 80484,
+    "burst": 4,
+    "logs": 23,
+    "start_s": 55.4,
+    "start_min_s": 39.4,
+    "start_max_s": 86.3
+   },
+   {
+    "skill": "Eternal Reflection [Aspect of the Staff]",
+    "skill_id": 80304,
+    "burst": 3,
+    "logs": 18,
+    "start_s": 56.4,
+    "start_min_s": 32,
+    "start_max_s": 101.6
+   },
+   {
     "skill": "Raging Storm [Vloxx]",
     "skill_id": 81176,
     "burst": 5,
-    "logs": 20,
-    "start_s": 56.5,
+    "logs": 25,
+    "start_s": 59.5,
     "start_min_s": 33,
     "start_max_s": 87.4
    },
@@ -1745,8 +1754,8 @@
     "skill": "Thousand Strikes [Aspect of the Spear]",
     "skill_id": 80709,
     "burst": 3,
-    "logs": 16,
-    "start_s": 57.6,
+    "logs": 18,
+    "start_s": 59.9,
     "start_min_s": 38.4,
     "start_max_s": 94.8
    },
@@ -1754,34 +1763,16 @@
     "skill": "Ancora Strike [Aspect of the Spear]",
     "skill_id": 80940,
     "burst": 5,
-    "logs": 18,
+    "logs": 20,
     "start_s": 60.7,
     "start_min_s": 31.8,
     "start_max_s": 82.5
    },
    {
-    "skill": "Raging Storm [Vloxx]",
-    "skill_id": 81176,
-    "burst": 6,
-    "logs": 16,
-    "start_s": 62.5,
-    "start_min_s": 41.5,
-    "start_max_s": 90.6
-   },
-   {
-    "skill": "Eternal Reflection [Aspect of the Staff]",
-    "skill_id": 80304,
-    "burst": 3,
-    "logs": 16,
-    "start_s": 62.7,
-    "start_min_s": 32,
-    "start_max_s": 101.6
-   },
-   {
     "skill": "Ancora Strike [Aspect of the Sword]",
     "skill_id": 81327,
     "burst": 4,
-    "logs": 16,
+    "logs": 18,
     "start_s": 63.1,
     "start_min_s": 27.4,
     "start_max_s": 94.3
@@ -1790,15 +1781,33 @@
     "skill": "Excision Extremis [Vloxx]",
     "skill_id": 80901,
     "burst": 4,
-    "logs": 20,
+    "logs": 24,
     "start_s": 65,
     "start_min_s": 65,
     "start_max_s": 66.6
+   },
+   {
+    "skill": "Raging Storm [Vloxx]",
+    "skill_id": 81176,
+    "burst": 6,
+    "logs": 19,
+    "start_s": 65.5,
+    "start_min_s": 41.5,
+    "start_max_s": 90.6
+   },
+   {
+    "skill": "Probability Distribution [Vloxx]",
+    "skill_id": 81318,
+    "burst": 2,
+    "logs": 19,
+    "start_s": 67.6,
+    "start_min_s": 51,
+    "start_max_s": 88.7
    }
   ]
  },
  "lastPhaseTimeline": {
-  "logs": 31,
+  "logs": 36,
   "events": [
    {
     "atS": 3,
@@ -1806,7 +1815,7 @@
     "maxS": 3,
     "what": "Judgment of Eternity (greens): markers on players",
     "round": 1,
-    "logs": 23,
+    "logs": 28,
     "note": "resolves ~8 s later"
    },
    {
@@ -1815,7 +1824,7 @@
     "maxS": 15,
     "what": "Raging Storm (falling spears): first wave",
     "round": 1,
-    "logs": 31,
+    "logs": 36,
     "note": "then a wave every 3 s until the end"
    },
    {
@@ -1824,7 +1833,7 @@
     "maxS": 36.1,
     "what": "Surrounding Curse: first hits (from the damage, so less exact)",
     "round": 1,
-    "logs": 31,
+    "logs": 36,
     "note": ""
    },
    {
@@ -1833,7 +1842,7 @@
     "maxS": 18,
     "what": "Excision Extremis: telegraph",
     "round": 1,
-    "logs": 31,
+    "logs": 36,
     "note": "slashes from 2 s later"
    },
    {
@@ -1842,7 +1851,7 @@
     "maxS": 23,
     "what": "Probability Distribution (spread): markers on players",
     "round": 1,
-    "logs": 31,
+    "logs": 36,
     "note": ""
    },
    {
@@ -1851,7 +1860,7 @@
     "maxS": 33.1,
     "what": "Judgment of Eternity (greens): markers on players",
     "round": 2,
-    "logs": 22,
+    "logs": 27,
     "note": "resolves ~8 s later"
    },
    {
@@ -1860,16 +1869,16 @@
     "maxS": 33,
     "what": "Excision Extremis: telegraph",
     "round": 2,
-    "logs": 31,
+    "logs": 36,
     "note": "slashes from 2 s later"
    },
    {
-    "atS": 35.8,
+    "atS": 35.9,
     "minS": 20,
     "maxS": 86.4,
     "what": "Surrounding Curse: first hits (from the damage, so less exact)",
     "round": 2,
-    "logs": 30,
+    "logs": 35,
     "note": ""
    },
    {
@@ -1878,7 +1887,7 @@
     "maxS": 43,
     "what": "Probability Distribution (spread): markers on players",
     "round": 2,
-    "logs": 28,
+    "logs": 33,
     "note": ""
    },
    {
@@ -1887,7 +1896,7 @@
     "maxS": 48,
     "what": "Excision Extremis: telegraph",
     "round": 3,
-    "logs": 28,
+    "logs": 33,
     "note": "slashes from 2 s later"
    },
    {
@@ -1896,7 +1905,7 @@
     "maxS": 63.1,
     "what": "Judgment of Eternity (greens): markers on players",
     "round": 3,
-    "logs": 14,
+    "logs": 18,
     "note": "resolves ~8 s later"
    },
    {
@@ -1905,7 +1914,7 @@
     "maxS": 63,
     "what": "Excision Extremis: telegraph",
     "round": 4,
-    "logs": 22,
+    "logs": 26,
     "note": "slashes from 2 s later"
    },
    {
@@ -1914,7 +1923,7 @@
     "maxS": 63,
     "what": "Probability Distribution (spread): markers on players",
     "round": 3,
-    "logs": 22,
+    "logs": 26,
     "note": ""
    },
    {
@@ -1923,7 +1932,7 @@
     "maxS": 93,
     "what": "Excision Extremis: telegraph",
     "round": 5,
-    "logs": 11,
+    "logs": 13,
     "note": "slashes from 2 s later"
    },
    {
@@ -1932,7 +1941,7 @@
     "maxS": 83,
     "what": "Probability Distribution (spread): markers on players",
     "round": 4,
-    "logs": 13,
+    "logs": 14,
     "note": ""
    }
   ]

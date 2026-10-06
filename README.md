@@ -31,7 +31,7 @@ docs-src/feedback.js "Feedback" / "Report a bug" buttons (top bar); contact name
 docs-src/plans/      shared planner templates (*.json, any exported plan); see the README there
 FINDINGS.md          every conclusion, its evidence, and hypotheses that were tested and REJECTED
 logs/                LOCAL ONLY (gitignored, not in the repository — back it up separately):
-logs/raw/            our squad's raw arcdps logs (.zevtc), CM: 284 logs from 2026-09-29 to 2026-10-05 (31 reached the last phase, 5 kills)
+logs/raw/            our squad's raw arcdps logs (.zevtc), CM: 315 logs from 2026-09-29 to 2026-10-06 (36 reached the last phase, 9 kills)
 logs/raw_nm/         raw NM logs (13; not analysed)
 logs/ei/             Elite Insights JSON of other squads' logs (gzipped). dps.report links + Wingman imports
 logs/sources.json    log id -> URL (dps.report / Wingman)

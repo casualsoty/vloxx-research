@@ -1,30 +1,30 @@
 {
- "hits": 14826,
+ "hits": 16708,
  "lockoutS": 1,
  "bySinceLastHit": {
   "1.0–3 s": {
-   "n": 1661,
-   "crippledPct": 86.1,
-   "strippedPct": 85.7
+   "n": 1816,
+   "crippledPct": 86.6,
+   "strippedPct": 86.3
   },
   "8 s or more": {
-   "n": 4478,
-   "crippledPct": 94.3,
-   "strippedPct": 94.5
+   "n": 5053,
+   "crippledPct": 94.6,
+   "strippedPct": 94.9
   },
   "under 1.0 s": {
-   "n": 7383,
-   "crippledPct": 0.4,
-   "strippedPct": 2.7
+   "n": 8343,
+   "crippledPct": 0.5,
+   "strippedPct": 2.8
   },
   "3–8 s": {
-   "n": 403,
-   "crippledPct": 95,
-   "strippedPct": 95
+   "n": 500,
+   "crippledPct": 95.8,
+   "strippedPct": 95.8
   }
  },
  "firstHit": {
-  "n": 901,
-  "crippledPct": 94.2
+  "n": 996,
+  "crippledPct": 94.1
  }
 }

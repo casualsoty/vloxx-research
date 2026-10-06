@@ -1,10 +1,10 @@
 {
- "logs": 284,
- "casts": 1023,
+ "logs": 315,
+ "casts": 1136,
  "landingDistance": {
-  "500": 26,
-  "1000": 84,
-  "1500": 913
+  "500": 33,
+  "1000": 111,
+  "1500": 992
  },
  "arrivalS": {
   "500": 5.6,
@@ -16,86 +16,86 @@
    "p50": 0,
    "p90": 0,
    "within10degPct": 100,
-   "n": 1023
+   "n": 1136
   },
   "fixatedPlayer": {
    "p50": 14,
    "p90": 36,
    "within10degPct": 35,
-   "n": 522
+   "n": 568
   },
   "farthestPlayer": {
    "p50": 26,
-   "p90": 84,
+   "p90": 87,
    "within10degPct": 18,
-   "n": 1012
+   "n": 1121
   },
   "closestPlayer": {
    "p50": 32,
-   "p90": 106,
+   "p90": 110,
    "within10degPct": 16,
-   "n": 915
+   "n": 1009
   }
  },
  "travellingOrb": {
   "hitTimesS": {
-   "2.0": 6125,
-   "3.5": 197,
-   "3.0": 2095,
-   "2.5": 4176,
-   "4.0": 98,
-   "4.5": 45
+   "2.0": 6901,
+   "3.5": 216,
+   "3.0": 2301,
+   "2.5": 4658,
+   "4.0": 108,
+   "4.5": 47
   },
   "byDistanceBesideThePath": [
    {
     "from": 0,
     "hitPct": 97,
-    "players": 640
+    "players": 716
    },
    {
     "from": 50,
     "hitPct": 97,
-    "players": 734
+    "players": 814
    },
    {
     "from": 100,
     "hitPct": 96,
-    "players": 1012
+    "players": 1103
    },
    {
     "from": 150,
     "hitPct": 92,
-    "players": 976
+    "players": 1065
    },
    {
     "from": 200,
     "hitPct": 82,
-    "players": 867
+    "players": 934
    },
    {
     "from": 250,
-    "hitPct": 39,
-    "players": 566
+    "hitPct": 40,
+    "players": 603
    },
    {
     "from": 300,
     "hitPct": 1,
-    "players": 326
+    "players": 344
    },
    {
     "from": 350,
     "hitPct": 0,
-    "players": 170
+    "players": 172
    },
    {
     "from": 400,
     "hitPct": 0,
-    "players": 52
+    "players": 53
    },
    {
     "from": 450,
     "hitPct": 0,
-    "players": 26
+    "players": 27
    },
    {
     "from": 500,
@@ -122,67 +122,72 @@
    {
     "from": -1800,
     "hitPct": 0,
-    "players": 9
+    "players": 10
    },
    {
     "from": -1700,
-    "hitPct": 26,
-    "players": 34
+    "hitPct": 30,
+    "players": 47
    },
    {
     "from": -1600,
-    "hitPct": 85,
-    "players": 62
+    "hitPct": 87,
+    "players": 71
    },
    {
     "from": -1500,
     "hitPct": 95,
-    "players": 102
+    "players": 113
    },
    {
     "from": -1400,
-    "hitPct": 97,
-    "players": 239
+    "hitPct": 95,
+    "players": 280
    },
    {
     "from": -1300,
     "hitPct": 94,
-    "players": 470
+    "players": 518
    },
    {
     "from": -1200,
-    "hitPct": 98,
-    "players": 332
+    "hitPct": 97,
+    "players": 357
    },
    {
     "from": -1100,
     "hitPct": 96,
-    "players": 93
+    "players": 98
    },
    {
     "from": -1000,
     "hitPct": 97,
-    "players": 33
+    "players": 34
    },
    {
     "from": -900,
-    "hitPct": 93,
-    "players": 29
+    "hitPct": 94,
+    "players": 31
    },
    {
     "from": -800,
-    "hitPct": 97,
-    "players": 63
+    "hitPct": 96,
+    "players": 75
    },
    {
     "from": -700,
     "hitPct": 100,
-    "players": 18
+    "players": 28
    },
    {
     "from": -600,
-    "hitPct": 75,
-    "players": 4
+    "hitPct": 80,
+    "players": 5
+   },
+   {
+    "from": -500,
+    "hitPct": 100,
+    "players": 1
    },
    {
     "from": -400,
@@ -192,12 +197,12 @@
    {
     "from": -300,
     "hitPct": 100,
-    "players": 8
+    "players": 13
    },
    {
     "from": -200,
     "hitPct": 100,
-    "players": 3
+    "players": 6
    },
    {
     "from": -100,
@@ -213,98 +218,98 @@
    {
     "afterLandingS": 0.3,
     "radius": 381,
-    "hits": 84
+    "hits": 104
    },
    {
     "afterLandingS": 0.6,
-    "radius": 520,
-    "hits": 415
+    "radius": 523,
+    "hits": 496
    },
    {
     "afterLandingS": 0.9,
-    "radius": 646,
-    "hits": 834
+    "radius": 649,
+    "hits": 945
    },
    {
     "afterLandingS": 1.2,
     "radius": 766,
-    "hits": 1122
+    "hits": 1204
    },
    {
     "afterLandingS": 1.5,
     "radius": 898,
-    "hits": 906
+    "hits": 974
    },
    {
     "afterLandingS": 1.8,
     "radius": 1033,
-    "hits": 390
+    "hits": 412
    },
    {
     "afterLandingS": 2.1,
-    "radius": 1185,
-    "hits": 137
+    "radius": 1178,
+    "hits": 150
    },
    {
     "afterLandingS": 2.7,
-    "radius": 1328,
-    "hits": 34
+    "radius": 1317,
+    "hits": 36
    }
   ],
-  "speedPerS": 395,
-  "reach": 1328,
+  "speedPerS": 390,
+  "reach": 1317,
   "playersInItsWayHitPct": 39,
-  "playersInItsWay": 8834,
+  "playersInItsWay": 9708,
   "hitTimesS": {
-   "8.0": 190,
-   "7.5": 401,
-   "7.0": 1950,
-   "6.5": 1020,
-   "6.0": 69,
-   "5.5": 46,
-   "4.5": 386,
-   "5.0": 135,
-   "4.0": 58,
-   "3.5": 12
+   "8.0": 205,
+   "7.5": 428,
+   "7.0": 2074,
+   "6.5": 1141,
+   "6.0": 87,
+   "5.5": 61,
+   "4.5": 522,
+   "5.0": 173,
+   "4.0": 78,
+   "3.5": 15
   }
  },
  "afterLanding": {
   "skill": 80323,
   "hitTimesS": {
-   "8.5": 260,
-   "8.0": 280,
-   "9.0": 432,
-   "9.5": 301,
-   "7.5": 163,
-   "6.5": 149,
-   "6.0": 112,
-   "7.0": 270,
-   "5.5": 69,
-   "4.0": 43,
-   "5.0": 67,
-   "3.5": 23,
-   "4.5": 39
+   "8.5": 305,
+   "8.0": 316,
+   "9.0": 515,
+   "9.5": 336,
+   "7.5": 200,
+   "6.5": 175,
+   "6.0": 131,
+   "7.0": 313,
+   "5.5": 81,
+   "4.0": 59,
+   "5.0": 91,
+   "3.5": 39,
+   "4.5": 58
   },
   "hitsByDistanceFromLandingPoint": {
    "0": 6,
-   "50": 17,
-   "100": 63,
-   "150": 176,
-   "200": 584,
-   "250": 637,
-   "300": 103,
-   "350": 12,
-   "400": 15,
-   "450": 9,
-   "500": 11,
-   "550": 21,
-   "600": 36,
-   "650": 70,
-   "700": 98,
-   "750": 106,
-   "800": 24,
-   "850": 5,
-   "900": 4
+   "50": 20,
+   "100": 69,
+   "150": 203,
+   "200": 699,
+   "250": 729,
+   "300": 108,
+   "350": 15,
+   "400": 19,
+   "450": 13,
+   "500": 17,
+   "550": 25,
+   "600": 44,
+   "650": 86,
+   "700": 119,
+   "750": 130,
+   "800": 30,
+   "850": 7,
+   "900": 5
   }
  }
 }

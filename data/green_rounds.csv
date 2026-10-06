@@ -1681,6 +1681,190 @@ log_id,source,phase,last_phase_tick_s,time_s,fixated_player,players_up,expected_
 20261005-220403,raw,last,33,529.027,,10,3,3,Player-80A0 > Player-FBAD > Player-F494,2 3 4,,7.25
 20261005-220403,raw,last,63,559.027,Player-1BA4,10,3,3,Player-1BA4 > Player-80A0 > Player-202A,1 2 3,Player-1BA4 | Player-1B8E | Player-F494,3.29
 20261005-220403,raw,last,93,589.027,Player-DDA6,3,1,1,Player-DDA6,1,,1.97
+20261005-234637,raw,early,,5.76,Player-DDA6,10,3,1,Player-DDA6,,,100
+20261005-234637,raw,early,,53.16,Player-DDA6,10,3,3,Player-DDA6 > Player-FBAD > Player-DDFD,,,87.14
+20261005-235038,raw,early,,6.118,Player-DDA6,10,3,1,Player-DDA6,,,100
+20261005-235038,raw,early,,53.118,Player-DDA6,10,3,3,Player-DDA6 > Player-FBAD > Player-DDFD,,,87.13
+20261005-235038,raw,early,,97.634,Player-98E0,10,3,3,Player-98E0 > Player-8AE5 > Player-DDFD,,,75.04
+20261005-235038,raw,early,,152.68,Player-FBAD,10,3,3,Player-FBAD > Player-DDFD > Player-6FCB,,,68.83
+20261005-235537,raw,early,,5.678,Player-DDA6,10,3,1,Player-DDA6,,,100
+20261005-235537,raw,early,,53.278,Player-DDA6,10,3,3,Player-DDA6 > Player-DDFD > Player-6FCB,,,87.32
+20261005-235537,raw,early,,98.086,Player-FBAD,10,3,3,Player-FBAD > Player-DDFD > Player-F494,,,75.16
+20261005-235537,raw,early,,153.562,Player-E1F6,10,3,3,Player-E1F6 > Player-6FCB > Player-DDFD,,,68.21
+20261005-235537,raw,early,,208.396,Player-E1F6,10,3,3,Player-E1F6 > Player-6FCB > Player-DDFD,,,55.32
+20261005-235537,raw,early,,253.628,Player-DDFD,10,3,3,Player-DDFD > Player-FBAD > Player-8F17,,,44.22
+20261005-235959,raw,early,,5.637,Player-DDA6,10,3,1,Player-DDA6,,,100
+20261005-235959,raw,early,,53.279,Player-DDA6,10,3,3,Player-DDA6 > Player-FBAD > Player-DDFD,,,87
+20261005-235959,raw,early,,97.757,Player-98E0,10,3,3,Player-98E0 > Player-FBAD > Player-6FCB,,,75.94
+20261005-235959,raw,early,,157.319,Player-E1F6,10,3,3,Player-E1F6 > Player-6FCB > Player-FBAD,,,67.64
+20261005-235959,raw,early,,212.237,Player-E1F6,10,3,3,Player-E1F6 > Player-DDFD > Player-F494,,,54.32
+20261006-000425,raw,early,,5.554,Player-DDA6,10,3,1,Player-DDA6,,,100
+20261006-000425,raw,early,,52.876,Player-DDA6,10,3,3,Player-DDA6 > Player-FBAD > Player-DDFD,,,88.33
+20261006-000425,raw,early,,97.434,Player-E1F6,10,3,3,Player-E1F6 > Player-FBAD > Player-F494,,,76.7
+20261006-000425,raw,early,,149.392,Player-8AE5,10,3,3,Player-8AE5 > Player-FBAD > Player-6FCB,,,67.78
+20261006-000425,raw,early,,204.032,Player-98E0,10,3,3,Player-98E0 > Player-6FCB > Player-DDFD,,,55.51
+20261006-000425,raw,early,,248.826,Player-D751,5,1,1,Player-D751,,,47.29
+20261006-001214,raw,early,,5.76,Player-DDA6,10,3,1,Player-DDA6,,,100
+20261006-001214,raw,early,,53.522,Player-DDA6,10,3,3,Player-DDA6 > Player-DDFD > Player-FBAD,,,87.19
+20261006-001214,raw,early,,98.522,Player-DDFD,10,3,3,Player-DDFD > Player-FBAD > Player-D751,,,74.18
+20261006-001214,raw,early,,152.356,Player-8AE5,10,3,3,Player-8AE5 > Player-6FCB > Player-FBAD,,,68.4
+20261006-001214,raw,early,,207.038,Player-8AE5,10,3,3,Player-8AE5 > Player-DDFD > Player-FBAD,,,55.22
+20261006-001214,raw,early,,267.996,Player-98E0,9,3,3,Player-98E0 > Player-DDFD > Player-6FCB,,,40.38
+20261006-001214,raw,early,,314.23,Player-8AE5,10,3,3,Player-8AE5 > Player-6FCB > Player-DDFD,,,38.79
+20261006-001214,raw,early,,361.146,Player-DDFD,9,3,3,Player-DDFD > Player-FBAD > Player-98E0,,,30.69
+20261006-001214,raw,early,,412.314,,9,3,3,Player-FBAD > Player-F494 > Player-DDA6,,,20.36
+20261006-001643,raw,early,,6.074,Player-DDA6,10,3,1,Player-DDA6,,,100
+20261006-001643,raw,early,,53.234,Player-DDA6,10,3,3,Player-DDA6 > Player-FBAD > Player-DDFD,,,87.19
+20261006-001643,raw,early,,98.282,Player-98E0,10,3,3,Player-98E0 > Player-F494 > Player-FBAD,,,75.61
+20261006-001643,raw,early,,151.72,Player-8F17,10,3,3,Player-8F17 > Player-6FCB > Player-FBAD,,,67.76
+20261006-001643,raw,early,,206.43,Player-8F17,10,3,3,Player-8F17 > Player-DDFD > Player-E1F6,,,53.55
+20261006-002451,raw,early,,5.675,Player-DDA6,10,3,1,Player-DDA6,,,100
+20261006-002451,raw,early,,53.319,Player-DDA6,10,3,3,Player-DDA6 > Player-DDFD > Player-FBAD,,,87.66
+20261006-002451,raw,early,,98.311,Player-E1F6,10,3,3,Player-E1F6 > Player-DDFD > Player-FBAD,,,75.1
+20261006-002451,raw,early,,156.879,Player-F494,10,3,3,Player-F494 > Player-6FCB > Player-DDFD,,,68.31
+20261006-002451,raw,early,,211.909,Player-98E0,10,3,3,Player-98E0 > Player-DDFD > Player-FBAD,,,54.11
+20261006-002451,raw,early,,258.271,Player-98E0,10,3,3,Player-98E0 > Player-DDFD > Player-F494,,,41.35
+20261006-002451,raw,early,,316.865,Player-6FCB,10,3,3,Player-6FCB > Player-DDFD > Player-FBAD,,,38.41
+20261006-002451,raw,early,,363.749,Player-6FCB,10,3,3,Player-6FCB > Player-DDFD > Player-E1F6,,,28.49
+20261006-002451,raw,early,,411.667,Player-E1F6,8,2,2,Player-E1F6 > Player-F494,,,18.75
+20261006-002831,raw,early,,5.717,Player-DDA6,10,3,1,Player-DDA6,,,100
+20261006-002831,raw,early,,53.04,Player-DDA6,10,3,3,Player-DDA6 > Player-FBAD > Player-DDFD,,,88.02
+20261006-002831,raw,early,,97.559,Player-DDFD,10,3,3,Player-DDFD > Player-FBAD > Player-6FCB,,,74.98
+20261006-002831,raw,early,,148.991,Player-F494,10,3,3,Player-F494 > Player-FBAD > Player-DDFD,,,68.42
+20261006-003211,raw,early,,5.799,Player-DDA6,10,3,1,Player-DDA6,,,100
+20261006-003211,raw,early,,53.399,Player-DDA6,10,3,3,Player-DDA6 > Player-DDFD > Player-FBAD,,,87.3
+20261006-003211,raw,early,,98.479,Player-D751,10,3,3,Player-D751 > Player-DDFD > Player-98E0,,,75.14
+20261006-003211,raw,early,,152.069,Player-FBAD,10,3,3,Player-FBAD > Player-DDFD > Player-6FCB,,,68.21
+20261006-003529,raw,early,,5.839,Player-DDA6,10,3,1,Player-DDA6,,,100
+20261006-003529,raw,early,,52.833,Player-DDA6,10,3,3,Player-DDA6 > Player-6FCB > Player-DDFD,,,87.31
+20261006-003529,raw,early,,97.271,Player-E1F6,8,2,2,Player-E1F6 > Player-DDFD,,,75.75
+20261006-003529,raw,early,,158.555,Player-8F17,10,3,3,Player-8F17 > Player-6FCB > Player-FBAD,,,68.46
+20261006-003843,raw,early,,6.075,Player-DDA6,10,3,1,Player-DDA6,,,100
+20261006-003843,raw,early,,53.313,Player-DDA6,10,3,3,Player-DDA6 > Player-DDFD > Player-6FCB,,,87.53
+20261006-003843,raw,early,,98.313,Player-DDA6,10,3,3,Player-DDA6 > Player-DDFD > Player-6FCB,,,76.81
+20261006-003843,raw,early,,159.271,Player-D751,10,3,3,Player-D751 > Player-6FCB > Player-8F17,,,68.13
+20261006-004106,raw,early,,5.598,Player-DDA6,10,3,1,Player-DDA6,,,100
+20261006-004106,raw,early,,53.114,Player-DDA6,10,3,3,Player-DDA6 > Player-FBAD > Player-DDFD,,,87.99
+20261006-004106,raw,early,,97.758,Player-E1F6,10,3,3,Player-E1F6 > Player-FBAD > Player-F494,,,75.97
+20261006-004600,raw,early,,5.795,Player-010B,10,3,1,Player-010B,,,100
+20261006-004600,raw,early,,53.441,Player-010B,10,3,3,Player-010B > Player-DDFD > Player-FBAD,,,88.51
+20261006-004600,raw,early,,97.993,Player-98E0,9,3,3,Player-98E0 > Player-FBAD > Player-DDFD,,,76.01
+20261006-004600,raw,early,,156.475,Player-6FCB,10,3,3,Player-6FCB > Player-DDFD > Player-FBAD,,,68.41
+20261006-004600,raw,early,,211.069,Player-8AE5,10,3,3,Player-8AE5 > Player-DDFD > Player-FBAD,,,55.23
+20261006-004743,raw,early,,5.836,Player-010B,10,3,1,Player-010B,,,100
+20261006-004743,raw,early,,53.602,Player-010B,10,3,3,Player-010B > Player-DDFD > Player-FBAD,,,87.38
+20261006-005515,raw,early,,5.602,Player-010B,10,3,1,Player-010B,,,99.99
+20261006-005515,raw,early,,53.076,Player-010B,9,3,3,Player-010B > Player-DDFD > Player-F494,,,87.41
+20261006-005515,raw,early,,97.718,Player-DDFD,10,3,3,Player-DDFD > Player-010B > Player-FBAD,,,74.33
+20261006-005515,raw,early,,152.352,Player-F494,10,3,3,Player-F494 > Player-6FCB > Player-FBAD,,,68.04
+20261006-005515,raw,early,,206.914,Player-DDFD,10,3,3,Player-DDFD > Player-010B > Player-F494,,,53.99
+20261006-005515,raw,early,,304.834,Player-E1F6,10,3,3,Player-E1F6 > Player-6FCB > Player-DDFD,,,38.13
+20261006-005515,raw,early,,352.348,Player-E1F6,10,3,3,Player-E1F6 > Player-FBAD > Player-010B,,,26.77
+20261006-005515,raw,early,,399.954,Player-010B,10,3,3,Player-010B > Player-F494 > Player-FBAD,,,16.88
+20261006-010653,raw,early,,5.521,Player-010B,10,3,1,Player-010B,,,100
+20261006-010653,raw,early,,52.679,Player-010B,10,3,3,Player-010B > Player-DDFD > Player-FBAD,,,87.19
+20261006-010653,raw,early,,97.159,Player-010B,10,3,3,Player-010B > Player-FBAD > Player-F494,,,74.91
+20261006-010653,raw,early,,142.721,Player-98E0,10,3,3,Player-98E0 > Player-FBAD > Player-DDFD,,,68.1
+20261006-010653,raw,early,,197.639,Player-98E0,10,3,3,Player-98E0 > Player-DDFD > Player-6FCB,,,54.14
+20261006-010653,raw,early,,243.717,,10,3,3,Player-DDFD > Player-FBAD > Player-010B,,,42.47
+20261006-010653,raw,early,,316.153,Player-E1F6,10,3,3,Player-E1F6 > Player-6FCB > Player-DDFD,,,38.54
+20261006-010653,raw,early,,363.153,Player-E1F6,10,3,3,Player-E1F6 > Player-FBAD > Player-DDFD,,,27.5
+20261006-010653,raw,early,,410.827,Player-FBAD,10,3,3,Player-FBAD > Player-F494 > Player-6FCB,,,18.54
+20261006-010653,raw,last,3,488.353,Player-D751,10,3,3,Player-D751 > Player-6FCB > Player-DDFD,1 2 3,,9.23
+20261006-010653,raw,last,33,518.353,Player-010B,10,3,3,Player-010B > Player-DDFD > Player-8AE5,1 2 3,,5.88
+20261006-010653,raw,last,63,548.353,Player-010B,10,3,3,Player-010B > Player-DDFD > Player-98E0,1 2 3,Player-010B | Player-E1F6 | Player-F494,1.54
+20261006-010653,raw,last,93,578.353,,6,2,0,,,,0
+20261006-223141,raw,early,,5.874,Player-BCA0,10,3,1,Player-BCA0,,,100
+20261006-223141,raw,early,,53.756,Player-BCA0,10,3,3,Player-BCA0 > Player-704B > Player-FBAD,,,87.46
+20261006-223141,raw,early,,98.751,Player-258F,10,3,3,Player-258F > Player-FBAD > Player-A775,,,74.16
+20261006-223141,raw,early,,166.464,Player-A775,10,3,3,Player-A775 > Player-FBAD > Player-704B,,,68.24
+20261006-223141,raw,early,,221.664,Player-A775,10,3,3,Player-A775 > Player-FBAD > Player-8FDE,,,53.93
+20261006-223141,raw,early,,324.5,Player-258F,10,3,3,Player-258F > Player-FBAD > Player-A775,,,38.26
+20261006-223141,raw,early,,371.136,Player-258F,10,3,3,Player-258F > Player-704B > Player-A775,,,29.27
+20261006-223141,raw,early,,419.614,Player-8FDE,10,3,3,Player-8FDE > Player-89AD > Player-A775,,,19.58
+20261006-223141,raw,early,,464.618,Player-FBAD,10,3,3,Player-FBAD > Player-258F > Player-704B,,,10.26
+20261006-223141,raw,last,3,509.816,Player-FBAD,10,3,3,Player-FBAD > Player-704B > Player-A775,1 2 3,,9.22
+20261006-223141,raw,last,33,539.816,,8,2,2,Player-FBAD > Player-8FDE,2 3,,7.54
+20261006-223141,raw,last,63,569.816,Player-89AD,9,3,3,Player-89AD > Player-DDA6 > Player-8AE5,1 2 3,Player-89AD | Player-FBAD | Player-BCA0,5.48
+20261006-223440,raw,early,,5.838,Player-BCA0,10,3,1,Player-BCA0,,,100
+20261006-223440,raw,early,,53.114,Player-BCA0,10,3,3,Player-BCA0 > Player-704B > Player-A775,,,87.9
+20261006-223440,raw,early,,97.676,Player-89AD,10,3,3,Player-89AD > Player-FBAD > Player-704B,,,75.71
+20261006-223918,raw,early,,6.03,Player-BCA0,10,3,1,Player-BCA0,,,100
+20261006-223918,raw,early,,53.674,Player-BCA0,10,3,3,Player-BCA0 > Player-FBAD > Player-704B,,,87.39
+20261006-223918,raw,early,,98.788,Player-704B,10,3,3,Player-704B > Player-FBAD > Player-A775,,,74.83
+20261006-223918,raw,early,,159.424,Player-8FDE,10,3,3,Player-8FDE > Player-704B > Player-FBAD,,,68.26
+20261006-223918,raw,early,,214.266,Player-8FDE,10,3,3,Player-8FDE > Player-704B > Player-A775,,,54.27
+20261006-224336,raw,early,,5.753,Player-BCA0,10,3,1,Player-BCA0,,,100
+20261006-224336,raw,early,,53.713,Player-BCA0,10,3,3,Player-BCA0 > Player-FBAD > Player-704B,,,87.21
+20261006-224336,raw,early,,149.313,Player-DDA6,10,3,3,Player-DDA6 > Player-704B > Player-FBAD,,,68.6
+20261006-224336,raw,early,,204.267,Player-DDA6,10,3,3,Player-DDA6 > Player-704B > Player-FBAD,,,55.59
+20261006-225342,raw,early,,5.716,Player-BCA0,10,3,1,Player-BCA0,,,100
+20261006-225342,raw,early,,53.114,Player-BCA0,10,3,3,Player-BCA0 > Player-FBAD > Player-704B,,,87.34
+20261006-225342,raw,early,,97.596,Player-A775,10,3,3,Player-A775 > Player-704B > Player-B055,,,73.77
+20261006-225342,raw,early,,155.712,Player-B055,10,3,3,Player-B055 > Player-FBAD > Player-704B,,,68.45
+20261006-225342,raw,early,,210.472,Player-B055,10,3,3,Player-B055 > Player-A775 > Player-FBAD,,,54.49
+20261006-225342,raw,early,,255.99,,9,3,3,Player-FBAD > Player-BCA0 > Player-8AE5,,,43.27
+20261006-225342,raw,early,,320.388,,10,3,3,Player-FBAD > Player-704B > Player-A775,,,39.01
+20261006-225342,raw,early,,367.576,Player-BCA0,10,3,3,Player-BCA0 > Player-704B > Player-FBAD,,,29.33
+20261006-225342,raw,early,,416.062,Player-258F,10,3,3,Player-258F > Player-704B > Player-FBAD,,,19.4
+20261006-225342,raw,last,3,495.46,Player-DDA6,10,3,3,Player-DDA6 > Player-FBAD > Player-704B,1 2 3,,9.14
+20261006-225342,raw,last,33,525.46,Player-DDA6,10,3,3,Player-DDA6 > Player-704B > Player-8AE5,1 2 3,,6.32
+20261006-225342,raw,last,63,555.46,,10,3,3,Player-704B > Player-FBAD > Player-BCA0,2 3 4,Player-B055 | Player-A775 | Player-89AD,1.89
+20261006-230725,raw,early,,5.839,Player-BCA0,10,3,1,Player-BCA0,,,100
+20261006-230725,raw,early,,53.277,Player-BCA0,10,3,3,Player-BCA0 > Player-FBAD > Player-704B,,,87.1
+20261006-230725,raw,early,,98.475,Player-A775,10,3,3,Player-A775 > Player-FBAD > Player-704B,,,73.86
+20261006-230725,raw,early,,143.197,Player-B055,10,3,3,Player-B055 > Player-A775 > Player-FBAD,,,68.06
+20261006-230725,raw,early,,197.795,Player-B055,10,3,3,Player-B055 > Player-BCA0 > Player-A775,,,54.1
+20261006-230725,raw,early,,242.711,Player-704B,10,3,3,Player-704B > Player-FBAD > Player-A775,,,43.08
+20261006-230725,raw,early,,292.027,Player-B055,10,3,3,Player-B055 > Player-704B > Player-A775,,,38.34
+20261006-230725,raw,early,,339.063,Player-B055,10,3,3,Player-B055 > Player-FBAD > Player-704B,,,29.23
+20261006-230725,raw,early,,389.627,Player-BCA0,10,3,3,Player-BCA0 > Player-704B > Player-DE24,,,17.92
+20261006-230725,raw,last,3,471.823,Player-704B,10,3,3,Player-704B > Player-FBAD > Player-DE24,1 2 3,,8.95
+20261006-230725,raw,last,33,501.823,Player-704B,10,3,3,Player-704B > Player-DE24 > Player-FBAD,1 2 3,,5.23
+20261006-230725,raw,last,63,531.823,,10,3,0,,,,0
+20261006-232143,raw,early,,5.915,Player-BCA0,10,3,1,Player-BCA0,,,100
+20261006-232143,raw,early,,53.321,Player-BCA0,10,3,3,Player-BCA0 > Player-704B > Player-FBAD,,,87.14
+20261006-232143,raw,early,,98.081,Player-704B,10,3,3,Player-704B > Player-FBAD > Player-A775,,,73.87
+20261006-232143,raw,early,,158.869,Player-258F,10,3,3,Player-258F > Player-704B > Player-FBAD,,,68.15
+20261006-232143,raw,early,,213.629,Player-258F,10,3,3,Player-258F > Player-704B > Player-A775,,,54.49
+20261006-232143,raw,early,,312.031,Player-89AD,10,3,3,Player-89AD > Player-FBAD > Player-A775,,,38.44
+20261006-232143,raw,early,,359.271,Player-89AD,10,3,3,Player-89AD > Player-704B > Player-FBAD,,,28.16
+20261006-232143,raw,early,,407.183,Player-704B,10,3,3,Player-704B > Player-A775 > Player-B055,,,17.69
+20261006-232143,raw,last,3,489.103,Player-BCA0,10,3,3,Player-BCA0 > Player-A775 > Player-FBAD,1 2 3,,9.33
+20261006-232143,raw,last,33,519.103,,10,3,3,Player-704B > Player-FBAD > Player-DDA6,2 3 4,,6.14
+20261006-232143,raw,last,63,549.103,Player-89AD,9,3,3,Player-89AD > Player-704B > Player-DDA6,1 2 3,Player-89AD | Player-FBAD | Player-B055,1.95
+20261006-232143,raw,last,93,579.103,Player-89AD,8,2,0,,,,0
+20261006-233212,raw,early,,5.913,Player-BCA0,10,3,1,Player-BCA0,,,100
+20261006-233212,raw,early,,53.395,Player-BCA0,10,3,3,Player-BCA0 > Player-704B > Player-8FDE,,,87.54
+20261006-233212,raw,early,,98.475,Player-258F,10,3,3,Player-258F > Player-FBAD > Player-704B,,,74.88
+20261006-233212,raw,early,,169.625,Player-FBAD,10,3,3,Player-FBAD > Player-704B > Player-A775,,,68.29
+20261006-233212,raw,early,,224.663,Player-FBAD,10,3,3,Player-FBAD > Player-DDA6 > Player-258F,,,53.26
+20261006-233212,raw,early,,270.661,Player-A775,10,3,3,Player-A775 > Player-FBAD > Player-BCA0,,,42.97
+20261006-233649,raw,early,,6.033,Player-BCA0,10,3,1,Player-BCA0,,,100
+20261006-233649,raw,early,,53.429,Player-BCA0,10,3,3,Player-BCA0 > Player-704B > Player-B055,,,86.97
+20261006-234145,raw,early,,5.479,Player-BCA0,10,3,1,Player-BCA0,,,100
+20261006-234145,raw,early,,53.279,Player-BCA0,10,3,3,Player-BCA0 > Player-704B > Player-FBAD,,,87.47
+20261006-234145,raw,early,,98.195,Player-7AAB,10,3,3,Player-7AAB > Player-704B > Player-FBAD,,,74.33
+20261006-234145,raw,early,,161.994,Player-7AAB,10,3,3,Player-7AAB > Player-704B > Player-A775,,,68.58
+20261006-234145,raw,early,,216.829,Player-7AAB,10,3,3,Player-7AAB > Player-FBAD > Player-89AD,,,54.34
+20261006-234145,raw,early,,261.271,Player-8FDE,9,3,3,Player-8FDE > Player-B055 > Player-FBAD,,,44.13
+20261006-234919,raw,early,,5.552,Player-BCA0,10,3,1,Player-BCA0,,,100
+20261006-234919,raw,early,,52.872,Player-BCA0,10,3,3,Player-BCA0 > Player-704B > Player-8FDE,,,87.46
+20261006-234919,raw,early,,97.954,Player-704B,10,3,3,Player-704B > Player-FBAD > Player-A775,,,74.26
+20261006-234919,raw,early,,154.594,Player-BCA0,10,3,3,Player-BCA0 > Player-704B > Player-A775,,,68.45
+20261006-234919,raw,early,,209.466,Player-BCA0,10,3,3,Player-BCA0 > Player-FBAD > Player-704B,,,55.13
+20261006-234919,raw,early,,255.506,Player-B055,10,3,3,Player-B055 > Player-FBAD > Player-258F,,,44.03
+20261006-234919,raw,early,,334.9,Player-89AD,10,3,3,Player-89AD > Player-704B > Player-FBAD,,,39.15
+20261006-234919,raw,early,,382.138,Player-89AD,10,3,3,Player-89AD > Player-DE24 > Player-704B,,,29.25
+20261006-235202,raw,early,,5.798,Player-BCA0,10,3,1,Player-BCA0,,,100
+20261006-235511,raw,early,,5.599,Player-BCA0,10,3,1,Player-BCA0,,,100
+20261006-235511,raw,early,,52.833,Player-BCA0,10,3,3,Player-BCA0 > Player-FBAD > Player-704B,,,87.45
+20261006-235511,raw,early,,97.435,Player-B055,9,3,3,Player-B055 > Player-A775 > Player-89AD,,,74.3
+20261006-235511,raw,early,,164.229,Player-BCA0,10,3,3,Player-BCA0 > Player-704B > Player-B055,,,69.39
+20261006-235833,raw,early,,5.836,Player-BCA0,10,3,1,Player-BCA0,,,100
+20261006-235833,raw,early,,53.116,Player-BCA0,10,3,3,Player-BCA0 > Player-704B > Player-FBAD,,,87.32
+20261006-235833,raw,early,,98.12,Player-89AD,10,3,3,Player-89AD > Player-704B > Player-A775,,,73.42
+20261006-235833,raw,early,,163.754,Player-258F,10,3,3,Player-258F > Player-FBAD > Player-A775,,,68.2
 014037-fixed_dpsreport,EI,early,,2.476,Player-0BF9,10,3,1,Player-0BF9,,,100
 014037-fixed_dpsreport,EI,early,,50.19,Player-0BF9,10,3,3,Player-0BF9 > Account-C912 > Player-184B,,,86.6
 014037-fixed_dpsreport,EI,early,,94.636,Account-C912,10,3,3,Account-C912 > Player-EACF > Player-D34A,,,75.29
@@ -1784,6 +1968,18 @@ wingman_081e5-Account-81AD_20261001-210656_noe_kill,EI,early,,428.158,Player-903
 wingman_081e5-Account-81AD_20261001-210656_noe_kill,EI,last,3,463.676,Player-0BF9,10,3,3,Player-0BF9 > Account-C912 > Player-EACF,1 2 3,,9.4
 wingman_081e5-Account-81AD_20261001-210656_noe_kill,EI,last,33,493.676,Player-0BF9,10,3,3,Player-0BF9 > Player-433D > Player-903A,1 2 3,,5.56
 wingman_081e5-Account-81AD_20261001-210656_noe_kill,EI,last,63,523.676,,9,3,1,Account-C912,2,Player-8964 | Player-903A | Player-433D,1.54
+wingman_0893f-20261006-224122_noe_kill,EI,early,,2.842,Player-CF48,10,3,1,Player-CF48,,,100
+wingman_0893f-20261006-224122_noe_kill,EI,early,,50.924,Player-CF48,10,3,3,Player-CF48 > Player-BC75 > Player-247A,,,88.38
+wingman_0893f-20261006-224122_noe_kill,EI,early,,95.368,Player-D488,10,3,3,Player-D488 > Player-247A > Player-6E8F,,,75.87
+wingman_0893f-20261006-224122_noe_kill,EI,early,,152.888,Player-55E0,10,3,3,Player-55E0 > Player-247A > Player-6E8F,,,68.5
+wingman_0893f-20261006-224122_noe_kill,EI,early,,207.732,Player-55E0,10,3,3,Player-55E0 > Player-6E8F > Player-247A,,,54.4
+wingman_0893f-20261006-224122_noe_kill,EI,early,,252.566,Player-B08A,10,3,3,Player-B08A > Player-6E8F > Player-247A,,,43.15
+wingman_0893f-20261006-224122_noe_kill,EI,early,,301.178,,10,3,3,Player-CF48 > Player-247A > Player-D132,,,37.4
+wingman_0893f-20261006-224122_noe_kill,EI,early,,356.05,Player-CF48,10,3,3,Player-CF48 > Player-466A > Player-D132,,,27.28
+wingman_0893f-20261006-224122_noe_kill,EI,early,,407.328,Player-247A,10,3,3,Player-247A > Player-6E8F > Player-466A,,,17.33
+wingman_0893f-20261006-224122_noe_kill,EI,last,3,490.42,Player-582B,10,3,3,Player-582B > Player-247A > Player-6E8F,1 2 3,,9.05
+wingman_0893f-20261006-224122_noe_kill,EI,last,33,520.42,Player-582B,10,3,3,Player-582B > Player-6E8F > Player-466A,1 2 3,,5.24
+wingman_0893f-20261006-224122_noe_kill,EI,last,63,550.42,,10,3,1,Player-55E0,2,Player-582B | Player-247A | Player-BC75,0.21
 wingman_14de4-20261004-011214_noe_kill,EI,early,,3.076,Player-C927,10,3,1,Player-C927,,,99.99
 wingman_14de4-20261004-011214_noe_kill,EI,early,,50.612,Player-C927,10,3,3,Player-C927 > Player-3CAD > Player-DC26,,,88.15
 wingman_14de4-20261004-011214_noe_kill,EI,early,,140.494,Player-EAD0,10,3,3,Player-EAD0 > Player-DC26 > Player-3CAD,,,68.37
@@ -1793,6 +1989,18 @@ wingman_14de4-20261004-011214_noe_kill,EI,early,,321.63,Player-3CAD,10,3,3,Playe
 wingman_14de4-20261004-011214_noe_kill,EI,early,,373.276,Player-58F8,10,3,3,Player-58F8 > Player-C927 > Player-3CAD,,,18.73
 wingman_14de4-20261004-011214_noe_kill,EI,last,3,453.596,Player-EAD0,10,3,3,Player-EAD0 > Player-3CAD > Player-DC26,1 2 3,,9.02
 wingman_14de4-20261004-011214_noe_kill,EI,last,33,483.596,,10,3,3,Player-3CAD > Player-DC26 > Player-C927,2 3 4,,5.34
+wingman_15e32-20261005-154659_noe_kill,EI,early,,2.871,Player-ACE4,10,3,1,Player-ACE4,,,100
+wingman_15e32-20261005-154659_noe_kill,EI,early,,50.595,Player-ACE4,10,3,3,Player-ACE4 > Player-2C12 > Player-582D,,,88.36
+wingman_15e32-20261005-154659_noe_kill,EI,early,,95.269,Player-C072,10,3,3,Player-C072 > Player-13B0 > Player-78D3,,,76.56
+wingman_15e32-20261005-154659_noe_kill,EI,early,,146.965,Player-2C12,10,3,3,Player-2C12 > Player-559E > Player-C072,,,67.92
+wingman_15e32-20261005-154659_noe_kill,EI,early,,201.781,Player-2C12,10,3,3,Player-2C12 > Player-582D > Player-13B0,,,53.52
+wingman_15e32-20261005-154659_noe_kill,EI,early,,246.627,Player-13B0,10,3,3,Player-13B0 > Player-2C12 > Player-78D3,,,42.09
+wingman_15e32-20261005-154659_noe_kill,EI,early,,294.903,Player-3B90,10,3,3,Player-3B90 > Player-2C12 > Player-582D,,,38.41
+wingman_15e32-20261005-154659_noe_kill,EI,early,,342.065,Player-3B90,10,3,3,Player-3B90 > Player-78D3 > Player-2C12,,,29.25
+wingman_15e32-20261005-154659_noe_kill,EI,early,,389.293,Player-BA09,10,3,3,Player-BA09 > Player-C072 > Player-2C12,,,18.62
+wingman_15e32-20261005-154659_noe_kill,EI,last,3,468.809,Player-C072,10,3,3,Player-C072 > Player-2C12 > Player-13B0,1 2 3,,9.31
+wingman_15e32-20261005-154659_noe_kill,EI,last,33,498.809,,10,3,3,Player-2C12 > Player-582D > Player-BA09,2 3 4,,5.41
+wingman_15e32-20261005-154659_noe_kill,EI,last,63,528.809,Player-13B0,10,3,3,Player-13B0 > Player-3B90 > Player-582D,1 2 3,Player-13B0 | Player-C072 | Player-BA09,0.53
 wingman_1f564-20260930-164742_noe_fail,EI,early,,2.507,Player-D572,10,3,1,Player-D572,,,100
 wingman_1f564-20260930-164742_noe_fail,EI,early,,49.673,Player-D572,10,3,3,Player-D572 > Player-67E4 > Player-32F8,,,89.43
 wingman_1f564-20260930-164742_noe_fail,EI,early,,94.155,Player-ACE4,10,3,3,Player-ACE4 > Player-67E4 > Player-32F8,,,77.19
@@ -2045,6 +2253,30 @@ wingman_755ee-Account-059D_20261004-184040_noe_kill,EI,early,,474.383,Player-CC6
 wingman_755ee-Account-059D_20261004-184040_noe_kill,EI,last,3,521.545,Player-CC68,10,3,3,Player-CC68 > Player-1D39 > Player-D52D,1 2 3,,9.53
 wingman_755ee-Account-059D_20261004-184040_noe_kill,EI,last,33,551.545,,9,3,3,Player-1D39 > Player-E1F6 > Player-A8AC,2 3 4,,6.51
 wingman_755ee-Account-059D_20261004-184040_noe_kill,EI,last,63,581.545,Player-1D39,10,3,3,Player-1D39 > Player-168D > Player-5397,1 2 3,Player-1D39 | Player-E1F6 | Player-D52D,0.67
+wingman_7b6a0-20261004-201330_noe_kill,EI,early,,2.941,Player-8D74,10,3,1,Player-8D74,,,100
+wingman_7b6a0-20261004-201330_noe_kill,EI,early,,50.301,Player-8D74,10,3,3,Player-8D74 > Player-D85A > Player-4B5A,,,89.49
+wingman_7b6a0-20261004-201330_noe_kill,EI,early,,95.423,Player-8B58,10,3,3,Player-8B58 > Player-D85A > Player-4B5A,,,77.52
+wingman_7b6a0-20261004-201330_noe_kill,EI,early,,149.177,Player-42BC,10,3,3,Player-42BC > Player-D85A > Player-4B5A,,,68.65
+wingman_7b6a0-20261004-201330_noe_kill,EI,early,,204.303,Player-42BC,10,3,3,Player-42BC > Player-D85A > Player-4B5A,,,56
+wingman_7b6a0-20261004-201330_noe_kill,EI,early,,250.845,,10,3,3,Player-D85A > Player-4AD8 > Player-4B5A,,,44.63
+wingman_7b6a0-20261004-201330_noe_kill,EI,early,,302.123,Player-4AD8,10,3,3,Player-4AD8 > Player-D85A > Player-4B5A,,,38.52
+wingman_7b6a0-20261004-201330_noe_kill,EI,early,,349.049,Player-4014,10,3,3,Player-4014 > Player-4B5A > Player-8B58,,,31.39
+wingman_7b6a0-20261004-201330_noe_kill,EI,early,,397.325,Player-4B5A,10,3,3,Player-4B5A > Player-D85A > Player-EA6B,,,22.87
+wingman_7b6a0-20261004-201330_noe_kill,EI,early,,442.227,Player-42BC,9,3,3,Player-42BC > Player-D48C > Player-0A54,,,15.49
+wingman_7b6a0-20261004-201330_noe_kill,EI,last,3,510.321,Player-0A54,10,3,3,Player-0A54 > Player-8B58 > Player-D85A,1 2 3,,9.27
+wingman_7b6a0-20261004-201330_noe_kill,EI,last,33,540.321,Player-0A54,10,3,3,Player-0A54 > Player-D48C > Player-8D74,1 2 3,,6.83
+wingman_7b6a0-20261004-201330_noe_kill,EI,last,63,570.321,,10,3,1,Player-8B58,2,Player-8D74 | Player-4014 | Player-4AD8,2.58
+wingman_7bf41-20261006-231822_noe_kill,EI,early,,2.785,Player-5EF6,10,3,1,Player-5EF6,,,100
+wingman_7bf41-20261006-231822_noe_kill,EI,early,,50.695,Player-5EF6,10,3,3,Player-5EF6 > Player-5112 > Player-58F8,,,86.35
+wingman_7bf41-20261006-231822_noe_kill,EI,early,,95.731,Player-A0E8,10,3,3,Player-A0E8 > Player-5112 > Player-58F8,,,72.22
+wingman_7bf41-20261006-231822_noe_kill,EI,early,,141.817,Player-58F8,10,3,3,Player-58F8 > Player-5112 > Player-7B16,,,65.36
+wingman_7bf41-20261006-231822_noe_kill,EI,early,,188.531,Player-58F8,10,3,3,Player-58F8 > Player-5112 > Player-3CAD,,,51.75
+wingman_7bf41-20261006-231822_noe_kill,EI,early,,265.533,Player-5EF6,10,3,3,Player-5EF6 > Player-5112 > Player-3CAD,,,38.28
+wingman_7bf41-20261006-231822_noe_kill,EI,early,,312.733,Player-3CAD,10,3,3,Player-3CAD > Player-5112 > Player-5EF6,,,28.89
+wingman_7bf41-20261006-231822_noe_kill,EI,early,,360.121,Player-5112,9,3,3,Player-5112 > Player-3CAD > Player-7B16,,,16.85
+wingman_7bf41-20261006-231822_noe_kill,EI,last,3,433.357,Player-7B16,10,3,3,Player-7B16 > Player-5112 > Player-58F8,1 2 3,,9.3
+wingman_7bf41-20261006-231822_noe_kill,EI,last,33,463.357,Player-1FB1,10,3,3,Player-1FB1 > Player-7B16 > Player-F9A6,1 2 3,,5.79
+wingman_7bf41-20261006-231822_noe_kill,EI,last,63,493.357,Player-1FB1,10,3,3,Player-1FB1 > Player-58F8 > Player-A0E8,1 2 3,Player-1FB1 | Player-F9A6 | Player-5112,0.53
 wingman_81daf-20261002-154733_noe_kill,EI,early,,2.829,Player-ACE4,10,3,1,Player-ACE4,,,100
 wingman_81daf-20261002-154733_noe_kill,EI,early,,50.385,Player-ACE4,10,3,3,Player-ACE4 > Player-594D > Player-78D3,,,88.15
 wingman_81daf-20261002-154733_noe_kill,EI,early,,94.863,Player-A65F,10,3,3,Player-A65F > Player-594D > Player-CDD7,,,75.03
