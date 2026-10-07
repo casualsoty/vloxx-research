@@ -1,0 +1,226 @@
+{
+ "castsSeen": 480,
+ "slashesPerCastInExcisionWindow": {
+  "0": 2,
+  "1": 3,
+  "3": 1,
+  "4": 6,
+  "5": 1,
+  "8": 5,
+  "11": 1,
+  "12": 4,
+  "15": 2,
+  "16": 455
+ },
+ "completeCasts": 426,
+ "logs": 93,
+ "flowers": 1704,
+ "structure": {
+  "flowerStartS": [
+   4.8,
+   5.3,
+   6.2,
+   6.8
+  ],
+  "slashEveryS": 0.5,
+  "slashToCentre_p10_50_90": [
+   397,
+   400,
+   403
+  ],
+  "sameTurningSensePct": 100
+ },
+ "centre": {
+  "freePct": 31,
+  "coveredBy4Pct": 49,
+  "byInwardSlashes": [
+   521,
+   103,
+   103,
+   148,
+   829
+  ],
+  "byDirectionVsFacing": [
+   {
+    "dirVsFacingDeg": "0–45",
+    "flowers": 671,
+    "centreFreePct": 3,
+    "centreCoveredBy4Pct": 81
+   },
+   {
+    "dirVsFacingDeg": "45–90",
+    "flowers": 323,
+    "centreFreePct": 4,
+    "centreCoveredBy4Pct": 74
+   },
+   {
+    "dirVsFacingDeg": "90–135",
+    "flowers": 380,
+    "centreFreePct": 69,
+    "centreCoveredBy4Pct": 7
+   },
+   {
+    "dirVsFacingDeg": "135–180",
+    "flowers": 330,
+    "centreFreePct": 68,
+    "centreCoveredBy4Pct": 7
+   }
+  ],
+  "freePctPerLog_min_median_max": [
+   4,
+   33,
+   60
+  ]
+ },
+ "behindVloxx135": {
+  "flowers": 330,
+  "inwardPctByPulseS": {
+   "4.8": {
+    "n": 76,
+    "inwardPct": 0
+   },
+   "5.3": {
+    "n": 155,
+    "inwardPct": 0
+   },
+   "5.8": {
+    "n": 155,
+    "inwardPct": 0
+   },
+   "6.2": {
+    "n": 84,
+    "inwardPct": 0
+   },
+   "6.3": {
+    "n": 155,
+    "inwardPct": 19
+   },
+   "6.7": {
+    "n": 84,
+    "inwardPct": 29
+   },
+   "6.8": {
+    "n": 170,
+    "inwardPct": 26
+   },
+   "7.2": {
+    "n": 84,
+    "inwardPct": 29
+   },
+   "7.3": {
+    "n": 91,
+    "inwardPct": 24
+   },
+   "7.8": {
+    "n": 175,
+    "inwardPct": 36
+   },
+   "8.4": {
+    "n": 91,
+    "inwardPct": 41
+   }
+  },
+  "withAnInwardSlashPctByFlower": [
+   18,
+   28,
+   39,
+   41
+  ]
+ },
+ "swordAspect": {
+  "alive": {
+   "casts": 268,
+   "flowers": 1072,
+   "centreFreePct": 30,
+   "meanInwardSlashes": 2.43,
+   "behindVloxxPct": 40,
+   "dirVsFacingAbsDeg_p25_50_75": [
+    22,
+    67,
+    123
+   ]
+  },
+  "dead": {
+   "casts": 123,
+   "flowers": 492,
+   "centreFreePct": 30,
+   "meanInwardSlashes": 2.34,
+   "behindVloxxPct": 45,
+   "dirVsFacingAbsDeg_p25_50_75": [
+    15,
+    74,
+    130
+   ]
+  }
+ },
+ "targeting": {
+  "logs": 11,
+  "casts": 65,
+  "flowers": 260,
+  "centreOnAPlayerWithin40": 255,
+  "centreToTargetMedian": 4,
+  "nearestPlayerToCentreBySecondsBeforeFirstSlash": {
+   "0": {
+    "medianDist": 58,
+    "within40Pct": 38
+   },
+   "-0.5": {
+    "medianDist": 48,
+    "within40Pct": 43
+   },
+   "-1": {
+    "medianDist": 40,
+    "within40Pct": 50
+   },
+   "-1.5": {
+    "medianDist": 25,
+    "within40Pct": 66
+   },
+   "-2": {
+    "medianDist": 4,
+    "within40Pct": 98
+   },
+   "-2.5": {
+    "medianDist": 31,
+    "within40Pct": 59
+   },
+   "-3": {
+    "medianDist": 40,
+    "within40Pct": 49
+   },
+   "-4": {
+    "medianDist": 60,
+    "within40Pct": 35
+   }
+  },
+  "targetsUp": 255,
+  "targetIsFixated": {
+   "n": 17,
+   "of": 210,
+   "expectedByChance": 21,
+   "byFlower": [
+    "2/55",
+    "10/52",
+    "3/51",
+    "2/52"
+   ]
+  },
+  "targetDistanceRankThirds_closest_middle_farthest": [
+   101,
+   61,
+   93
+  ],
+  "distinctTargetsPerCast": {
+   "4": 61
+  },
+  "firstSlashOnVloxxSideWithin20deg": {
+   "n": 232,
+   "of": 232
+  },
+  "firstSlashToTarget_p10_50_90": [
+   393,
+   399,
+   406
+  ]
+ }
+}

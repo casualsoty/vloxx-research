@@ -28,6 +28,7 @@ const steps = [
   'raging_storm_target_rule.js', // data/raging_storm_target_rule.json: tested rules for the two non-fixated spear targets (none found)
   'raging_storm_last_phase.js', // data/raging_storm_last_phase.json: falling spears per second with each Aspect alive or dead
   'excision_safespot.js',    // data/excision_melee.csv + excision_safespot_summary.json: melee safety vs distance of the fixated player
+  'excision_flowers.js',     // data/excision_flowers.csv + excision_flowers_summary.json: the four "flowers" per cast, their targets, inward / outward (needs excision_slashes + excision_melee)
   'echoing_blade.js',        // data/echoing_blade_summary.json: spinning half-circle on Vloxx, radius, projectiles
   'breakbars.js',            // data/breakbars.csv + breakbars_summary.json: bar size, when it opens, drain, time to break
   'phase_entry_fixated.js',  // data/phase_entry_fixated.csv: P2 / P3 entry with a fresh vs carried Fixated

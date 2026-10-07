@@ -12,6 +12,12 @@ Gather **general, evidence-backed knowledge about how Vloxx CM works** — how e
 what adds do and when they respawn, where things spawn — so the group can plan the fight from facts instead of guesses.
 Every claim is tied to log evidence and a confidence tag, and disproved ideas are kept so they aren't re-tested.
 
+**Rule for every exploration (also for AI sessions):** a new finding is not done until the repository says it. In the same session:
+(1) write it into [FINDINGS.md](FINDINGS.md) with its evidence, sample size and confidence tag, and correct any older statement it contradicts
+(rejected ideas go to §6, things left unverified to §7); (2) commit the script that produced it under `scripts/` and add it to
+`scripts/build_all.js`, with its output in `data/`; (3) list new datasets in this file; (4) rebuild the page with `node scripts/build_docs.js`.
+Answers given only in a chat are lost.
+
 Topics so far: 3-people greens (*Judgment of Eternity*), Fixated, Probability Distribution, 2-people green shackles
 (*Ascension's Sacrifice*), Ascension orbs, the Aspect adds (respawn, CC, spawn points), arena coordinates. A notable
 practical result: the "+2.5 s Fixated" timing bug that makes the last-phase +63 s green round come out 2 greens short
@@ -53,6 +59,7 @@ scripts/             parser + loaders + dataset builder + checks (Node.js, no de
 | `ascension_sacrifice_2green.csv` | each 2-people green pick (Ascension's Sacrifice): order, timing, distance rank, fixated (built by `scripts/asc_sacrifice.js`) |
 | `arena.json` | not a table: arena geometry for the planner (centre, platform radius, Aspect spawns, 8-point Cosmic ring, entrance, player heatmap); built by `scripts/build_arena.js` |
 | `worldpiercer.csv` / `worldpiercer_summary.json` | Worldpiercer projectile (origin, aim, end, speed) / measured shape for the planner (`scripts/worldpiercer.js`) |
+| `excision_flowers.csv` / `excision_flowers_summary.json` | Excision Extremis "flower" (4 per cast): centre, direction vs Vloxx's facing, inward slashes, target (`scripts/excision_flowers.js`; runs on the committed CSVs + EI positions of our logs that are on Wingman, downloaded once into `private/ei_positions/`, local only) |
 | `orb_throws.csv` | Aspect CC: orb-throw missiles (skill 80520), orbs seen, projectile-hate skills nearby (`scripts/orb_throws.js`) |
 | `aspect_events.csv` | Aspect of the Staff/Spear/Sword spawns, deaths (+respawn time), breakbar breaks (+orb delay) |
 

@@ -283,7 +283,7 @@ Elite Insights (EI) values = what the planner used before.
 | Raging Storm (80810, 81176 Vloxx; 80965 Bulwark) | Vloxx, Bulwark | circle **~150** around its ground marker (~2 s telegraph) | 150 | ✔ |
 | Visions of Eternity (80420, 81017) | Vloxx | circle **~600** (100 % / 0 %, 113 impacts) | 560 | bigger |
 | Slice Through Reality (80585) | Vloxx | circle **~525 around Vloxx** at 1.2 s, then a **portal of ~300 radius** where Vloxx stood (hits and teleports players to an identical exit ~2,000 away, open ~9 s); see §5m | "port 220" | **wrong** |
-| Excision Extremis (81053; 80901 in the last phase) | Vloxx | **semicircles of radius ~525**, 16 (sometimes 23–24) per cast, each telegraphed 2.0 s before; see §5e | 400 half-circle | bigger (radius), shape ✔ |
+| Excision Extremis (81053; 80901 in the last phase) | Vloxx | **semicircles of radius ~525**, 16 per cast in four squares of four centred on four players (§5k), each telegraphed 2.0 s before; see §5e | 400 half-circle | bigger (radius), shape ✔ |
 | Excision Extremis (81326) | Sword | diffuse, forward ±450 out to ~2,000; no clean shape | 400 half-circle | **[open]** |
 | Thousand Strikes (80709) | Spear | **forward cone, half-angle ~55° (~110°), radius ~1,100–1,200**; nothing behind | 135°, 1,000 | corrected |
 | Thousand Strikes (80555) | Vloxx | same cone, radius ~1,200–1,500 | — | new |
@@ -309,7 +309,10 @@ Scripts `scripts/excision_geometry.js` (→ `data/excision_slashes.csv`, `excisi
 * Cast **6.2 s**. Vloxx lays semicircle **telegraphs** (ground effect GUID A5962B65…, 2.5 s) in pairs every ~0.5 s, in four directions 90° apart,
   marching outward from Vloxx.
 * Exactly **2.0 s** after each telegraph the **slash** (ground effect GUID B4868841…) appears at the same spot. That is the damage pulse.
-  Pulses land at 4.8, 5.3, 5.8, 6.2/6.3, 6.7/6.8, 7.2/7.3, 7.8 and 8.4 s after the cast starts; a cast has 16 slashes (142 casts), sometimes 17 or 23–24.
+  Pulses land at 4.8, 5.3, 5.8, 6.2/6.3, 6.7/6.8, 7.2/7.3, 7.8 and 8.4 s after the cast starts. **A complete cast always has exactly 16 slashes**
+  (455 of 480 casts; the other 25 have fewer and were cut short). They form four squares of four, the "flowers": placement rule in §5k.
+  The "17 or 23–24 slashes" counted earlier included 6–8 later slashes (8.7–11.8 s after the cast start, 0.2 s apart): by their timing they
+  are the Division Eternal line that follows in the rotation, not Excision. **[likely: timing only, no skill id on those slashes]**
 * Each slash is a **semicircle of radius ~525** around its origin: 100 % of players hit out to 500, 46 % at 500–550, 0 % beyond 550
   (Elite Insights draws 400). On the hit side 99.4 % are hit, on the other side 0.7 %.
 * Effect rotation = int16 at byte 26 of the event, in mrad, **clockwise**: a player at bearing b from the origin is hit when
@@ -507,7 +510,7 @@ but on the same side as Vloxx, the line went through the stack and hit 9 of 9 (2
 * Alternative: the stack ≥ 600 to the side of the line, or beyond ~1,900 from the Sword (Sword kited far away: 3 casts at 2,000–2,500, nobody hit).
 Sample for the safe cases is small (4 casts with Vloxx 300+ behind the Sword). **[likely]**
 
-## 5k. Excision Extremis — is there a safe spot in melee, depending on where the fixated player stands?  [solid / likely]
+## 5k. Excision Extremis — the four "flowers": who they land on, inward or outward, and the safe spot in melee  [solid / likely]
 Script `scripts/excision_safespot.js` → `data/excision_melee.csv` (one row per non-fixated player per cast) and
 `data/excision_safespot_summary.json` (part of the full build). 457 casts in 94 logs, 371 with a fixated player.
 "Melee" = stayed within **300 of the edge of Vloxx's hitbox** (hitbox radius 150, so within 450 of its centre) for all eight pulses.
@@ -517,13 +520,49 @@ A blocked or evaded hit counts as a hit. Distances Vloxx ↔ fixated are centre 
 gets safer the further the fixated player stands, slowly: at 500–1,000 it is still covered in most casts. Only with the fixated player
 **~1,000+ from Vloxx** does the back of Vloxx stay mostly clean.
 
-**How the 16 slashes are laid out.**
-* **4 slashes on Vloxx** (20 % of slashes; origin ~111 from its centre, at 4.8, 5.3, 6.2 and 6.8 s). They face **forward**: the half-circle
-  covers the side Vloxx is looking at, i.e. toward the fixated player, out to ~525 + the offset. Directly behind Vloxx they don't reach.
-* **12 slashes further out**, origins 424–894 from Vloxx (median 551), in three groups: from the left, from the right and from beyond.
-  In casts where the fixated player stands still they sit roughly 400 around that player and face back toward them; no exact placement
-  rule was found. **44 % of these origins are within 525 of Vloxx's centre**, so they sweep over the melee area from the sides, including behind Vloxx. **[likely]**
-* All half-circles are aligned on Vloxx's facing (0° off), which is the direction of the fixated player at that moment.
+**The placement rule: four "flowers", each centred on a player.** Script `scripts/excision_flowers.js` → `data/excision_flowers.csv`
+(one row per flower) and `data/excision_flowers_summary.json`. It runs on the committed datasets (no raw logs needed). 426 complete casts in 93 logs,
+1,704 flowers.
+* **The 16 slashes are 4 squares of 4 half-circles.** In each square the four slash origins are **exactly 400 from the square's centre**
+  (397–403), i.e. the midpoints of the sides of an 800 square, always walked in the same turning sense (1,703 / 1,704). One slash every 0.5 s.
+  The four flowers start **4.8, 5.3, 6.2 and 6.8 s** after the cast starts, so they overlap in time (eight pulses, 16 slashes). **[solid]**
+* **The centre of a flower is a player.** It is the spot where one player stands **when the flower's first telegraph appears** (2.0 s before its
+  first slash). Checked with player positions from Elite Insights for 11 of our logs (65 casts, 260 flowers): **255 / 260 centres are within 40 units
+  of a player at that instant, median 4 units.** Half a second earlier or later the match drops to 59–66 %, 2 s later to 38 %. The flower does not
+  follow the player afterwards. **[likely: 11 logs, one squad, EI positions every 300 ms; re-check on raw positions]**
+* **Four different players per cast:** 61 / 61 casts with four identified targets had four distinct players (four independent random picks would
+  repeat a player in about half the casts). **[likely]**
+* **Who is picked: no rule found, it looks random.** Distance from Vloxx does not matter (targets per distance rank: closest four 101, middle three 61,
+  farthest three 93, i.e. 20–31 per rank). **The fixated player is not favoured: 17 / 210 flowers, 21 expected by chance** (per flower 2/55, 10/52,
+  3/51, 2/52; flower 1 is not "the fixated player's flower"). All 255 targets were up. Not tested: subgroup, role, profession. **[likely]**
+* **The first slash of a flower is on the Vloxx side of its target:** 400 from the target on the line toward Vloxx (232 / 232 within 20°).
+  The other three follow around the square.
+* **The Aspect of the Sword changes nothing.** Sword alive (268 casts) vs dead (123): centre free 30 % vs 30 %, 2.43 vs 2.34 inward slashes per
+  flower, same 16 slashes, timing, radius and turning sense; where the flowers lie relative to Vloxx's facing is the same (20 comparisons, one
+  below p = 0.05; 36 more at matched fixated distance, two below). With the Sword more than 30° away from every player (seen from Vloxx) the
+  flowers do not point at it more than chance (15 % of 40 vs 8 %; 57 % point at a player). **[solid for alive/dead, likely for position]**
+
+**Inward or outward: it depends on which side of Vloxx the targeted player stands.** Every half-circle is oriented on **Vloxx's facing**: the first
+one of a flower faces the way Vloxx looks, each next one is turned a further 90°. The flower itself is placed around its target. So:
+| direction Vloxx → target, relative to Vloxx's facing | flowers | centre never covered ("outward") | centre covered by all four ("inward") |
+|---|---|---|---|
+| 0–45° (in front) | 671 | 3 % | 81 % |
+| 45–90° | 323 | 4 % | 74 % |
+| 90–135° | 380 | 69 % | 7 % |
+| 135–180° (behind) | 330 | 68 % | 7 % |
+* Overall 31 % of flowers leave their centre free and 49 % cover it four times. Per log: 4 % to 60 % of flowers free (median 33 %).
+* Vloxx faces the fixated player (its target when nobody is fixated), so **"in front" is the fixated player's side and "behind" is the far side.**
+  A squad stacked behind Vloxx gets four outward flowers on top of each other, with the stack in the free middle; a stack in front gets four inward ones.
+* **Why "behind" is 68 % and not 100 %: Vloxx turning after the cast (§5e).** For flowers behind Vloxx (135–180°), share of slashes facing inward by
+  pulse: 4.8 / 5.3 / 5.8 / 6.2 s **0 % (470 slashes)** · 6.3 s 19 % · 6.7 s 29 % · 6.8 s 26 % · 7.2 s 29 % · 7.3 s 24 % · 7.8 s 36 % · 8.4 s 41 %.
+  During the cast (≤ 6.2 s) no slash ever faces inward; after it each slash takes Vloxx's facing at the moment it lands. At least one inward slash:
+  flower 1 18 %, flower 2 28 %, flower 3 39 %, flower 4 41 %. **[solid]**
+* **So the fixated player's position decides only the orientation** (through Vloxx's facing, and through Vloxx turning when they move after
+  ~6.2 s). It does not decide where the flowers are, how many slashes there are, or their timing.
+* **Practical:** fixated player on one side of Vloxx, everyone else on the opposite side, and the fixated player standing still from ~6 s into the
+  cast until the last slash (8.4 s). A player away from the stack gets their own flower there: its half-circles reach ~925 from that player.
+* Corrects the earlier description here ("4 slashes on Vloxx facing forward + 12 further out, no exact placement rule"): the "4 on Vloxx" are
+  the first slash of each flower (they sit near Vloxx because most targets are in melee), the "12 further out" are the other three of each.
 * The fixated player moved a median of 188 units during the pulses (p90 588).
 
 **What happened to players in melee of Vloxx**, by distance between Vloxx and the fixated player (mean over the pulses).
@@ -1033,4 +1072,7 @@ Sorted by stacks at kill time. The number is a link to the log when it is online
 6. **Avoiding the +63 s overlap without losing greens (§3b).** Have the +42.5 s Fixated holder stealth before +62.5 s, then check
    whether the +62.5 s tick skipped (`fixation_last_phase_ticks.csv`), whether +63 s had an overlap, and how many greens it had.
    Only 1 clean example so far (20261002-225404, holder downed).
+7. **Excision flowers (§5k): re-check the targeting on raw positions and look for a pick rule.** The "centre = a player, four different players"
+   result uses EI positions (300 ms) from 11 logs of one squad. On the machine with `logs/raw`: take each player's exact position at the first
+   telegraph of each flower, and test subgroup / role / squad order for the four picks. Also confirm the 8.7–11.8 s slashes are Division Eternal.
 Anything new should be checked on **raw .zevtc** (exact positions, every effect) — EI JSON misled us once (range).
