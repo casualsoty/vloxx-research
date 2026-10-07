@@ -61,6 +61,7 @@ scripts/             parser + loaders + dataset builder + checks (Node.js, no de
 | `worldpiercer.csv` / `worldpiercer_summary.json` | Worldpiercer projectile (origin, aim, end, speed) / measured shape for the planner (`scripts/worldpiercer.js`) |
 | `excision_flowers.csv` / `excision_flowers_summary.json` | Excision Extremis "flower" (4 per cast): centre, direction vs Vloxx's facing, inward slashes, target (`scripts/excision_flowers.js`; runs on the committed CSVs + EI positions of our logs that are on Wingman, downloaded once into `private/ei_positions/`, local only) |
 | `attack_conditions.csv` / `attack_conditions_summary.json` | attack × condition applied to players: share of hits, stacks (`scripts/attack_conditions.js`; EI JSON from Wingman, slim copies in `private/ei_conditions/`, local only) |
+| `fixated_selection.csv` / `fixated_selection_summary.json` | Fixated application: the picked player's value and rank among players up, per feature (`scripts/fixated_selection.js`; EI JSON from Wingman, slim copies in `private/ei_fixated/`, local only) |
 | `orb_throws.csv` | Aspect CC: orb-throw missiles (skill 80520), orbs seen, projectile-hate skills nearby (`scripts/orb_throws.js`) |
 | `aspect_events.csv` | Aspect of the Staff/Spear/Sword spawns, deaths (+respawn time), breakbar breaks (+orb delay) |
 

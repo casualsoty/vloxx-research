@@ -1,0 +1,784 @@
+{
+ "logs": 40,
+ "applications": 323,
+ "note": "meanPercentile 0.5 and |z| < 3 = no effect; pickedIsLowest/Highest vs expectedEach = how often the picked player is the extreme one",
+ "all": {
+  "features": {
+   "dist_to_vloxx": {
+    "n": 323,
+    "meanPercentile": 0.507,
+    "z": 0.4,
+    "pickedIsLowest": 36,
+    "pickedIsHighest": 29,
+    "expectedEach": 33.3
+   },
+   "toughness": {
+    "n": 322,
+    "meanPercentile": 0.476,
+    "z": -1.5,
+    "pickedIsLowest": 0,
+    "pickedIsHighest": 2,
+    "expectedEach": 33.1
+   },
+   "healing_power": {
+    "n": 319,
+    "meanPercentile": 0.494,
+    "z": -0.4,
+    "pickedIsLowest": 0,
+    "pickedIsHighest": 14,
+    "expectedEach": 32.6
+   },
+   "concentration": {
+    "n": 322,
+    "meanPercentile": 0.504,
+    "z": 0.2,
+    "pickedIsLowest": 0,
+    "pickedIsHighest": 0,
+    "expectedEach": 33.1
+   },
+   "condition_dmg": {
+    "n": 322,
+    "meanPercentile": 0.497,
+    "z": -0.2,
+    "pickedIsLowest": 1,
+    "pickedIsHighest": 0,
+    "expectedEach": 33.1
+   },
+   "dmg_to_vloxx_total": {
+    "n": 323,
+    "meanPercentile": 0.497,
+    "z": -0.2,
+    "pickedIsLowest": 30,
+    "pickedIsHighest": 29,
+    "expectedEach": 33.3
+   },
+   "dmg_to_vloxx_last10s": {
+    "n": 287,
+    "meanPercentile": 0.504,
+    "z": 0.3,
+    "pickedIsLowest": 30,
+    "pickedIsHighest": 40,
+    "expectedEach": 29.7
+   },
+   "dmg_taken_last10s": {
+    "n": 322,
+    "meanPercentile": 0.489,
+    "z": -0.7,
+    "pickedIsLowest": 25,
+    "pickedIsHighest": 34,
+    "expectedEach": 33.2
+   },
+   "health_pct": {
+    "n": 237,
+    "meanPercentile": 0.49,
+    "z": -0.5,
+    "pickedIsLowest": 27,
+    "pickedIsHighest": 1,
+    "expectedEach": 24.7
+   },
+   "subgroup": {
+    "n": 323,
+    "meanPercentile": 0.529,
+    "z": 1.8,
+    "pickedIsLowest": 0,
+    "pickedIsHighest": 1,
+    "expectedEach": 33.3
+   },
+   "instance_id": {
+    "n": 323,
+    "meanPercentile": 0.488,
+    "z": -0.7,
+    "pickedIsLowest": 29,
+    "pickedIsHighest": 28,
+    "expectedEach": 33.3
+   },
+   "squad_list_order": {
+    "n": 323,
+    "meanPercentile": 0.546,
+    "z": 2.9,
+    "pickedIsLowest": 33,
+    "pickedIsHighest": 50,
+    "expectedEach": 33.3
+   },
+   "times_fixated_before": {
+    "n": 302,
+    "meanPercentile": 0.497,
+    "z": -0.2,
+    "pickedIsLowest": 0,
+    "pickedIsHighest": 18,
+    "expectedEach": 31.2
+   },
+   "time_since_own_last_fixated": {
+    "n": 302,
+    "meanPercentile": 0.508,
+    "z": 0.5,
+    "pickedIsLowest": 27,
+    "pickedIsHighest": 0,
+    "expectedEach": 31.2
+   },
+   "dist_to_previous_holder": {
+    "n": 302,
+    "meanPercentile": 0.532,
+    "z": 1.9,
+    "pickedIsLowest": 29,
+    "pickedIsHighest": 36,
+    "expectedEach": 31.2
+   }
+  },
+  "flags": {
+   "previousHolderPickedAgain": {
+    "n": 25,
+    "of": 288,
+    "expected": 29.3
+   },
+   "neverFixatedBeforePicked": {
+    "n": 197,
+    "of": 302,
+    "expected": 194.6
+   },
+   "inStealth": {
+    "rounds": 8,
+    "picked": 0,
+    "expected": 1.1
+   },
+   "hadGreenInLast40s": {
+    "rounds": 215,
+    "picked": 64,
+    "expected": 66.9
+   },
+   "hadSpreadInLast40s": {
+    "rounds": 215,
+    "picked": 69,
+    "expected": 64.8
+   },
+   "commanderTag": {
+    "picked": 37,
+    "of": 323,
+    "expected": 33.3
+   }
+  }
+ },
+ "byContext": {
+  "fight start": {
+   "applications": 21,
+   "features": {
+    "dist_to_vloxx": {
+     "n": 21,
+     "meanPercentile": 0.55,
+     "z": 0.8,
+     "pickedIsLowest": 3,
+     "pickedIsHighest": 3,
+     "expectedEach": 2.1
+    },
+    "toughness": {
+     "n": 21,
+     "meanPercentile": 0.513,
+     "z": 0.2,
+     "pickedIsLowest": 0,
+     "pickedIsHighest": 0,
+     "expectedEach": 2.1
+    },
+    "healing_power": {
+     "n": 21,
+     "meanPercentile": 0.463,
+     "z": -0.6,
+     "pickedIsLowest": 0,
+     "pickedIsHighest": 1,
+     "expectedEach": 2.1
+    },
+    "concentration": {
+     "n": 21,
+     "meanPercentile": 0.405,
+     "z": -1.5,
+     "pickedIsLowest": 0,
+     "pickedIsHighest": 0,
+     "expectedEach": 2.1
+    },
+    "condition_dmg": {
+     "n": 21,
+     "meanPercentile": 0.54,
+     "z": 0.6,
+     "pickedIsLowest": 0,
+     "pickedIsHighest": 0,
+     "expectedEach": 2.1
+    },
+    "dmg_to_vloxx_total": {
+     "n": 21,
+     "meanPercentile": 0.519,
+     "z": 0.3,
+     "pickedIsLowest": 1,
+     "pickedIsHighest": 1,
+     "expectedEach": 2.1
+    },
+    "dmg_to_vloxx_last10s": {
+     "n": 21,
+     "meanPercentile": 0.503,
+     "z": 0,
+     "pickedIsLowest": 2,
+     "pickedIsHighest": 2,
+     "expectedEach": 2.1
+    },
+    "dmg_taken_last10s": {
+     "n": 21,
+     "meanPercentile": 0.481,
+     "z": -0.3,
+     "pickedIsLowest": 5,
+     "pickedIsHighest": 3,
+     "expectedEach": 2.1
+    },
+    "health_pct": {
+     "n": 21,
+     "meanPercentile": 0.468,
+     "z": -0.5,
+     "pickedIsLowest": 4,
+     "pickedIsHighest": 0,
+     "expectedEach": 2.1
+    },
+    "subgroup": {
+     "n": 21,
+     "meanPercentile": 0.566,
+     "z": 1,
+     "pickedIsLowest": 0,
+     "pickedIsHighest": 0,
+     "expectedEach": 2.1
+    },
+    "instance_id": {
+     "n": 21,
+     "meanPercentile": 0.524,
+     "z": 0.4,
+     "pickedIsLowest": 2,
+     "pickedIsHighest": 1,
+     "expectedEach": 2.1
+    },
+    "squad_list_order": {
+     "n": 21,
+     "meanPercentile": 0.55,
+     "z": 0.8,
+     "pickedIsLowest": 0,
+     "pickedIsHighest": 3,
+     "expectedEach": 2.1
+    },
+    "times_fixated_before": null,
+    "time_since_own_last_fixated": null,
+    "dist_to_previous_holder": null
+   },
+   "flags": {
+    "previousHolderPickedAgain": {
+     "n": 0,
+     "of": 0,
+     "expected": 0
+    },
+    "neverFixatedBeforePicked": {
+     "n": 0,
+     "of": 0,
+     "expected": 0
+    },
+    "inStealth": {
+     "rounds": 1,
+     "picked": 0,
+     "expected": 0.1
+    },
+    "hadGreenInLast40s": {
+     "rounds": 21,
+     "picked": 5,
+     "expected": 6.3
+    },
+    "hadSpreadInLast40s": {
+     "rounds": 21,
+     "picked": 9,
+     "expected": 6.3
+    },
+    "commanderTag": {
+     "picked": 1,
+     "of": 21,
+     "expected": 2.1
+    }
+   }
+  },
+  "boss phase": {
+   "applications": 186,
+   "features": {
+    "dist_to_vloxx": {
+     "n": 186,
+     "meanPercentile": 0.497,
+     "z": -0.2,
+     "pickedIsLowest": 19,
+     "pickedIsHighest": 14,
+     "expectedEach": 19.1
+    },
+    "toughness": {
+     "n": 186,
+     "meanPercentile": 0.492,
+     "z": -0.4,
+     "pickedIsLowest": 0,
+     "pickedIsHighest": 1,
+     "expectedEach": 19.1
+    },
+    "healing_power": {
+     "n": 185,
+     "meanPercentile": 0.497,
+     "z": -0.1,
+     "pickedIsLowest": 0,
+     "pickedIsHighest": 9,
+     "expectedEach": 19
+    },
+    "concentration": {
+     "n": 186,
+     "meanPercentile": 0.495,
+     "z": -0.2,
+     "pickedIsLowest": 0,
+     "pickedIsHighest": 0,
+     "expectedEach": 19.1
+    },
+    "condition_dmg": {
+     "n": 186,
+     "meanPercentile": 0.503,
+     "z": 0.2,
+     "pickedIsLowest": 0,
+     "pickedIsHighest": 0,
+     "expectedEach": 19.1
+    },
+    "dmg_to_vloxx_total": {
+     "n": 186,
+     "meanPercentile": 0.518,
+     "z": 0.8,
+     "pickedIsLowest": 17,
+     "pickedIsHighest": 19,
+     "expectedEach": 19.1
+    },
+    "dmg_to_vloxx_last10s": {
+     "n": 186,
+     "meanPercentile": 0.508,
+     "z": 0.4,
+     "pickedIsLowest": 21,
+     "pickedIsHighest": 26,
+     "expectedEach": 19.1
+    },
+    "dmg_taken_last10s": {
+     "n": 185,
+     "meanPercentile": 0.483,
+     "z": -0.8,
+     "pickedIsLowest": 15,
+     "pickedIsHighest": 13,
+     "expectedEach": 19
+    },
+    "health_pct": {
+     "n": 150,
+     "meanPercentile": 0.479,
+     "z": -0.9,
+     "pickedIsLowest": 17,
+     "pickedIsHighest": 1,
+     "expectedEach": 15.5
+    },
+    "subgroup": {
+     "n": 186,
+     "meanPercentile": 0.505,
+     "z": 0.3,
+     "pickedIsLowest": 0,
+     "pickedIsHighest": 0,
+     "expectedEach": 19.1
+    },
+    "instance_id": {
+     "n": 186,
+     "meanPercentile": 0.512,
+     "z": 0.6,
+     "pickedIsLowest": 15,
+     "pickedIsHighest": 21,
+     "expectedEach": 19.1
+    },
+    "squad_list_order": {
+     "n": 186,
+     "meanPercentile": 0.516,
+     "z": 0.8,
+     "pickedIsLowest": 24,
+     "pickedIsHighest": 27,
+     "expectedEach": 19.1
+    },
+    "times_fixated_before": {
+     "n": 186,
+     "meanPercentile": 0.506,
+     "z": 0.3,
+     "pickedIsLowest": 0,
+     "pickedIsHighest": 14,
+     "expectedEach": 19.1
+    },
+    "time_since_own_last_fixated": {
+     "n": 186,
+     "meanPercentile": 0.503,
+     "z": 0.1,
+     "pickedIsLowest": 17,
+     "pickedIsHighest": 0,
+     "expectedEach": 19.1
+    },
+    "dist_to_previous_holder": {
+     "n": 186,
+     "meanPercentile": 0.521,
+     "z": 1,
+     "pickedIsLowest": 20,
+     "pickedIsHighest": 18,
+     "expectedEach": 19.1
+    }
+   },
+   "flags": {
+    "previousHolderPickedAgain": {
+     "n": 16,
+     "of": 176,
+     "expected": 17.9
+    },
+    "neverFixatedBeforePicked": {
+     "n": 119,
+     "of": 186,
+     "expected": 119.6
+    },
+    "inStealth": {
+     "rounds": 7,
+     "picked": 0,
+     "expected": 1
+    },
+    "hadGreenInLast40s": {
+     "rounds": 157,
+     "picked": 42,
+     "expected": 46.5
+    },
+    "hadSpreadInLast40s": {
+     "rounds": 155,
+     "picked": 51,
+     "expected": 46.7
+    },
+    "commanderTag": {
+     "picked": 22,
+     "of": 186,
+     "expected": 19.1
+    }
+   }
+  },
+  "phase entry (bar break)": {
+   "applications": 69,
+   "features": {
+    "dist_to_vloxx": {
+     "n": 69,
+     "meanPercentile": 0.53,
+     "z": 0.9,
+     "pickedIsLowest": 8,
+     "pickedIsHighest": 8,
+     "expectedEach": 6.9
+    },
+    "toughness": {
+     "n": 69,
+     "meanPercentile": 0.424,
+     "z": -2.2,
+     "pickedIsLowest": 0,
+     "pickedIsHighest": 0,
+     "expectedEach": 6.9
+    },
+    "healing_power": {
+     "n": 69,
+     "meanPercentile": 0.486,
+     "z": -0.4,
+     "pickedIsLowest": 0,
+     "pickedIsHighest": 2,
+     "expectedEach": 6.9
+    },
+    "concentration": {
+     "n": 69,
+     "meanPercentile": 0.534,
+     "z": 1,
+     "pickedIsLowest": 0,
+     "pickedIsHighest": 0,
+     "expectedEach": 6.9
+    },
+    "condition_dmg": {
+     "n": 69,
+     "meanPercentile": 0.481,
+     "z": -0.6,
+     "pickedIsLowest": 0,
+     "pickedIsHighest": 0,
+     "expectedEach": 6.9
+    },
+    "dmg_to_vloxx_total": {
+     "n": 69,
+     "meanPercentile": 0.467,
+     "z": -1,
+     "pickedIsLowest": 7,
+     "pickedIsHighest": 5,
+     "expectedEach": 6.9
+    },
+    "dmg_to_vloxx_last10s": {
+     "n": 40,
+     "meanPercentile": 0.551,
+     "z": 1.1,
+     "pickedIsLowest": 2,
+     "pickedIsHighest": 8,
+     "expectedEach": 4
+    },
+    "dmg_taken_last10s": {
+     "n": 69,
+     "meanPercentile": 0.512,
+     "z": 0.3,
+     "pickedIsLowest": 3,
+     "pickedIsHighest": 11,
+     "expectedEach": 6.9
+    },
+    "health_pct": {
+     "n": 35,
+     "meanPercentile": 0.505,
+     "z": 0.1,
+     "pickedIsLowest": 4,
+     "pickedIsHighest": 0,
+     "expectedEach": 3.5
+    },
+    "subgroup": {
+     "n": 69,
+     "meanPercentile": 0.6,
+     "z": 2.9,
+     "pickedIsLowest": 0,
+     "pickedIsHighest": 0,
+     "expectedEach": 6.9
+    },
+    "instance_id": {
+     "n": 69,
+     "meanPercentile": 0.445,
+     "z": -1.6,
+     "pickedIsLowest": 8,
+     "pickedIsHighest": 5,
+     "expectedEach": 6.9
+    },
+    "squad_list_order": {
+     "n": 69,
+     "meanPercentile": 0.628,
+     "z": 3.7,
+     "pickedIsLowest": 5,
+     "pickedIsHighest": 13,
+     "expectedEach": 6.9
+    },
+    "times_fixated_before": {
+     "n": 69,
+     "meanPercentile": 0.473,
+     "z": -0.8,
+     "pickedIsLowest": 0,
+     "pickedIsHighest": 1,
+     "expectedEach": 6.9
+    },
+    "time_since_own_last_fixated": {
+     "n": 69,
+     "meanPercentile": 0.527,
+     "z": 0.8,
+     "pickedIsLowest": 4,
+     "pickedIsHighest": 0,
+     "expectedEach": 6.9
+    },
+    "dist_to_previous_holder": {
+     "n": 69,
+     "meanPercentile": 0.559,
+     "z": 1.7,
+     "pickedIsLowest": 4,
+     "pickedIsHighest": 12,
+     "expectedEach": 6.9
+    }
+   },
+   "flags": {
+    "previousHolderPickedAgain": {
+     "n": 4,
+     "of": 69,
+     "expected": 6.9
+    },
+    "neverFixatedBeforePicked": {
+     "n": 57,
+     "of": 69,
+     "expected": 53.9
+    },
+    "inStealth": {
+     "rounds": 0,
+     "picked": 0,
+     "expected": 0
+    },
+    "hadGreenInLast40s": {
+     "rounds": 6,
+     "picked": 4,
+     "expected": 1.7
+    },
+    "hadSpreadInLast40s": {
+     "rounds": 17,
+     "picked": 3,
+     "expected": 5.1
+    },
+    "commanderTag": {
+     "picked": 8,
+     "of": 69,
+     "expected": 6.9
+    }
+   }
+  },
+  "last phase": {
+   "applications": 47,
+   "features": {
+    "dist_to_vloxx": {
+     "n": 47,
+     "meanPercentile": 0.494,
+     "z": -0.1,
+     "pickedIsLowest": 6,
+     "pickedIsHighest": 4,
+     "expectedEach": 5.2
+    },
+    "toughness": {
+     "n": 46,
+     "meanPercentile": 0.473,
+     "z": -0.6,
+     "pickedIsLowest": 0,
+     "pickedIsHighest": 1,
+     "expectedEach": 5
+    },
+    "healing_power": {
+     "n": 44,
+     "meanPercentile": 0.506,
+     "z": 0.1,
+     "pickedIsLowest": 0,
+     "pickedIsHighest": 2,
+     "expectedEach": 4.6
+    },
+    "concentration": {
+     "n": 46,
+     "meanPercentile": 0.537,
+     "z": 0.9,
+     "pickedIsLowest": 0,
+     "pickedIsHighest": 0,
+     "expectedEach": 5
+    },
+    "condition_dmg": {
+     "n": 46,
+     "meanPercentile": 0.476,
+     "z": -0.6,
+     "pickedIsLowest": 1,
+     "pickedIsHighest": 0,
+     "expectedEach": 5
+    },
+    "dmg_to_vloxx_total": {
+     "n": 47,
+     "meanPercentile": 0.449,
+     "z": -1.2,
+     "pickedIsLowest": 5,
+     "pickedIsHighest": 4,
+     "expectedEach": 5.2
+    },
+    "dmg_to_vloxx_last10s": {
+     "n": 40,
+     "meanPercentile": 0.442,
+     "z": -1.3,
+     "pickedIsLowest": 5,
+     "pickedIsHighest": 4,
+     "expectedEach": 4.5
+    },
+    "dmg_taken_last10s": {
+     "n": 47,
+     "meanPercentile": 0.482,
+     "z": -0.4,
+     "pickedIsLowest": 2,
+     "pickedIsHighest": 7,
+     "expectedEach": 5.2
+    },
+    "health_pct": {
+     "n": 31,
+     "meanPercentile": 0.541,
+     "z": 0.8,
+     "pickedIsLowest": 2,
+     "pickedIsHighest": 0,
+     "expectedEach": 3.6
+    },
+    "subgroup": {
+     "n": 47,
+     "meanPercentile": 0.503,
+     "z": 0.1,
+     "pickedIsLowest": 0,
+     "pickedIsHighest": 1,
+     "expectedEach": 5.2
+    },
+    "instance_id": {
+     "n": 47,
+     "meanPercentile": 0.439,
+     "z": -1.4,
+     "pickedIsLowest": 4,
+     "pickedIsHighest": 1,
+     "expectedEach": 5.2
+    },
+    "squad_list_order": {
+     "n": 47,
+     "meanPercentile": 0.543,
+     "z": 1,
+     "pickedIsLowest": 4,
+     "pickedIsHighest": 7,
+     "expectedEach": 5.2
+    },
+    "times_fixated_before": {
+     "n": 47,
+     "meanPercentile": 0.494,
+     "z": -0.1,
+     "pickedIsLowest": 0,
+     "pickedIsHighest": 3,
+     "expectedEach": 5.2
+    },
+    "time_since_own_last_fixated": {
+     "n": 47,
+     "meanPercentile": 0.503,
+     "z": 0.1,
+     "pickedIsLowest": 6,
+     "pickedIsHighest": 0,
+     "expectedEach": 5.2
+    },
+    "dist_to_previous_holder": {
+     "n": 47,
+     "meanPercentile": 0.538,
+     "z": 0.9,
+     "pickedIsLowest": 5,
+     "pickedIsHighest": 6,
+     "expectedEach": 5.2
+    }
+   },
+   "flags": {
+    "previousHolderPickedAgain": {
+     "n": 5,
+     "of": 43,
+     "expected": 4.5
+    },
+    "neverFixatedBeforePicked": {
+     "n": 21,
+     "of": 47,
+     "expected": 21.1
+    },
+    "inStealth": {
+     "rounds": 0,
+     "picked": 0,
+     "expected": 0
+    },
+    "hadGreenInLast40s": {
+     "rounds": 31,
+     "picked": 13,
+     "expected": 12.4
+    },
+    "hadSpreadInLast40s": {
+     "rounds": 22,
+     "picked": 6,
+     "expected": 6.7
+    },
+    "commanderTag": {
+     "picked": 6,
+     "of": 47,
+     "expected": 5.2
+    }
+   }
+  }
+ },
+ "pickedProfession": {
+  "Scourge": 157,
+  "Troubadour": 65,
+  "Specter": 35,
+  "Evoker": 30,
+  "Luminary": 14,
+  "Weaver": 5,
+  "Tempest": 4,
+  "Chronomancer": 4,
+  "Harbinger": 3,
+  "Renegade": 3,
+  "Virtuoso": 2,
+  "Vindicator": 1
+ }
+}

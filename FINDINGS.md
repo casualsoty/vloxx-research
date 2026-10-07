@@ -66,6 +66,34 @@ Probability Distribution count 245/255, orb throws 564/566 (2 misses, both Staff
     found (not time since loss, not cause, not holder state, not stealth at the tick). After a +22.5 skip, +42.5 applied **7/7**. **[open]**
   * The previous holder can be re-fixated immediately (233450, 230802, 220703).
 
+* **Who gets Fixated: no rule found, it behaves like a uniform random pick among the players that are up.** Script
+  `scripts/fixated_selection.js` → `data/fixated_selection.csv` (one row per application, with the picked player's rank on every feature) and
+  `data/fixated_selection_summary.json`. 40 CM logs from Wingman (EI JSON: our 11 raw logs that are there + 29 kills of other squads),
+  **323 applications**: 21 at fight start, 186 during boss phases, 69 at a phase entry (bar break), 47 in the last phase.
+  For each feature the picked player was ranked among the players up at that instant; a random pick gives a mean percentile of 0.50 and the
+  picked player being the extreme one ~33 times.
+  | feature | mean percentile | picked = lowest / highest (33 expected each) |
+  |---|---|---|
+  | distance to Vloxx | 0.51 | closest 36 / farthest 29 |
+  | toughness | 0.48 | (almost everyone has the same value: only 2 picks could be told apart as "highest") |
+  | healing power, concentration, condition damage | 0.49–0.50 | no trend |
+  | damage done to Vloxx (whole fight / last 10 s) | 0.50 / 0.50 | 30 / 29 and 30 / 40 |
+  | damage taken in the last 10 s | 0.49 | 25 / 34 |
+  | health % | 0.49 | no trend |
+  | agent instance id | 0.49 | 29 / 28 |
+  | number of times fixated before, time since own last Fixated | 0.50 / 0.51 | no trend |
+  | distance to the previous holder | 0.53 | 29 / 36 |
+  * **Not a rotation:** a player who was never fixated in that fight is picked 197 / 302 times, 194.6 expected. **The previous holder is not
+    excluded and not favoured:** picked again 25 / 288, 29.3 expected.
+  * Having had a green or a spread in the last 40 s: 64 / 215 (66.9 expected) and 69 / 215 (64.8). Commander tag: 37 / 323 (33.3).
+  * A player in stealth at that instant was never picked, but only 8 applications had one (1.1 picks expected): not enough to say. **[open]**
+  * The four contexts give the same picture, with one exception to re-check: **at a phase entry the pick leans toward the second subgroup,
+    47 / 69 against 34.5 expected** (z ≈ 3; boss phases 95 vs 93.0, last phase 23 vs 23.5). 53 of those 69 are from other squads' kills. It may
+    come from what each subgroup does during the split, not from the subgroup itself. **[open: one deviation among ~75 comparisons]**
+  * Toughness cannot be judged properly: squads run everyone at the same toughness. A classic "highest toughness tanks" rule would need a log
+    with one player clearly above the rest. **[open]**
+  **[likely]** for "random": nothing among these features steers it; a rule on something not in EI (e.g. server-side threat) is still possible.
+
 * **Entering P2 (Spear) and P3 (Sword): with or without a Fixated carried through the split** (`scripts/phase_entry_fixated.js` →
   `data/phase_entry_fixated.csv`; 120 P2 entries, 47 P3 entries, raw logs). A phase change goes: split starts → Vloxx returns channelling
   *Visions of Eternity* with its breakbar (§5i) → the bar is broken → the boss phase resumes ("entry" = end of that cast).
@@ -1124,4 +1152,6 @@ which stack in duration, so a re-application is invisible). Blocked / evaded hit
    telegraph of each flower, and test subgroup / role / squad order for the four picks. Also confirm the 8.7–11.8 s slashes are Division Eternal.
 8. **Conditions per attack (§5t) on raw logs:** base durations, the split of Cosmic Charge / Raging Storm hits, which skill of the Aspect of the
    Sword applies what, and whether Slice Through Reality really corrupts boons (check the boons removed at the same instant).
+9. **Fixated selection (§2):** (a) does the phase-entry pick really favour one subgroup (47 / 69)? Re-test on the raw set with subgroups and with
+   where each player is when the bar breaks; (b) one fight with a single high-toughness player; (c) stealth at the moment of application.
 Anything new should be checked on **raw .zevtc** (exact positions, every effect) — EI JSON misled us once (range).
