@@ -1048,6 +1048,53 @@ Sorted by stacks at kill time. The number is a link to the log when it is online
 | [87](https://gw2wingman.nevermindcreations.de/log/5771f-Caemlyn4801_20261003-011714_noe_kill) | 9 min 29 s | 0 | 8 | 24 | 34 | 87 |
 | [89](https://gw2wingman.nevermindcreations.de/log/45f7e-Seel6214_20261004-012814_noe_kill) | 9 min 11 s | 1 | 13 | 34 | 42 | 89 |
 
+## 5t. Conditions applied by each attack  [solid for the high percentages, likely for the rest]
+Script `scripts/attack_conditions.js` → `data/attack_conditions.csv`, `data/attack_conditions_summary.json`. 20 CM logs (our 11 raw logs that are
+on Wingman + 9 kills from other squads), read from Elite Insights JSON: per player and condition the stack history **per source**, and the time of
+every attack hit EI tracks. A condition counts for an attack when its stacks from an enemy source go up on the hit player within −100 … +300 ms.
+"When absent" = only hits where that condition from that source was not already on the player (needed for Crippled, Weakness, Blind, Slow, Chilled,
+which stack in duration, so a re-application is invisible). Blocked / evaded hits and Resistance are not visible: percentages are lower bounds.
+
+| attack | hits | conditions (share of hits · share when absent before · stacks per hit) |
+|---|---|---|
+| **Excision Extremis** (Vloxx) | 4,826 | **Bleeding 98 % · 100 % · 1** — **Crippled 41 % · 60 %** (the 1.0 s strip lockout of §5e applies to Crippled too) |
+| **Echoing Blade** | 3,897 | **Torment 99 % · 99 % · 1** — **Weakness 60 % · 95 %** |
+| **Division Eternal** (Vloxx) | 1,733 | **Confusion 99 % · 99 % · 1** — **Blind 73 % · 93 %** |
+| **Visions of Eternity** | 57 | **Vulnerability 100 % · 1** |
+| **Probability Distribution** (puddle hit) | 959 | **Crippled 48 % · 92 %** |
+| **Annihilating Orb** (orb hit) | 634 | Burning 60 % · 60 % · 1 — Slow 58 % · 60 % (same hits: about 6 in 10 hits carry both) |
+| Annihilating Orb shockwave | 127 | none |
+| **Thousand Strikes** | 15,837 | Vulnerability ×4 and Torment ×1–2 on most hits (Vulnerability 45 % from Vloxx + 58 % from the Aspect of the Spear, Torment 35 % + 26 %); Crippled 9 % |
+| **Worldpiercer** | 467 | Burning 38 % · **10 stacks** — Bleeding 51 % · 3 stacks (EI gives the Bleeding to a "Cosmic Bulwark" helper agent) |
+| **Cosmic Charge** | 5,770 | Crippled 18 % · 21 % — Burning 16 % (only some of its hits: not split here between the dash, the knockdown pulses and the trail) |
+| **Raging Storm** | 4,736 | Crippled 24 % · 36 % from Vloxx + 14 % from a "Cosmic Bulwark" helper agent; Confusion 7 %, Blind 7 %, Torment 4 % (likely overlaps with other attacks) |
+| **Surrounding Curse** | 6,019 | Torment 15 % — Weakness 10 % (per tick, so most ticks add nothing) |
+| **Judgment of Eternity** (failed green) | 8 | Burning ×2 and Chilled on 7 of 8 hits. **[likely: 8 hits]** |
+| **Eternal Reflection** | 23,716 | none |
+| Champion Cosmic Sunderer "Excision" | 90 | Confusion, Burning, Bleeding, Torment, Poison, 1 stack each (84–100 % when absent) |
+| Cosmic Piercer | — | Fear (9 applications, at the Annihilating Orb moment). **[likely]** |
+
+* **Slice Through Reality corrupts boons.** Around its cast the hit players get a mixed set, each on about 10 % of hits: Slow, Bleeding,
+  Vulnerability, Blind, Crippled, Poison, Chilled, Weakness, Confusion, plus Fear (20). That is exactly the game's boon-corruption table (Quickness →
+  Slow, Vigor → Bleeding, Protection → Vulnerability, Fury → Blind, Swiftness → Crippled, Regeneration → Poison, Alacrity → Chilled, Might → Weakness,
+  Stability → Fear), and their durations are longer than the other attacks' (median 3–5 s vs ~1 s). Most of these applications have **no tracked
+  hit at the same moment** (Chilled 94 of 142, Poison 65 of 158, Fear 20 of 23), so it is probably the second hit / portal of §5m, which EI does
+  not track. "Ascension Removed" shows the same set only because it happens at the same moment in these logs. **[likely: inferred from the set of
+  conditions, the boons removed were not checked]**
+* **Aspect of the Sword:** Confusion (1,033 applications), Blind (678), Bleeding (504), Crippled (276). EI has no hit mechanic and no cast list
+  for it, so they are not tied to a skill here. By analogy with Vloxx: its Division Eternal → Confusion + Blind, its Excision Extremis →
+  Bleeding + Crippled (§5e: Crippled 5 s from the Sword). **[likely: analogy only]**
+* **Aspect of the Spear:** Vulnerability ×4 (8,855) and Torment (2,885), 85 % of them at a "Thousand Strikes" hit: EI's Thousand Strikes mechanic
+  covers the Spear's version too. Crippled 133.
+* **Per condition, where it mostly comes from (Vloxx as source):** Bleeding 86 % Excision Extremis · Confusion 74 % Division Eternal · Blind 66 %
+  Division Eternal · Weakness 73 % Echoing Blade, 14 % Surrounding Curse · Torment 45 % Thousand Strikes, 40 % Echoing Blade · Vulnerability 86 %
+  Thousand Strikes · Crippled 32 % Excision Extremis, 21 % Cosmic Charge, 15 % Thousand Strikes, 9 % Raging Storm, 8 % Probability Distribution ·
+  Burning 45 % Cosmic Charge, 17 % Annihilating Orb, 15 % Worldpiercer · Slow 65 % Annihilating Orb, the rest Slice Through Reality.
+* **Durations are not measured.** The time the conditions stayed on players is short (median ~1 s, p90 ~4 s) because the squad cleanses; the
+  base durations need the raw buff events (§5e has Crippled 10 s from Vloxx, 5 s from the Sword). **[open]**
+* Not covered: attacks EI has no hit mechanic for (the Aspects' Ancora Strike, the Sword's skills, Cosmic adds other than the Sunderer), and
+  non-condition effects (knockdowns, launches, stuns).
+
 ## 6. Hypotheses that were tested and REJECTED (don't redo)
 * **Range limit ~600 (last phase) / ~775 (early, = 600 + boss hitbox 150 + player 24).** Looked perfect on EI data (211/211),
   **broken by our squad's raw 2026-10-01 logs** (201030 +33 s: 3 greens with everyone 714–898 away; 213946/223543 +33 s: 3
@@ -1075,4 +1122,6 @@ Sorted by stacks at kill time. The number is a link to the log when it is online
 7. **Excision flowers (§5k): re-check the targeting on raw positions and look for a pick rule.** The "centre = a player, four different players"
    result uses EI positions (300 ms) from 11 logs of one squad. On the machine with `logs/raw`: take each player's exact position at the first
    telegraph of each flower, and test subgroup / role / squad order for the four picks. Also confirm the 8.7–11.8 s slashes are Division Eternal.
+8. **Conditions per attack (§5t) on raw logs:** base durations, the split of Cosmic Charge / Raging Storm hits, which skill of the Aspect of the
+   Sword applies what, and whether Slice Through Reality really corrupts boons (check the boons removed at the same instant).
 Anything new should be checked on **raw .zevtc** (exact positions, every effect) — EI JSON misled us once (range).

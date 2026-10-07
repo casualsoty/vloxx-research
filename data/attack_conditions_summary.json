@@ -1,0 +1,466 @@
+{
+ "logs": 20,
+ "trackedAttacks": {
+  "2-people green select": {
+   "hits": 120,
+   "conditions": []
+  },
+  "3-people green select": {
+   "hits": 675,
+   "conditions": [
+    "Vulnerability (Aspect of the Spear) 4 %"
+   ]
+  },
+  "Annihilating Orb": {
+   "hits": 634,
+   "conditions": [
+    "Burning (Vloxx) 60 %",
+    "Slow (Vloxx) 58 %"
+   ]
+  },
+  "Annihilating Orb Shockwave": {
+   "hits": 98,
+   "conditions": []
+  },
+  "Annihilating Orb Shockwave Hit no stab": {
+   "hits": 29,
+   "conditions": []
+  },
+  "Ascension Applied": {
+   "hits": 45,
+   "conditions": []
+  },
+  "Ascension Removed": {
+   "hits": 159,
+   "conditions": [
+    "Weakness (Vloxx) 47 %",
+    "Torment (Vloxx) 40 %",
+    "Chilled (Vloxx) 34 %",
+    "Slow (Vloxx) 27 %",
+    "Blind (Vloxx) 26 %",
+    "Poison (Vloxx) 26 %",
+    "Crippled (Vloxx) 25 %",
+    "Vulnerability (Vloxx) 25 %",
+    "Burning (Vloxx) 19 %",
+    "Bleeding (Vloxx) 18 %",
+    "Confusion (Vloxx) 11 %"
+   ]
+  },
+  "Ascension's Sacrifice": {
+   "hits": 3,
+   "conditions": []
+  },
+  "Cosmic Charge": {
+   "hits": 5770,
+   "conditions": [
+    "Crippled (Vloxx) 18 %",
+    "Burning (Vloxx) 16 %"
+   ]
+  },
+  "Division Eternal": {
+   "hits": 1733,
+   "conditions": [
+    "Confusion (Vloxx) 99 %",
+    "Blind (Vloxx) 73 %",
+    "Bleeding (Vloxx) 6 %",
+    "Vulnerability (Aspect of the Spear) 5 %"
+   ]
+  },
+  "Echoing Blade": {
+   "hits": 3897,
+   "conditions": [
+    "Torment (Vloxx) 99 %",
+    "Weakness (Vloxx) 60 %",
+    "Vulnerability (Aspect of the Spear) 4 %"
+   ]
+  },
+  "Eternal Reflection": {
+   "hits": 23716,
+   "conditions": []
+  },
+  "Excision": {
+   "hits": 90,
+   "conditions": [
+    "Confusion (Cosmic Sunderer) 41 %",
+    "Burning (Cosmic Sunderer) 37 %",
+    "Bleeding (Cosmic Sunderer) 36 %",
+    "Torment (Cosmic Sunderer) 34 %",
+    "Poison (Cosmic Sunderer) 21 %",
+    "Vulnerability (Aspect of the Spear) 16 %"
+   ]
+  },
+  "Excision Extremis": {
+   "hits": 4826,
+   "conditions": [
+    "Bleeding (Vloxx) 98 %",
+    "Crippled (Vloxx) 41 %"
+   ]
+  },
+  "Judgment of Eternity": {
+   "hits": 8,
+   "conditions": [
+    "Burning (Vloxx) 88 %",
+    "Chilled (Vloxx) 88 %"
+   ]
+  },
+  "Probability Distribution": {
+   "hits": 959,
+   "conditions": [
+    "Crippled (Vloxx) 48 %",
+    "Torment (Vloxx) 6 %",
+    "Blind (Vloxx) 5 %",
+    "Vulnerability (Vloxx) 4 %",
+    "Poison (Vloxx) 4 %"
+   ]
+  },
+  "Raging Storm": {
+   "hits": 4736,
+   "conditions": [
+    "Crippled (Vloxx) 24 %",
+    "Crippled (Cosmic Bulwark) 14 %",
+    "Confusion (Vloxx) 7 %",
+    "Blind (Vloxx) 7 %",
+    "Torment (Vloxx) 4 %"
+   ]
+  },
+  "Slice Through Reality": {
+   "hits": 351,
+   "conditions": [
+    "Slow (Vloxx) 12 %",
+    "Bleeding (Vloxx) 11 %",
+    "Vulnerability (Vloxx) 11 %",
+    "Blind (Vloxx) 11 %",
+    "Crippled (Vloxx) 10 %",
+    "Poison (Vloxx) 10 %",
+    "Chilled (Vloxx) 9 %",
+    "Weakness (Vloxx) 8 %",
+    "Confusion (Vloxx) 5 %"
+   ]
+  },
+  "Spread + Probability Distribution": {
+   "hits": 627,
+   "conditions": [
+    "Bleeding (Vloxx) 4 %"
+   ]
+  },
+  "Surrounding Curse": {
+   "hits": 6019,
+   "conditions": [
+    "Torment (Vloxx) 15 %",
+    "Weakness (Vloxx) 10 %"
+   ]
+  },
+  "Thousand Strikes": {
+   "hits": 15837,
+   "conditions": [
+    "Vulnerability (Aspect of the Spear) 58 %",
+    "Vulnerability (Vloxx) 45 %",
+    "Torment (Vloxx) 35 %",
+    "Torment (Aspect of the Spear) 26 %",
+    "Crippled (Vloxx) 9 %"
+   ]
+  },
+  "Visions of Eternity": {
+   "hits": 57,
+   "conditions": [
+    "Vulnerability (Vloxx) 100 %"
+   ]
+  },
+  "Worldpiercer": {
+   "hits": 467,
+   "conditions": [
+    "Bleeding (Cosmic Bulwark) 51 %",
+    "Burning (Vloxx) 38 %"
+   ]
+  }
+ },
+ "bySourceAndCondition": {
+  "Aspect of the Spear": {
+   "Vulnerability": {
+    "applications": 8855,
+    "duration_s_median": 0.2,
+    "duration_s_p90": 2.4,
+    "from": {
+     "Thousand Strikes": "7519 (85 %)"
+    }
+   },
+   "Torment": {
+    "applications": 2885,
+    "duration_s_median": 0.2,
+    "duration_s_p90": 2.6,
+    "from": {
+     "Thousand Strikes": "2462 (85 %)"
+    }
+   },
+   "Crippled": {
+    "applications": 133,
+    "duration_s_median": 1.8,
+    "duration_s_p90": 4.8,
+    "from": {
+     "Thousand Strikes": "115 (86 %)",
+     "Cosmic Charge + Thousand Strikes": "7 (5 %)",
+     "Eternal Reflection + Surrounding Curse + Thousand Strikes": "5 (4 %)"
+    }
+   }
+  },
+  "Vloxx": {
+   "Vulnerability": {
+    "applications": 7150,
+    "duration_s_median": 0.4,
+    "duration_s_p90": 3.7,
+    "from": {
+     "Thousand Strikes": "6153 (86 %)"
+    }
+   },
+   "Torment": {
+    "applications": 8885,
+    "duration_s_median": 0.5,
+    "duration_s_p90": 2.9,
+    "from": {
+     "Thousand Strikes": "3965 (45 %)",
+     "Echoing Blade": "3556 (40 %)",
+     "Surrounding Curse": "517 (6 %)"
+    }
+   },
+   "Weakness": {
+    "applications": 2908,
+    "duration_s_median": 0.9,
+    "duration_s_p90": 3.7,
+    "from": {
+     "Echoing Blade": "2118 (73 %)",
+     "Surrounding Curse": "416 (14 %)",
+     "Echoing Blade + Thousand Strikes": "91 (3 %)"
+    }
+   },
+   "Burning": {
+    "applications": 1812,
+    "duration_s_median": 1,
+    "duration_s_p90": 3.7,
+    "from": {
+     "Cosmic Charge": "824 (45 %)",
+     "Annihilating Orb": "316 (17 %)",
+     "Worldpiercer": "151 (8 %)",
+     "during Worldpiercer (no tracked hit)": "128 (7 %)",
+     "during Thousand Strikes (no tracked hit)": "93 (5 %)"
+    }
+   },
+   "Slow": {
+    "applications": 476,
+    "duration_s_median": 0.9,
+    "duration_s_p90": 3.7,
+    "from": {
+     "Annihilating Orb": "309 (65 %)",
+     "during Slice Through Reality (no tracked hit)": "58 (12 %)",
+     "Annihilating Orb + Eternal Reflection": "42 (9 %)",
+     "Ascension Removed + Slice Through Reality": "41 (9 %)"
+    }
+   },
+   "Crippled": {
+    "applications": 4196,
+    "duration_s_median": 1.1,
+    "duration_s_p90": 4,
+    "from": {
+     "Excision Extremis": "1361 (32 %)",
+     "Cosmic Charge": "870 (21 %)",
+     "Thousand Strikes": "620 (15 %)",
+     "Raging Storm": "382 (9 %)",
+     "Probability Distribution": "330 (8 %)"
+    }
+   },
+   "Confusion": {
+    "applications": 1999,
+    "duration_s_median": 0.8,
+    "duration_s_p90": 4.4,
+    "from": {
+     "Division Eternal": "1473 (74 %)",
+     "Raging Storm": "170 (9 %)",
+     "Division Eternal + Excision Extremis": "91 (5 %)",
+     "Division Eternal + Thousand Strikes": "88 (4 %)"
+    }
+   },
+   "Blind": {
+    "applications": 1622,
+    "duration_s_median": 0.4,
+    "duration_s_p90": 2.9,
+    "from": {
+     "Division Eternal": "1070 (66 %)",
+     "Raging Storm": "152 (9 %)",
+     "Division Eternal + Excision Extremis": "76 (5 %)",
+     "during Slice Through Reality (no tracked hit)": "62 (4 %)",
+     "Division Eternal + Thousand Strikes": "62 (4 %)"
+    }
+   },
+   "Bleeding": {
+    "applications": 4168,
+    "duration_s_median": 0.7,
+    "duration_s_p90": 4.3,
+    "from": {
+     "Excision Extremis": "3600 (86 %)"
+    }
+   },
+   "Poison": {
+    "applications": 158,
+    "duration_s_median": 3.2,
+    "duration_s_p90": 6,
+    "from": {
+     "during Slice Through Reality (no tracked hit)": "65 (41 %)",
+     "Ascension Removed + Slice Through Reality": "34 (22 %)",
+     "during Threshold of Eternity (no tracked hit)": "18 (11 %)",
+     "Probability Distribution": "17 (11 %)",
+     "Ascension Removed": "5 (3 %)",
+     "Cosmic Charge + Probability Distribution": "5 (3 %)"
+    }
+   },
+   "Fear": {
+    "applications": 23,
+    "duration_s_median": 1,
+    "duration_s_p90": 1,
+    "from": {
+     "during Slice Through Reality (no tracked hit)": "20 (87 %)"
+    }
+   },
+   "Chilled": {
+    "applications": 142,
+    "duration_s_median": 2.5,
+    "duration_s_p90": 3,
+    "from": {
+     "during Slice Through Reality (no tracked hit)": "94 (66 %)",
+     "Ascension Removed + Slice Through Reality": "31 (22 %)",
+     "Probability Distribution": "6 (4 %)"
+    }
+   }
+  },
+  "Aspect of the Sword": {
+   "Crippled": {
+    "applications": 276,
+    "duration_s_median": 1,
+    "duration_s_p90": 5.3,
+    "from": {
+     "unattributed": "256 (93 %)",
+     "Eternal Reflection": "11 (4 %)"
+    }
+   },
+   "Confusion": {
+    "applications": 1033,
+    "duration_s_median": 1.3,
+    "duration_s_p90": 4.7,
+    "from": {
+     "unattributed": "820 (79 %)",
+     "Thousand Strikes": "57 (6 %)",
+     "Raging Storm": "33 (3 %)"
+    }
+   },
+   "Blind": {
+    "applications": 678,
+    "duration_s_median": 0.4,
+    "duration_s_p90": 2.6,
+    "from": {
+     "unattributed": "553 (82 %)",
+     "Thousand Strikes": "29 (4 %)"
+    }
+   },
+   "Bleeding": {
+    "applications": 504,
+    "duration_s_median": 0.8,
+    "duration_s_p90": 5.8,
+    "from": {
+     "unattributed": "453 (90 %)",
+     "Eternal Reflection": "16 (3 %)"
+    }
+   }
+  },
+  "Cosmic Bulwark": {
+   "Crippled": {
+    "applications": 381,
+    "duration_s_median": 1,
+    "duration_s_p90": 3.8,
+    "from": {
+     "Raging Storm": "330 (87 %)",
+     "Eternal Reflection + Raging Storm": "15 (4 %)",
+     "Raging Storm + Surrounding Curse": "12 (3 %)"
+    }
+   },
+   "Bleeding": {
+    "applications": 240,
+    "duration_s_median": 0.9,
+    "duration_s_p90": 4.4,
+    "from": {
+     "Worldpiercer": "200 (83 %)",
+     "Raging Storm + Worldpiercer": "24 (10 %)"
+    }
+   },
+   "Vulnerability": {
+    "applications": 5,
+    "duration_s_median": 0.2,
+    "duration_s_p90": 0.4,
+    "from": {
+     "Worldpiercer": "5 (100 %)"
+    }
+   }
+  },
+  "Cosmic Sunderer": {
+   "Confusion": {
+    "applications": 19,
+    "duration_s_median": 0.9,
+    "duration_s_p90": 3.2,
+    "from": {
+     "Excision": "15 (79 %)"
+    }
+   },
+   "Bleeding": {
+    "applications": 18,
+    "duration_s_median": 1.4,
+    "duration_s_p90": 3.8,
+    "from": {
+     "Excision": "14 (78 %)"
+    }
+   },
+   "Torment": {
+    "applications": 15,
+    "duration_s_median": 0.9,
+    "duration_s_p90": 2.3,
+    "from": {
+     "Excision": "10 (67 %)",
+     "Excision + Thousand Strikes": "3 (20 %)"
+    }
+   },
+   "Poison": {
+    "applications": 11,
+    "duration_s_median": 1.6,
+    "duration_s_p90": 4.6,
+    "from": {
+     "Excision": "7 (64 %)"
+    }
+   },
+   "Burning": {
+    "applications": 16,
+    "duration_s_median": 1.7,
+    "duration_s_p90": 3.9,
+    "from": {
+     "Excision": "12 (75 %)",
+     "Excision + Thousand Strikes": "4 (25 %)"
+    }
+   },
+   "Vulnerability": {
+    "applications": 77,
+    "duration_s_median": 0.4,
+    "duration_s_p90": 2.8,
+    "from": {
+     "during 80510 (no tracked hit)": "41 (53 %)",
+     "during Echoing Attack (no tracked hit)": "26 (34 %)",
+     "Raging Storm": "7 (9 %)"
+    }
+   }
+  },
+  "Cosmic Piercer": {
+   "Fear": {
+    "applications": 9,
+    "duration_s_median": 0.9,
+    "duration_s_p90": 2,
+    "from": {
+     "Annihilating Orb": "9 (100 %)"
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,64 @@
+attack,hits,source,condition,hits_applying,pct_of_hits,pct_when_absent_before,stacks_median,duration_s_median,duration_s_p90
+3-people green select,675,Aspect of the Spear,Vulnerability,26,4,1,4,0.1,0.1
+Annihilating Orb,634,Vloxx,Burning,378,60,60,1,1.3,4.2
+Annihilating Orb,634,Vloxx,Slow,370,58,60,1,0.8,3.7
+Ascension Removed,159,Vloxx,Weakness,74,47,56,1,1.6,5
+Ascension Removed,159,Vloxx,Torment,63,40,34,2,1,4.8
+Ascension Removed,159,Vloxx,Chilled,54,34,50,1,3,5
+Ascension Removed,159,Vloxx,Slow,43,27,28,1,1.7,5
+Ascension Removed,159,Vloxx,Blind,41,26,27,1,1.2,5
+Ascension Removed,159,Vloxx,Poison,41,26,41,1,5,6
+Ascension Removed,159,Vloxx,Crippled,40,25,34,1,2.5,7.5
+Ascension Removed,159,Vloxx,Vulnerability,39,25,25,3,5.2,8
+Ascension Removed,159,Vloxx,Burning,31,19,14,2,3,4
+Ascension Removed,159,Vloxx,Bleeding,29,18,18,2,4.9,6.7
+Ascension Removed,159,Vloxx,Confusion,18,11,12,3,4,4
+Cosmic Charge,5770,Vloxx,Crippled,1058,18,21,1,1.1,3.9
+Cosmic Charge,5770,Vloxx,Burning,920,16,12,1,0.8,3.8
+Division Eternal,1733,Vloxx,Confusion,1712,99,99,1,0.6,4.2
+Division Eternal,1733,Vloxx,Blind,1264,73,93,1,0.3,2.2
+Division Eternal,1733,Vloxx,Bleeding,100,6,3,1,0.8,4.8
+Division Eternal,1733,Aspect of the Spear,Vulnerability,80,5,2,4,0.1,2.2
+Echoing Blade,3897,Vloxx,Torment,3865,99,99,1,0.6,2.9
+Echoing Blade,3897,Vloxx,Weakness,2322,60,95,1,0.8,3.3
+Echoing Blade,3897,Aspect of the Spear,Vulnerability,137,4,1,4,0.2,2
+Excision,90,Cosmic Sunderer,Confusion,37,41,97,1,0.9,3.3
+Excision,90,Cosmic Sunderer,Burning,33,37,94,1,1.8,3.9
+Excision,90,Cosmic Sunderer,Bleeding,32,36,97,1,1.8,4.7
+Excision,90,Cosmic Sunderer,Torment,31,34,84,1,0.9,4.7
+Excision,90,Cosmic Sunderer,Poison,19,21,100,1,1.6,5.2
+Excision,90,Aspect of the Spear,Vulnerability,14,16,16,4,,
+Excision Extremis,4826,Vloxx,Bleeding,4736,98,100,1,0.6,3.9
+Excision Extremis,4826,Vloxx,Crippled,1983,41,60,1,1.1,4.3
+Judgment of Eternity,8,Vloxx,Burning,7,88,100,2,3.8,3.8
+Judgment of Eternity,8,Vloxx,Chilled,7,88,88,1,1.4,3.8
+Probability Distribution,959,Vloxx,Crippled,458,48,92,1,0.9,3.9
+Probability Distribution,959,Vloxx,Torment,57,6,3,1,0.4,1.2
+Probability Distribution,959,Vloxx,Blind,49,5,5,1,0.7,3
+Probability Distribution,959,Vloxx,Vulnerability,42,4,2,4,1.8,8
+Probability Distribution,959,Vloxx,Poison,36,4,6,1,1.4,4.9
+Raging Storm,4736,Vloxx,Crippled,1145,24,36,1,1.1,4.4
+Raging Storm,4736,Cosmic Bulwark,Crippled,642,14,16,1,0.9,4
+Raging Storm,4736,Vloxx,Confusion,337,7,8,1,1.3,5.6
+Raging Storm,4736,Vloxx,Blind,312,7,7,1,0.4,3.2
+Raging Storm,4736,Vloxx,Torment,182,4,3,1,1.4,6.3
+Slice Through Reality,351,Vloxx,Slow,42,12,13,1,1.7,5
+Slice Through Reality,351,Vloxx,Bleeding,39,11,8,2,4.9,6.7
+Slice Through Reality,351,Vloxx,Vulnerability,38,11,11,3,5,8
+Slice Through Reality,351,Vloxx,Blind,37,11,11,1,1,5
+Slice Through Reality,351,Vloxx,Crippled,35,10,10,1,3.4,6.6
+Slice Through Reality,351,Vloxx,Poison,34,10,16,1,5.2,6
+Slice Through Reality,351,Vloxx,Chilled,32,9,15,1,3,5.5
+Slice Through Reality,351,Vloxx,Weakness,29,8,11,1,5,5
+Slice Through Reality,351,Vloxx,Confusion,17,5,5,3,4,4
+Spread + Probability Distribution,627,Vloxx,Bleeding,26,4,1,1,1.3,2.2
+Surrounding Curse,6019,Vloxx,Torment,887,15,13,1,1,4.4
+Surrounding Curse,6019,Vloxx,Weakness,623,10,12,1,1,4.1
+Thousand Strikes,15837,Aspect of the Spear,Vulnerability,9206,58,29,4,0.2,2.7
+Thousand Strikes,15837,Vloxx,Vulnerability,7199,45,14,4,0.1,1.1
+Thousand Strikes,15837,Vloxx,Torment,5587,35,16,2,0.2,1.3
+Thousand Strikes,15837,Aspect of the Spear,Torment,4128,26,16,1,0.2,2.5
+Thousand Strikes,15837,Vloxx,Crippled,1503,9,10,1,1,3.2
+Visions of Eternity,57,Vloxx,Vulnerability,57,100,100,1,1.4,3.2
+Worldpiercer,467,Cosmic Bulwark,Bleeding,238,51,56,3,0.9,4.4
+Worldpiercer,467,Vloxx,Burning,177,38,35,10,0.8,3.2

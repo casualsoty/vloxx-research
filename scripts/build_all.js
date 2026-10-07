@@ -20,6 +20,7 @@ const steps = [
   'damage_immunity.js',      // data/damage_immunity.csv + damage_immunity_summary.json: what still damages Vloxx during Damage Immunity
   'phase_times.js',          // data/phase_times.csv + phase_times.json: fastest / average time per phase, with the link of the fastest
   'empowered_stacks.js',     // data/empowered_stacks.csv + .json: Empowered stacks on Vloxx at kill time and at each threshold
+  'attack_conditions.js',    // data/attack_conditions.csv + attack_conditions_summary.json: conditions applied by each attack (EI JSON from Wingman, cached in private/ei_conditions/)
   'dps_table.js',            // data/dps_samples.csv + dps_table.json: target and cleave DPS per specialisation / build
   'annihilating_orb.js',     // data/annihilating_orb_summary.json: Vloxx's orb path, landing zone and expanding ring
   'raging_storm_last_phase.js', // data/raging_storm_last_phase.json: falling spears per second with each Aspect alive or dead
