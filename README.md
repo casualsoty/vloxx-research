@@ -75,6 +75,8 @@ Times are seconds from log start. **Raw logs start ~3 s later than EI** (EI show
 "Last phase" = from the start of Vloxx's channel skill **81071**; its rounds are at **+3, +33, +63 s** (greens),
 **+23, +43, +63 s** (Probability Distribution) and Fixated ticks at **+2.5, +22.5, +42.5, +62.5 s**.
 
+The top bar also links to a friend's tool, the [thumbnail maker](https://chocciee.github.io/thumbnail-maker-for-the-uncs/) (external site, not part of this repository).
+
 ## Raid planner (docs page, "Raid planner" tab)
 A fight planner in the style of raidplan.io, built for Vloxx CM. The map is drawn in real game coordinates from `data/arena.json`;
 the cursor readout shows world, map (×0.0254) and distance from centre. Features:
