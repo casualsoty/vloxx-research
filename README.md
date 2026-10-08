@@ -18,7 +18,7 @@ Every claim is tied to log evidence and a confidence tag, and disproved ideas ar
 `scripts/build_all.js`, with its output in `data/`; (3) list new datasets in this file; (4) rebuild the page with `node scripts/build_docs.js`.
 Answers given only in a chat are lost.
 
-Topics so far: 3-people greens (*Judgment of Eternity*), Fixated, Probability Distribution, 2-people green shackles
+Topics so far: 3-people greens (*Judgment of Eternity*), whether greens can be stacked, Fixated, Probability Distribution, 2-people green shackles
 (*Ascension's Sacrifice*), Ascension orbs, the Aspect adds (respawn, CC, spawn points), arena coordinates. A notable
 practical result: the "+2.5 s Fixated" timing bug that makes the last-phase +63 s green round come out 2 greens short
 (FINDINGS §3).
@@ -62,6 +62,7 @@ scripts/             parser + loaders + dataset builder + checks (Node.js, no de
 | `excision_flowers.csv` / `excision_flowers_summary.json` | Excision Extremis "flower" (4 per cast): centre, direction vs Vloxx's facing, inward slashes, target (`scripts/excision_flowers.js`; runs on the committed CSVs + EI positions of our logs that are on Wingman, downloaded once into `private/ei_positions/`, local only) |
 | `attack_conditions.csv` / `attack_conditions_summary.json` | attack × condition applied to players: share of hits, stacks (`scripts/attack_conditions.js`; EI JSON from Wingman, slim copies in `private/ei_conditions/`, local only) |
 | `fixated_selection.csv` / `fixated_selection_summary.json` | Fixated application: the picked player's value and rank among players up, per feature (`scripts/fixated_selection.js`; EI JSON from Wingman, slim copies in `private/ei_fixated/`, local only) |
+| `green_overlap_rounds.csv` / `green_overlap_players.csv` / `green_overlap_summary.json` | green round / player × green round at the moment the circles resolve: players inside each circle, players inside several, Ascension lost, floated, Empowered gained by Vloxx (`scripts/green_overlap.js`; EI JSON from Wingman for the logs that reached the last phase, slim copies in `private/ei_greens/`, local only) |
 | `orb_throws.csv` | Aspect CC: orb-throw missiles (skill 80520), orbs seen, projectile-hate skills nearby (`scripts/orb_throws.js`) |
 | `aspect_events.csv` | Aspect of the Staff/Spear/Sword spawns, deaths (+respawn time), breakbar breaks (+orb delay) |
 
@@ -174,3 +175,4 @@ automatically; to give one its own sidebar category, add an entry to `CATS` in `
 5. Why the Aspect sometimes doesn't throw its orbs on a CC (2/302, both Staff; projectile hate and early pickups ruled out).
 6. Whoever holds Fixated at last-phase +63 s gets a green and a spread together (9/9). It is avoided only when nobody is fixated
    at +63 s. Open: a reliable way to get that without the 1-green timing bug.
+7. Can last-phase greens be stacked on each other? Nobody does it in the logs (0 of 118 rounds), so it is untested (FINDINGS §1b).

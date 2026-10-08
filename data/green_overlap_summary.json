@@ -1,0 +1,364 @@
+{
+ "early": {
+  "rounds": 493,
+  "rounds_dropped_split_before_resolve": 5,
+  "rounds_2plus_greens": 442,
+  "rounds_with_a_player_in_2plus_circles": 11,
+  "rounds_all_holders_within_radius": 3,
+  "resolve_delay_ms": {
+   "n": 5,
+   "min": 8076,
+   "median": 8086,
+   "max": 8162
+  },
+  "failed_green_hits": {
+   "hits": 8,
+   "landed": 8,
+   "blocked": 0,
+   "evaded": 0,
+   "invulnerable": 0
+  },
+  "player_punished_by_circles_inside": {
+   "0": {
+    "players": 106,
+    "punished": 0,
+    "pct": 0,
+    "ascension_lost_3": 0,
+    "ascension_lost_6plus": 0
+   },
+   "1": {
+    "players": 4776,
+    "punished": 8,
+    "pct": 0.2,
+    "ascension_lost_3": 8,
+    "ascension_lost_6plus": 0
+   },
+   "2+": {
+    "players": 48,
+    "punished": 0,
+    "pct": 0,
+    "ascension_lost_3": 0,
+    "ascension_lost_6plus": 0
+   }
+  },
+  "circle_by_up_players_inside": {
+   "under_3": {
+    "circles": 18,
+    "with_punished_player": 5
+   },
+   "exactly_3": {
+    "circles": 860,
+    "with_punished_player": 0
+   },
+   "4_or_more": {
+    "circles": 497,
+    "with_punished_player": 0
+   }
+  },
+  "empowered_gained_at_resolve": {
+   "nobody_punished_no_shared_player": {
+    "rounds": 478,
+    "with_gain": 21,
+    "stacks": 21,
+    "ascension_lost": 0
+   },
+   "nobody_punished_shared_players": {
+    "rounds": 10,
+    "with_gain": 0,
+    "stacks": 0,
+    "ascension_lost": 0
+   },
+   "somebody_punished": {
+    "rounds": 5,
+    "with_gain": 5,
+    "stacks": 24,
+    "ascension_lost": 24
+   }
+  },
+  "float_on_punished": {
+   "up_with_stability": {
+    "punished": 8,
+    "floated": 6
+   },
+   "up_without_stability": {
+    "punished": 0,
+    "floated": 0
+   },
+   "downed": {
+    "punished": 0,
+    "floated": 0
+   }
+  },
+  "overlapping_groups": {
+   "all": {
+    "groups": 11,
+    "punished": 0
+   },
+   "under_3_players_per_circle": {
+    "groups": 4,
+    "punished": 0
+   }
+  },
+  "overlapping_groups_list": [
+   {
+    "log": "20260930-214712",
+    "tick_s": "",
+    "select_s": "251.2",
+    "circles": 2,
+    "up_players": 8,
+    "punished": 0,
+    "empowered_gained": 6,
+    "up_players_per_circle": "4/2/5",
+    "holder_separation": "475/372/356"
+   },
+   {
+    "log": "20260930-234618",
+    "tick_s": "",
+    "select_s": "442.8",
+    "circles": 3,
+    "up_players": 9,
+    "punished": 0,
+    "empowered_gained": 0,
+    "up_players_per_circle": "8/9/9",
+    "holder_separation": "214/216/60"
+   },
+   {
+    "log": "wingman_15e32-20261005-154659_noe_kill",
+    "tick_s": "",
+    "select_s": "201.8",
+    "circles": 2,
+    "up_players": 7,
+    "punished": 0,
+    "empowered_gained": 0,
+    "up_players_per_circle": "3/4/4",
+    "holder_separation": "326/386/368"
+   },
+   {
+    "log": "wingman_3273c-20261001-011226_noe_fail",
+    "tick_s": "",
+    "select_s": "497.2",
+    "circles": 2,
+    "up_players": 4,
+    "punished": 0,
+    "empowered_gained": 0,
+    "up_players_per_circle": "4/3/3",
+    "holder_separation": "567/105/588"
+   },
+   {
+    "log": "wingman_4c55f-20261005-181952_noe_kill",
+    "tick_s": "",
+    "select_s": "452.2",
+    "circles": 3,
+    "up_players": 10,
+    "punished": 0,
+    "empowered_gained": 0,
+    "up_players_per_circle": "2/8/9",
+    "holder_separation": "214/298/137"
+   },
+   {
+    "log": "wingman_5771f-Account-CDD2_20261003-011714_noe_kill",
+    "tick_s": "",
+    "select_s": "246.1",
+    "circles": 3,
+    "up_players": 8,
+    "punished": 0,
+    "empowered_gained": 0,
+    "up_players_per_circle": "5/6/5",
+    "holder_separation": "233/381/155"
+   },
+   {
+    "log": "wingman_8d411-20260930-191421_noe_fail",
+    "tick_s": "",
+    "select_s": "261.2",
+    "circles": 3,
+    "up_players": 8,
+    "punished": 0,
+    "empowered_gained": 0,
+    "up_players_per_circle": "7/8/8",
+    "holder_separation": "227/79/237"
+   },
+   {
+    "log": "wingman_9fe05-20261002-155233_noe_kill",
+    "tick_s": "",
+    "select_s": "155.7",
+    "circles": 2,
+    "up_players": 6,
+    "punished": 0,
+    "empowered_gained": 0,
+    "up_players_per_circle": "3/4/4",
+    "holder_separation": "301/406/375"
+   },
+   {
+    "log": "wingman_bf5ea-20261004-210412_noe_kill",
+    "tick_s": "",
+    "select_s": "394.9",
+    "circles": 2,
+    "up_players": 8,
+    "punished": 0,
+    "empowered_gained": 0,
+    "up_players_per_circle": "7/2/7",
+    "holder_separation": "272/159/367"
+   },
+   {
+    "log": "wingman_dc6a8-Account-81AD_20261002-011054_noe_kill",
+    "tick_s": "",
+    "select_s": "314.3",
+    "circles": 2,
+    "up_players": 7,
+    "punished": 0,
+    "empowered_gained": 0,
+    "up_players_per_circle": "4/3/4",
+    "holder_separation": "469/376/486"
+   },
+   {
+    "log": "wingman_dc6a8-Account-81AD_20261002-011054_noe_kill",
+    "tick_s": "",
+    "select_s": "467.6",
+    "circles": 3,
+    "up_players": 5,
+    "punished": 0,
+    "empowered_gained": 0,
+    "up_players_per_circle": "4/4/5",
+    "holder_separation": "196/69/149"
+   }
+  ]
+ },
+ "last": {
+  "rounds": 126,
+  "rounds_dropped_split_before_resolve": 0,
+  "rounds_2plus_greens": 118,
+  "rounds_with_a_player_in_2plus_circles": 3,
+  "rounds_all_holders_within_radius": 0,
+  "resolve_delay_ms": {
+   "n": 21,
+   "min": 7994,
+   "median": 8010,
+   "max": 8172
+  },
+  "failed_green_hits": {
+   "hits": 63,
+   "landed": 63,
+   "blocked": 0,
+   "evaded": 0,
+   "invulnerable": 0
+  },
+  "player_punished_by_circles_inside": {
+   "0": {
+    "players": 45,
+    "punished": 1,
+    "pct": 2.2,
+    "ascension_lost_3": 1,
+    "ascension_lost_6plus": 0
+   },
+   "1": {
+    "players": 1151,
+    "punished": 57,
+    "pct": 5,
+    "ascension_lost_3": 57,
+    "ascension_lost_6plus": 0
+   },
+   "2+": {
+    "players": 3,
+    "punished": 1,
+    "pct": 33.3,
+    "ascension_lost_3": 1,
+    "ascension_lost_6plus": 0
+   }
+  },
+  "circle_by_up_players_inside": {
+   "under_3": {
+    "circles": 20,
+    "with_punished_player": 19
+   },
+   "exactly_3": {
+    "circles": 212,
+    "with_punished_player": 5
+   },
+   "4_or_more": {
+    "circles": 111,
+    "with_punished_player": 1
+   }
+  },
+  "empowered_gained_at_resolve": {
+   "nobody_punished_no_shared_player": {
+    "rounds": 104,
+    "with_gain": 8,
+    "stacks": 35,
+    "ascension_lost": 0
+   },
+   "nobody_punished_shared_players": {
+    "rounds": 1,
+    "with_gain": 0,
+    "stacks": 0,
+    "ascension_lost": 0
+   },
+   "somebody_punished": {
+    "rounds": 21,
+    "with_gain": 19,
+    "stacks": 239,
+    "ascension_lost": 177
+   }
+  },
+  "float_on_punished": {
+   "up_with_stability": {
+    "punished": 20,
+    "floated": 10
+   },
+   "up_without_stability": {
+    "punished": 24,
+    "floated": 12
+   },
+   "downed": {
+    "punished": 15,
+    "floated": 0
+   }
+  },
+  "overlapping_groups": {
+   "all": {
+    "groups": 3,
+    "punished": 2
+   },
+   "under_3_players_per_circle": {
+    "groups": 1,
+    "punished": 1
+   }
+  },
+  "overlapping_groups_list": [
+   {
+    "log": "wingman_7b6a0-20261004-201330_noe_kill",
+    "tick_s": 3,
+    "select_s": "510.3",
+    "circles": 2,
+    "up_players": 7,
+    "punished": 0,
+    "empowered_gained": 0,
+    "up_players_per_circle": "3/4/4",
+    "holder_separation": "450/742/386"
+   },
+   {
+    "log": "wingman_c654b-20260930-172031_noe_fail",
+    "tick_s": 33,
+    "select_s": "530.5",
+    "circles": 2,
+    "up_players": 4,
+    "punished": 4,
+    "empowered_gained": 25,
+    "up_players_per_circle": "2/3",
+    "holder_separation": "323"
+   },
+   {
+    "log": "wingman_c8506-20261003-120005_noe_kill",
+    "tick_s": 3,
+    "select_s": "503.2",
+    "circles": 2,
+    "up_players": 6,
+    "punished": 2,
+    "empowered_gained": 6,
+    "up_players_per_circle": "4/4/3",
+    "holder_separation": "660/370/306"
+   }
+  ]
+ },
+ "logs": 52,
+ "radius": 240
+}
