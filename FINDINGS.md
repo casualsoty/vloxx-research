@@ -1168,6 +1168,31 @@ which stack in duration, so a re-application is invisible). Blocked / evaded hit
 * Not covered: attacks EI has no hit mechanic for (the Aspects' Ancora Strike, the Sword's skills, Cosmic adds other than the Sunderer), and
   non-condition effects (knockdowns, launches, stuns).
 
+## 5u. What the squads play: weapons and circular projectile block / reflect skills  [solid for the 6 common specialisations]
+Script `scripts/spec_weapons.js` → `data/spec_weapons.json` (part of the full build). 52 CM logs that reached the last phase, from Elite
+Insights JSON on Wingman: each player's weapon sets and the skills they cast. It feeds the **Green groups** tab (`#greens`), which sorts a squad
+into three groups of 3 for the greens, each with a circular ground-area projectile block / reflect skill and a baiter (a melee player first,
+otherwise a ranged one, since greens go to players near Vloxx, §1).
+
+| specialisation | players | carry a melee weapon | most common weapon sets | circular projectile block / reflect skills cast (players) |
+|---|---|---|---|---|
+| Scourge | 258 | 0 % | Scepter/Torch + Pistol/Torch ×150 · Pistol/Torch + Scepter/Torch ×107 | Corrosive Poison Cloud 83 |
+| Troubadour | 104 | 70 % | Rifle/2Hand + Spear/2Hand ×26 · Staff/2Hand + Rifle/2Hand ×17 | Feedback 101 |
+| Evoker | 55 | 0 % | Pistol/Warhorn ×41 · Scepter/Focus ×14 | — |
+| Specter | 44 | 100 % | Scepter/Dagger + Spear/2Hand ×40 · Spear/2Hand + Scepter/Dagger ×4 | Smoke Screen 35 |
+| Weaver | 18 | 0 % | Pistol/Warhorn ×18 | — |
+| Luminary | 17 | 100 % | Spear/2Hand + Greatsword/2Hand ×14 · Greatsword/2Hand + Spear/2Hand ×3 | Sanctuary 4 |
+| Harbinger | 8 | 0 % | Scepter/Dagger + Pistol/Torch ×4 · Pistol/Torch + Scepter/Dagger ×4 | Corrosive Poison Cloud 1 |
+
+* "Melee weapon" = one of the two weapon sets has a main hand other than Staff, Scepter, Longbow, Shortbow, Rifle, Pistol. It says what the build can do, not
+  where the player stands.
+* The skills counted block or reflect projectiles in a **circular area on the ground**. Walls and lines (Wall of Reflection, Sublime Conversion, …)
+  and self-only or moving skills are not counted; list and exclusions in `docs-src/green_groups.json`, from the wiki's Reflect and Block pages
+  and each skill's facts (Smoke Screen and Seal Area: radius 240). **Feedback is on almost every Troubadour (101 / 104) and Smoke Screen on
+  most Specters (35 / 44); Corrosive Poison Cloud is slotted by about a third of the Scourges (83 / 258); Sanctuary by 4 of
+  17 Luminaries.**
+* Other specialisations appear fewer than 5 times; the tool uses an assumed melee / ranged value for them and says so.
+
 ## 6. Hypotheses that were tested and REJECTED (don't redo)
 * **Range limit ~600 (last phase) / ~775 (early, = 600 + boss hitbox 150 + player 24).** Looked perfect on EI data (211/211),
   **broken by our squad's raw 2026-10-01 logs** (201030 +33 s: 3 greens with everyone 714–898 away; 213946/223543 +33 s: 3

@@ -1,0 +1,30 @@
+/* Green groups tool — scoped with .gg- prefix; uses the page's CSS variables (light/dark) */
+#greens-root{display:none}#greens-root.on{display:block}body.greens .wrap{display:none}
+.gg-wrap{max-width:1500px;margin:0 auto;padding:18px 18px 60px}
+.gg-head h2{margin:0 0 4px;font-size:22px}.gg-head p{margin:0 0 10px;color:var(--mute);max-width:820px}
+.gg-btns{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-bottom:14px}.gg-msg{color:var(--acc);font-size:13px}
+.gg-grid{display:grid;grid-template-columns:minmax(0,3fr) minmax(300px,2fr);gap:18px;align-items:start}
+@media (max-width:1100px){.gg-grid{grid-template-columns:1fr}}
+.gg-table{min-width:0;width:100%;font-size:13px}.gg-table td,.gg-table th{padding:4px 6px;white-space:nowrap}.gg-table td.gg-info{white-space:normal;color:var(--mute);font-size:12px;min-width:120px}
+.gg-table input,.gg-table select{font:13px system-ui,sans-serif;background:var(--panel);color:var(--ink);border:1px solid var(--line);border-radius:6px;padding:4px 5px;max-width:170px}
+.gg-table input.gg-name{width:130px}.gg-n{color:var(--mute)}
+.gg-dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px;vertical-align:middle;border:1px solid var(--line)}
+.gg-cards{display:grid;gap:10px}
+.gg-card{background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--solid);border-radius:10px;padding:10px 14px}
+.gg-card.gg-warn{border-left-color:var(--likely)}.gg-card.gg-joker{border-left-color:var(--open)}
+.gg-card h4{margin:0 0 6px;font-size:15px}.gg-card ul{list-style:none;margin:0;padding:0}.gg-card li{padding:3px 0;display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.gg-spec{color:var(--mute)}.gg-sub{color:var(--mute);font-size:12px}
+.gg-tag{font-size:11.5px;border-radius:999px;padding:1px 8px;background:var(--code);color:var(--ink);cursor:help}
+.gg-tag.gg-bait{background:var(--solidbg);color:var(--solid)}.gg-tag.gg-hate{background:var(--openbg);color:var(--open)}
+.gg-w{margin:6px 0 0;color:var(--likely);font-size:13px}.gg-hint{color:var(--mute);font-size:13px;margin:8px 0}
+.gg-data{margin-top:26px;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:10px 16px}
+.gg-data summary{cursor:pointer;font-weight:600}.gg-data h5{margin:16px 0 4px;font-size:14px}.gg-data p{max-width:900px}
+.gg-ic{display:inline-block;width:20px;height:20px;border-radius:5px;margin-right:6px;vertical-align:middle;border:1px solid var(--line)}.gg-ic img{width:18px;height:18px;display:block;margin:0 auto;filter:drop-shadow(0 0 1px rgba(0,0,0,.7))}
+.gg-card li .gg-ic{margin-right:0}
+.gg-shot{height:30px;display:block;border-radius:3px;border:2px solid transparent}.gg-shot.gg-unsure{border-color:var(--rej)}
+.gg-jk{text-align:center}.gg-pick{grid-column:1/-1;order:-1;background:var(--panel);border:2px solid var(--acc);border-radius:10px;padding:12px 16px}
+.gg-pick h4{margin:0 0 2px;font-size:16px}.gg-picks{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 12px}
+.gg-pickb{background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:6px;cursor:pointer;color:var(--ink);font:12px system-ui,sans-serif;display:flex;flex-direction:column;align-items:center;gap:4px}
+.gg-pickb:hover{border-color:var(--acc)}.gg-pickb img{height:44px;border-radius:3px;display:block}
+.gg-exp{font:600 10.5px system-ui,sans-serif;text-transform:uppercase;letter-spacing:.04em;background:var(--likelybg);color:var(--likely);border-radius:999px;padding:2px 7px;vertical-align:middle;margin-left:4px}
+.gg-head p.gg-expnote{color:var(--likely);margin-bottom:6px}

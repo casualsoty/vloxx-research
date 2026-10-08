@@ -1,0 +1,264 @@
+{
+ "logs": 52,
+ "rangedMainHands": [
+  "Staff",
+  "Scepter",
+  "Longbow",
+  "Shortbow",
+  "Rifle",
+  "Pistol"
+ ],
+ "specs": {
+  "Scourge": {
+   "players": 258,
+   "hasMeleeWeaponPct": 0,
+   "roles": {
+    "condition": 257,
+    "boon": 1
+   },
+   "mainHands": {
+    "Scepter": 258,
+    "Pistol": 258
+   },
+   "weaponSets": {
+    "Scepter/Torch + Pistol/Torch": 150,
+    "Pistol/Torch + Scepter/Torch": 107,
+    "Scepter/Torch + Pistol/Dagger": 1
+   },
+   "castProjectileHate": {
+    "Corrosive Poison Cloud": 83
+   }
+  },
+  "Troubadour": {
+   "players": 104,
+   "hasMeleeWeaponPct": 70,
+   "roles": {
+    "heal": 91,
+    "boon": 13
+   },
+   "mainHands": {
+    "Rifle": 104,
+    "Sword": 35,
+    "Spear": 35,
+    "Staff": 21,
+    "Scepter": 5,
+    "Dagger": 3
+   },
+   "weaponSets": {
+    "Rifle/2Hand + Spear/2Hand": 26,
+    "Staff/2Hand + Rifle/2Hand": 17,
+    "Sword/Focus + Rifle/2Hand": 13,
+    "Spear/2Hand + Rifle/2Hand": 9,
+    "Rifle/2Hand + Sword/Focus": 8,
+    "Sword/Shield + Rifle/2Hand": 7
+   },
+   "castProjectileHate": {
+    "Feedback": 101
+   }
+  },
+  "Evoker": {
+   "players": 55,
+   "hasMeleeWeaponPct": 0,
+   "roles": {
+    "condition": 52,
+    "boon": 3
+   },
+   "mainHands": {
+    "Pistol": 41,
+    "Scepter": 14
+   },
+   "weaponSets": {
+    "Pistol/Warhorn": 41,
+    "Scepter/Focus": 14
+   },
+   "castProjectileHate": {}
+  },
+  "Specter": {
+   "players": 44,
+   "hasMeleeWeaponPct": 100,
+   "roles": {
+    "boon": 44
+   },
+   "mainHands": {
+    "Scepter": 44,
+    "Spear": 44
+   },
+   "weaponSets": {
+    "Scepter/Dagger + Spear/2Hand": 40,
+    "Spear/2Hand + Scepter/Dagger": 4
+   },
+   "castProjectileHate": {
+    "Smoke Screen": 35
+   }
+  },
+  "Weaver": {
+   "players": 18,
+   "hasMeleeWeaponPct": 0,
+   "roles": {
+    "condition": 18
+   },
+   "mainHands": {
+    "Pistol": 18
+   },
+   "weaponSets": {
+    "Pistol/Warhorn": 18
+   },
+   "castProjectileHate": {}
+  },
+  "Luminary": {
+   "players": 17,
+   "hasMeleeWeaponPct": 100,
+   "roles": {
+    "power": 17
+   },
+   "mainHands": {
+    "Spear": 17,
+    "Greatsword": 17
+   },
+   "weaponSets": {
+    "Spear/2Hand + Greatsword/2Hand": 14,
+    "Greatsword/2Hand + Spear/2Hand": 3
+   },
+   "castProjectileHate": {
+    "Sanctuary": 4
+   }
+  },
+  "Harbinger": {
+   "players": 8,
+   "hasMeleeWeaponPct": 0,
+   "roles": {
+    "condition": 8
+   },
+   "mainHands": {
+    "Scepter": 8,
+    "Pistol": 8
+   },
+   "weaponSets": {
+    "Scepter/Dagger + Pistol/Torch": 4,
+    "Pistol/Torch + Scepter/Dagger": 4
+   },
+   "castProjectileHate": {
+    "Corrosive Poison Cloud": 1
+   }
+  },
+  "Chronomancer": {
+   "players": 4,
+   "hasMeleeWeaponPct": 0,
+   "roles": {
+    "condition": 4
+   },
+   "mainHands": {
+    "Staff": 4,
+    "Scepter": 4
+   },
+   "weaponSets": {
+    "Staff/2Hand + Scepter/Pistol": 4
+   },
+   "castProjectileHate": {}
+  },
+  "Tempest": {
+   "players": 3,
+   "hasMeleeWeaponPct": 0,
+   "roles": {
+    "condition": 3
+   },
+   "mainHands": {
+    "Scepter": 3
+   },
+   "weaponSets": {
+    "Scepter/Focus": 3
+   },
+   "castProjectileHate": {}
+  },
+  "Renegade": {
+   "players": 3,
+   "hasMeleeWeaponPct": 100,
+   "roles": {
+    "condition": 3
+   },
+   "mainHands": {
+    "Mace": 3,
+    "Shortbow": 3
+   },
+   "weaponSets": {
+    "Mace/Axe + Shortbow/2Hand": 3
+   },
+   "castProjectileHate": {}
+  },
+  "Virtuoso": {
+   "players": 2,
+   "hasMeleeWeaponPct": 100,
+   "roles": {
+    "condition": 2
+   },
+   "mainHands": {
+    "Dagger": 2
+   },
+   "weaponSets": {
+    "Dagger/Sword + Dagger/Pistol": 2
+   },
+   "castProjectileHate": {
+    "Feedback": 1
+   }
+  },
+  "Vindicator": {
+   "players": 1,
+   "hasMeleeWeaponPct": 100,
+   "roles": {
+    "power": 1
+   },
+   "mainHands": {
+    "Sword": 1,
+    "Greatsword": 1
+   },
+   "weaponSets": {
+    "Sword/Shield + Greatsword/2Hand": 1
+   },
+   "castProjectileHate": {}
+  },
+  "Daredevil": {
+   "players": 1,
+   "hasMeleeWeaponPct": 100,
+   "roles": {
+    "power": 1
+   },
+   "mainHands": {
+    "Pistol": 1,
+    "Spear": 1
+   },
+   "weaponSets": {
+    "Pistol/Pistol + Spear/2Hand": 1
+   },
+   "castProjectileHate": {}
+  },
+  "Willbender": {
+   "players": 1,
+   "hasMeleeWeaponPct": 0,
+   "roles": {
+    "condition": 1
+   },
+   "mainHands": {
+    "Pistol": 1
+   },
+   "weaponSets": {
+    "Pistol/Torch + Pistol/Pistol": 1
+   },
+   "castProjectileHate": {}
+  },
+  "Conduit": {
+   "players": 1,
+   "hasMeleeWeaponPct": 100,
+   "roles": {
+    "condition": 1
+   },
+   "mainHands": {
+    "Spear": 1,
+    "Mace": 1
+   },
+   "weaponSets": {
+    "Spear/2Hand + Mace/Axe": 1
+   },
+   "castProjectileHate": {}
+  }
+ }
+}

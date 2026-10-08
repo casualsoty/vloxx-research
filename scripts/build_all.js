@@ -22,6 +22,7 @@ const steps = [
   'empowered_stacks.js',     // data/empowered_stacks.csv + .json: Empowered stacks on Vloxx at kill time and at each threshold
   'fixated_selection.js',    // data/fixated_selection.csv + fixated_selection_summary.json: who Fixated picks, tested against distance, stats, damage, squad order, history (EI JSON from Wingman, cached in private/ei_fixated/)
   'green_overlap.js',        // data/green_overlap_rounds.csv + green_overlap_players.csv + green_overlap_summary.json: players inside overlapping greens and who is punished (EI JSON from Wingman, cached in private/ei_greens/)
+  'spec_weapons.js',         // data/spec_weapons.json: weapons (melee / ranged) and ground-area projectile skills per specialisation, for the Green groups tab (EI JSON from Wingman, cached in private/ei_weapons/)
   'attack_conditions.js',    // data/attack_conditions.csv + attack_conditions_summary.json: conditions applied by each attack (EI JSON from Wingman, cached in private/ei_conditions/)
   'dps_table.js',            // data/dps_samples.csv + dps_table.json: target and cleave DPS per specialisation / build
   'annihilating_orb.js',     // data/annihilating_orb_summary.json: Vloxx's orb path, landing zone and expanding ring
