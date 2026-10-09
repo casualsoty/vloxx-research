@@ -154,15 +154,15 @@
   }
  },
  "targeting": {
-  "logs": 11,
-  "casts": 65,
-  "flowers": 260,
-  "centreOnAPlayerWithin40": 255,
+  "logs": 10,
+  "casts": 59,
+  "flowers": 236,
+  "centreOnAPlayerWithin40": 231,
   "centreToTargetMedian": 4,
   "nearestPlayerToCentreBySecondsBeforeFirstSlash": {
    "0": {
-    "medianDist": 58,
-    "within40Pct": 38
+    "medianDist": 59,
+    "within40Pct": 37
    },
    "-0.5": {
     "medianDist": 48,
@@ -174,7 +174,7 @@
    },
    "-1.5": {
     "medianDist": 25,
-    "within40Pct": 66
+    "within40Pct": 67
    },
    "-2": {
     "medianDist": 4,
@@ -185,37 +185,37 @@
     "within40Pct": 59
    },
    "-3": {
-    "medianDist": 40,
+    "medianDist": 41,
     "within40Pct": 49
    },
    "-4": {
-    "medianDist": 60,
-    "within40Pct": 35
+    "medianDist": 59,
+    "within40Pct": 34
    }
   },
-  "targetsUp": 255,
+  "targetsUp": 231,
   "targetIsFixated": {
-   "n": 17,
-   "of": 210,
-   "expectedByChance": 21,
+   "n": 15,
+   "of": 188,
+   "expectedByChance": 18.8,
    "byFlower": [
-    "2/55",
-    "10/52",
-    "3/51",
-    "2/52"
+    "2/49",
+    "9/46",
+    "3/46",
+    "1/47"
    ]
   },
   "targetDistanceRankThirds_closest_middle_farthest": [
-   101,
-   61,
-   93
+   91,
+   57,
+   83
   ],
   "distinctTargetsPerCast": {
-   "4": 61
+   "4": 55
   },
   "firstSlashOnVloxxSideWithin20deg": {
-   "n": 232,
-   "of": 232
+   "n": 213,
+   "of": 213
   },
   "firstSlashToTarget_p10_50_90": [
    393,

@@ -11,7 +11,7 @@ const fs = require('fs'), path = require('path'), zlib = require('zlib'), crypto
 const ROOT = path.join(__dirname, '..');
 // names that are deliberately public (the site's contact) are never replaced
 const ALLOW = new Set([...(process.env.ANON_ALLOW || '').split(',').filter(Boolean), (fs.readFileSync(path.join(ROOT, 'scripts', 'build_docs.js'), 'utf8').match(/CONTACT_DISCORD = '([^']+)'/) || [])[1]].filter(Boolean).map(s => s.toLowerCase()));
-const NOT_NAMES = new Set(['vloxx', 'staff', 'spear', 'sword', 'player', 'account', 'cosmic', 'aspect', 'raw', 'ei', 'fail', 'noe', 'fixed', 'last', 'early']);
+const NOT_NAMES = new Set(['vloxx', 'staff', 'spear', 'sword', 'player', 'account', 'cosmic', 'aspect', 'raw', 'ei', 'fail', 'noe', 'fixed', 'last', 'early', 'blank']);
 
 function salt() {
   if (process.env.ANON_SALT) return process.env.ANON_SALT;
@@ -57,8 +57,8 @@ function load() {
   const keys = [...map.keys()].sort((a, b) => b.length - a.length).map(k => k.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'));
   const lower = new Map([...map].map(([k, v]) => [k.toLowerCase(), v]));
   const rx = keys.length ? new RegExp('(?<![\\p{L}\\p{N}])(' + keys.join('|') + ')(?![\\p{L}\\p{N}])', 'giu') : null;
-  // GW2 Wingman log links are kept as they are (their path contains the uploader's account, anonymising would break the link)
-  const KEEP = /https?:\/\/gw2wingman\.nevermindcreations\.de\/[^\s,"'<>)]*/g;
+  // GW2 Wingman log links and GitHub Pages links are kept as they are (their URL can contain an account name, anonymising would break the link)
+  const KEEP = /https?:\/\/(?:gw2wingman\.nevermindcreations\.de|[A-Za-z0-9-]+\.github\.io)\/[^\s,"'<>)]*/g;
   const sub = t => t.replace(rx, m => map.get(m) || lower.get(m.toLowerCase()) || m);
   const apply = t => { t = String(t); if (!rx) return t; let out = '', last = 0; for (const m of t.matchAll(KEEP)) { out += sub(t.slice(last, m.index)) + m[0]; last = m.index + m[0].length; } return out + sub(t.slice(last)); };
   return { apply, map, count: { characters: chars.size, accounts: accounts.size, spellings: map.size } };
