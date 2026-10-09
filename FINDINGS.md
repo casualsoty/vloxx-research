@@ -48,14 +48,50 @@ Probability Distribution count 245/255, orb throws 564/566 (2 misses, both Staff
   Every last-phase round that came up short is explained by the Fixated state (§3, §3b) or by downs. So the separate skill ID is
   real, but it doesn't by itself explain the missing greens. **[solid]** (IDs) / **[likely]** (same targeting code)
 
-## 1b. Can the greens be stacked on each other? (overlapping circles)  [open for the last phase]
+## 1b. Can the greens be stacked on each other? (overlapping circles)  [last phase: likely not]
+**Last phase, from the raw logs (2026-10-08): overlapping circles is not punished, but a player only counts for one circle.** Each circle
+needs 3 up players of its own; a circle that reaches 3 only by counting someone who also stands in a circle that resolved before it fails,
+and everybody inside is hit, the shared player included. **[likely: 2 failures out of 3 such circles, 1 of them with every player standing still]**
+
+Script `scripts/green_overlap_raw.js` → `data/green_overlap_raw_circles.csv` (one row per circle), `data/green_overlap_raw_summary.json`
+(part of the full build). 36 raw CM logs that reached the last phase: 94 rounds, 83 with 2+ greens, 253 circles, 49 failed. 6 more rounds are left
+out because the log ended or Vloxx died before the circles resolved (4 of them are kills where the squad stacked on Vloxx while it died:
+nothing resolves after its death, so they say nothing).
+
+* **How a circle resolves (raw events).** Each circle resolves on its own, **8.000 s after its own marker** (49 failures: 7.988–8.010 s). Markers
+  are 80 ms apart (§1), so the circles resolve one after the other in marker order, the Fixated holder's first. A failed circle leaves ground
+  effect **29242** at its centre (median 4 units from the holder's logged position, 79 at most for a holder on the move), hits everybody inside
+  (80378, plus 23296 on up players), removes 3 Ascension each and gives Vloxx the same number of Empowered. A circle that passes leaves no
+  event at all. A dead holder's circle still resolves (13 failed circles). **[solid]**
+* **Radius: a little more than the 240 drawn.** A player standing still 246 from the centre is hit and is counted; nobody at 269 or more is hit
+  (269, 273, 286, 293, 297, 298, 300). The script uses 255 and flags players between 240 and 270 as "on the edge". **[likely]**
+* **3 up players are needed.** Circles with under 3 up players inside failed **45 / 46**; with exactly 3, 4 / 130; with 4 or more, 0 / 77.
+  Downed players do not count: 6 / 7 circles with under 3 up players but 3 with the downed ones failed. The exception (20261004-234835, +3 s)
+  is also the only under-filled circle that passed. **[solid]**
+* **Circles that had 3 up players only thanks to a player already inside an earlier circle: 2 of 3 failed.** The other 204 circles with 3 or
+  more inside failed 2 times (both with a player running in or a holder on the move).
+
+  | log, round | the circles (distance from the centre) | result |
+  |---|---|---|
+  | 20261005-001631, +63 s | two holders **246 apart, both standing still**. Circle 1: its holder, one player (91), the other holder (246). Circle 2, 84 ms later: its holder, one player (61), the first holder (246) | circle 1 **passed**; circle 2 **failed** and hit all three (−3 Ascension each, +9 Empowered). Same layout, only the order differs. Without the other holder circle 1 has 2 players, and it passed, so the holder at 246 did count there |
+  | 20260930-234618, +3 s | circle 2: holder + 2 players (114, 145) + a player crossing over (214). Circle 3, 80 ms later: holder + 1 player (114) + the same player (238, position sample 4 ms before) | circle 2 passed; circle 3 **failed** and hit all three, the shared player too |
+  | 20261001-223543, +33 s | circle 2: holder + 2 players (114, 117) + two players who are also in circle 3 (147, 224). Circle 3: holder + 1 player (63) + those two (201, 94) | everything **passed**, nobody hit, Empowered +0. Three own players per circle were available (10 up players, 3 circles) |
+
+  The first two are what "counted once" predicts and what "one player can fill two circles" does not. The third fits both. Whether a player who
+  is the 4th or 5th in an earlier circle stays free for a later one is not settled: the third round says yes, the second says no, and in both
+  the shared players were moving. **[open]**
+* **Overlap itself costs nothing.** 7 rounds with an up player inside two circles. In the 5 where every circle passed: 0 hits, 0 Ascension
+  removed, 0 Empowered. No round passed with fewer up players in the circles than 3 per green. **[likely]**
+* **For planning:** 3 greens still need 9 players. Circles may touch, but each needs its own 3, standing clearly inside one circle only.
+  A player inside two circles is counted by the one that resolves first, which may be the wrong one.
+
+### Elite Insights data (other squads' logs, 300 ms positions)
 Script `scripts/green_overlap.js` → `data/green_overlap_rounds.csv`, `data/green_overlap_players.csv`, `data/green_overlap_summary.json`
 (part of the full build). 52 CM logs that reached the last phase (11 of our squad + 41 from other squads, 37 kills), read from Elite Insights
 JSON on Wingman: positions every 300 ms, the Ascension stack history, EI's *Float* mechanic, the failed-green hits and Vloxx's Empowered stacks. For every round, at the
 moment the circles resolve: which up players stand within 240 of each green holder, and who is punished. 126 last-phase rounds, 493 early ones.
 
-**Short answer: the logs cannot say whether last-phase greens can be stacked, because nobody stacks them.** No penalty for standing in two
-circles shows up in the little data there is.
+On this data alone the question stayed open, because nobody stacks the greens on purpose. The raw logs above answer it; what the EI data adds:
 
 * **Nobody overlaps greens in the last phase.** 118 rounds with 2+ greens: **0** with every holder within 240 of the others, and only **3**
   with any player inside two circles (one player each time, 3 of 1,199 player × round). Holders stand 300–900 apart. **[solid]**
@@ -78,8 +114,8 @@ circles shows up in the little data there is.
   | wingman_c8506-20261003-120005, +3 s | holder + 1 player + a third who was also in another (full) circle, 212 from this holder | circle **failed**: the two others lost 3 stacks, **the shared player lost nothing**; Empowered +6, exactly those two |
   | wingman_c654b-20260930-172031, +33 s | two circles 323 apart, 4 up players in total, one of them in both (156 and 202 from the holders), one holder downed | **both failed** 84 ms apart; the shared player lost **3** stacks (in the first, nothing in the second) and was floated once; Empowered +6 then +19 for 9 stacks removed (10 unexplained) |
 
-  The last two lean towards "a player only fills one circle", but in both the shared player is 200+ from the holder, and circles with exactly 3
-  inside also fail without any overlap. **[open]**
+  The last two lean towards "a player only fills one circle", like the two raw cases above. In both the shared player is 200+ from the holder,
+  and circles with exactly 3 inside also fail without any overlap, so alone they prove little. **[likely, with the raw cases]**
 * **No sign of a penalty for the overlap itself:** of the 3 shared players, 2 lost nothing and 1 lost the normal 3 stacks of a failed green.
   No float or Ascension loss appears on anyone in a round where every circle is filled. **[likely: 3 cases]**
 * **Early phases (skill 80629): field report vs these logs.** Reported from play (2026-10-08, not from a log): greens stacked instead of solved in
@@ -90,8 +126,9 @@ circles shows up in the little data there is.
   our squad's logs; the 13 others took no hit at all). Those 13 gave no Empowered either. So in these logs "no punishment" is weak evidence for the early phases: either some early rounds do not
   resolve at all, or EI's positions put players in circles they were not in. The early greens are a different skill from the last-phase ones (§1). **[open]**
 
-**To settle it:** one last-phase round with two or three holders on the same spot and fewer than 3 players per circle inside (for example
-3 holders + 3 others, the rest away), then read `green_overlap_rounds.csv` (`circle_groups`, `punished_per_circle`). Raw logs give exact positions.
+**To confirm it:** one last-phase round with two or three holders on the same spot and fewer than 3 players per circle inside (for example
+3 holders + 3 others, the rest away, everybody standing still), then read `green_overlap_raw_circles.csv` (`up_inside`,
+`up_inside_not_in_an_earlier_circle`, `failed`). Expected from the cases above: the first circle passes, the others fail.
 
 ## 2. Fixated
 * Buff 34508, lasts **60 s**. Removed early by **stealth** (every non-down/non-death early removal coincided to the ms with a
@@ -1224,7 +1261,7 @@ otherwise a ranged one, since greens go to players near Vloxx, §1).
    Sword applies what, and whether Slice Through Reality really corrupts boons (check the boons removed at the same instant).
 9. **Fixated selection (§2):** (a) does the phase-entry pick really favour one subgroup (47 / 69)? Re-test on the raw set with subgroups and with
    where each player is when the bar breaks; (b) one fight with a single high-toughness player; (c) stealth at the moment of application.
-10. **Stacking greens (§1b).** (a) Last phase: does one player fill two overlapping circles? Nobody has tried it in 126 rounds; needs one test
-   round. (b) Early phases: why do 13 of 18 circles with under 3 up players inside take no hit at all (several are 1–2 players alone, far from
+10. **Stacking greens (§1b).** (a) Last phase: the raw logs say a player counts for one circle only (2 of 3 circles filled with a shared player
+   failed). Still wanted: one deliberate test round, and whether the 4th / 5th player of an earlier circle stays free for a later one. (b) Early phases: why do 13 of 18 circles with under 3 up players inside take no hit at all (several are 1–2 players alone, far from
    a split)? Check on raw logs whether those markers resolve at all (effect 10269 end, skill 80629 hits).
 Anything new should be checked on **raw .zevtc** (exact positions, every effect) — EI JSON misled us once (range).

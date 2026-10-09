@@ -67,6 +67,7 @@ scripts/             parser + loaders + dataset builder + checks (Node.js, no de
 | `attack_conditions.csv` / `attack_conditions_summary.json` | attack × condition applied to players: share of hits, stacks (`scripts/attack_conditions.js`; EI JSON from Wingman, slim copies in `private/ei_conditions/`, local only) |
 | `fixated_selection.csv` / `fixated_selection_summary.json` | Fixated application: the picked player's value and rank among players up, per feature (`scripts/fixated_selection.js`; EI JSON from Wingman, slim copies in `private/ei_fixated/`, local only) |
 | `green_overlap_rounds.csv` / `green_overlap_players.csv` / `green_overlap_summary.json` | green round / player × green round at the moment the circles resolve: players inside each circle, players inside several, Ascension lost, floated, Empowered gained by Vloxx (`scripts/green_overlap.js`; EI JSON from Wingman for the logs that reached the last phase, slim copies in `private/ei_greens/`, local only) |
+| `green_overlap_raw_circles.csv` / `green_overlap_raw_summary.json` | last-phase green circle, from the raw logs, at the instant it resolves (8.0 s after its own marker): up / downed players inside, players shared with another circle, players not already inside an earlier circle, failed or not (ground effect 29242), players hit, Ascension removed, Empowered gained (`scripts/green_overlap_raw.js`) |
 | `spec_weapons.json` | not a table: per specialisation the players seen, share with a melee weapon, weapon sets, and how many cast each circular ground-area projectile block / reflect skill (`scripts/spec_weapons.js`; EI JSON from Wingman, slim copies in `private/ei_weapons/`, local only). Read by the Green groups tab |
 | `orb_throws.csv` | Aspect CC: orb-throw missiles (skill 80520), orbs seen, projectile-hate skills nearby (`scripts/orb_throws.js`) |
 | `aspect_events.csv` | Aspect of the Staff/Spear/Sword spawns, deaths (+respawn time), breakbar breaks (+orb delay) |
@@ -175,6 +176,7 @@ common structure (greens, PD, fixation, stealth, downs, deaths, positions, orbs,
 | Judgment of Eternity: early phases = cast **and** failed-green damage | skill 80629 (+ fixed 4,000 dmg skill 23296) |
 | Last-phase greens (no cast, timer during channel 81071): failed-green damage | skill 80378 (+ 23296) |
 | Green markers (both phases) | effects 10269 (circle) + 12014 |
+| Failed green: ground effect at the circle's centre (raw, last phase) | effect id **29242**, 8.0 s after the circle's own marker |
 | Fixated (Timed) buff | 34508 (60 s) |
 | Stealth buff | 13017 |
 | Ascension buff (10 stacks at start, −3 per failed green hit) | 80368 |
@@ -199,4 +201,5 @@ automatically; to give one its own sidebar category, add an entry to `CATS` in `
 5. Why the Aspect sometimes doesn't throw its orbs on a CC (2/302, both Staff; projectile hate and early pickups ruled out).
 6. Whoever holds Fixated at last-phase +63 s gets a green and a spread together (9/9). It is avoided only when nobody is fixated
    at +63 s. Open: a reliable way to get that without the 1-green timing bug.
-7. Can last-phase greens be stacked on each other? Nobody does it in the logs (0 of 118 rounds), so it is untested (FINDINGS §1b).
+7. Last-phase greens stacked on each other: the raw logs say a player counts for one circle only, so 3 greens still need 9 players
+   (2 of 3 circles filled with a shared player failed, FINDINGS §1b). A deliberate test round is still wanted.

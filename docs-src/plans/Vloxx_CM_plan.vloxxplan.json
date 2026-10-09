@@ -3,7 +3,6 @@
   "version": 1,
   "title": "Vloxx CM plan",
   "notes": "",
-  "created": "2026-10-04T12:50:45.375Z",
   "players": [
     {
       "name": "Player 1",
@@ -66,17 +65,6 @@
       "sub": 2
     }
   ],
-  "layers": {
-    "platform": true,
-    "heat": true,
-    "grid": true,
-    "rings": true,
-    "spawns": true,
-    "cosmic": true,
-    "entrance": true,
-    "labels": true,
-    "compass": true
-  },
   "snap": 25,
   "steps": [
     {
@@ -2732,13 +2720,6 @@
           "y": 15325
         },
         {
-          "id": "asj7hd2",
-          "type": "marker",
-          "m": "x",
-          "x": 9225,
-          "y": 18325
-        },
-        {
           "id": "7v0och4",
           "type": "unit",
           "u": "piercer",
@@ -2817,13 +2798,6 @@
           "y": 15325
         },
         {
-          "id": "asj7hd2",
-          "type": "marker",
-          "m": "x",
-          "x": 9225,
-          "y": 18325
-        },
-        {
           "id": "rsh0yg5",
           "type": "circle",
           "r": 240,
@@ -2865,6 +2839,732 @@
           "y": 15575
         }
       ]
+    },
+    {
+      "id": "zf0dnj1",
+      "name": "P4 Step 2",
+      "time": "",
+      "note": "Reflect 1 -> Reflect 2",
+      "objects": [
+        {
+          "id": "mg561x7",
+          "type": "unit",
+          "u": "vloxx",
+          "x": 12221.6,
+          "y": 15327.4
+        },
+        {
+          "id": "7jf0y96",
+          "type": "marker",
+          "m": "commander",
+          "x": 11975,
+          "y": 15325
+        },
+        {
+          "id": "5wjv24n",
+          "type": "circle",
+          "r": 300,
+          "color": "#ffffff",
+          "label": "",
+          "x": 11975,
+          "y": 15325
+        },
+        {
+          "id": "8435m0l",
+          "type": "cone",
+          "x": 12225,
+          "y": 15325,
+          "r": 525,
+          "spread": 180,
+          "angle": 0,
+          "color": "#f0a040",
+          "label": "Excision Extremis slash (half-circle)"
+        },
+        {
+          "id": "cc4htfm",
+          "type": "cone",
+          "x": 11975,
+          "y": 15575,
+          "r": 525,
+          "spread": 180,
+          "angle": 90,
+          "color": "#f0a040",
+          "label": "Excision Extremis slash (half-circle)"
+        },
+        {
+          "id": "kexd58p",
+          "type": "cone",
+          "x": 11725,
+          "y": 15325,
+          "r": 525,
+          "spread": 180,
+          "angle": 180,
+          "color": "#f0a040",
+          "label": "Excision Extremis slash (half-circle)"
+        },
+        {
+          "id": "1ya4v4e",
+          "type": "cone",
+          "x": 11975,
+          "y": 15075,
+          "r": 525,
+          "spread": 180,
+          "angle": -90,
+          "color": "#f0a040",
+          "label": "Excision Extremis slash (half-circle)"
+        }
+      ]
+    },
+    {
+      "id": "lnszt2g",
+      "name": "P4 Step 3",
+      "time": "",
+      "note": "Spreads",
+      "objects": [
+        {
+          "id": "mg561x7",
+          "type": "unit",
+          "u": "vloxx",
+          "x": 12221.6,
+          "y": 15327.4
+        },
+        {
+          "id": "7jf0y96",
+          "type": "marker",
+          "m": "commander",
+          "x": 12475,
+          "y": 15325
+        },
+        {
+          "id": "2p9kxjq",
+          "type": "circle",
+          "r": 325,
+          "color": "#2f55c0",
+          "label": "Probability Distribution puddle",
+          "x": 12600,
+          "y": 15325
+        },
+        {
+          "id": "2ey5dn1",
+          "type": "circle",
+          "r": 325,
+          "color": "#2f55c0",
+          "label": "Probability Distribution puddle",
+          "x": 12575,
+          "y": 15300
+        },
+        {
+          "id": "pks02xy",
+          "type": "circle",
+          "r": 325,
+          "color": "#2f55c0",
+          "label": "Probability Distribution puddle",
+          "x": 12625,
+          "y": 15300
+        }
+      ]
+    },
+    {
+      "id": "271jlje",
+      "name": "P4 Step 4",
+      "time": "",
+      "note": "Spears",
+      "objects": [
+        {
+          "id": "mg561x7",
+          "type": "unit",
+          "u": "vloxx",
+          "x": 12221.6,
+          "y": 15327.4
+        },
+        {
+          "id": "7jf0y96",
+          "type": "marker",
+          "m": "commander",
+          "x": 12225,
+          "y": 15075
+        },
+        {
+          "id": "2p9kxjq",
+          "type": "circle",
+          "r": 325,
+          "color": "#2f55c0",
+          "label": "Probability Distribution puddle",
+          "x": 12600,
+          "y": 15325
+        },
+        {
+          "id": "2ey5dn1",
+          "type": "circle",
+          "r": 325,
+          "color": "#2f55c0",
+          "label": "Probability Distribution puddle",
+          "x": 12575,
+          "y": 15300
+        },
+        {
+          "id": "pks02xy",
+          "type": "circle",
+          "r": 325,
+          "color": "#2f55c0",
+          "label": "Probability Distribution puddle",
+          "x": 12625,
+          "y": 15300
+        },
+        {
+          "id": "7bj4y1v",
+          "type": "circle",
+          "r": 150,
+          "color": "#f0a040",
+          "label": "Raging Storm",
+          "x": 12500,
+          "y": 15300
+        },
+        {
+          "id": "ow1xcyp",
+          "type": "circle",
+          "r": 150,
+          "color": "#f0a040",
+          "label": "Raging Storm",
+          "x": 12450,
+          "y": 15300
+        },
+        {
+          "id": "6wf07m1",
+          "type": "circle",
+          "r": 150,
+          "color": "#f0a040",
+          "label": "Raging Storm",
+          "x": 12475,
+          "y": 15325
+        }
+      ]
+    },
+    {
+      "id": "4tqqtcg",
+      "name": "P4 Step 5",
+      "time": "",
+      "note": "Spears",
+      "objects": [
+        {
+          "id": "mg561x7",
+          "type": "unit",
+          "u": "vloxx",
+          "x": 12221.6,
+          "y": 15327.4
+        },
+        {
+          "id": "7jf0y96",
+          "type": "marker",
+          "m": "commander",
+          "x": 11975,
+          "y": 15325
+        },
+        {
+          "id": "2p9kxjq",
+          "type": "circle",
+          "r": 325,
+          "color": "#2f55c0",
+          "label": "Probability Distribution puddle",
+          "x": 12600,
+          "y": 15325
+        },
+        {
+          "id": "2ey5dn1",
+          "type": "circle",
+          "r": 325,
+          "color": "#2f55c0",
+          "label": "Probability Distribution puddle",
+          "x": 12575,
+          "y": 15300
+        },
+        {
+          "id": "pks02xy",
+          "type": "circle",
+          "r": 325,
+          "color": "#2f55c0",
+          "label": "Probability Distribution puddle",
+          "x": 12625,
+          "y": 15300
+        },
+        {
+          "id": "7bj4y1v",
+          "type": "circle",
+          "r": 150,
+          "color": "#f0a040",
+          "label": "Raging Storm",
+          "x": 12500,
+          "y": 15300
+        },
+        {
+          "id": "ow1xcyp",
+          "type": "circle",
+          "r": 150,
+          "color": "#f0a040",
+          "label": "Raging Storm",
+          "x": 12450,
+          "y": 15300
+        },
+        {
+          "id": "6wf07m1",
+          "type": "circle",
+          "r": 150,
+          "color": "#f0a040",
+          "label": "Raging Storm",
+          "x": 12475,
+          "y": 15325
+        },
+        {
+          "id": "jh19eoh",
+          "type": "circle",
+          "r": 150,
+          "color": "#f0a040",
+          "label": "Raging Storm",
+          "x": 12250,
+          "y": 15050
+        },
+        {
+          "id": "kbrxbhu",
+          "type": "circle",
+          "r": 150,
+          "color": "#f0a040",
+          "label": "Raging Storm",
+          "x": 12200,
+          "y": 15050
+        },
+        {
+          "id": "q78lgzr",
+          "type": "circle",
+          "r": 150,
+          "color": "#f0a040",
+          "label": "Raging Storm",
+          "x": 12225,
+          "y": 15075
+        }
+      ]
+    },
+    {
+      "id": "hbiyk6k",
+      "name": "P4 Step 6",
+      "time": "",
+      "note": "Swords",
+      "objects": [
+        {
+          "id": "mg561x7",
+          "type": "unit",
+          "u": "vloxx",
+          "x": 12221.6,
+          "y": 15327.4
+        },
+        {
+          "id": "7jf0y96",
+          "type": "marker",
+          "m": "commander",
+          "x": 11975,
+          "y": 15325
+        },
+        {
+          "id": "2p9kxjq",
+          "type": "circle",
+          "r": 325,
+          "color": "#2f55c0",
+          "label": "Probability Distribution puddle",
+          "x": 12600,
+          "y": 15325
+        },
+        {
+          "id": "2ey5dn1",
+          "type": "circle",
+          "r": 325,
+          "color": "#2f55c0",
+          "label": "Probability Distribution puddle",
+          "x": 12575,
+          "y": 15300
+        },
+        {
+          "id": "pks02xy",
+          "type": "circle",
+          "r": 325,
+          "color": "#2f55c0",
+          "label": "Probability Distribution puddle",
+          "x": 12625,
+          "y": 15300
+        },
+        {
+          "id": "7bj4y1v",
+          "type": "circle",
+          "r": 150,
+          "color": "#f0a040",
+          "label": "Raging Storm",
+          "x": 12500,
+          "y": 15300
+        },
+        {
+          "id": "ow1xcyp",
+          "type": "circle",
+          "r": 150,
+          "color": "#f0a040",
+          "label": "Raging Storm",
+          "x": 12450,
+          "y": 15300
+        },
+        {
+          "id": "6wf07m1",
+          "type": "circle",
+          "r": 150,
+          "color": "#f0a040",
+          "label": "Raging Storm",
+          "x": 12475,
+          "y": 15325
+        },
+        {
+          "id": "jh19eoh",
+          "type": "circle",
+          "r": 150,
+          "color": "#f0a040",
+          "label": "Raging Storm",
+          "x": 12250,
+          "y": 15050
+        },
+        {
+          "id": "kbrxbhu",
+          "type": "circle",
+          "r": 150,
+          "color": "#f0a040",
+          "label": "Raging Storm",
+          "x": 12200,
+          "y": 15050
+        },
+        {
+          "id": "q78lgzr",
+          "type": "circle",
+          "r": 150,
+          "color": "#f0a040",
+          "label": "Raging Storm",
+          "x": 12225,
+          "y": 15075
+        },
+        {
+          "id": "6kqrwyy",
+          "type": "cone",
+          "x": 12225,
+          "y": 15325,
+          "r": 525,
+          "spread": 180,
+          "angle": 0,
+          "color": "#f0a040",
+          "label": "Excision Extremis slash (half-circle)"
+        },
+        {
+          "id": "fzx3rgu",
+          "type": "cone",
+          "x": 11975,
+          "y": 15575,
+          "r": 525,
+          "spread": 180,
+          "angle": 90,
+          "color": "#f0a040",
+          "label": "Excision Extremis slash (half-circle)"
+        },
+        {
+          "id": "4nuzbhy",
+          "type": "cone",
+          "x": 11725,
+          "y": 15325,
+          "r": 525,
+          "spread": 180,
+          "angle": 180,
+          "color": "#f0a040",
+          "label": "Excision Extremis slash (half-circle)"
+        },
+        {
+          "id": "tg60af8",
+          "type": "cone",
+          "x": 11975,
+          "y": 15075,
+          "r": 525,
+          "spread": 180,
+          "angle": -90,
+          "color": "#f0a040",
+          "label": "Excision Extremis slash (half-circle)"
+        }
+      ]
+    },
+    {
+      "id": "f04rnx6",
+      "name": "P4 Step 7",
+      "time": "",
+      "note": "Triples + Reflect 1 melee",
+      "objects": [
+        {
+          "id": "mg561x7",
+          "type": "unit",
+          "u": "vloxx",
+          "x": 12221.6,
+          "y": 15327.4
+        },
+        {
+          "id": "7jf0y96",
+          "type": "marker",
+          "m": "commander",
+          "x": 12100,
+          "y": 15325
+        },
+        {
+          "id": "2p9kxjq",
+          "type": "circle",
+          "r": 325,
+          "color": "#2f55c0",
+          "label": "Probability Distribution puddle",
+          "x": 12600,
+          "y": 15325
+        },
+        {
+          "id": "2ey5dn1",
+          "type": "circle",
+          "r": 325,
+          "color": "#2f55c0",
+          "label": "Probability Distribution puddle",
+          "x": 12575,
+          "y": 15300
+        },
+        {
+          "id": "pks02xy",
+          "type": "circle",
+          "r": 325,
+          "color": "#2f55c0",
+          "label": "Probability Distribution puddle",
+          "x": 12625,
+          "y": 15300
+        },
+        {
+          "id": "7bj4y1v",
+          "type": "circle",
+          "r": 150,
+          "color": "#f0a040",
+          "label": "Raging Storm",
+          "x": 12500,
+          "y": 15300
+        },
+        {
+          "id": "ow1xcyp",
+          "type": "circle",
+          "r": 150,
+          "color": "#f0a040",
+          "label": "Raging Storm",
+          "x": 12450,
+          "y": 15300
+        },
+        {
+          "id": "6wf07m1",
+          "type": "circle",
+          "r": 150,
+          "color": "#f0a040",
+          "label": "Raging Storm",
+          "x": 12475,
+          "y": 15325
+        },
+        {
+          "id": "jh19eoh",
+          "type": "circle",
+          "r": 150,
+          "color": "#f0a040",
+          "label": "Raging Storm",
+          "x": 12250,
+          "y": 15050
+        },
+        {
+          "id": "kbrxbhu",
+          "type": "circle",
+          "r": 150,
+          "color": "#f0a040",
+          "label": "Raging Storm",
+          "x": 12200,
+          "y": 15050
+        },
+        {
+          "id": "q78lgzr",
+          "type": "circle",
+          "r": 150,
+          "color": "#f0a040",
+          "label": "Raging Storm",
+          "x": 12225,
+          "y": 15075
+        },
+        {
+          "id": "l3fm31m",
+          "type": "circle",
+          "r": 240,
+          "color": "#2fa84f",
+          "label": "3-people green",
+          "x": 12100,
+          "y": 15325
+        },
+        {
+          "id": "cunybb8",
+          "type": "circle",
+          "r": 240,
+          "color": "#2fa84f",
+          "label": "3-people green",
+          "x": 11725,
+          "y": 15575
+        },
+        {
+          "id": "qz29yfb",
+          "type": "circle",
+          "r": 240,
+          "color": "#2fa84f",
+          "label": "3-people green",
+          "x": 11725,
+          "y": 15075
+        },
+        {
+          "id": "rz4euu8",
+          "type": "marker",
+          "m": "circle",
+          "x": 11725,
+          "y": 15075
+        },
+        {
+          "id": "wdqs6n6",
+          "type": "marker",
+          "m": "arrow",
+          "x": 11725,
+          "y": 15575
+        },
+        {
+          "id": "43mwie2",
+          "type": "circle",
+          "r": 300,
+          "color": "#ffffff",
+          "label": "",
+          "x": 12100,
+          "y": 15325
+        }
+      ]
+    },
+    {
+      "id": "npig4bp",
+      "name": "P4 Step 8",
+      "time": "",
+      "note": "Reflect 2 -> Reflect 3 -> Reflect 4 -> Kill",
+      "objects": [
+        {
+          "id": "mg561x7",
+          "type": "unit",
+          "u": "vloxx",
+          "x": 12221.6,
+          "y": 15327.4
+        },
+        {
+          "id": "7jf0y96",
+          "type": "marker",
+          "m": "commander",
+          "x": 12100,
+          "y": 15325
+        },
+        {
+          "id": "2p9kxjq",
+          "type": "circle",
+          "r": 325,
+          "color": "#2f55c0",
+          "label": "Probability Distribution puddle",
+          "x": 12600,
+          "y": 15325
+        },
+        {
+          "id": "2ey5dn1",
+          "type": "circle",
+          "r": 325,
+          "color": "#2f55c0",
+          "label": "Probability Distribution puddle",
+          "x": 12575,
+          "y": 15300
+        },
+        {
+          "id": "pks02xy",
+          "type": "circle",
+          "r": 325,
+          "color": "#2f55c0",
+          "label": "Probability Distribution puddle",
+          "x": 12625,
+          "y": 15300
+        },
+        {
+          "id": "7bj4y1v",
+          "type": "circle",
+          "r": 150,
+          "color": "#f0a040",
+          "label": "Raging Storm",
+          "x": 12500,
+          "y": 15300
+        },
+        {
+          "id": "ow1xcyp",
+          "type": "circle",
+          "r": 150,
+          "color": "#f0a040",
+          "label": "Raging Storm",
+          "x": 12450,
+          "y": 15300
+        },
+        {
+          "id": "6wf07m1",
+          "type": "circle",
+          "r": 150,
+          "color": "#f0a040",
+          "label": "Raging Storm",
+          "x": 12475,
+          "y": 15325
+        },
+        {
+          "id": "jh19eoh",
+          "type": "circle",
+          "r": 150,
+          "color": "#f0a040",
+          "label": "Raging Storm",
+          "x": 12250,
+          "y": 15050
+        },
+        {
+          "id": "kbrxbhu",
+          "type": "circle",
+          "r": 150,
+          "color": "#f0a040",
+          "label": "Raging Storm",
+          "x": 12200,
+          "y": 15050
+        },
+        {
+          "id": "q78lgzr",
+          "type": "circle",
+          "r": 150,
+          "color": "#f0a040",
+          "label": "Raging Storm",
+          "x": 12225,
+          "y": 15075
+        },
+        {
+          "id": "3nsnfur",
+          "type": "circle",
+          "r": 300,
+          "color": "#ffffff",
+          "label": "",
+          "x": 12100,
+          "y": 15325
+        }
+      ]
     }
-  ]
+  ],
+  "layers": {
+    "platform": true,
+    "heat": true,
+    "grid": true,
+    "rings": true,
+    "spawns": true,
+    "cosmic": true,
+    "entrance": true,
+    "labels": true,
+    "compass": true
+  }
 }
