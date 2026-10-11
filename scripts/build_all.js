@@ -25,7 +25,6 @@ const steps = [
   'green_overlap_raw.js',    // data/green_overlap_raw_circles.csv + green_overlap_raw_summary.json: last-phase circles from the raw logs: who is inside, shared players, which circle failed
   'spec_weapons.js',         // data/spec_weapons.json: weapons (melee / ranged) and ground-area projectile skills per specialisation, for the Green groups tab (EI JSON from Wingman, cached in private/ei_weapons/)
   'attack_conditions.js',    // data/attack_conditions.csv + attack_conditions_summary.json: conditions applied by each attack (EI JSON from Wingman, cached in private/ei_conditions/)
-  'dps_table.js',            // data/dps_samples.csv + dps_table.json: target and cleave DPS per specialisation / build
   'annihilating_orb.js',     // data/annihilating_orb_summary.json: Vloxx's orb path, landing zone and expanding ring
   'raging_storm_last_phase.js', // data/raging_storm_last_phase.json: falling spears per second with each Aspect alive or dead
   'raging_storm_targets.js', // data/raging_storm_targets.csv + .json: who the last-phase spears target (sets of 2 + the fixated player)

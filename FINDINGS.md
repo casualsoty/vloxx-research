@@ -924,52 +924,6 @@ At 10 % the immunity continues for 15 s into the last phase (a second, 15 s appl
 * **It is too small to matter.** The best window let 113,545 damage through; Vloxx lost at most 0.14 % of its health during an immunity window
   (median 0.01–0.02 %). It does not shorten the fight in any useful way.
 
-## 5o. DPS per specialisation and build on kills — target and cleave, average and highest  [solid for builds with many samples]
-Script `scripts/dps_table.js` → `data/dps_samples.csv` (one row per player per kill, no names) and `data/dps_table.json` (part of the full build).
-**Kills only:** 46 CM kills (37 Elite Insights logs from dps.report / GW2 Wingman, 9 raw logs), 460 samples (one player in one kill).
-Kill times 489–596 s (average 556 s).
-
-* **Target** = damage on Vloxx ÷ length of the fight. **Cleave** = damage on every enemy (Vloxx, Aspects, Cosmic adds) ÷ length of the fight.
-  The whole fight counts as time, including the splits and the Damage Immunity windows (§5n), so these numbers are lower than a
-  benchmark and lower than a phase DPS.
-* **Build:** "Condition" when at least half of the player's damage was condition damage, otherwise "Power"; "Heal" / "Boon" from the healing
-  and concentration stats the log records.
-* **The highest values are links** to the log they come from, when the log is online; otherwise the name of the log is written (43 of 46 kills).
-* **Whole squad:** target 153,396 on average (best [174,439](https://gw2wingman.nevermindcreations.de/log/bf5ea-20261004-210412_noe_kill)), cleave 257,880 (best [283,177](https://gw2wingman.nevermindcreations.de/log/14de4-20261004-011214_noe_kill)).
-
-| build | samples | target avg | target highest | cleave avg | cleave highest | condition share |
-|---|---|---|---|---|---|---|
-| Condition Scourge | 231 | 19,756 | [24,591](https://gw2wingman.nevermindcreations.de/log/bf5ea-20261004-210412_noe_kill) | 34,308 | [42,267](https://gw2wingman.nevermindcreations.de/log/23819-20261004-223108_noe_kill) | 94 % |
-| Condition Weaver | 18 | 22,329 | [24,414](https://gw2wingman.nevermindcreations.de/log/081e5-Seel6214_20261001-210656_noe_kill) | 35,373 | [38,331](https://gw2wingman.nevermindcreations.de/log/81daf-20261002-154733_noe_kill) | 94 % |
-| Condition Harbinger | 7 | 22,649 | [24,067](https://gw2wingman.nevermindcreations.de/log/704cb-20261003-193028_noe_kill) | 33,341 | [37,051](https://gw2wingman.nevermindcreations.de/log/704cb-20261003-193028_noe_kill) | 88 % |
-| Condition Evoker | 39 | 18,588 | [21,749](https://gw2wingman.nevermindcreations.de/log/15e32-20261005-154659_noe_kill) | 29,777 | [35,218](https://gw2wingman.nevermindcreations.de/log/e961b-20261003-211028_noe_kill) | 92 % |
-| Power Luminary | 15 | 13,713 | [17,366](https://gw2wingman.nevermindcreations.de/log/85c0f-20261002-215404_noe_kill) | 25,283 | [29,531](https://gw2wingman.nevermindcreations.de/log/f9dda-20261002-215908_noe_kill) | 1 % |
-| Boon Condition Specter | 35 | 12,570 | [16,598](https://gw2wingman.nevermindcreations.de/log/2ca3c-20261004-215302_noe_kill) | 17,440 | [22,802](https://gw2wingman.nevermindcreations.de/log/2ca3c-20261004-215302_noe_kill) | 89 % |
-| Boon Condition Troubadour | 13 | 6,480 | [8,256](https://gw2wingman.nevermindcreations.de/log/081e5-Seel6214_20261001-210656_noe_kill) | 10,053 | [11,862](https://dps.report/MsKX-20260930-014037-fixed_boss) | 71 % |
-| Heal Troubadour | 77 | 1,226 | [6,896](https://gw2wingman.nevermindcreations.de/log/7bf41-20261006-231822_noe_kill) | 2,091 | 10,513 (log `20261005-145748`, not uploaded) | 14 % |
-
-**Fewer than 5 samples (not reliable):**
-| build | samples | target avg | target highest | cleave avg | cleave highest | condition share |
-|---|---|---|---|---|---|---|
-| Condition Chronomancer | 1 | 22,121 | [22,121](https://b.dps.report/rKIr-20261002-010435_boss) | 34,764 | [34,764](https://b.dps.report/rKIr-20261002-010435_boss) | 86 % |
-| Condition Berserker | 2 | 19,480 | 21,592 (log `20261006-010653`, not uploaded) | 33,318 | 37,204 (log `20261006-010653`, not uploaded) | 83 % |
-| Condition Virtuoso | 2 | 18,347 | [19,705](https://gw2wingman.nevermindcreations.de/log/23819-20261004-223108_noe_kill) | 28,287 | [29,303](https://gw2wingman.nevermindcreations.de/log/23819-20261004-223108_noe_kill) | 75 % |
-| Boon Condition Evoker | 4 | 17,672 | [19,072](https://gw2wingman.nevermindcreations.de/log/14de4-20261004-011214_noe_kill) | 28,247 | [31,101](https://gw2wingman.nevermindcreations.de/log/f9dda-20261002-215908_noe_kill) | 94 % |
-| Power Daredevil | 1 | 18,553 | [18,553](https://gw2wingman.nevermindcreations.de/log/755ee-McFIT1398_20261004-184040_noe_kill) | 35,657 | [35,657](https://gw2wingman.nevermindcreations.de/log/755ee-McFIT1398_20261004-184040_noe_kill) | 1 % |
-| Condition Antiquary | 1 | 18,331 | 18,331 (log `20261006-010653`, not uploaded) | 26,363 | 26,363 (log `20261006-010653`, not uploaded) | 85 % |
-| Condition Renegade | 2 | 17,870 | [18,330](https://gw2wingman.nevermindcreations.de/log/4bfb1-Salieri7962_20261004-232956_noe_kill) | 29,998 | [30,894](https://gw2wingman.nevermindcreations.de/log/4bfb1-Salieri7962_20261004-232956_noe_kill) | 87 % |
-| Condition Conduit | 1 | 18,146 | [18,146](https://gw2wingman.nevermindcreations.de/log/f9dda-20261002-215908_noe_kill) | 28,880 | [28,880](https://gw2wingman.nevermindcreations.de/log/f9dda-20261002-215908_noe_kill) | 89 % |
-| Condition Willbender | 1 | 16,129 | [16,129](https://gw2wingman.nevermindcreations.de/log/dc6a8-Seel6214_20261002-011054_noe_kill) | 24,748 | [24,748](https://gw2wingman.nevermindcreations.de/log/dc6a8-Seel6214_20261002-011054_noe_kill) | 92 % |
-| Boon Condition Scourge | 1 | 15,389 | [15,389](https://gw2wingman.nevermindcreations.de/log/14de4-20261004-011214_noe_kill) | 22,990 | [22,990](https://gw2wingman.nevermindcreations.de/log/14de4-20261004-011214_noe_kill) | 90 % |
-| Boon Condition Firebrand | 1 | 14,551 | [14,551](https://dps.report/oPU0-20260930-224233_boss) | 25,180 | [25,180](https://dps.report/oPU0-20260930-224233_boss) | 94 % |
-| Power Vindicator | 1 | 14,210 | [14,210](https://gw2wingman.nevermindcreations.de/log/704cb-20261003-193028_noe_kill) | 20,856 | [20,856](https://gw2wingman.nevermindcreations.de/log/704cb-20261003-193028_noe_kill) | 1 % |
-| Condition Tempest | 4 | 12,993 | 13,991 (log `20261006-230725`, not uploaded) | 22,367 | [23,087](https://gw2wingman.nevermindcreations.de/log/755ee-McFIT1398_20261004-184040_noe_kill) | 79 % |
-| Heal Scourge | 1 | 10,033 | 10,033 (log `20261005-145748`, not uploaded) | 16,993 | 16,993 (log `20261005-145748`, not uploaded) | 83 % |
-| Heal Luminary | 1 | 960 | 960 (log `20261006-010653`, not uploaded) | 1,779 | 1,779 (log `20261006-010653`, not uploaded) | 4 % |
-| Heal Paragon | 1 | 345 | [345](https://dps.report/oPU0-20260930-224233_boss) | 592 | [592](https://dps.report/oPU0-20260930-224233_boss) | 2 % |
-
-Kills come from several squads, but the mix of builds is still narrow (Condition Scourge is 50 % of all samples).
-
 ## 5p. Annihilating Orb (Vloxx, P1) — path, landing zone and expanding ring  [solid]
 Script `scripts/annihilating_orb.js` → `data/annihilating_orb_summary.json` (part of the full build). 1136 casts in 315 logs. Cast 6.9 s.
 
