@@ -174,6 +174,19 @@ const rdJson = p => { try { return JSON.parse(rd(p)); } catch (e) { return null;
 const presets = rdJson('docs-src/presets.json') || { circles: [], cones: [], beams: [] }; const presetsJson = safeJson(presets);
 // Green groups tab: docs-src/greens.js + greens.css, data = docs-src/green_groups.json + what each specialisation plays in the logs (scripts/spec_weapons.js)
 const greensCss = rd('docs-src/greens.css'), greensJs = rd('docs-src/greens.js').replace(/<\/script/gi, '<\\/script'), greensScanJs = rd('docs-src/greens_scan.js').replace(/<\/script/gi, '<\\/script'), greensJson = safeJson({ ...(rdJson('docs-src/green_groups.json') || {}), logs: rdJson('data/spec_weapons.json'), icons: rdJson('docs-src/spec_icons.json') || {} });
+// Relic analyzer tab: docs-src/relics.js + relics.css, logic = the ES modules in docs-src/relics/ (also runnable in Node),
+// joined here into one script in dependency order: imports dropped, exports turned into plain declarations
+const RELIC_MODULES = ['weapon-strengths', 'condition-duration-defaults', 'relics', 'parse-evtc', 'count-relic-procs'];
+const relicLogicJs = (() => {
+  const src = RELIC_MODULES.map(m => rd(`docs-src/relics/${m}.mjs`)
+    .replace(/^import [^;]*;\r?\n/gm, '')
+    .replace(/^export default \[/m, 'const relics = [')
+    .replace(/^export default (async )?function /m, '$1function ')
+    .replace(/^export (const|let|async function|function) /gm, '$1 ')).join('\n');
+  if (/^(import|export) /m.test(src)) throw new Error('docs-src/relics: an import / export the bundler does not handle');
+  return `(function () {\n${src}\nwindow.RelicLogic = { countRelicProcs, getConditionPartValue, relics, conditions, conditionDurationDefaults, BUNDLE_WEAPON_STRENGTH, PROFESSION_WEAPON_STRENGTH, UNEQUIPPED_WEAPON_STRENGTH };\n})();`.replace(/<\/script/gi, '<\\/script');
+})();
+const relicsCss = rd('docs-src/relics.css'), relicsJs = rd('docs-src/relics.js').replace(/<\/script/gi, '<\\/script');
 const mechJson = safeJson({ worldpiercer: rdJson('data/worldpiercer_summary.json'), cosmicCharge: rdJson('data/cosmic_charge_summary.json') });
 
 const html = `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
@@ -241,7 +254,8 @@ a{color:var(--acc)}.tag{display:inline-block;font-size:11px;font-weight:600;padd
 .hide{display:none}#none{display:none;color:var(--mute);padding:20px}
 @media (max-width:820px){.wrap{grid-template-columns:1fr}aside{position:static;height:auto;border-right:0;border-bottom:1px solid var(--line)}}
 ${plannerCss}
-${greensCss}</style></head><body><div class="topbar"><a href="#top" class="brand" title="Back to the home page (knowledge base)"><b>Vloxx CM</b></a><a href="#top" data-view="kb" class="on">Knowledge base</a><a href="#planner" data-view="planner">Raid planner</a><a href="#greens" data-view="greens">Green groups <span class="gg-exp">experimental</span></a><a href="https://chocciee.github.io/thumbnail-maker-for-the-uncs/" target="_blank" rel="noopener" class="ext" title="A small thumbnail tool made by a friend (opens in a new tab)">Thumbnail maker ↗</a><span class="fb"><button type="button" data-fb="feedback" title="Send feedback to ${CONTACT_DISCORD} on Discord">Feedback</button><button type="button" data-legal title="Disclaimer, trademarks and copyright">About & legal</button><button type="button" data-fb="bug" title="Report a bug to ${CONTACT_DISCORD} on Discord">Report a bug</button></span></div><div class="wrap" id="top"><aside><h1>Vloxx CM Research</h1><div class="sub">Nexus of Eternity · boss 28106 · built ${built}</div>
+${greensCss}
+${relicsCss}</style></head><body><div class="topbar"><a href="#top" class="brand" title="Back to the home page (knowledge base)"><b>Vloxx CM</b></a><a href="#top" data-view="kb" class="on">Knowledge base</a><a href="#planner" data-view="planner">Raid planner</a><a href="#greens" data-view="greens">Green groups <span class="gg-exp">experimental</span></a><a href="#relics" data-view="relics">Relic analyzer</a><a href="https://chocciee.github.io/thumbnail-maker-for-the-uncs/" target="_blank" rel="noopener" class="ext" title="A small thumbnail tool made by a friend (opens in a new tab)">Thumbnail maker ↗</a><span class="fb"><button type="button" data-fb="feedback" title="Send feedback to ${CONTACT_DISCORD} on Discord">Feedback</button><button type="button" data-legal title="Disclaimer, trademarks and copyright">About & legal</button><button type="button" data-fb="bug" title="Report a bug to ${CONTACT_DISCORD} on Discord">Report a bug</button></span></div><div class="wrap" id="top"><aside><h1>Vloxx CM Research</h1><div class="sub">Nexus of Eternity · boss 28106 · built ${built}</div>
 <input id="q" type="search" placeholder="Search findings… (e.g. fixated, 120s, orbs)"><nav>${nav}</nav>
 <div class="legend"><span class="tag tag-solid">solid</span><span class="tag tag-likely">likely</span><span class="tag tag-open">open</span><span class="tag tag-rejected">REJECTED</span></div></aside>
 <main><div class="hero"><h2>What we know about Vloxx CM</h2>${md(intro)}<div class="stats">
@@ -249,7 +263,7 @@ ${greensCss}</style></head><body><div class="topbar"><a href="#top" class="brand
 ${dataFiles.map(d => d.f === 'green_rounds.csv' ? `<div class="stat"><b>${d.rows}</b>green rounds</div>` : d.f === 'ascension_sacrifice_2green.csv' ? `<div class="stat"><b>${d.rows}</b>shackle picks</div>` : d.f === 'ascension_orbs.csv' ? `<div class="stat"><b>${d.rows}</b>orbs tracked</div>` : '').join('')}
 ${Object.entries(tagCounts).map(([k, v]) => `<div class="stat"><b>${v}</b>${k} findings</div>`).join('')}</div></div>
 ${body}<div id="none">No matching findings.</div>
-<footer class="legal"><p>${esc(legalShort)}</p><p>Contact: <b>${esc(CONTACT_DISCORD)}</b> on Discord · <button type="button" data-legal>Full disclaimer & legal</button> · page built ${built}</p></footer></main></div><div id="planner-root"></div><div id="greens-root"></div>
+<footer class="legal"><p>${esc(legalShort)}</p><p>Contact: <b>${esc(CONTACT_DISCORD)}</b> on Discord · <button type="button" data-legal>Full disclaimer & legal</button> · page built ${built}</p></footer></main></div><div id="planner-root"></div><div id="greens-root"></div><div id="relics-root"></div>
 <script>
 const q=document.getElementById('q'),cards=[...document.querySelectorAll('.card')],cats=[...document.querySelectorAll('.cat')];
 cards.forEach(c=>c.dataset.html=c.innerHTML);
@@ -266,11 +280,12 @@ function spy(){if(pinned&&Date.now()-pinT<1200)return;pinned=null;const line=90;
  if(window.innerHeight+window.scrollY>=document.documentElement.scrollHeight-4){const vis=targets.filter(s=>s.offsetParent!==null);cur=vis[vis.length-1]||cur;}if(cur)setOn(cur.id);}
 links.forEach(a=>a.addEventListener('click',()=>{pinned=a.getAttribute('href').slice(1);pinT=Date.now();setOn(pinned);}));
 ['wheel','touchstart','keydown'].forEach(t=>window.addEventListener(t,()=>{pinT=0;},{passive:true}));window.addEventListener('scroll',spy,{passive:true});spy();
-</script><script>window.ARENA=${arenaJson};window.PLANS=${plansJson};window.MECH=${mechJson};window.PRESETS=${presetsJson};</script><script>${plannerJs}</script><script>window.GREENS=${greensJson};</script><script>${greensScanJs}</script><script>${greensJs}</script>
+</script><script>window.ARENA=${arenaJson};window.PLANS=${plansJson};window.MECH=${mechJson};window.PRESETS=${presetsJson};</script><script>${plannerJs}</script><script>window.GREENS=${greensJson};</script><script>${greensScanJs}</script><script>${greensJs}</script><script>${relicLogicJs}</script><script>${relicsJs}</script>
 <script>
-function view(){const pl=/^#planner($|=)/.test(location.hash),gg=/^#greens($|=)/.test(location.hash),cur=pl?'planner':gg?'greens':'kb';document.body.classList.toggle('planner',pl);document.getElementById('planner-root').classList.toggle('on',pl);
+function view(){const pl=/^#planner($|=)/.test(location.hash),gg=/^#greens($|=)/.test(location.hash),ra=/^#relics($|=)/.test(location.hash),cur=pl?'planner':gg?'greens':ra?'relics':'kb';document.body.classList.toggle('planner',pl);document.getElementById('planner-root').classList.toggle('on',pl);
  document.body.classList.toggle('greens',gg);document.getElementById('greens-root').classList.toggle('on',gg);
- document.querySelectorAll('.topbar a').forEach(a=>a.classList.toggle('on',a.dataset.view===cur));if(pl)window.VloxxPlanner.boot();else document.querySelectorAll('.pl-modal').forEach(m=>m.remove());if(gg)window.VloxxGreens.boot();}
+ document.body.classList.toggle('relics',ra);document.getElementById('relics-root').classList.toggle('on',ra);
+ document.querySelectorAll('.topbar a').forEach(a=>a.classList.toggle('on',a.dataset.view===cur));if(pl)window.VloxxPlanner.boot();else document.querySelectorAll('.pl-modal').forEach(m=>m.remove());if(gg)window.VloxxGreens.boot();if(ra)window.VloxxRelics.boot();}
 window.addEventListener('hashchange',view);view();
 </script><template id="legal-tpl"><div class="fb-box legal-box" role="dialog" aria-modal="true"><h4>About & legal</h4>${legalBody}<div class="fb-row"><button type="button" data-c="close">Close</button></div></div></template>
 <script>document.querySelectorAll('[data-legal]').forEach(b=>b.addEventListener('click',()=>{const m=document.createElement('div');m.className='fb-modal';m.appendChild(document.getElementById('legal-tpl').content.cloneNode(true));document.body.appendChild(m);

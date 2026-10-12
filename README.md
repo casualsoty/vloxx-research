@@ -28,7 +28,7 @@ practical result: the "+2.5 s Fixated" timing bug that makes the last-phase +63 
 README.md            this file (context + how to continue)
 docs/index.html      static documentation page (categories, search) GENERATED from FINDINGS.md + README.md + data/ —
                      rebuild with `node scripts/build_docs.js` after every change to the notes.
-                     Three tabs: Knowledge base, Raid planner (open with `#planner`) and Green groups (`#greens`)
+                     Four tabs: Knowledge base, Raid planner (open with `#planner`), Green groups (`#greens`) and Relic analyzer (`#relics`)
 docs-src/planner.js  raid planner (SVG arena editor; plan JSON import/export) — inlined into docs/index.html by build_docs.js
 docs-src/planner.css planner styles (also inlined)
 docs-src/presets.json attack presets + unit sizes. The planner AND the docs "Raid planner data" section read it (single source)
@@ -36,6 +36,8 @@ docs-src/greens.js   Green groups tool (open with `#greens`) + greens.css — in
 docs-src/greens_scan.js  screenshot reader of that tool (tile detection + icon matching, no dependencies)
 docs-src/spec_icons.json  the 45 profession / specialisation icons as data URIs (scripts/fetch_spec_icons.js)
 docs-src/green_groups.json  data of that tool: specialisations, assumed melee/ranged, projectile block / reflect skills that count (circular ground areas) and the excluded ones
+docs-src/relics.js   Relic analyzer tool (open with `#relics`) + relics.css — inlined into docs/index.html by build_docs.js
+docs-src/relics/     its logic as ES modules (EVTC parser, relic data, proc detection and damage), joined into one script by build_docs.js
 docs-src/legal.md    disclaimer / trademark / copyright notice (page footer + "About & legal" dialog)
 docs-src/feedback.js "Feedback" / "Report a bug" buttons (top bar); contact name = CONTACT_DISCORD in scripts/build_docs.js
 docs-src/plans/      shared planner templates (*.json, any exported plan); see the README there
@@ -120,6 +122,18 @@ The tab's "How it sorts, and the data behind it" section lists everything it use
 tiles as a subgroup, and compares each tile's white icon with the 45 official icons (`docs-src/spec_icons.json`, from the Guild Wars 2 API via
 `node scripts/fetch_spec_icons.js`). A tile that does not match well is left empty, with its picture in the row. After reading, the page asks who the joker is (the tiles as buttons, or "Let the tool choose"); the Joker column changes it later. Names are read from the tiles with Tesseract.js (loaded from jsDelivr on
 the first import; long names are cut by the panel itself, accents can be missed). The image never leaves the browser. Tested on two screenshots so far (20 tiles: all icons and names read at the original size, lieutenant / commander symbols before a name left out; on resized copies a few names come out wrong or empty).
+
+## Relic analyzer (docs page, "Relic analyzer" tab)
+Reads any arcdps log (.evtc / .zevtc, several at once, not only Vloxx) in the browser; nothing is uploaded. Per player: the relic detected
+(Relic of the Fractal, Relic of the Last Tyrant), its procs and their damage on the target and as cleave, and the procs and damage the other
+relic would have had in the same fight (~ = estimated). The Condition duration column shows each player's duration bonus per condition, read
+or estimated from the log, and accepts a typed-in value instead. Below each log, the condition timeline of a chosen player: stacks on all foes
+over the fight with the relic procs marked (drag to zoom), every proc with its damage and cut-short stacks (hover for a combat-replay frame),
+and a table of applied duration vs time on foe. The tab's "How it works" section explains every rule.
+The logic lives in `docs-src/relics/*.mjs` (ES modules: `parse-evtc`, `relics`, `weapon-strengths`, `condition-duration-defaults`,
+`count-relic-procs`); `build_docs.js` drops their imports / exports and inlines them as one script. They also run in Node 22+:
+`(await import('./docs-src/relics/count-relic-procs.mjs')).default(new Blob([fs.readFileSync(log)]))`. It calls the Guild Wars 2 API
+(specialisations, skills) while parsing.
 
 ## Anonymisation (player names)
 Every published file uses pseudonyms instead of player names: `Player-XXXX` for characters, `Account-XXXX` for accounts. That covers
